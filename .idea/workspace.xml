@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="compro-lib" targetName="range-sum-query-0" />
-      <config projectName="compro-lib" targetName="rsq-and-raq-0" />
-      <config projectName="compro-lib" targetName="range-minimum-query-0" />
-      <config projectName="compro-lib" targetName="rmq-and-ruq-0" />
+      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
+      <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
+      <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -15,7 +15,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mathematics/convolution.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mathematics/mod-int.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Library-Checker/Math/Convolution-mod-1000000007.test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit-test/mathematics/mod-int.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/range-minimum-query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/range-sum-query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/rmq-and-ruq-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/rsq-and-raq-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,32 +64,44 @@
       <recent name="$PROJECT_DIR$/data-structure" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.range-sum-query-0">
-    <configuration name="range-minimum-query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="range-minimum-query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="range-minimum-query-0">
+  <component name="RunManager" selected="CMake Application.Range-Minimum-Query-0">
+    <configuration name="Convolution-mod-1000000007-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Convolution-mod-1000000007-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Convolution-mod-1000000007-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="range-sum-query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="range-sum-query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="range-sum-query-0">
+    <configuration name="RMQ-and-RUQ-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RMQ-and-RUQ-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RMQ-and-RUQ-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rmq-and-ruq-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="rmq-and-ruq-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="rmq-and-ruq-0">
+    <configuration name="RSQ-and-RAQ-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RSQ-and-RAQ-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RSQ-and-RAQ-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rsq-and-raq-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="rsq-and-raq-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="rsq-and-raq-0">
+    <configuration name="Range-Minimum-Query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Range-Minimum-Query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Range-Minimum-Query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Range-Sum-Query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Range-Sum-Query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Range-Sum-Query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mod-int-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="mod-int-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="mod-int-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.range-minimum-query-0" />
-      <item itemvalue="CMake Application.range-sum-query-0" />
-      <item itemvalue="CMake Application.rmq-and-ruq-0" />
-      <item itemvalue="CMake Application.rsq-and-raq-0" />
+      <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
+      <item itemvalue="CMake Application.mod-int-0" />
+      <item itemvalue="CMake Application.Range-Minimum-Query-0" />
+      <item itemvalue="CMake Application.Range-Sum-Query-0" />
+      <item itemvalue="CMake Application.RMQ-and-RUQ-0" />
+      <item itemvalue="CMake Application.RSQ-and-RAQ-0" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -94,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588876473280</updated>
       <workItem from="1588876474967" duration="39000" />
-      <workItem from="1588876555739" duration="2176000" />
+      <workItem from="1588876555739" duration="2866000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1588877317919</created>
@@ -131,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588878545658</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1588878741497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588878741497</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,14 +170,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="562" y="331" width="852" height="452" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588879276797">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="562" y="331" width="852" height="452" key="#com.intellij.fileTypes.FileTypeChooser/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588879276797" />
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588876571723">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588878545570">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588878741381">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878545570" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878741381" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1588876510956">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -194,9 +226,13 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="319" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878567798" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588878550725">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588878746610">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878550725" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878746610" />
+    <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1588878963080">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="629" y="139" width="729" height="834" key="find.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878963080" />
   </component>
 </project>
