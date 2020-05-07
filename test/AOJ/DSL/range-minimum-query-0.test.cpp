@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A&lang=ja"
-#include"../../data-structure/segment-tree.hpp"
+#include"../../../data-structure/segment-tree.hpp"
 
 #include<bits/stdc++.h>
 using namespace std;
