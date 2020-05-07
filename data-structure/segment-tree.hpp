@@ -8,8 +8,8 @@ struct segment_tree {
     Z zero;
     std::vector<T> data;
     segment_tree(int n, F f, Z zero) : n(n), f(f), zero(zero), data(n << 1, zero()) {}
-    template<typename I> segment_tree(I begin, I end, F f, Z zero)
-        : n(end - begin), f(f), zero(zero), data(n << 1) {
+    template<typename I>
+    segment_tree(I begin, I end, F f, Z zero) : n(end - begin), f(f), zero(zero), data(n << 1) {
         std::copy(begin, end, data.begin() + n);
         for (int i = n - 1; i > 0; i--) { data[i] = f(data[i << 1 | 0], data[i << 1 | 1]); }
     }
