@@ -13,8 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/AOJ/DSL/rmq-and-ruq-0.test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/AOJ/DSL/rsq-and-raq-0.test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/range-sum-query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/range-sum-query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data-structure" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -59,9 +68,21 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="rmq-and-ruq-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="rmq-and-ruq-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="rmq-and-ruq-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rsq-and-raq-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="rsq-and-raq-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="rsq-and-raq-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake Application.range-minimum-query-0" />
       <item itemvalue="CMake Application.range-sum-query-0" />
+      <item itemvalue="CMake Application.rmq-and-ruq-0" />
+      <item itemvalue="CMake Application.rsq-and-raq-0" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -75,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588876473280</updated>
       <workItem from="1588876474967" duration="39000" />
-      <workItem from="1588876555739" duration="1566000" />
+      <workItem from="1588876555739" duration="1961000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1588877317919</created>
@@ -98,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588877667208</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1588878146390</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588878146390</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,10 +141,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="456" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588877667086">
-      <screen x="67" y="34" width="1853" height="1046" />
+    <state x="2150" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588878146275">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="456" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588877667086" />
+    <state x="2150" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878146275" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1588876510956">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -161,9 +189,9 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="320" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878111273" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588877750526">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588878152323">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588877750526" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878152323" />
   </component>
 </project>
