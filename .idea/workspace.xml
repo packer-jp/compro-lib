@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="compro-lib" targetName="compro_lib" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -11,7 +9,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="" />
+    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-structure/segment-tree.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/aizu-online-judge/DSL/range-minimum-query-0.test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/aizu-online-judge/DSL/range-sum-query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,19 +24,44 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1baiBzjbhMAdUkWfV1zGGAVoEto" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data-structure" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data-structure" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.range-minimum-query-0">
+    <configuration name="range-minimum-query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="range-minimum-query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="range-minimum-query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="range-sum-query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="range-sum-query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="range-sum-query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.range-minimum-query-0" />
+      <item itemvalue="CMake Application.range-sum-query-0" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -45,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588876473280</updated>
       <workItem from="1588876474967" duration="39000" />
-      <workItem from="1588876555739" duration="163000" />
+      <workItem from="1588876555739" duration="618000" />
     </task>
     <servers />
   </component>
@@ -61,9 +90,13 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876510956" />
-    <state x="816" y="429" width="354" height="255" key="Github.ShareDialog" timestamp="1588876608055">
+    <state x="816" y="429" width="354" height="255" key="Github.ShareDialog" timestamp="1588876742632">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="816" y="429" width="354" height="255" key="Github.ShareDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876608055" />
+    <state x="816" y="429" width="354" height="255" key="Github.ShareDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876742632" />
+    <state x="793" y="130" width="390" height="853" key="Github.UntrackedFilesDialog" timestamp="1588876762520">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="793" y="130" width="390" height="853" key="Github.UntrackedFilesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876762520" />
   </component>
 </project>
