@@ -2,6 +2,4 @@ toc: True
 html: False
 categorize_library: True
 categorize_verify: True
-plugins:
-  - jemoji
 theme: jekyll-theme-cayman
