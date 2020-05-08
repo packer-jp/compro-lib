@@ -1,6 +1,11 @@
 #include <vector>
 #include <cassert>
 
+/*
+ * @title セグメントツリー
+ * @docs docs/data-structure/segment-tree.md
+ */
+
 template<typename T, typename F, typename Z>
 struct segment_tree {
     int n;
