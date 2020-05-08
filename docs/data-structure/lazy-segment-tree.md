@@ -27,7 +27,7 @@
 - `(constructor)(int n, F f, G g, H h, ZT zero_t, ZU zero_u)`  
 列長`n`、各演算で初期化。
 
-- `<typename I>(constructor)(I begin, I end, F f, G g, H h, ZT zero_t, ZU zero_u)`  
+- `<I> (constructor)(I begin, I end, F f, G g, H h, ZT zero_t, ZU zero_u)`  
 `[begin, end)`のデータを元に、各演算で初期化。
 
 - `int n`  

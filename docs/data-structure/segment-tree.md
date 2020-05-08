@@ -15,7 +15,7 @@
 - `(constructor)(int n, F f, Z zero)`  
 列長`n`、二項演算`f`、単位元`zero`で初期化。
 
-- `<typename I>(constructor)(I begin, I end, F f, Z zero)`  
+- `<I> (constructor)(I begin, I end, F f, Z zero)`  
 `[begin, end)`のデータを元に、二項演算`f`、単位元`zero`で初期化。
 
 - `int n`  
