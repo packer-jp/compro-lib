@@ -17,9 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.verify-helper/docs/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/data-structure/lazy-segment-tree.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/data-structure/lazy-segment-tree.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.verify-helper/docs/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.verify-helper/docs/_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,7 @@
       <workItem from="1588876474967" duration="39000" />
       <workItem from="1588876555739" duration="4147000" />
       <workItem from="1588921103650" duration="5000" />
-      <workItem from="1588924590420" duration="11304000" />
+      <workItem from="1588924590420" duration="11594000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1588877317919</created>
@@ -247,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588947903908</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update">
+      <created>1588948245301</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1588948245301</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +275,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588947903808">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588948245206">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588947903808" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588948245206" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1588876510956">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -318,10 +323,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="319" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588914893758" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588948008790">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588948249222">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588948008790" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588948249222" />
     <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1588878963080">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
