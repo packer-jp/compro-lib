@@ -1,6 +1,11 @@
 #include <vector>
 #include <cassert>
 
+/*
+ * @title 遅延評価セグメントツリー
+ * @docs docs/data-structure/lazy-segment-tree.md
+ */
+
 template<typename T, typename U, typename F, typename G, typename H, typename ZT, typename ZU>
 struct lazy_segment_tree {
     int n;
