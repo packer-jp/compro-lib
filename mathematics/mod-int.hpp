@@ -2,6 +2,11 @@
 #include <utility>
 #include <vector>
 
+/*
+ * @title Modulo Inteter
+ * @docs docs/mathematics/mod-int.md
+ */
+
 template<int MOD = 1000000007>
 struct mod_int {
     int val;
