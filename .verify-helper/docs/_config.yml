@@ -4,4 +4,4 @@ categorize_library: True
 categorize_verify: True
 plugins:
   - jemoji
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
