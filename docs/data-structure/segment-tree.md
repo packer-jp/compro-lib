@@ -3,26 +3,23 @@
 
 ## テンプレートパラメータ
 - `typename T`  
-扱うモノイドのデータ型。
+モノイドのデータ型。
 
 - `typename F`  
-扱うモノイドの二項演算の型。
+モノイドの二項演算の型。
 
 - `typename Z`  
-扱うモノイドの単位元を返す関数の型。
+モノイドの単位元を返す関数の型。
 
 ## メンバ
-- `(constructor)(int n, F f, Z z)`  
-列長`n`、二項演算`f`、単位元`z`で初期化。
+- `(constructor)(int n, F f, Z zero)`  
+列長`n`、二項演算`f`、単位元`zero`で初期化。
 
-- `<typename I>(constructor)(I begin, I end, F f, Z z)`  
-`[begin, end)`のデータを元に、列、二項演算`f`、単位元`z`で初期化。
+- `<typename I>(constructor)(I begin, I end, F f, Z zero)`  
+`[begin, end)`のデータを元に、二項演算`f`、単位元`zero`で初期化。
 
 - `int n`  
 列長。
-
-- `std::vector<T> data`  
-データを格納しておく配列。
 
 - `void set(int i, T x)`  
 要素`i`を`x`に変更する。
