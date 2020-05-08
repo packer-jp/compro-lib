@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
- * @title Modulo Inteter
+ * @title Modulo Integer
  * @docs docs/mathematics/mod-int.md
  */
 
