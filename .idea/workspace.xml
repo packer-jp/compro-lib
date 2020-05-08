@@ -17,6 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.verify-helper/docs/static/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.verify-helper/docs/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.verify-helper/docs/_config.yml" afterDir="false" />
     </list>
@@ -112,7 +113,7 @@
       <workItem from="1588876555739" duration="4147000" />
       <workItem from="1588921103650" duration="5000" />
       <workItem from="1588924590420" duration="13667000" />
-      <workItem from="1588950708005" duration="6902000" />
+      <workItem from="1588950708005" duration="7334000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1588877317919</created>
@@ -345,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588964378484</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update">
+      <created>1588965465815</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1588965465815</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,18 +368,18 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="447" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588947839693" />
-    <state x="562" y="331" width="852" height="452" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588879276797">
+    <state x="562" y="331" width="852" height="452" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588965817846">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="562" y="331" width="852" height="452" key="#com.intellij.fileTypes.FileTypeChooser/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588879276797" />
+    <state x="562" y="331" width="852" height="452" key="#com.intellij.fileTypes.FileTypeChooser/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588965817846" />
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588876571723">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588964378323">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1588965465715">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588964378323" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588965465715" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1588876510956">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -416,10 +424,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="319" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588914893758" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588964620874">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1588965471832">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588964620874" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588965471832" />
     <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1588878963080">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
