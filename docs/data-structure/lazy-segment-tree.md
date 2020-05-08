@@ -5,7 +5,7 @@
 - `typename T`  
 メインモノイドのデータ型。
 
-- `typename U`
+- `typename U`  
 作用素モノイドのデータ型。
 
 - `typename F`  
@@ -17,10 +17,10 @@
 - `typename H`  
 メインモノイド、作用素モノイド、列長からメインモノイドを得る演算の型。
 
-- `typename ZT`
+- `typename ZT`  
 メインモノイドの単位元を返す関数の型。
 
-- `typename ZU`
+- `typename ZU`  
 作用素モノイドの単位元を返す関数の型。
 
 ## メンバ
