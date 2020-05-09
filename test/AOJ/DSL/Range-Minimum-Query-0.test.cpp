@@ -8,8 +8,8 @@ int main() {
     int n, q;
     cin >> n >> q;
     auto f = [](int a, int b) { return min(a, b); };
-    auto zero = []() { return INT_MAX; };
-    segtree_decl(int, rmq, n, f, zero);
+    auto id = []() { return INT_MAX; };
+    segtree_decl(int, rmq, n, f, id);
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;

@@ -6,21 +6,21 @@
  * @docs docs/data-structure/lazy-segment-tree.md
  */
 
-template<typename T, typename U, typename F, typename G, typename H, typename ZT, typename ZU>
+template<typename T, typename E, typename F, typename G, typename H, typename ID_T, typename ID_E>
 struct lazy_segment_tree {
     int n;
     F f;
     G g;
     H h;
-    ZT zero_t;
-    ZU zero_u;
+    ID_T id_t;
+    ID_E id_e;
     std::vector<T> data;
-    std::vector<U> lazy;
-    lazy_segment_tree(int n, F f, G g, H h, ZT zero_t, ZU zero_u)
-        : n(n), f(f), g(g), h(h), zero_t(zero_t), zero_u(zero_u), data(n << 1, zero_t()), lazy(n << 1, zero_u()) {}
+    std::vector<E> lazy;
+    lazy_segment_tree(int n, const F &f, const G &g, const H &h, const ID_T &id_t, const ID_E &id_e)
+        : n(n), f(f), g(g), h(h), id_t(id_t), id_e(id_e), data(n << 1, id_t()), lazy(n << 1, id_e()) {}
     template<typename I>
-    lazy_segment_tree(I begin, I end, F f, G g, H h, ZT zero_t, ZU zero_u)
-        : n(end - begin), f(f), g(g), h(h), zero_t(zero_t), zero_u(zero_u), data(n << 1), lazy(n << 1, zero_u()) {
+    lazy_segment_tree(I begin, I end, const F &f, const G &g, const H &h, const ID_T &id_t, const ID_E &id_e)
+        : n(end - begin), f(f), g(g), h(h), id_t(id_t), id_e(id_e), data(n << 1), lazy(n << 1, id_e()) {
         std::copy(begin, end, data.begin() + n);
         for (int i = n - 1; i > 0; i--) { data[i] = f(data[i << 1 | 0], data[i << 1 | 1]); }
     }
@@ -31,9 +31,9 @@ struct lazy_segment_tree {
             lazy[i << 1 | 0] = g(lazy[i << 1 | 0], lazy[i]);
             lazy[i << 1 | 1] = g(lazy[i << 1 | 1], lazy[i]);
         }
-        lazy[i] = zero_u();
+        lazy[i] = id_e();
     }
-    void add(int l, int r, const U &x) {
+    void add(int l, int r, const E &x) {
         assert(0 <= l && l < n);
         assert(0 < r && r <= n);
         l += n, r += n - 1;
@@ -56,7 +56,7 @@ struct lazy_segment_tree {
         assert(0 < r && r <= n);
         l += n, r += n - 1;
         for (int i = std::__lg(r); i > 0; i--) { propagate(l >> i), propagate(r >> i); }
-        T a = zero_t(), b = zero_t();
+        T a = id_t(), b = id_t();
         for (r++; l < r; l >>= 1, r >>= 1) {
             if (l & 1) { propagate(l), a = f(a, data[l++]); }
             if (r & 1) { propagate(--r), b = f(data[r], b); }
@@ -64,4 +64,4 @@ struct lazy_segment_tree {
         return f(a, b);
     }
 };
-#define lazysegtree_decl(T, U, name, n, f, g, h, zero_t, zero_u) lazy_segment_tree<T, U, decltype(f), decltype(g), decltype(h), decltype(zero_t), decltype(zero_u)> name(n, f, g, h, zero_t, zero_u)
+#define lazysegtree_decl(T, E, name, n, f, g, h, id_t, id_e) lazy_segment_tree<T, E, decltype(f), decltype(g), decltype(h), decltype(id_t), decltype(id_e)> name(n, f, g, h, id_t, id_e)

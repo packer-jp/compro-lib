@@ -6,15 +6,15 @@
  * @docs docs/data-structure/segment-tree.md
  */
 
-template<typename T, typename F, typename Z>
+template<typename T, typename F, typename ID>
 struct segment_tree {
     int n;
     F f;
-    Z zero;
+    ID id;
     std::vector<T> data;
-    segment_tree(int n, F f, Z zero) : n(n), f(f), zero(zero), data(n << 1, zero()) {}
+    segment_tree(int n, F f, ID id) : n(n), f(f), id(id), data(n << 1, id()) {}
     template<typename I>
-    segment_tree(I begin, I end, F f, Z zero) : n(end - begin), f(f), zero(zero), data(n << 1) {
+    segment_tree(I begin, I end, F f, ID id) : n(end - begin), f(f), id(id), data(n << 1) {
         std::copy(begin, end, data.begin() + n);
         for (int i = n - 1; i > 0; i--) { data[i] = f(data[i << 1 | 0], data[i << 1 | 1]); }
     }
@@ -27,7 +27,7 @@ struct segment_tree {
     T get_sum(int l, int r) const {
         assert(0 <= l && l < n);
         assert(0 < r && r <= n);
-        T a = zero(), b = zero();
+        T a = id(), b = id();
         for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
             if (l & 1) { a = f(a, data[l++]); }
             if (r & 1) { b = f(data[--r], b); }
@@ -35,4 +35,4 @@ struct segment_tree {
         return f(a, b);
     }
 };
-#define segtree_decl(T, name, n, f, zero) segment_tree<T, decltype(f), decltype(zero)> name(n, f, zero)
+#define segtree_decl(T, name, n, f, id) segment_tree<T, decltype(f), decltype(id)> name(n, f, id)
