@@ -16,10 +16,10 @@ struct lazy_segment_tree {
     ID_E id_e;
     std::vector<T> data;
     std::vector<E> lazy;
-    lazy_segment_tree(int n, const F &f, const G &g, const H &h, const ID_T &id_t, const ID_E &id_e)
+    lazy_segment_tree(int n, F f, G g, H h, ID_T id_t, ID_E id_e)
         : n(n), f(f), g(g), h(h), id_t(id_t), id_e(id_e), data(n << 1, id_t()), lazy(n << 1, id_e()) {}
     template<typename I>
-    lazy_segment_tree(I begin, I end, const F &f, const G &g, const H &h, const ID_T &id_t, const ID_E &id_e)
+    lazy_segment_tree(I begin, I end, F f, G g, H h, ID_T id_t, ID_E id_e)
         : n(end - begin), f(f), g(g), h(h), id_t(id_t), id_e(id_e), data(n << 1), lazy(n << 1, id_e()) {
         std::copy(begin, end, data.begin() + n);
         for (int i = n - 1; i > 0; i--) { data[i] = f(data[i << 1 | 0], data[i << 1 | 1]); }

@@ -8,15 +8,15 @@
 - `typename F`  
 モノイドの二項演算の型。
 
-- `typename Z`  
+- `typename ID`  
 モノイドの単位元を返す関数の型。
 
 ## メンバ
-- `(constructor)(int n, F f, Z zero)`  
-列長`n`、二項演算`f`、単位元`zero`で初期化。
+- `(constructor)(int n, F f, ID id)`  
+列長`n`、二項演算`f`、単位元`id`で初期化。
 
-- `<I> (constructor)(I begin, I end, F f, Z zero)`  
-`[begin, end)`のデータを元に、二項演算`f`、単位元`zero`で初期化。
+- `<I> (constructor)(I begin, I end, F f, ID id)`  
+`[begin, end)`のデータを元に、二項演算`f`、単位元`id`で初期化。
 
 - `int n`  
 列長。

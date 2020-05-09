@@ -3,23 +3,30 @@
 
 ## テンプレートパラメータ
 - `typename T`  
-モノイドのデータ型。
+距離のデータ型。
 
-## メンバ
-- `(constructor)(int n, F f, Z zero)`  
-列長`n`、二項演算`f`、単位元`zero`で初期化。
+## 引数
+- `I begin_adj, I end_adj`  
+隣接リストの範囲を指すイテレータ。
 
-- `<I> (constructor)(I begin, I end, F f, Z zero)`  
-`[begin, end)`のデータを元に、二項演算`f`、単位元`zero`で初期化。
+- `J begin_cost`  
+コストのリスト (隣接リストと同じ構造) の開始点を指すイテレータ。
 
-- `int n`  
-列長。
+- `int s`  
+始点。
 
-- `void set(int i, T x)`  
-要素`i`を`x`に変更する。
+- `F f`  
+距離とコストを受けとり、距離を返す二項演算。
 
-- `T operator[](int i)`  
-要素`i`を取得する。
+- `G g`  
+距離`a, b`を受けとり、`a > b`を返す二項演算。
+    - `g(a, f(a, x))`
+    - `g(a, b) => g(f(a, x), f(b, x))`  
+    
+  を要請する。(多分……)
 
-- `T get_sum(int l, int r)`  
-`[l, r)`の区間和を取得する。
+- `ID id`  
+距離の`f`に関する単位元。
+
+- `AB ab`  
+距離の`f`に関する吸収元。`g(ab, y)`を要請する。

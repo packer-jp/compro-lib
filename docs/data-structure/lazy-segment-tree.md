@@ -5,7 +5,7 @@
 - `typename T`  
 メインモノイドのデータ型。
 
-- `typename U`  
+- `typename E`  
 作用素モノイドのデータ型。
 
 - `typename F`  
@@ -17,23 +17,23 @@
 - `typename H`  
 メインモノイド、作用素モノイド、列長からメインモノイドを得る演算の型。
 
-- `typename ZT`  
+- `typename ID_T`  
 メインモノイドの単位元を返す関数の型。
 
-- `typename ZU`  
+- `typename ID_E`  
 作用素モノイドの単位元を返す関数の型。
 
 ## メンバ
-- `(constructor)(int n, F f, G g, H h, ZT zero_t, ZU zero_u)`  
+- `(constructor)(int n, F f, G g, H h, ID_T id_t, ID_E id_e)`  
 列長`n`、各演算で初期化。
 
-- `<I> (constructor)(I begin, I end, F f, G g, H h, ZT zero_t, ZU zero_u)`  
+- `<I> (constructor)(I begin, I end, F f, G g, H h, ID_T id_t, ID_E id_e)`  
 `[begin, end)`のデータを元に、各演算で初期化。
 
 - `int n`  
 列長。
 
-- `void add(int l, int r, U x)`  
+- `void add(int l, int r, E x)`  
 `[l, r)`に`x`を作用させる。
 
 - `T get_sum(int l, int r)`  
