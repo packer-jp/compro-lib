@@ -34,7 +34,6 @@ template<typename T, typename I, typename J>
 std::vector<T> basic_dijkstra(I begin_adj, I end_adj, J begin_cost, int s) {
     auto id = []() -> T { return 0; };
     auto ab = []() -> T { return std::numeric_limits<T>::max(); };
-    auto f = [&](T a, T b) -> T { return a == ab() ? ab() : a + b; };
-    auto g = [](T a, T b) -> bool { return a > b; };
-    return dijkstra<T>(begin_adj, end_adj, begin_cost, s, f, g, id, ab);
+    auto f = [&](const T &a, const T &b) -> T { return a == ab() ? ab() : a + b; };
+    return dijkstra<T>(begin_adj, end_adj, begin_cost, s, f, std::greater<T>(), id, ab);
 }
