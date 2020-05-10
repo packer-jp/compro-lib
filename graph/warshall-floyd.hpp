@@ -2,6 +2,11 @@
 #include <vector>
 #include <functional>
 
+/*
+ * @title ワーシャル-フロイド法
+ * @docs docs/graph/warshall-floyd.md
+ */
+
 template<typename T, typename F, typename G>
 std::vector<std::vector<T>> warshall_floyd(const std::vector<std::vector<T>> &graph, F f, G g) {
     int n = graph.size();
