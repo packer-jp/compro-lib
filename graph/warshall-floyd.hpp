@@ -25,6 +25,6 @@ std::vector<std::vector<T>> warshall_floyd(const std::vector<std::vector<T>> &gr
 template<typename T>
 std::vector<std::vector<T>> basic_warshall_floyd(const std::vector<std::vector<T>> &graph) {
     auto ab = []() -> T { return std::numeric_limits<T>::max(); };
-    auto f = [&](const T &a, const T &b) { return a == ab() || b == ab() ? ab() : a + b; };
+    auto f = [&](const T &a, const T &b) -> T { return a == ab() || b == ab() ? ab() : a + b; };
     return warshall_floyd(graph, f, std::greater<T>());
 }
