@@ -4,7 +4,7 @@ using namespace std;
 #define int long long
 #define rep(i, n) for (int i = 0; i < (n); i++)
 #define reps(i, n) for (int i = 1; i <= (n); i++)
-#define all(x) (x).begin, (x).end
+#define all(x) (x).begin(), (x).end()
 #define uniq(x) (x).erase(unique(all(x)), end(x))
 #define bit(n) (1LL << (n))
 #define cdiv(a, b) (((a) - 1) / (b) + 1)

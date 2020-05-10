@@ -13,9 +13,8 @@ struct segment_tree {
     ID id;
     std::vector<T> data;
     segment_tree(int n, F f, ID id) : n(n), f(f), id(id), data(n << 1, id()) {}
-    template<typename I>
-    segment_tree(I begin, I end, F f, ID id) : n(end - begin), f(f), id(id), data(n << 1) {
-        std::copy(begin, end, data.begin() + n);
+    segment_tree(const std::vector<T> &src, F f, ID id) : n(src.size()), f(f), id(id), data(n << 1) {
+        std::copy(src.begin(), src.end(), data.begin() + n);
         for (int i = n - 1; i > 0; i--) { data[i] = f(data[i << 1 | 0], data[i << 1 | 1]); }
     }
     void set(int i, const T &x) {
