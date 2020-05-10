@@ -28,7 +28,7 @@
 列長`n`、各演算で初期化。
 
 - `(constructor)(std::vector<T> src, F f, G g, H h, ID_T id_t, ID_E id_e)`  
-`[begin, end)`のデータを元に、各演算で初期化。
+`src`を元に、各演算で初期化。
 
 - `int n`  
 列長。

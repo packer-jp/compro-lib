@@ -16,7 +16,7 @@
 列長`n`、二項演算`f`、単位元`id`で初期化。
 
 - `(constructor)(std::vector<T> src, F f, ID id)`  
-`[begin, end)`のデータを元に、二項演算`f`、単位元`id`で初期化。
+`src`を元に、二項演算`f`、単位元`id`で初期化。
 
 - `int n`  
 列長。
