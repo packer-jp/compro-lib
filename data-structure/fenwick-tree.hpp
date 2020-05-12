@@ -23,5 +23,5 @@ struct fenwick_tree_range {
     fenwick_tree<T> ft;
     fenwick_tree_range(int n) : ft(fenwick_tree<T>(n)) {}
     void add(int l, int r, T x) { ft.add(l, x), ft.add(r, -x); }
-    T operator[](int i) const { ft.get_sum(i + 1); }
+    T operator[](int i) const { return ft.get_sum(i + 1); }
 };
