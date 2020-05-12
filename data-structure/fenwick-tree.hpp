@@ -12,15 +12,11 @@ struct fenwick_tree {
     fenwick_tree(int n) : n(n), data(n + 1, 0) {}
     void add(int i, T x) { for (i++; i <= n; i += i & -i) { data[i] += x; }}
     T get_sum(int i) const {
-        if (i > n) { i = n; }
         T ret = 0;
         for (; i > 0; i -= i & -i) { ret += data[i]; }
         return ret;
     }
-    T get_sum(int l, int r) const {
-        if (l < r) { return get_sum(r) - get_sum(l); }
-        else { return 0; }
-    }
+    T get_sum(int l, int r) const { return get_sum(r) - get_sum(l); }
 };
 
 template<typename T>
