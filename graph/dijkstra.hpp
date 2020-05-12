@@ -36,9 +36,9 @@ std::vector<T> dijkstra(const std::vector<std::vector<int>> &adj,
     return ret;
 }
 
-template<typename T, typename E>
+template<typename T>
 std::vector<T> basic_dijkstra(const std::vector<std::vector<int>> &adj,
-                              const std::vector<std::vector<E>> &cost,
+                              const std::vector<std::vector<T>> &cost,
                               int s) {
     auto id = []() -> T { return 0; };
     auto ab = []() -> T { return std::numeric_limits<T>::max(); };
