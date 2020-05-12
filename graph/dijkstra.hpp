@@ -1,6 +1,7 @@
 #include <limits>
 #include <queue>
 #include <vector>
+#include <cassert>
 
 /*
  * @title ダイクストラ法
@@ -16,6 +17,7 @@ std::vector<T> dijkstra(const std::vector<std::vector<int>> &adj,
                         ID id,
                         AB ab) {
     int n = adj.size();
+    assert(0 <= s && s < n);
     std::vector<T> ret(n, ab());
     using P = std::pair<T, int>;
     auto c = [&](P a, P b) -> bool { return g(a.first, b.first); };

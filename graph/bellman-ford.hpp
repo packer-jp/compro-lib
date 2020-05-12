@@ -1,6 +1,7 @@
 #include <limits>
 #include <vector>
 #include <functional>
+#include <cassert>
 
 /*
  * @title ベルマン-フォード法
@@ -20,6 +21,7 @@ std::vector<T> bellman_ford(const std::vector<std::vector<int>> &adj,
         T cost;
     };
     int n = adj.size();
+    assert(0 <= s && s < n);
     std::vector<edge> edges;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < adj[i].size(); j++) { edges.push_back({i, adj[i][j], cost[i][j]}); }
