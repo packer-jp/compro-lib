@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Range-Minimum-Query-0 test/AOJ/DSL/Range-Minimum-Query-0.test.cpp data-structure/segment-tree.hpp)
 add_executable(Range-Sum-Query-0 test/AOJ/DSL/Range-Sum-Query-0.test.cpp data-structure/segment-tree.hpp)
+add_executable(Range-Sum-Query-1 test/AOJ/DSL/Range-Sum-Query-1.test.cpp data-structure/fenwick-tree.hpp)
+add_executable(Range-Add-Query-0 test/AOJ/DSL/Range-Add-Query-0.test.cpp data-structure/fenwick-tree.hpp)
 add_executable(RMQ-and-RUQ-0 test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
 add_executable(RSQ-and-RAQ-0 test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
 add_executable(Single-Source-Shortest-Path-0 test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp graph/dijkstra.hpp)
