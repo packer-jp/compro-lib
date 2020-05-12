@@ -2,6 +2,11 @@
 #include <vector>
 #include <functional>
 
+/*
+ * @title ベルマン-フォード法
+ * @docs docs/graph/bellman-ford.md
+ */
+
 template<typename T, typename E, typename F, typename G, typename ID, typename AB>
 std::vector<T> bellman_ford(const std::vector<std::vector<int>> &adj,
                             const std::vector<std::vector<E>> &cost,
