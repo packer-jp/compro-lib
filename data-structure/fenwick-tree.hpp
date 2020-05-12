@@ -1,5 +1,10 @@
 #include <vector>
 
+/*
+ * @title Fenwick木
+ * @docs docs/data-structure/fenwick-tree.md
+ */
+
 template<typename T>
 struct fenwick_tree {
     int n;

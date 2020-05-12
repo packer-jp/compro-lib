@@ -2,7 +2,7 @@
 #include <cassert>
 
 /*
- * @title セグメントツリー
+ * @title セグメント木
  * @docs docs/data-structure/segment-tree.md
  */
 

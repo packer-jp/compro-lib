@@ -2,7 +2,7 @@
 #include <cassert>
 
 /*
- * @title 遅延評価セグメントツリー
+ * @title 遅延評価セグメント木
  * @docs docs/data-structure/lazy-segment-tree.md
  */
 
