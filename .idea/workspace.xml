@@ -22,7 +22,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data-structure/fenwick-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/fenwick-tree.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/utility/binary-search.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/AOJ/ALDS1/Binary-Search-0.test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utility/binary-search.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +74,11 @@
   </component>
   <component name="RunManager" selected="CMake Application.Range-Add-Query-0">
     <configuration name="All-Pairs-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="All-Pairs-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="All-Pairs-Shortest-Path-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Binary-Search-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Binary-Search-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Binary-Search-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -126,6 +135,7 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.All-Pairs-Shortest-Path-0" />
+      <item itemvalue="CMake Application.Binary-Search-0" />
       <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
       <item itemvalue="CMake Application.RMQ-and-RUQ-0" />
       <item itemvalue="CMake Application.RSQ-and-RAQ-0" />
@@ -164,14 +174,7 @@
       <workItem from="1589101056657" duration="71000" />
       <workItem from="1589109111816" duration="202000" />
       <workItem from="1589278272696" duration="3681000" />
-      <workItem from="1589282189674" duration="8853000" />
-    </task>
-    <task id="LOCAL-00013" summary="update">
-      <created>1588942654379</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1588942654379</updated>
+      <workItem from="1589282189674" duration="9401000" />
     </task>
     <task id="LOCAL-00014" summary="update">
       <created>1588943733847</created>
@@ -509,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589291058255</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="update">
+      <created>1589291521031</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1589291521031</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,10 +542,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589291058154">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589291520914">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589291058154" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589291520914" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589287957383">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -580,10 +590,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="313" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589287664826" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589291062371">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589291526165">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589291062371" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589291526165" />
     <state x="723" y="447" width="531" height="219" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588965893450">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -596,9 +606,9 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="573" y="251" key="run.anything.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589288524519" />
-    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1589284537007">
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1589291971628">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589284537007" />
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589291971628" />
   </component>
 </project>
