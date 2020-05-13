@@ -5,7 +5,7 @@
 using namespace std;
 
 constexpr int MOD = 998244353;
-using mint=mod_int<MOD>;
+using mint = mod_int<MOD>;
 
 mint fact(int n) {
     mint ret = 1;
@@ -30,8 +30,7 @@ int main() {
     assert(m-- == mint(MOD + 1));
     assert(m == mint(MOD));
 
-    assert(mint(A)
-               +mint(A) == mint(A + A));
+    assert(mint(A) +mint(A) == mint(A + A));
     assert(mint(A + A) - mint(A) == mint(A));
     assert(mint(A) / mint(A) == mint(1));
     assert(mint(A).pow(A) * mint(A).pow(-A) == mint(1));
