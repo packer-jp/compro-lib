@@ -2,20 +2,20 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
-      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
-      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
-      <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
-      <config projectName="compro-lib" targetName="permutation" />
-      <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
-      <config projectName="compro-lib" targetName="Binary-Search-0" />
-      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
-      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
-      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
-      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
       <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
-      <config projectName="compro-lib" targetName="String-Search-0" />
+      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
       <config projectName="compro-lib" targetName="mod-int" />
+      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
+      <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
+      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
+      <config projectName="compro-lib" targetName="Binary-Search-0" />
+      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="permutation" />
+      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
+      <config projectName="compro-lib" targetName="String-Search-0" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -25,7 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test/unit-test/mathematics/permutation.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit-test/mathematics/permutation.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mathematics/permutation.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/mathematics/permutation.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,14 +188,8 @@
       <workItem from="1589278272696" duration="3681000" />
       <workItem from="1589282189674" duration="13743000" />
       <workItem from="1589333726702" duration="400000" />
-      <workItem from="1589360577847" duration="2803000" />
-    </task>
-    <task id="LOCAL-00017" summary="update">
-      <created>1588947056666</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1588947056666</updated>
+      <workItem from="1589360577847" duration="3108000" />
+      <workItem from="1589364790225" duration="1262000" />
     </task>
     <task id="LOCAL-00018" summary="update">
       <created>1588947870068</created>
@@ -532,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589363199514</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="update">
+      <created>1589363425680</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1589363425680</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,10 +557,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589363199260">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589363425491">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589363199260" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589363425491" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589287957383">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -603,10 +605,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="313" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589363204858">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589363434216">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589363204858" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589363434216" />
     <state x="723" y="447" width="531" height="219" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588965893450">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>

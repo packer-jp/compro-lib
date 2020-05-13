@@ -11,7 +11,7 @@ struct permutation {
     int n;
     std::vector<int> data;
     permutation(int n) : n(n), data(n) { for (int i = 0; i < n; i++) { data[i] = i; }}
-    permutation(std::vector<int> &src) : n(src.size()), data(src) {}
+    permutation(const std::vector<int> &src) : n(src.size()), data(src) {}
     bool next() { return std::next_permutation(data.begin(), data.end()); }
     bool prev() { return std::prev_permutation(data.begin(), data.end()); }
     bool operator==(const permutation &rhs) const { return data == rhs.data; }
