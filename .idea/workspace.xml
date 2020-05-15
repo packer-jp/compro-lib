@@ -26,16 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mathematics/matrix.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/unit-test/mathematics/matrix.test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-structure/segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/segment-tree.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +74,7 @@
       <recent name="$PROJECT_DIR$/data-structure" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.RSQ-and-RAQ-0">
+  <component name="RunManager" selected="CMake Application.Range-Minimum-Query-0">
     <configuration name="All-Pairs-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="All-Pairs-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="All-Pairs-Shortest-Path-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -206,14 +198,7 @@
       <workItem from="1589333726702" duration="400000" />
       <workItem from="1589360577847" duration="3108000" />
       <workItem from="1589364790225" duration="1369000" />
-      <workItem from="1589522413368" duration="16621000" />
-    </task>
-    <task id="LOCAL-00019" summary="update">
-      <created>1588947903908</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1588947903908</updated>
+      <workItem from="1589522413368" duration="17008000" />
     </task>
     <task id="LOCAL-00020" summary="update">
       <created>1588948245301</created>
@@ -551,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589370551475</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="update">
+      <created>1589539104626</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1589539104627</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,10 +570,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589522440963" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589370551175">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589539104359">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589370551175" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539104359" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589370629100">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -594,42 +586,42 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="793" y="130" width="390" height="853" key="Github.UntrackedFilesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876762520" />
-    <state width="1789" height="312" key="GridCell.Tab.0.bottom" timestamp="1589539095339">
+    <state width="1789" height="312" key="GridCell.Tab.0.bottom" timestamp="1589539451247">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.0.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
-    <state width="1789" height="312" key="GridCell.Tab.0.center" timestamp="1589539095339">
+    <state width="1789" height="312" key="GridCell.Tab.0.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451247" />
+    <state width="1789" height="312" key="GridCell.Tab.0.center" timestamp="1589539451246">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.0.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
-    <state width="1789" height="312" key="GridCell.Tab.0.left" timestamp="1589539095339">
+    <state width="1789" height="312" key="GridCell.Tab.0.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451246" />
+    <state width="1789" height="312" key="GridCell.Tab.0.left" timestamp="1589539451246">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.0.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
-    <state width="1789" height="312" key="GridCell.Tab.0.right" timestamp="1589539095339">
+    <state width="1789" height="312" key="GridCell.Tab.0.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451246" />
+    <state width="1789" height="312" key="GridCell.Tab.0.right" timestamp="1589539451246">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.0.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
-    <state width="1789" height="312" key="GridCell.Tab.1.bottom" timestamp="1589539095171">
+    <state width="1789" height="312" key="GridCell.Tab.0.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451246" />
+    <state width="1789" height="312" key="GridCell.Tab.1.bottom" timestamp="1589539451103">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.1.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
-    <state width="1789" height="312" key="GridCell.Tab.1.center" timestamp="1589539095171">
+    <state width="1789" height="312" key="GridCell.Tab.1.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451103" />
+    <state width="1789" height="312" key="GridCell.Tab.1.center" timestamp="1589539451103">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.1.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
-    <state width="1789" height="312" key="GridCell.Tab.1.left" timestamp="1589539095171">
+    <state width="1789" height="312" key="GridCell.Tab.1.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451103" />
+    <state width="1789" height="312" key="GridCell.Tab.1.left" timestamp="1589539451103">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.1.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
-    <state width="1789" height="312" key="GridCell.Tab.1.right" timestamp="1589539095171">
+    <state width="1789" height="312" key="GridCell.Tab.1.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451103" />
+    <state width="1789" height="312" key="GridCell.Tab.1.right" timestamp="1589539451103">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="312" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589363434216">
+    <state width="1789" height="312" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539451103" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589539108761">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589363434216" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539108761" />
     <state x="723" y="447" width="531" height="219" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588965893450">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>

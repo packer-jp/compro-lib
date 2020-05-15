@@ -34,14 +34,14 @@ struct segment_tree {
     }
 };
 
-struct rminq {
+struct rsq {
     using T = long long;
     static T OP(T a, T b) { return a + b; }
     static T ID() { return 0; }
     using type = segment_tree<T, OP, ID>;
 };
 
-struct rsq {
+struct rminq {
     using T = long long;
     static T OP(T a, T b) { return std::min(a, b); }
     static T ID() { return std::numeric_limits<T>::max(); }
