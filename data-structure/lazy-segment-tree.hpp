@@ -7,7 +7,7 @@
  * @docs docs/data-structure/lazy-segment-tree.md
  */
 
-template<typename T, typename E, T(*OP_TT)(T, T), E (*OP_EE)(E, E), T(*OP_TE)(T, E, int), T(*ID_T)(), E(*ID_E)()>
+template<typename T, typename E, T(*OP_TT)(T, T), E(*OP_EE)(E, E), T(*OP_TE)(T, E, int), T(*ID_T)(), E(*ID_E)()>
 struct lazy_segment_tree {
     int n;
     std::vector<T> data;

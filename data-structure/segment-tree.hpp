@@ -7,7 +7,7 @@
  * @docs docs/data-structure/segment-tree.md
  */
 
-template<class T, T(*OP)(T, T), T (*ID)()>
+template<class T, T(*OP)(T, T), T(*ID)()>
 struct segment_tree {
     int n;
     std::vector<T> data;
