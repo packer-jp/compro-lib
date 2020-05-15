@@ -26,13 +26,13 @@ std::vector<typename M::T> bellman_ford(const std::vector<std::vector<int>> &adj
     std::vector<T> ret(n, M::ab());
     ret[s] = M::id();
     for (int i = 0; i < n; i++) {
-        bool update = false;
+        bool upd = false;
         for (int j = 0; j < edges.size(); j++) {
             edge e = edges[j];
             T dist = M::op(ret[e.from], e.cost);
-            if (M::gr(ret[e.to], dist)) { ret[e.to] = dist, update = true; }
+            if (M::gr(ret[e.to], dist)) { ret[e.to] = dist, upd = true; }
         }
-        if (!update) { return ret; }
+        if (!upd) { return ret; }
     }
     return std::vector<T>();
 }
