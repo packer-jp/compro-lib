@@ -45,6 +45,7 @@ struct mod_int {
     mod_int operator*(const mod_int &rhs) const { return mod_int(*this) *= rhs; }
     mod_int operator/(const mod_int &rhs) const { return mod_int(*this) /= rhs; }
     mod_int inv() const {
+        assert(val != 0);
         int a = val, b = MOD, x = 1, u = 0;
         while (b) {
             int t = a / b;

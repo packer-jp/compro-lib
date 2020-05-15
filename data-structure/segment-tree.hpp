@@ -22,7 +22,7 @@ struct segment_tree {
         data[i += n] = x;
         while (i >>= 1) { data[i] = M::op(data[i << 1 | 0], data[i << 1 | 1]); }
     }
-    T operator[](int i) const { return data[i + n]; }
+    const T &operator[](int i) const { return data[i + n]; }
     T get_sum(int l, int r) const {
         assert(0 <= l && l < n);
         assert(0 < r && r <= n);
