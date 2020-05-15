@@ -55,8 +55,8 @@ struct lazy_segment_tree {
         for (int i = std::__lg(r); i > 0; i--) { propagate(l >> i), propagate(r >> i); }
         T a = M::id_T(), b = M::id_T();
         for (r++; l < r; l >>= 1, r >>= 1) {
-            if (l & 1) { propagate(l), a = OP_TT(a, data[l++]); }
-            if (r & 1) { propagate(--r), b = OP_TT(data[r], b); }
+            if (l & 1) { propagate(l), a = op_TT(a, data[l++]); }
+            if (r & 1) { propagate(--r), b = op_TT(data[r], b); }
         }
         return M::op_TT(a, b);
     }
