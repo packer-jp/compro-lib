@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    fenwick_tree_range<int> ft(n);
+    fenwick_tree_range<rsq> ft(n);
     for (int i = 0; i < q; i++) {
         int com;
         cin >> com;

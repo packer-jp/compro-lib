@@ -8,7 +8,7 @@ int main() {
     int n, q;
     using ll = long long;
     cin >> n >> q;
-    rsq_and_raq::type lst(n + 1);
+    lazy_segment_tree<rsq_and_raq> lst(n + 1);
     for (int i = 0; i < q; i++) {
         int com;
         cin >> com;

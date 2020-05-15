@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    rsq::type rsq(n + 1);
+    segment_tree<rsq> rsq(n + 1);
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;
