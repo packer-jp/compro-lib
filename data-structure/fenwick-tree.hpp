@@ -19,7 +19,7 @@ struct fenwick_tree {
     T get_sum(int i) const {
         assert(0 < i && i <= n);
         T ret = M::id();
-        for (; i > 0; i -= i & -i) { M::op(ret, data[i]); }
+        for (; i > 0; i -= i & -i) { ret = M::op(ret, data[i]); }
         return ret;
     }
     T get_sum(int l, int r) const {

@@ -14,8 +14,8 @@ struct lazy_segment_tree {
     int n;
     std::vector<T> data;
     std::vector<E> lazy;
-    lazy_segment_tree(int n) : n(n), data(n << 1, M::ID_T()), lazy(n << 1, M::ID_E()) {}
-    lazy_segment_tree(const std::vector<T> &src) : n(src.size()), data(n << 1), lazy(n << 1, M::ID_E()) {
+    lazy_segment_tree(int n) : n(n), data(n << 1, M::id_T()), lazy(n << 1, M::id_E()) {}
+    lazy_segment_tree(const std::vector<T> &src) : n(src.size()), data(n << 1), lazy(n << 1, M::id_E()) {
         std::copy(src.begin(), src.end(), data.begin() + n);
         for (int i = n - 1; i > 0; i--) { data[i] = M::op_TT(data[i << 1 | 0], data[i << 1 | 1]); }
     }
