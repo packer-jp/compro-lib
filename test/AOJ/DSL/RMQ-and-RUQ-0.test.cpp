@@ -7,12 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    auto id_t = []() { return INT_MAX; };
-    auto id_e = []() { return -1; };
-    auto f = [](int a, int b) { return min(a, b); };
-    auto g = [&](int a, int b) { return b == id_e() ? a : b; };
-    auto h = [&](int a, int b, int c) { return b == id_e() ? a : b; };
-    lazysegtree_decl(int, int, lst, n, f, g, h, id_t, id_e);
+    rminq_and_ruq::type lst(vector<long long>(n, INT_MAX));
     for (int i = 0; i < q; i++) {
         int com;
         cin >> com;

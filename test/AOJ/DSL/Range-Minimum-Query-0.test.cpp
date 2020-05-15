@@ -7,9 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    auto f = [](int a, int b) { return min(a, b); };
-    auto id = []() { return INT_MAX; };
-    segtree_decl(int, rmq, n, f, id);
+    rminq::type rmq(vector<long long>(n, INT_MAX));
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;

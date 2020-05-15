@@ -20,4 +20,5 @@ add_executable(All-Pairs-Shortest-Path-0 test/AOJ/GRL/All-Pairs-Shortest-Path-0.
 add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
 
 add_executable(mod-int test/unit-test/mathematics/mod-int.test.cpp mathematics/mod-int.hpp)
+add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/matrix.hpp)
 add_executable(permutation test/unit-test/mathematics/permutation.test.cpp mathematics/permutation.hpp)

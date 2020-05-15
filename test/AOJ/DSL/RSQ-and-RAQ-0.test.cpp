@@ -6,14 +6,9 @@ using namespace std;
 
 int main() {
     int n, q;
-    cin >> n >> q;
     using ll = long long;
-    auto id_t = []() { return 0LL; };
-    auto id_e = []() { return 0LL; };
-    auto f = [](ll a, ll b) { return a + b; };
-    auto g = [](ll a, ll b) { return a + b; };
-    auto h = [](ll a, ll b, int c) { return a + b * c; };
-    lazysegtree_decl(ll, ll, lst, n + 1, f, g, h, id_t, id_e);
+    cin >> n >> q;
+    rsq_and_raq::type lst(n + 1);
     for (int i = 0; i < q; i++) {
         int com;
         cin >> com;

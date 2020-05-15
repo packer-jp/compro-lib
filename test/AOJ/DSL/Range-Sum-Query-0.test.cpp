@@ -7,9 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    auto f = [](int a, int b) { return a + b; };
-    auto id = []() { return 0; };
-    segtree_decl(int, rsq, n + 1, f, id);
+    rsq::type rsq(n);
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;

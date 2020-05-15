@@ -2,20 +2,21 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
       <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
-      <config projectName="compro-lib" targetName="mod-int" />
-      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
-      <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
-      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
-      <config projectName="compro-lib" targetName="Binary-Search-0" />
-      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
       <config projectName="compro-lib" targetName="permutation" />
-      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
+      <config projectName="compro-lib" targetName="matrix" />
       <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
+      <config projectName="compro-lib" targetName="Binary-Search-0" />
+      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
+      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
       <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
+      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
       <config projectName="compro-lib" targetName="String-Search-0" />
+      <config projectName="compro-lib" targetName="mod-int" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -25,8 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mathematics/matrix.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/unit-test/mathematics/matrix.test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mathematics/permutation.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/mathematics/permutation.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/segment-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../competitive-programming" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,6 +70,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -72,7 +82,7 @@
       <recent name="$PROJECT_DIR$/data-structure" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.String-Search-0">
+  <component name="RunManager" selected="CMake Application.RSQ-and-RAQ-0">
     <configuration name="All-Pairs-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="All-Pairs-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="All-Pairs-Shortest-Path-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -133,6 +143,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="matrix" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="matrix" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="matrix">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mod-int" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="mod-int" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="mod-int">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -147,6 +162,7 @@
       <item itemvalue="CMake Application.All-Pairs-Shortest-Path-0" />
       <item itemvalue="CMake Application.Binary-Search-0" />
       <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
+      <item itemvalue="CMake Application.matrix" />
       <item itemvalue="CMake Application.mod-int" />
       <item itemvalue="CMake Application.permutation" />
       <item itemvalue="CMake Application.RMQ-and-RUQ-0" />
@@ -189,14 +205,8 @@
       <workItem from="1589282189674" duration="13743000" />
       <workItem from="1589333726702" duration="400000" />
       <workItem from="1589360577847" duration="3108000" />
-      <workItem from="1589364790225" duration="1262000" />
-    </task>
-    <task id="LOCAL-00018" summary="update">
-      <created>1588947870068</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1588947870068</updated>
+      <workItem from="1589364790225" duration="1369000" />
+      <workItem from="1589522413368" duration="16621000" />
     </task>
     <task id="LOCAL-00019" summary="update">
       <created>1588947903908</created>
@@ -534,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589363425680</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="update">
+      <created>1589370551474</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1589370551475</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,14 +574,18 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876571723" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589363425491">
+    <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589522440963">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589363425491" />
-    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589287957383">
+    <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589522440963" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589370551175">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589287957383" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589370551175" />
+    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589370629100">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589370629100" />
     <state x="816" y="429" width="354" height="255" key="Github.ShareDialog" timestamp="1588876742632">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -573,38 +594,38 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="793" y="130" width="390" height="853" key="Github.UntrackedFilesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876762520" />
-    <state width="1789" height="313" key="GridCell.Tab.0.bottom" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.0.bottom" timestamp="1589539095339">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.0.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.0.center" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.0.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
+    <state width="1789" height="312" key="GridCell.Tab.0.center" timestamp="1589539095339">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.0.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.0.left" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.0.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
+    <state width="1789" height="312" key="GridCell.Tab.0.left" timestamp="1589539095339">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.0.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.0.right" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.0.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
+    <state width="1789" height="312" key="GridCell.Tab.0.right" timestamp="1589539095339">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.0.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.1.bottom" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.0.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095339" />
+    <state width="1789" height="312" key="GridCell.Tab.1.bottom" timestamp="1589539095171">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.1.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.1.center" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.1.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
+    <state width="1789" height="312" key="GridCell.Tab.1.center" timestamp="1589539095171">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.1.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.1.left" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.1.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
+    <state width="1789" height="312" key="GridCell.Tab.1.left" timestamp="1589539095171">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.1.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
-    <state width="1789" height="313" key="GridCell.Tab.1.right" timestamp="1589298320484">
+    <state width="1789" height="312" key="GridCell.Tab.1.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
+    <state width="1789" height="312" key="GridCell.Tab.1.right" timestamp="1589539095171">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="313" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589298320484" />
+    <state width="1789" height="312" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589539095171" />
     <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589363434216">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -617,13 +638,13 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="629" y="139" width="729" height="834" key="find.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588878963080" />
-    <state x="573" y="251" key="run.anything.popup" timestamp="1589288524519">
+    <state x="573" y="251" key="run.anything.popup" timestamp="1589531062378">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="573" y="251" key="run.anything.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589288524519" />
-    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1589291971628">
+    <state x="573" y="251" key="run.anything.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589531062378" />
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1589537402869">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589291971628" />
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589537402869" />
   </component>
 </project>
