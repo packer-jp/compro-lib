@@ -4,10 +4,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 int main() {
     int n, q;
     using ll = long long;
     cin >> n >> q;
+    struct rsq_and_raq {
+        using T = long long;
+        using E = long long;
+        static T id_T() { return 0; };
+        static E id_E() { return 0; };
+        static T op_TT(const T &a, const T &b) { return a + b; }
+        static E op_EE(const T &a, const T &b) { return a + b; }
+        static T op_TE(const T &a, const T &b, int c) { return a + b * c; }
+    };
     lazy_segment_tree<rsq_and_raq> lst(n + 1);
     for (int i = 0; i < q; i++) {
         int com;
