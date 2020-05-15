@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    segment_tree<rminq> rmq(vector<long long>(n, INT_MAX));
+    segment_tree<rminq> rmq(n);
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;

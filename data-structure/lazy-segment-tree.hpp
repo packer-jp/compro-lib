@@ -63,8 +63,8 @@ struct lazy_segment_tree {
 };
 
 struct rminq_and_ruq {
-    using T = long long;
-    using E = long long;
+    using T = int;
+    using E = int;
     static T id_T() { return std::numeric_limits<T>::max(); };
     static E id_E() { return -1; };
     static T op_TT(const T &a, const T &b) { return std::min(a, b); }
@@ -73,8 +73,8 @@ struct rminq_and_ruq {
 };
 
 struct rsq_and_raq {
-    using T = long long;
-    using E = long long;
+    using T = int;
+    using E = int;
     static T id_T() { return 0; };
     static E id_E() { return 0; };
     static T op_TT(const T &a, const T &b) { return a + b; }

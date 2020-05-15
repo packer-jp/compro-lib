@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     int n, q;
     cin >> n >> q;
-    lazy_segment_tree<rminq_and_ruq> lst(vector<long long>(n, INT_MAX));
+    lazy_segment_tree<rminq_and_ruq> lst(n);
     for (int i = 0; i < q; i++) {
         int com;
         cin >> com;

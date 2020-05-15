@@ -39,7 +39,7 @@ struct fenwick_tree_range {
 };
 
 struct rsq {
-    using T = long long;
+    using T = int;
     static T id() { return 0; }
     static T op(const T &a, const T &b) { return a + b; }
     static T inv(const T &a) { return -a; }

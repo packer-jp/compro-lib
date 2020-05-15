@@ -8,42 +8,38 @@
  * @docs docs/graph/dijkstra.md
  */
 
-template<typename T, typename E, typename F, typename G, typename ID, typename AB>
-std::vector<T> dijkstra(const std::vector<std::vector<int>> &adj,
-                        const std::vector<std::vector<E>> &cost,
-                        int s,
-                        F f,
-                        G g,
-                        ID id,
-                        AB ab) {
+template<typename M>
+std::vector<typename M::T> dijkstra(const std::vector<std::vector<int>> &adj,
+                                    const std::vector<std::vector<typename M::E>> &cost,
+                                    int s) {
+    using T = typename M::T;
     int n = adj.size();
     assert(0 <= s && s < n);
-    std::vector<T> ret(n, ab());
+    std::vector<T> ret(n, M::ab());
     using P = std::pair<T, int>;
-    auto c = [&](P a, P b) -> bool { return g(a.first, b.first); };
+    auto c = [&](P a, P b) -> bool { return M::gr(a.first, b.first); };
     std::priority_queue<P, std::vector<P>, decltype(c)> pq(c);
-    ret[s] = id();
+    ret[s] = M::id();
     pq.push({ret[s], s});
     while (!pq.empty()) {
         P p = pq.top();
         pq.pop();
         int v = p.second;
-        if (g(p.first, ret[v])) { continue; }
+        if (M::gr(p.first, ret[v])) { continue; }
         for (int i = 0; i < adj[v].size(); i++) {
             int u = adj[v][i];
-            T dist = f(ret[v], cost[v][i]);
-            if (g(ret[u], dist)) { ret[u] = dist, pq.push({ret[u], u}); }
+            T dist = M::op(ret[v], cost[v][i]);
+            if (M::gr(ret[u], dist)) { ret[u] = dist, pq.push({ret[u], u}); }
         }
     }
     return ret;
 }
 
-template<typename T>
-std::vector<T> basic_dijkstra(const std::vector<std::vector<int>> &adj,
-                              const std::vector<std::vector<T>> &cost,
-                              int s) {
-    auto id = []() -> T { return 0; };
-    auto ab = []() -> T { return std::numeric_limits<T>::max(); };
-    auto f = [&](const T &a, const T &b) -> T { return a == ab() ? ab() : a + b; };
-    return dijkstra<T>(adj, cost, s, f, std::greater<T>(), id, ab);
-}
+struct basic_dij {
+    using T = int;
+    using E = int;
+    static T id() { return 0; }
+    static T ab() { return std::numeric_limits<T>::max(); }
+    static T op(const T &a, const E &b) { return a == ab() ? ab() : a + b; }
+    static bool gr(const T &a, const T &b) { return a > b; }
+};
