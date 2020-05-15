@@ -35,7 +35,7 @@ std::vector<typename M::T> dijkstra(const std::vector<std::vector<int>> &adj,
     return ret;
 }
 
-struct basic_dij {
+struct int_dij {
     using T = int;
     using E = int;
     static T id() { return 0; }

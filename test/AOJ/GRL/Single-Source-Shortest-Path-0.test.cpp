@@ -13,6 +13,6 @@ int main() {
         cin >> s >> t >> d;
         adj[s].push_back(t), cost[s].push_back(d);
     }
-    vector<int> dist = dijkstra<basic_dij>(adj, cost, r);
+    vector<int> dist = dijkstra<int_dij>(adj, cost, r);
     for (int i = 0; i < V; i++) { cout << (dist[i] == INT_MAX ? "INF" : to_string(dist[i])) << endl; }
 }

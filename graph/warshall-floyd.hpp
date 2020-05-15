@@ -23,7 +23,7 @@ std::vector<std::vector<typename M::T>> warshall_floyd(const std::vector<std::ve
     return ret;
 }
 
-struct basic_wf {
+struct int_wf {
     using T = int;
     static T ab() { return std::numeric_limits<T>::max(); }
     static T op(const T &a, const T &b) { return a == ab() || b == ab() ? ab() : a + b; }

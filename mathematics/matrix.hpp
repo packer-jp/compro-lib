@@ -130,7 +130,7 @@ struct matrix {
     }
 };
 
-struct basic_mat {
+struct double_mat {
     using T = double;
     static constexpr double EPS = 1e-15;
     static T op_pl(const T &a, const T &b) { return a + b; }

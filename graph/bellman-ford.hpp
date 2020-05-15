@@ -37,7 +37,7 @@ std::vector<typename M::T> bellman_ford(const std::vector<std::vector<int>> &adj
     return std::vector<T>();
 }
 
-struct basic_bf {
+struct int_bf {
     using T = int;
     using E = int;
     static T id() { return 0; }
