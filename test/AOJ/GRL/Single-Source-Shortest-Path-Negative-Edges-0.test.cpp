@@ -13,7 +13,7 @@ int main() {
         cin >> s >> t >> d;
         adj[s].push_back(t), cost[s].push_back(d);
     }
-    vector<int> dist = basic_bellman_ford(adj, cost, r);
+    vector<int> dist = bellman_ford<basic_bf>(adj, cost, r);
     if (dist.empty()) {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;

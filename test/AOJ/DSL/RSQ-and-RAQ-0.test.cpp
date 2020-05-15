@@ -10,8 +10,8 @@ int main() {
     using ll = long long;
     cin >> n >> q;
     struct rsq_and_raq {
-        using T = long long;
-        using E = long long;
+        using T = ll;
+        using E = ll;
         static T id_T() { return 0; };
         static E id_E() { return 0; };
         static T op_TT(const T &a, const T &b) { return a + b; }

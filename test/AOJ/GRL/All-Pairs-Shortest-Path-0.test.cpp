@@ -14,7 +14,7 @@ int main() {
         cin >> s >> t >> d;
         graph[s][t] = d;
     }
-    vector<vector<int>> dist = basic_warshall_floyd(graph);
+    vector<vector<int>> dist = warshall_floyd<basic_wf>(graph);
     for (int i = 0; i < V; i++) {
         if (dist[i][i] < 0) {
             cout << "NEGATIVE CYCLE" << endl;
