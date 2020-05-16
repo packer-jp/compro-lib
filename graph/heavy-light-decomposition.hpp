@@ -72,11 +72,5 @@ struct heavy_light_decomposition {
         a.insert(a.end(), b.begin(), b.end());
         return a;
     }
-    std::pair<int, int> get_subtree(int v, bool edge) {
-        if (edge) {
-            if (in[v] == out[v] - 1) { return {1, 0}; }
-            return {in[v] + 1, out[v] - 1};
-        }
-        return {in[v], out[v] - 1};
-    }
+    std::pair<int, int> get_subtree(int v, bool edge) { return {in[v] + edge, out[v] - 1}; }
 };
