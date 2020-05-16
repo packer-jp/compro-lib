@@ -21,7 +21,7 @@ struct lazy_segment_tree {
     }
     void propagate(int i) {
         if (i < 1) { return; }
-        data[i] = M::op_TE(data[i], lazy[i], i >= n ? 1 : 2 << std::__lg((n - 1) / i));
+        data[i] = M::op_TE(data[i], lazy[i]);
         if (i < n) {
             lazy[i << 1 | 0] = M::op_EE(lazy[i << 1 | 0], lazy[i]);
             lazy[i << 1 | 1] = M::op_EE(lazy[i << 1 | 1], lazy[i]);
@@ -41,11 +41,11 @@ struct lazy_segment_tree {
             if (i & 1) { apply(i++); }
             if (j & 1) { apply(--j); }
         }
-        for (int i = 1; l >>= 1, r >>= 1; i <<= 1) {
-            data[l] = M::op_TT(M::op_TE(data[l << 1 | 0], lazy[l << 1 | 0], i),
-                               M::op_TE(data[l << 1 | 1], lazy[l << 1 | 1], i));
-            data[r] = M::op_TT(M::op_TE(data[r << 1 | 0], lazy[r << 1 | 0], i),
-                               M::op_TE(data[r << 1 | 1], lazy[r << 1 | 1], i));
+        while (l >>= 1, r >>= 1) {
+            data[l] = M::op_TT(M::op_TE(data[l << 1 | 0], lazy[l << 1 | 0]),
+                               M::op_TE(data[l << 1 | 1], lazy[l << 1 | 1]));
+            data[r] = M::op_TT(M::op_TE(data[r << 1 | 0], lazy[r << 1 | 0]),
+                               M::op_TE(data[r << 1 | 1], lazy[r << 1 | 1]));
         }
     }
     T get_sum(int l, int r) {
@@ -68,16 +68,16 @@ struct rminq_and_ruq {
     static T id_T() { return std::numeric_limits<T>::max(); };
     static E id_E() { return -1; };
     static T op_TT(const T &a, const T &b) { return std::min(a, b); }
-    static E op_EE(const T &a, const T &b) { return b == id_E() ? a : b; }
-    static T op_TE(const T &a, const T &b, int) { return b == id_E() ? a : b; }
+    static E op_EE(const E &a, const E &b) { return b == id_E() ? a : b; }
+    static T op_TE(const T &a, const E &b) { return b == id_E() ? a : b; }
 };
 
 struct rsq_and_raq {
-    using T = int;
+    using T = std::pair<int, int>;
     using E = int;
-    static T id_T() { return 0; };
+    static T id_T() { return {0, 0}; };
     static E id_E() { return 0; };
-    static T op_TT(const T &a, const T &b) { return a + b; }
-    static E op_EE(const T &a, const T &b) { return a + b; }
-    static T op_TE(const T &a, const T &b, int c) { return a + b * c; }
+    static T op_TT(const T &a, const T &b) { return {a.first + b.first, a.second + b.second}; }
+    static E op_EE(const E &a, const E &b) { return a + b; }
+    static T op_TE(const T &a, const E &b) { return {a.first + b * a.second, a.second}; }
 };
