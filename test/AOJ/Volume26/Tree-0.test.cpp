@@ -16,24 +16,14 @@ int main() {
     }
     heavy_light_decomposition hld(adj);
     hld.build(0);
-    using ll = long long;
-    struct rsq_and_raq_ll {
-        using T = std::pair<ll, int>;
-        using E = ll;
-        static T id_T() { return {0, 0}; };
-        static E id_E() { return 0; };
-        static T op_TT(const T &a, const T &b) { return {a.first + b.first, a.second + b.second}; }
-        static E op_EE(const E &a, const E &b) { return a + b; }
-        static T op_TE(const T &a, const E &b) { return {a.first + b * a.second, a.second}; }
-    };
-    lazy_segment_tree<rsq_and_raq_ll> lst(vector<pair<ll, int>>(N, {0, 1}));
+    lazy_segment_tree<rsq_and_raq> lst(vector<pair<long long, int>>(N, {0, 1}));
     for (int i = 0; i < Q; i++) {
         int type;
         cin >> type;
         if (type == 0) {
             int u, v;
             cin >> u >> v;
-            ll ans = 0;
+            long long ans = 0;
             vector<pair<int, int>> segs = hld.get_path(u, v, true);
             for (int j = 0; j < segs.size(); j++) {
                 if (segs[j].first > segs[j].second) { swap(segs[j].first, segs[j].second); }

@@ -73,8 +73,8 @@ struct rminq_and_ruq {
 };
 
 struct rsq_and_raq {
-    using T = std::pair<int, int>;
-    using E = int;
+    using T = std::pair<long long, int>;
+    using E = long long;
     static T id_T() { return {0, 0}; };
     static E id_E() { return 0; };
     static T op_TT(const T &a, const T &b) { return {a.first + b.first, a.second + b.second}; }
