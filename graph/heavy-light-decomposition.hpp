@@ -50,7 +50,7 @@ struct heavy_light_decomposition {
             if (head[u] == head[v]) {
                 if (edge) {
                     if (in[u] > in[v]) { a.push_back({in[v] + 1, in[u]}); }
-                    if (in[u] < in[v]) { a.push_back({in[u] + 1, in[u]}); }
+                    if (in[u] < in[v]) { a.push_back({in[u] + 1, in[v]}); }
                 } else { a.push_back({in[u], in[v]}); }
                 break;
             }
