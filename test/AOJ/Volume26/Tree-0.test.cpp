@@ -44,7 +44,7 @@ int main() {
             int v, x;
             cin >> v >> x;
             pair<int, int> seg = hld.get_subtree(v, true);
-            if (seg.first <= seg.second) { lst.add(seg.first, seg.second + 1, x); }
+            lst.add(seg.first, seg.second + 1, x);
         }
     }
 }
