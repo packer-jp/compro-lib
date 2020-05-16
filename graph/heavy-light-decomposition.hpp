@@ -5,7 +5,7 @@ struct heavy_light_decomposition {
     int n;
     std::vector<std::vector<int>> adj;
     std::vector<int> par, size, depth, in, out, head;
-    heavy_light_decomposition(const std::vector<std::vector<int>> adj)
+    heavy_light_decomposition(const std::vector<std::vector<int>> &adj)
         : n(adj.size()), adj(adj), par(n), size(n), depth(n), in(n), out(n), head(n) {}
     void dfs_size(int v, int p) {
         size[v] = 1;
@@ -44,11 +44,14 @@ struct heavy_light_decomposition {
         }
     }
     int get_dist(int u, int v) { return depth[u] + depth[v] - 2 * depth[get_lca(u, v)]; }
-    std::vector<std::pair<int, int>> get_path(int u, int v) {
+    std::vector<std::pair<int, int>> get_path(int u, int v, bool edge) {
         std::vector<std::pair<int, int>> a, b;
         while (true) {
             if (head[u] == head[v]) {
-                a.push_back({in[u], in[v]});
+                if (edge) {
+                    if (in[u] > in[v]) { a.push_back({in[v] + 1, in[u]}); }
+                    else if (in[u] < in[v]) { a.push_back({in[u] + 1, in[u]}); }
+                } else { a.push_back({in[u], in[v]}); }
                 break;
             }
             if (in[u] > in[v]) {
@@ -63,5 +66,5 @@ struct heavy_light_decomposition {
         a.insert(a.end(), b.begin(), b.end());
         return a;
     }
-    std::pair<int, int> get_subtree(int v) { return {in[v], out[v] - 1}; }
+    std::pair<int, int> get_subtree(int v, bool edge) { return {in[v] + edge, out[v] - 1}; }
 };

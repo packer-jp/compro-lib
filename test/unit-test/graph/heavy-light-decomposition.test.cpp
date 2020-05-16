@@ -33,7 +33,7 @@ int main() {
     }
     auto path = [&](int u, int v) {
         string ret = "";
-        vector<pair<int, int>> path = hld.get_path(u, v);
+        vector<pair<int, int>> path = hld.get_path(u, v, false);
         for (int i = 0; i < path.size(); i++) {
             int l = path[i].first, r = path[i].second;
             if (l < r) { ret += st_fwd.get_sum(l, r + 1); }
@@ -42,7 +42,7 @@ int main() {
         return ret;
     };
     auto subtree = [&](int v) {
-        pair<int, int> subtree = hld.get_subtree(v);
+        pair<int, int> subtree = hld.get_subtree(v, false);
         return st_fwd.get_sum(subtree.first, subtree.second + 1);
     };
     assert(path(2, 1) == "cefb");

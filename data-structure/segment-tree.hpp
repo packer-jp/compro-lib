@@ -37,12 +37,12 @@ struct segment_tree {
 
 struct rsq {
     using T = int;
-    static T op(T a, T b) { return a + b; }
+    static T op(const T &a, const T &b) { return a + b; }
     static T id() { return 0; }
 };
 
 struct rminq {
     using T = int;
-    static T op(T a, T b) { return std::min(a, b); }
+    static T op(const T &a, const T &b) { return std::min(a, b); }
     static T id() { return std::numeric_limits<T>::max(); }
 };
