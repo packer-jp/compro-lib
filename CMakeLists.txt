@@ -17,6 +17,8 @@ add_executable(Single-Source-Shortest-Path-0 test/AOJ/GRL/Single-Source-Shortest
 add_executable(Single-Source-Shortest-Path-Negative-Edges-0 test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp graph/bellman-ford.hpp)
 add_executable(All-Pairs-Shortest-Path-0 test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp graph/warshall-floyd.hpp)
 
+add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomposition.hpp data-structure/lazy-segment-tree.hpp)
+
 add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
 
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)

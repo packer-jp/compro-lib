@@ -1,5 +1,11 @@
 #include <algorithm>
 #include <vector>
+#include <cassert>
+
+/*
+ * @title HL分解
+ * @docs docs/graph/heavy-light-decomposition.md
+ */
 
 struct heavy_light_decomposition {
     int n;
@@ -49,7 +55,7 @@ struct heavy_light_decomposition {
         while (true) {
             if (head[u] == head[v]) {
                 if (edge) {
-                    if (in[u] > in[v]) { a.push_back({in[v] + 1, in[u]}); }
+                    if (in[u] > in[v]) { a.push_back({in[u], in[v] + 1}); }
                     if (in[u] < in[v]) { a.push_back({in[u] + 1, in[v]}); }
                 } else { a.push_back({in[u], in[v]}); }
                 break;
