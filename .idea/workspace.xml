@@ -8,6 +8,7 @@
       <config projectName="compro-lib" targetName="Tree-0" />
       <config projectName="compro-lib" targetName="Binary-Search-0" />
       <config projectName="compro-lib" targetName="Range-Add-Query-0" />
+      <config projectName="compro-lib" targetName="Bipartite-Matching-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
       <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
       <config projectName="compro-lib" targetName="String-Search-0" />
@@ -37,11 +38,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/graph/bipartite-matching.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graph/bipartite-matching.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/AOJ/GRL/Bipartite-Matching-0.test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utility/run-length-encoding.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/string/run-length-encoding.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unit-test/utility/run-length-encoding.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit-test/string/run-length-encoding.test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/run-length-encoding.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/string/run-length-encoding.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,13 +95,18 @@
       <recent name="$PROJECT_DIR$/.verify-helper/docs/static" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.to-rooted-tree">
+  <component name="RunManager" selected="CMake Application.Bipartite-Matching-0">
     <configuration name="All-Pairs-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="All-Pairs-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="All-Pairs-Shortest-Path-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Binary-Search-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Binary-Search-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Binary-Search-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bipartite-Matching-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Bipartite-Matching-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Bipartite-Matching-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -228,6 +234,7 @@
     <list>
       <item itemvalue="CMake Application.All-Pairs-Shortest-Path-0" />
       <item itemvalue="CMake Application.Binary-Search-0" />
+      <item itemvalue="CMake Application.Bipartite-Matching-0" />
       <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
       <item itemvalue="CMake Application.Diameter-of-a-Tree-0" />
       <item itemvalue="CMake Application.heavy-light-decomposition" />
@@ -290,14 +297,8 @@
       <workItem from="1589702300500" duration="2193000" />
       <workItem from="1589704583599" duration="245000" />
       <workItem from="1589705148779" duration="761000" />
-      <workItem from="1589705931022" duration="2531000" />
-    </task>
-    <task id="LOCAL-00051" summary="update">
-      <created>1589099098419</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1589099098419</updated>
+      <workItem from="1589705931022" duration="2587000" />
+      <workItem from="1589708654984" duration="448000" />
     </task>
     <task id="LOCAL-00052" summary="update">
       <created>1589100298253</created>
@@ -635,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589708311114</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="update">
+      <created>1589708481285</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1589708481285</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,10 +671,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589522440963" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589708311003">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589708481150">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708311003" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708481150" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589705977371">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -679,42 +687,42 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="793" y="130" width="390" height="853" key="Github.UntrackedFilesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1588876762520" />
-    <state width="1789" height="182" key="GridCell.Tab.0.bottom" timestamp="1589708305499">
+    <state width="1789" height="182" key="GridCell.Tab.0.bottom" timestamp="1589709100046">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.0.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305499" />
-    <state width="1789" height="182" key="GridCell.Tab.0.center" timestamp="1589708305499">
+    <state width="1789" height="182" key="GridCell.Tab.0.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709100046" />
+    <state width="1789" height="182" key="GridCell.Tab.0.center" timestamp="1589709100046">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.0.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305499" />
-    <state width="1789" height="182" key="GridCell.Tab.0.left" timestamp="1589708305499">
+    <state width="1789" height="182" key="GridCell.Tab.0.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709100046" />
+    <state width="1789" height="182" key="GridCell.Tab.0.left" timestamp="1589709100045">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.0.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305499" />
-    <state width="1789" height="182" key="GridCell.Tab.0.right" timestamp="1589708305499">
+    <state width="1789" height="182" key="GridCell.Tab.0.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709100045" />
+    <state width="1789" height="182" key="GridCell.Tab.0.right" timestamp="1589709100046">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.0.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305499" />
-    <state width="1789" height="182" key="GridCell.Tab.1.bottom" timestamp="1589708305382">
+    <state width="1789" height="182" key="GridCell.Tab.0.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709100046" />
+    <state width="1789" height="182" key="GridCell.Tab.1.bottom" timestamp="1589708527916">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.1.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305382" />
-    <state width="1789" height="182" key="GridCell.Tab.1.center" timestamp="1589708305382">
+    <state width="1789" height="182" key="GridCell.Tab.1.bottom/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708527916" />
+    <state width="1789" height="182" key="GridCell.Tab.1.center" timestamp="1589708527916">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.1.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305382" />
-    <state width="1789" height="182" key="GridCell.Tab.1.left" timestamp="1589708305382">
+    <state width="1789" height="182" key="GridCell.Tab.1.center/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708527916" />
+    <state width="1789" height="182" key="GridCell.Tab.1.left" timestamp="1589708527916">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.1.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305382" />
-    <state width="1789" height="182" key="GridCell.Tab.1.right" timestamp="1589708305382">
+    <state width="1789" height="182" key="GridCell.Tab.1.left/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708527916" />
+    <state width="1789" height="182" key="GridCell.Tab.1.right" timestamp="1589708527916">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1789" height="182" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708305382" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589708315376">
+    <state width="1789" height="182" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708527916" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589708485127">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708315376" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708485127" />
     <state x="413" y="74" width="1150" height="965" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589623430166">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
