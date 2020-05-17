@@ -29,6 +29,7 @@ add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomp
 add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
 
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)
+add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp graph/topological-sort.hpp)
 
 add_executable(mod-int test/unit-test/mathematics/mod-int.test.cpp mathematics/mod-int.hpp)
 add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/matrix.hpp)
