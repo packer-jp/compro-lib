@@ -19,5 +19,6 @@
 "test/unit-test/graph/heavy-light-decomposition.test.cpp": "2020-05-16 20:59:17 +0900",
 "test/unit-test/mathematics/matrix.test.cpp": "2020-05-17 17:34:03 +0900",
 "test/unit-test/mathematics/mod-int.test.cpp": "2020-05-17 17:34:03 +0900",
+"test/unit-test/mathematics/moebius.test.cpp": "2020-05-17 17:54:19 +0900",
 "test/unit-test/mathematics/permutation.test.cpp": "2020-05-13 20:49:11 +0900"
 }
