@@ -8,6 +8,7 @@
 "test/AOJ/DSL/Range-Sum-Query-0.test.cpp": "2020-05-16 17:59:32 +0900",
 "test/AOJ/DSL/Range-Sum-Query-1.test.cpp": "2020-05-15 20:52:00 +0900",
 "test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp": "2020-05-16 02:42:59 +0900",
+"test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp": "2020-05-17 17:25:31 +0900",
 "test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp": "2020-05-16 02:42:59 +0900",
 "test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp": "2020-05-16 02:42:59 +0900",
 "test/AOJ/Volume26/Tree-0.test.cpp": "2020-05-16 21:29:23 +0900",
