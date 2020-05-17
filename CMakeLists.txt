@@ -33,3 +33,4 @@ add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomp
 add_executable(mod-int test/unit-test/mathematics/mod-int.test.cpp mathematics/mod-int.hpp)
 add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/matrix.hpp)
 add_executable(permutation test/unit-test/mathematics/permutation.test.cpp mathematics/permutation.hpp)
+add_executable(moebius test/unit-test/mathematics/moebius.test.cpp mathematics/moebius.hpp)
