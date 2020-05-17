@@ -30,6 +30,7 @@ add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolutio
 
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)
 add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp graph/topological-sort.hpp)
+add_executable(to-rooted-tree test/unit-test/graph/to-rooted-tree.test.cpp graph/to-rooted-tree.hpp)
 
 add_executable(mod-int test/unit-test/mathematics/mod-int.test.cpp mathematics/mod-int.hpp)
 add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/matrix.hpp)

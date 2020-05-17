@@ -6,7 +6,7 @@
  */
 
 std::vector<int> to_rooted_tree(const std::vector<std::vector<int>> &adj, int s) {
-    std::vector<int> ret;
+    std::vector<int> ret(adj.size());
     static auto dfs = [&](auto &&self, int cur, int par) -> void {
         ret[cur] = par;
         for (int i = 0; i < adj[cur].size(); i++) {
