@@ -37,10 +37,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/graph/bipartite-matching.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/bipartite-matching.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AOJ/GRL/Bipartite-Matching-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/GRL/Bipartite-Matching-0.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +51,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1baiBzjbhMAdUkWfV1zGGAVoEto" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -296,14 +295,7 @@
       <workItem from="1589704583599" duration="245000" />
       <workItem from="1589705148779" duration="761000" />
       <workItem from="1589705931022" duration="2587000" />
-      <workItem from="1589708654984" duration="800000" />
-    </task>
-    <task id="LOCAL-00053" summary="update">
-      <created>1589101085773</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1589101085774</updated>
+      <workItem from="1589708654984" duration="1003000" />
     </task>
     <task id="LOCAL-00054" summary="update">
       <created>1589285180925</created>
@@ -641,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589709106318</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="update">
+      <created>1589709461571</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1589709461571</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,10 +668,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589522440963" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589709428805">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1589709461464">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709428805" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709461464" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589705977371">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -717,10 +716,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="182" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589708527916" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589709111059">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1589709480376">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709111059" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589709480376" />
     <state x="413" y="74" width="1150" height="965" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589623430166">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>

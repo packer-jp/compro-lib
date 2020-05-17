@@ -1,7 +1,7 @@
 #include <vector>
 
 /*
- * @title 最大二部マッチング
+ * @title 二部最大マッチング
  * @docs docs/graph/bipartite-matching.md
  */
 
