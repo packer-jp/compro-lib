@@ -1,7 +1,7 @@
 #include <vector>
 
 /*
- * @title to Rooted Tree
+ * @title 根付き木に変換
  * @docs docs/graph/to-rooted-tree.md
  */
 
