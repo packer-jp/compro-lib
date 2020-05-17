@@ -1,6 +1,11 @@
 #include <vector>
 
-std::vector<std::pair<int, int>> get_max_bipartite_matching(const std::vector<std::vector<int>> &adj) {
+/*
+ * @title 最大二部マッチング
+ * @docs docs/graph/bipartite-matching.md
+ */
+
+std::vector<std::pair<int, int>> bipartite_matching(const std::vector<std::vector<int>> &adj) {
     int n = adj.size();
     std::vector<int> match(n, -1), used(n);
     int timestamp = 0;

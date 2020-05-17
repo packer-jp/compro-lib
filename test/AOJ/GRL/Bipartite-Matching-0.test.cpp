@@ -13,5 +13,5 @@ int main() {
         cin >> x >> y;
         adj[x].push_back(X + y), adj[X + y].push_back(x);
     }
-    cout << get_max_bipartite_matching(adj).size() << endl;
+    cout << bipartite_matching(adj).size() << endl;
 }
