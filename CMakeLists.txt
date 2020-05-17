@@ -37,4 +37,4 @@ add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/mat
 add_executable(permutation test/unit-test/mathematics/permutation.test.cpp mathematics/permutation.hpp)
 add_executable(moebius test/unit-test/mathematics/moebius.test.cpp mathematics/moebius.hpp)
 
-add_executable(run-length-encoding test/unit-test/utility/run-length-encoding.test.cpp utility/run-length-encoding.hpp)
+add_executable(run-length-encoding test/unit-test/string/run-length-encoding.test.cpp string/run-length-encoding.hpp)

@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A&lang=ja"
-#include"../../../utility/run-length-encoding.hpp"
+#include"../../../string/run-length-encoding.hpp"
 
 #include<bits/stdc++.h>
 using namespace std;
