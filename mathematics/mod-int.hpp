@@ -4,7 +4,7 @@
 #include <cassert>
 
 /*
- * @title 剰余環 / 有限体
+ * @title 剰余環/有限体
  * @docs docs/mathematics/mod-int.md
  */
 

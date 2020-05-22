@@ -40,6 +40,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mathematics/mod-int.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/mathematics/mod-int.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,14 +304,7 @@
       <workItem from="1589705931022" duration="2587000" />
       <workItem from="1589708654984" duration="1136000" />
       <workItem from="1590152680618" duration="901000" />
-      <workItem from="1590153919932" duration="287000" />
-    </task>
-    <task id="LOCAL-00058" summary="update">
-      <created>1589288982453</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1589288982453</updated>
+      <workItem from="1590153919932" duration="602000" />
     </task>
     <task id="LOCAL-00059" summary="update">
       <created>1589290150240</created>
@@ -648,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590154008046</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="update">
+      <created>1590154355425</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1590154355425</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,10 +677,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589522440963" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1590154007326">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1590154355091">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590154007326" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590154355091" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1589705977371">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
