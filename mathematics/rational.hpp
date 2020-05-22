@@ -24,7 +24,7 @@ struct rational {
     }
     bool operator==(const rational &rhs) const { return num == rhs.num && den == rhs.den; }
     bool operator!=(const rational &rhs) const { return std::rel_ops::operator!=(*this, rhs); }
-    bool operator<(const rational &rhs) const { return num * rhs.den < rhs.num * den; }
+    bool operator<(const rational &rhs) const { return to_double() < rhs.to_double(); }
     bool operator>(const rational &rhs) const { return std::rel_ops::operator>(*this, rhs); }
     bool operator<=(const rational &rhs) const { return std::rel_ops::operator<=(*this, rhs); }
     bool operator>=(const rational &rhs) const { return std::rel_ops::operator>=(*this, rhs); }
