@@ -5,7 +5,7 @@
 using namespace std;
 
 /*
- * @title 順列
+ * @title 有理数
  * @docs docs/mathematics/rational.md
  */
 
