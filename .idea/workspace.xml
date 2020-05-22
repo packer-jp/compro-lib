@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="compro-lib" targetName="topological-sort" />
@@ -38,8 +56,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/test/unit-test/mathematics/rational.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit-test/mathematics/rational.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -658,6 +675,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
@@ -732,10 +752,14 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="720" y="124" width="536" height="866" key="RollbackChangesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590168786388" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1590168800091">
+    <state x="800" y="128" width="367" height="860" key="VCS.ChangeListViewerDialog" timestamp="1590169468806">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590168800091" />
+    <state x="800" y="128" width="367" height="860" key="VCS.ChangeListViewerDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590169468806" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1590169478124">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590169478124" />
     <state x="413" y="74" width="1150" height="965" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589623430166">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -748,6 +772,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="629" y="139" width="729" height="834" key="find.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590152703806" />
+    <state x="759" y="424" width="459" height="269" key="git4idea.ui.GitResetDialog" timestamp="1590169472216">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="759" y="424" width="459" height="269" key="git4idea.ui.GitResetDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590169472216" />
     <state x="573" y="251" key="run.anything.popup" timestamp="1589531062378">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
