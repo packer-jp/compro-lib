@@ -4,11 +4,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
- * @title 有理数
- * @docs docs/mathematics/rational.md
- */
-
 int main() {
     assert(rational() == rational(0));
     assert(rational(3340, 810) == rational(334, 81));
