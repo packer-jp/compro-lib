@@ -110,7 +110,7 @@
       <recent name="$PROJECT_DIR$/.verify-helper/docs/static" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.Bipartite-Matching-0">
+  <component name="RunManager" selected="CMake Application.rational">
     <configuration name="All-Pairs-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="All-Pairs-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="All-Pairs-Shortest-Path-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
