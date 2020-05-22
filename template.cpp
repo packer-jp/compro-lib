@@ -14,7 +14,7 @@ using vvint = vector<vint>;
 using pint = pair<int, int>;
 using vpint = vector<pint>;
 template<typename T> using priority_queue_rev = priority_queue<T, vector<T>, greater<T>>;
-constexpr long double PI = 3.1415926535897932384626433832795028L;
+constexpr double PI = 3.1415926535897932384626433832795028;
 constexpr int DY[8] = {0, 1, 0, -1, 1, 1, -1, -1};
 constexpr int DX[8] = {1, 0, -1, 0, 1, -1, -1, 1};
 int gcd(int a, int b) {
