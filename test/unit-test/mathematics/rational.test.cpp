@@ -15,7 +15,6 @@ int main() {
     assert(rational(-1, 2) == rational(1, -2));
     assert(rational(1, 3) + rational(1, 6) == rational(1, 2));
     assert(rational(1, 2) - rational(1, 3) == rational(1, 6));
-    assert(rational(1, 2) - rational(1, 3) == rational(1, 6));
     assert(rational(100, 200) * rational(400, 300) == rational(2, 3));
     assert(rational(100, 200) / rational(300, 400) == rational(2, 3));
     assert(rational(3, 4) > rational(200, 300));
