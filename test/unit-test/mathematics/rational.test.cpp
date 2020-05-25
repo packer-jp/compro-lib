@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A&lang=ja"
-#include"../../mathematics/rational.hpp"
+#include"../../../mathematics/rational.hpp"
 
 #include<bits/stdc++.h>
 using namespace std;
