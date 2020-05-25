@@ -1,6 +1,11 @@
 #include <iostream>
 #include <utility>
 
+/*
+ * @title 有理数
+ * @docs docs/mathematics/rational.md
+ */
+
 struct rational {
     long long num, den;
     static long long gcd(long long a, long long b) {
