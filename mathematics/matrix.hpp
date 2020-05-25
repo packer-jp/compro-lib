@@ -133,8 +133,8 @@ struct matrix {
 struct double_mat {
     using T = double;
     static constexpr double EPS = 1e-15;
-    static T op_pl(const T &a, const T &b) { return a + b; }
-    static T op_cr(const T &a, const T &b) { return a * b; }
+    static T pl(const T &a, const T &b) { return a + b; }
+    static T cr(const T &a, const T &b) { return a * b; }
     static T id_pl() { return 0; }
     static T id_cr() { return 1; }
     static T inv_pl(const T &a) { return -a; }
