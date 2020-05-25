@@ -65,7 +65,7 @@ struct matrix {
     }
     matrix &operator/=(const matrix &rhs) { return *this *= rhs.inv(); }
     matrix operator+() const { return *this; }
-    matrix operator-() const { return matrix(h, w) -= (*this); }
+    matrix operator-() const { return matrix(h, w) -= *this; }
     matrix operator+(const matrix &rhs) const { return matrix(*this) += rhs; }
     matrix operator-(const matrix &rhs) const { return matrix(*this) -= rhs; }
     matrix operator*(const matrix &rhs) const { return matrix(*this) *= rhs; }
