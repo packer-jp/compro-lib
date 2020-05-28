@@ -3,7 +3,7 @@
 #include <cassert>
 
 /*
- * @title 2次元ローリングハッシュ
+ * @title 二次元ローリングハッシュ
  * @docs docs/string/rolling-hash-2d.md
  */
 

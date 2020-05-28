@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
- * @title Ford-Fulkerson法
+ * @title フォード-ファルカーソン法
  * @docs docs/graph/ford-fulkerson.md
  */
 
