@@ -19,6 +19,8 @@ add_executable(Single-Source-Shortest-Path-Negative-Edges-0 test/AOJ/GRL/Single-
 add_executable(All-Pairs-Shortest-Path-0 test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp graph/warshall-floyd.hpp)
 add_executable(Diameter-of-a-Tree-0 test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp graph/re-rooting.hpp)
 add_executable(Bipartite-Matching-0 test/AOJ/GRL/Bipartite-Matching-0.test.cpp graph/bipartite-matching.hpp)
+add_executable(Maximum-Flow-0 test/AOJ/GRL/Maximum-Flow-0.test.cpp graph/ford-fulkerson.hpp)
+add_executable(Maximum-Flow-1 test/AOJ/GRL/Maximum-Flow-1.test.cpp graph/dinic.hpp)
 
 add_executable(How-Many-Divisors-0 test/AOJ/ITP1/How-Many-Divisors-0.test.cpp mathematics/get-divisors.hpp)
 
