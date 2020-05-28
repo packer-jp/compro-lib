@@ -21,6 +21,7 @@ add_executable(Diameter-of-a-Tree-0 test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp g
 add_executable(Bipartite-Matching-0 test/AOJ/GRL/Bipartite-Matching-0.test.cpp graph/bipartite-matching.hpp)
 add_executable(Maximum-Flow-0 test/AOJ/GRL/Maximum-Flow-0.test.cpp graph/ford-fulkerson.hpp)
 add_executable(Maximum-Flow-1 test/AOJ/GRL/Maximum-Flow-1.test.cpp graph/dinic.hpp)
+add_executable(Strongly-Connected-Components-0 test/AOJ/GRL/Strongly-Connected-Components-0.test.cpp graph/strongly-connected-components.hpp)
 
 add_executable(How-Many-Divisors-0 test/AOJ/ITP1/How-Many-Divisors-0.test.cpp mathematics/get-divisors.hpp)
 

@@ -7,13 +7,13 @@ using namespace std;
 int main() {
     int V, E;
     cin >> V >> E;
-    vector<vector<int>> cost(V), adj(V);
+    vector<vector<int>> adj(V), cap(V);
     for (int i = 0; i < E; i++) {
         int u, v, c;
         cin >> u >> v >> c;
-        adj[u].push_back(v), cost[u].push_back(c);
+        adj[u].push_back(v), cap[u].push_back(c);
     }
-    ford_fulkerson<int_ff> ff(adj, cost);
+    ford_fulkerson<int_ff> ff(adj, cap);
     int ans0 = ff.calc_max_flow(0, V - 1);
     map<pair<int, int>, int> flow = ff.get_max_flow();
     int ans1 = 0;
