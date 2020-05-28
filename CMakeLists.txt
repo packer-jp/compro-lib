@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Binary-Search-0 test/AOJ/ALDS1/Binary-Search-0.test.cpp utility/binary-search.hpp)
 add_executable(String-Search-0 test/AOJ/ALDS1/String-Search-0.test.cpp string/rolling-hash.hpp)
+add_executable(Pattern-Search-0 test/AOJ/ALDS1/Pattern-Search-0.test.cpp string/rolling-hash-2d.hpp)
 add_executable(Prime-Numbers-0 test/AOJ/ALDS1/Prime-Numbers-0.test.cpp mathematics/get-prime-table.hpp)
 
 add_executable(Range-Minimum-Query-0 test/AOJ/DSL/Range-Minimum-Query-0.test.cpp data-structure/segment-tree.hpp)

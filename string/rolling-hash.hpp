@@ -16,7 +16,7 @@ struct rolling_hash {
     static std::vector<ull> pow_base;
     int n;
     std::vector<ull> hash;
-    static void push_hash(int n) {
+    static void push_pow(int n) {
         while (pow_base.size() <= n) { pow_base.push_back(calc_mod(mul(pow_base.back(), pow_base[1]))); }
     }
     static ull rng() {
@@ -37,12 +37,12 @@ struct rolling_hash {
         return val;
     }
     static ull connect(ull lhs, ull rhs, int rn) {
-        push_hash(rn);
+        push_pow(rn);
         return calc_mod(mul(lhs, pow_base[rn]) + rhs);
     }
     template<typename T> rolling_hash(const std::vector<T> &src) : n(src.size()), hash(n + 1) {
         for (int i = 0; i < src.size(); i++) { hash[i + 1] = calc_mod(mul(hash[i], pow_base[1]) + src[i]); }
-        push_hash(n);
+        push_pow(n);
     }
     ull get_hash(int l, int r) const {
         assert(0 <= l && l < n);
