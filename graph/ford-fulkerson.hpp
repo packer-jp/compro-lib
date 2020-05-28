@@ -20,13 +20,14 @@ struct ford_fulkerson {
     std::vector<std::vector<edge>> graph;
     std::vector<int> used;
     int timestamp;
-    ford_fulkerson(const std::vector<std::vector<int>> &adj, const std::vector<std::vector<typename M::T>> &cost)
+    void add_edge(int from, int to, T cap) {
+        graph[from].push_back({to, (int) graph[to].size(), cap, false});
+        graph[to].push_back({from, (int) graph[from].size() - 1, M::id(), true});
+    }
+    ford_fulkerson(const std::vector<std::vector<int>> &adj, const std::vector<std::vector<typename M::T>> &cap)
         : n(adj.size()), graph(n), used(n) {
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < adj[i].size(); j++) {
-                graph[i].push_back({adj[i][j], (int) graph[adj[i][j]].size(), cost[i][j], false});
-                graph[adj[i][j]].push_back({i, (int) graph[i].size() - 1, M::id(), true});
-            }
+            for (int j = 0; j < adj[i].size(); j++) { add_edge(i, adj[i][j], cap[i][j]); }
         }
     }
     T dfs(int v, int t, T f) {
