@@ -44,7 +44,7 @@ struct my_complex {
     my_complex conj() { return {real, -imag}; }
 };
 
-template<typename T> void fft(std::vector<T> &x, std::vector<T> &w) {
+template<typename T> void fft(std::vector<T> &x, const std::vector<T> &w) {
     int n = x.size();
     int m = n >> 1;
     std::vector<T> y(n);
@@ -62,7 +62,7 @@ template<typename T> void fft(std::vector<T> &x, std::vector<T> &w) {
     if (p != &x) { std::copy(p->begin(), p->end(), x.begin()); }
 }
 
-template<typename T> void ifft(std::vector<T> &x, std::vector<T> &w) {
+template<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w) {
     int n = x.size();
     int m = n >> 1;
     std::vector<T> y(n);
@@ -137,12 +137,12 @@ std::vector<int> friendly_mod_convolute(const std::vector<int> &a, const std::ve
 template<int K = 3>
 std::vector<int> arbitrary_mod_convolute(const std::vector<int> &a, const std::vector<int> &b, int mod) {
     static constexpr int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};
-    static constexpr auto safe_mod = [](int a, int m) -> int {
+    static auto safe_mod = [](int a, int m) -> int {
         a %= m;
         if (a < 0) { a += m; }
         return a;
     };
-    static constexpr auto mod_inv = [](int a, int m) -> int {
+    static auto mod_inv = [](int a, int m) -> int {
         int b = m, x = 1, u = 0;
         while (b) {
             int t = a / b;
