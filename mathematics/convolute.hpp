@@ -48,38 +48,35 @@ template<typename T> void fft(std::vector<T> &x, const std::vector<T> &w) {
     int n = x.size();
     int m = n >> 1;
     std::vector<T> y(n);
-    std::vector<T> *p = &x, *q = &y;
     for (int i = 1; i <= m; i <<= 1) {
         for (int j = 0; j < m; j += i) {
             for (int k = 0; k < i; k++) {
                 int u = j + k;
-                (*q)[(u << 1) + 0] = ((*p)[u + 0] + (*p)[u + m]);
-                (*q)[(u << 1) + 1] = ((*p)[u + 0] - (*p)[u + m]) * w[j];
+                y[(u << 1) + 0] = (x[u + 0] + x[u + m]);
+                y[(u << 1) + 1] = (x[u + 0] - x[u + m]) * w[j];
             }
         }
-        std::swap(p, q);
+        std::swap(x, y);
     }
-    if (p != &x) { std::copy(p->begin(), p->end(), x.begin()); }
 }
 
 template<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w) {
     int n = x.size();
     int m = n >> 1;
     std::vector<T> y(n);
-    std::vector<T> *p = &x, *q = &y;
     for (int i = m; i > 0; i >>= 1) {
         for (int j = 0; j < m; j += i) {
             for (int k = 0; k < i; k++) {
                 int u = j + k;
-                (*p)[(u << 1) + 1] *= w[j];
-                (*q)[u + 0] = (*p)[(u << 1) + 0] + (*p)[(u << 1) + 1];
-                (*q)[u + m] = (*p)[(u << 1) + 0] - (*p)[(u << 1) + 1];
+                x[(u << 1) + 1] *= w[j];
+                y[u + 0] = x[(u << 1) + 0] + x[(u << 1) + 1];
+                y[u + m] = x[(u << 1) + 0] - x[(u << 1) + 1];
             }
         }
-        std::swap(p, q);
+        std::swap(x, y);
     }
     T n_inv = T(1) / n;
-    for (int i = 0; i < n; i++) { x[i] = (*p)[i] * n_inv; }
+    for (int i = 0; i < n; i++) { x[i] *= n_inv; }
 }
 
 std::vector<double> convolute(const std::vector<double> &a, const std::vector<double> &b) {
