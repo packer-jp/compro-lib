@@ -2,8 +2,8 @@
 using namespace std;
 
 #define int long long
-#define rep(i, n) for (int i = 0; i < (n); i++)
-#define reps(i, n) for (int i = 1; i <= (n); i++)
+#define rep(i, n) for (int i = 0; i < (int) (n); i++)
+#define reps(i, n) for (int i = 1; i <= (int) (n); i++)
 #define all(x) (x).begin(), (x).end()
 #define uniq(x) (x).erase(unique(all(x)), end(x))
 #define bit(n) (1LL << (n))
