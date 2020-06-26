@@ -36,7 +36,7 @@ struct lazy_segment_tree {
             propagate(l >> i);
             propagate(r >> i);
         }
-        static auto apply = [&](int i) { lazy[i] = M::op_EE(lazy[i], x), propagate(i); };
+        auto apply = [&](int i) { lazy[i] = M::op_EE(lazy[i], x), propagate(i); };
         for (int i = l, j = r + 1; i < j; i >>= 1, j >>= 1) {
             if (i & 1) { apply(i++); }
             if (j & 1) { apply(--j); }

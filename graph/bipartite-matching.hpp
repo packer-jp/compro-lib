@@ -9,7 +9,7 @@ std::vector<std::pair<int, int>> bipartite_matching(const std::vector<std::vecto
     int n = adj.size();
     std::vector<int> match(n, -1), used(n);
     int timestamp = 0;
-    static auto dfs = [&](auto &&self, int v) -> bool {
+    auto dfs = [&](auto &&self, int v) -> bool {
         used[v] = timestamp;
         for (int i = 0; i < adj[v].size(); i++) {
             int u = adj[v][i], w = match[u];

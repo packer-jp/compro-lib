@@ -10,7 +10,7 @@ std::vector<int> strongly_connected_components(const std::vector<std::vector<int
     std::vector<int> vs;
     {
         std::vector<bool> visited(n);
-        static auto dfs = [&](auto &&self, int cur) -> void {
+        auto dfs = [&](auto &&self, int cur) -> void {
             if (visited[cur]) { return; }
             visited[cur] = true;
             for (int i = 0; i < adj[cur].size(); i++) { self(self, adj[cur][i]); }
@@ -26,7 +26,7 @@ std::vector<int> strongly_connected_components(const std::vector<std::vector<int
             for (int j = 0; j < adj[i].size(); j++) { radj[adj[i][j]].push_back(i); }
         }
         int k = 0;
-        static auto dfs = [&](auto &&self, int cur) -> void {
+        auto dfs = [&](auto &&self, int cur) -> void {
             visited[cur] = true;
             ret[cur] = k;
             for (int i = 0; i < radj[cur].size(); i++) {

@@ -12,7 +12,7 @@ std::vector<typename M::T> re_rooting(const std::vector<std::vector<int>> &adj,
     int n = adj.size();
     std::vector<std::vector<T>> dp(n);
     {
-        static auto dfs = [&](auto &&self, int cur, int par) -> T {
+        auto dfs = [&](auto &&self, int cur, int par) -> T {
             dp[cur].resize(adj[cur].size());
             T cum = M::id();
             for (int i = 0; i < adj[cur].size(); i++) {
@@ -26,7 +26,7 @@ std::vector<typename M::T> re_rooting(const std::vector<std::vector<int>> &adj,
     }
     std::vector<T> ret(n);
     {
-        static auto dfs = [&](auto &&self, int cur, int par, T drop) -> void {
+        auto dfs = [&](auto &&self, int cur, int par, T drop) -> void {
             int m = adj[cur].size();
             std::vector<T> l_cum(m + 1), r_cum(m + 1);
             l_cum[0] = r_cum[m] = M::id();
