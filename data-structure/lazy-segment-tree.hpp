@@ -81,3 +81,13 @@ struct rsq_and_raq {
     static E op_EE(const E &a, const E &b) { return a + b; }
     static T op_TE(const T &a, const E &b) { return {a.first + b * a.second, a.second}; }
 };
+
+struct rminq_and_raq {
+    using T = long long;
+    using E = long long;
+    static T id_T() { return std::numeric_limits<T>::max(); };
+    static E id_E() { return 0; };
+    static T op_TT(const T &a, const T &b) { return std::min(a, b); }
+    static E op_EE(const E &a, const E &b) { return a + b; }
+    static T op_TE(const T &a, const E &b) { return a + b; }
+};
