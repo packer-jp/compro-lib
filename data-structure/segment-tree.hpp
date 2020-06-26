@@ -24,8 +24,8 @@ struct segment_tree {
     }
     const T &operator[](int i) const { return data[i + n]; }
     T get_sum(int l, int r) const {
-        assert(0 <= l && l < n);
-        assert(0 < r && r <= n);
+        assert(0 <= l && l <= n);
+        assert(0 <= r && r <= n);
         T a = M::id(), b = M::id();
         for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
             if (l & 1) { a = M::op(a, data[l++]); }
