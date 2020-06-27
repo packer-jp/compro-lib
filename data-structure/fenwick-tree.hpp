@@ -23,8 +23,8 @@ struct fenwick_tree {
         return ret;
     }
     T get_sum(int l, int r) const {
-        assert(0 <= l && l < n);
-        assert(0 < r && r <= n);
+        assert(0 <= l && l <= n);
+        assert(0 <= r && r <= n);
         return M::op(get_sum(r), M::inv(get_sum(l)));
     }
 };
