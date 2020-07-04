@@ -63,10 +63,6 @@ struct rolling_hash_2d {
         push_pow_x(w);
     }
     ull get_hash(int y0, int x0, int y1, int x1) const {
-        assert(0 <= y0 && y0 < h);
-        assert(0 < y1 && y1 <= h);
-        assert(0 <= x0 && x0 < w);
-        assert(0 < x1 && x1 <= w);
         ull hl = calc_mod(POSITIVIZER - mul(hash[y0][x0], pow_base_y[y1 - y0]) + hash[y1][x0]);
         ull hr = calc_mod(POSITIVIZER - mul(hash[y0][x1], pow_base_y[y1 - y0]) + hash[y1][x1]);
         return calc_mod(POSITIVIZER - mul(hl, pow_base_x[x1 - x0]) + hr);

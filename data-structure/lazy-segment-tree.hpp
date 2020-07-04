@@ -29,8 +29,6 @@ struct lazy_segment_tree {
         lazy[i] = M::id_E();
     }
     void add(int l, int r, const E &x) {
-        assert(0 <= l && l < n);
-        assert(0 < r && r <= n);
         l += n, r += n - 1;
         for (int i = std::__lg(r); i > 0; i--) {
             propagate(l >> i);
@@ -49,8 +47,6 @@ struct lazy_segment_tree {
         }
     }
     T get_sum(int l, int r) {
-        assert(0 <= l && l < n);
-        assert(0 < r && r <= n);
         l += n, r += n - 1;
         for (int i = std::__lg(r); i > 0; i--) { propagate(l >> i), propagate(r >> i); }
         T a = M::id_T(), b = M::id_T();

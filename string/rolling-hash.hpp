@@ -44,10 +44,6 @@ struct rolling_hash {
         for (int i = 0; i < src.size(); i++) { hash[i + 1] = calc_mod(mul(hash[i], pow_base[1]) + src[i]); }
         push_pow(n);
     }
-    ull get_hash(int l, int r) const {
-        assert(0 <= l && l < n);
-        assert(0 < r && r <= n);
-        return calc_mod(POSITIVIZER - mul(hash[l], pow_base[r - l]) + hash[r]);
-    }
+    ull get_hash(int l, int r) const { return calc_mod(POSITIVIZER - mul(hash[l], pow_base[r - l]) + hash[r]); }
 };
 std::vector<rolling_hash::ull> rolling_hash::pow_base{1, rng()};

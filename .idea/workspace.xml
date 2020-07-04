@@ -26,29 +26,29 @@
       <config projectName="compro-lib" targetName="Maximum-Flow-0" />
       <config projectName="compro-lib" targetName="permutation" />
       <config projectName="compro-lib" targetName="How-Many-Divisors-0" />
-      <config projectName="compro-lib" targetName="Binary-Search-0" />
       <config projectName="compro-lib" targetName="heavy-light-decomposition" />
+      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
       <config projectName="compro-lib" targetName="matrix" />
       <config projectName="compro-lib" targetName="Bipartite-Matching-0" />
       <config projectName="compro-lib" targetName="Prime-Factorize-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
-      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
+      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
       <config projectName="compro-lib" targetName="Range-Add-Query-0" />
-      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
       <config projectName="compro-lib" targetName="Pattern-Search-0" />
       <config projectName="compro-lib" targetName="topological-sort" />
       <config projectName="compro-lib" targetName="rational" />
-      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
+      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
       <config projectName="compro-lib" targetName="to-rooted-tree" />
       <config projectName="compro-lib" targetName="Tree-0" />
       <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
       <config projectName="compro-lib" targetName="moebius" />
       <config projectName="compro-lib" targetName="Prime-Numbers-0" />
+      <config projectName="compro-lib" targetName="Binary-Search-0" />
       <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
       <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
       <config projectName="compro-lib" targetName="RMQ-and-RAQ-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
-      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
       <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
       <config projectName="compro-lib" targetName="mod-int" />
       <config projectName="compro-lib" targetName="run-length-encoding" />
@@ -63,11 +63,11 @@
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/fenwick-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/fenwick-tree.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/bipartite-matching.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/bipartite-matching.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/re-rooting.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/re-rooting.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/strongly-connected-components.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/strongly-connected-components.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/to-rooted-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/to-rooted-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/segment-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/rolling-hash-2d.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/string/rolling-hash-2d.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/rolling-hash.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/string/rolling-hash.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,14 +379,8 @@
       <workItem from="1592577395751" duration="458000" />
       <workItem from="1593180100538" duration="1244000" />
       <workItem from="1593181370937" duration="34000" />
-      <workItem from="1593184873093" duration="106000" />
-    </task>
-    <task id="LOCAL-00084" summary="update">
-      <created>1589613415172</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1589613415172</updated>
+      <workItem from="1593184873093" duration="164000" />
+      <workItem from="1593888182215" duration="226000" />
     </task>
     <task id="LOCAL-00085" summary="update">
       <created>1589619572936</created>
@@ -724,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593181340030</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="update">
+      <created>1593185008232</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1593185008232</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,10 +775,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="677" y="360" width="623" height="393" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589522440963" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1593181339773">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1593185008065">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593181339773" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593185008065" />
     <state x="167" y="132" width="1653" height="848" key="DiffContextDialog" timestamp="1590416818451">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -834,10 +835,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="800" y="128" width="367" height="860" key="VCS.ChangeListViewerDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590170223000" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1593181384808">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1593185013692">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593181384808" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593185013692" />
     <state x="413" y="74" width="1150" height="965" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589623430166">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -846,14 +847,14 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="723" y="447" width="531" height="221" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1589703921595" />
-    <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1593184973344">
+    <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1593185001207">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="629" y="139" width="729" height="834" key="find.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593184973344" />
-    <state x="598" y="287" width="780" height="542" key="git4idea.merge.GitPullDialog" timestamp="1593181397271">
+    <state x="629" y="139" width="729" height="834" key="find.popup/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593185001207" />
+    <state x="598" y="287" width="780" height="542" key="git4idea.merge.GitPullDialog" timestamp="1593888320499">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="598" y="287" width="780" height="542" key="git4idea.merge.GitPullDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593181397271" />
+    <state x="598" y="287" width="780" height="542" key="git4idea.merge.GitPullDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593888320499" />
     <state x="709" y="376" width="558" height="361" key="git4idea.rebase.GitRebaseDialog" timestamp="1590417034056">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
