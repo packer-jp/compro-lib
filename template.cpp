@@ -22,6 +22,7 @@ int gcd(int a, int b) {
     return a;
 }
 int lcm(int a, int b) { return a / gcd(a, b) * b; }
+int sgn(int x) { return (x > 0) - (x < 0); }
 template<typename T> void fin(T mes) {
     cout << mes << endl;
     exit(0);
