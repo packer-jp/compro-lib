@@ -20,21 +20,20 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="compro-lib" targetName="Power-0" />
       <config projectName="compro-lib" targetName="Convex-Hull-0" />
       <config projectName="compro-lib" targetName="Strongly-Connected-Components-0" />
       <config projectName="compro-lib" targetName="Maximum-Flow-1" />
       <config projectName="compro-lib" targetName="Maximum-Flow-0" />
       <config projectName="compro-lib" targetName="permutation" />
-      <config projectName="compro-lib" targetName="Power-0" />
-      <config projectName="compro-lib" targetName="heavy-light-decomposition" />
+      <config projectName="compro-lib" targetName="How-Many-Divisors-0" />
       <config projectName="compro-lib" targetName="Binary-Search-0" />
-      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
+      <config projectName="compro-lib" targetName="heavy-light-decomposition" />
       <config projectName="compro-lib" targetName="matrix" />
       <config projectName="compro-lib" targetName="Bipartite-Matching-0" />
       <config projectName="compro-lib" targetName="Prime-Factorize-0" />
       <config projectName="compro-lib" targetName="Articulation-Points-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
-      <config projectName="compro-lib" targetName="How-Many-Divisors-0" />
       <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
       <config projectName="compro-lib" targetName="Range-Add-Query-0" />
       <config projectName="compro-lib" targetName="Pattern-Search-0" />
@@ -51,6 +50,7 @@
       <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
       <config projectName="compro-lib" targetName="RMQ-and-RAQ-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
+      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
       <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
       <config projectName="compro-lib" targetName="Bridges-0" />
       <config projectName="compro-lib" targetName="mod-int" />
@@ -65,9 +65,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/docs/graph/low-link.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/low-link.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/low-link.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,34 +308,34 @@
       <item itemvalue="CMake Application.Convex-Hull-0" />
       <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
       <item itemvalue="CMake Application.Diameter-of-a-Tree-0" />
-      <item itemvalue="CMake Application.heavy-light-decomposition" />
       <item itemvalue="CMake Application.How-Many-Divisors-0" />
-      <item itemvalue="CMake Application.matrix" />
       <item itemvalue="CMake Application.Maximum-Flow-0" />
       <item itemvalue="CMake Application.Maximum-Flow-1" />
-      <item itemvalue="CMake Application.mod-int" />
-      <item itemvalue="CMake Application.moebius" />
       <item itemvalue="CMake Application.Pattern-Search-0" />
-      <item itemvalue="CMake Application.permutation" />
       <item itemvalue="CMake Application.Power-0" />
       <item itemvalue="CMake Application.Prime-Factorize-0" />
       <item itemvalue="CMake Application.Prime-Numbers-0" />
+      <item itemvalue="CMake Application.RMQ-and-RAQ-0" />
+      <item itemvalue="CMake Application.RMQ-and-RUQ-0" />
+      <item itemvalue="CMake Application.RSQ-and-RAQ-0" />
       <item itemvalue="CMake Application.Range-Add-Query-0" />
       <item itemvalue="CMake Application.Range-Minimum-Query-0" />
       <item itemvalue="CMake Application.Range-Sum-Query-0" />
       <item itemvalue="CMake Application.Range-Sum-Query-1" />
-      <item itemvalue="CMake Application.rational" />
-      <item itemvalue="CMake Application.RMQ-and-RAQ-0" />
-      <item itemvalue="CMake Application.RMQ-and-RUQ-0" />
-      <item itemvalue="CMake Application.RSQ-and-RAQ-0" />
-      <item itemvalue="CMake Application.run-length-encoding" />
       <item itemvalue="CMake Application.Single-Source-Shortest-Path-0" />
       <item itemvalue="CMake Application.Single-Source-Shortest-Path-Negative-Edges-0" />
       <item itemvalue="CMake Application.String-Search-0" />
       <item itemvalue="CMake Application.Strongly-Connected-Components-0" />
+      <item itemvalue="CMake Application.Tree-0" />
+      <item itemvalue="CMake Application.heavy-light-decomposition" />
+      <item itemvalue="CMake Application.matrix" />
+      <item itemvalue="CMake Application.mod-int" />
+      <item itemvalue="CMake Application.moebius" />
+      <item itemvalue="CMake Application.permutation" />
+      <item itemvalue="CMake Application.rational" />
+      <item itemvalue="CMake Application.run-length-encoding" />
       <item itemvalue="CMake Application.to-rooted-tree" />
       <item itemvalue="CMake Application.topological-sort" />
-      <item itemvalue="CMake Application.Tree-0" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -404,14 +402,8 @@
       <workItem from="1595847491971" duration="69000" />
       <workItem from="1595908971778" duration="10661000" />
       <workItem from="1595939038177" duration="6735000" />
-      <workItem from="1596177494440" duration="1011000" />
-    </task>
-    <task id="LOCAL-00087" summary="update">
-      <created>1589619696655</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1589619696655</updated>
+      <workItem from="1596177494440" duration="1140000" />
+      <workItem from="1596179120526" duration="613000" />
     </task>
     <task id="LOCAL-00088" summary="update">
       <created>1589629672917</created>
@@ -749,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596178035392</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="update">
+      <created>1596178516959</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1596178516959</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -873,10 +872,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="800" y="128" width="367" height="860" key="VCS.ChangeListViewerDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590170223000" />
-    <state x="349" y="153" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1596178040350">
+    <state x="349" y="153" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1596179129169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596178040350" />
+    <state x="349" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596179129169" />
     <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1593185013692" />
     <state x="413" y="74" width="1150" height="965" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589623430166">
       <screen x="67" y="34" width="1853" height="1046" />
