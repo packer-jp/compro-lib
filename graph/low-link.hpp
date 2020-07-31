@@ -1,6 +1,11 @@
 #include <vector>
 #include <algorithm>
 
+/*
+ * @title LowLink
+ * @docs docs/graph/low-link.md
+ */
+
 struct low_link {
     int n;
     std::vector<int> ord, low, articulations;
