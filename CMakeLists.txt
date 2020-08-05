@@ -38,6 +38,8 @@ add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomp
 
 add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
 
+add_executable(Many-A-Plus-B-0 test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp utility/fast-io.hpp)
+
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)
 add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp graph/topological-sort.hpp)
 add_executable(to-rooted-tree test/unit-test/graph/to-rooted-tree.test.cpp graph/to-rooted-tree.hpp)
