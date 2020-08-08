@@ -22,6 +22,7 @@ int gcd(int a, int b) {
     return a;
 }
 int lcm(int a, int b) { return a / gcd(a, b) * b; }
+int sgn(int x) { return (x > 0) - (x < 0); }
 template<typename T> void fin(T mes) {
     cout << mes << endl;
     exit(0);
@@ -45,6 +46,30 @@ template<typename T, typename U> ostream &operator<<(ostream &os, const pair<T, 
     return os;
 }
 template<typename T> ostream &operator<<(ostream &os, const vector<T> &rhs) {
+    os << "{";
+    for (auto itr = rhs.begin(); itr != rhs.end(); itr++) {
+        os << *itr << (next(itr) != rhs.end() ? ", " : "");
+    }
+    os << "}";
+    return os;
+}
+template<typename T> ostream &operator<<(ostream &os, const deque<T> &rhs) {
+    os << "{";
+    for (auto itr = rhs.begin(); itr != rhs.end(); itr++) {
+        os << *itr << (next(itr) != rhs.end() ? ", " : "");
+    }
+    os << "}";
+    return os;
+}
+template<typename T> ostream &operator<<(ostream &os, const set<T> &rhs) {
+    os << "{";
+    for (auto itr = rhs.begin(); itr != rhs.end(); itr++) {
+        os << *itr << (next(itr) != rhs.end() ? ", " : "");
+    }
+    os << "}";
+    return os;
+}
+template<typename T, typename U> ostream &operator<<(ostream &os, const map<T, U> &rhs) {
     os << "{";
     for (auto itr = rhs.begin(); itr != rhs.end(); itr++) {
         os << *itr << (next(itr) != rhs.end() ? ", " : "");
