@@ -126,12 +126,27 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Articulation-Points-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Articulation-Points-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Articulation-Points-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Binary-Search-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Binary-Search-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Binary-Search-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Bipartite-Matching-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Bipartite-Matching-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Bipartite-Matching-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bridges-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Bridges-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Bridges-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Convex-Hull-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Convex-Hull-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Convex-Hull-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -147,6 +162,11 @@
       </method>
     </configuration>
     <configuration name="How-Many-Divisors-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="How-Many-Divisors-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="How-Many-Divisors-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Many-A-Plus-B-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Many-A-Plus-B-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Many-A-Plus-B-0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -288,11 +308,15 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.All-Pairs-Shortest-Path-0" />
+      <item itemvalue="CMake Application.Articulation-Points-0" />
       <item itemvalue="CMake Application.Binary-Search-0" />
       <item itemvalue="CMake Application.Bipartite-Matching-0" />
+      <item itemvalue="CMake Application.Bridges-0" />
+      <item itemvalue="CMake Application.Convex-Hull-0" />
       <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
       <item itemvalue="CMake Application.Diameter-of-a-Tree-0" />
       <item itemvalue="CMake Application.How-Many-Divisors-0" />
+      <item itemvalue="CMake Application.Many-A-Plus-B-0" />
       <item itemvalue="CMake Application.Maximum-Flow-0" />
       <item itemvalue="CMake Application.Maximum-Flow-1" />
       <item itemvalue="CMake Application.Pattern-Search-0" />
