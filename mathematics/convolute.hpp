@@ -134,12 +134,12 @@ std::vector<int> friendly_mod_convolute(const std::vector<int> &a, const std::ve
 template<int K = 3>
 std::vector<int> arbitrary_mod_convolute(const std::vector<int> &a, const std::vector<int> &b, int mod) {
     static constexpr int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};
-    static auto safe_mod = [](int a, int m) -> int {
+    auto safe_mod = [](int a, int m) -> int {
         a %= m;
         if (a < 0) { a += m; }
         return a;
     };
-    static auto mod_inv = [](int a, int m) -> int {
+    auto mod_inv = [](int a, int m) -> int {
         int b = m, x = 1, u = 0;
         while (b) {
             int t = a / b;

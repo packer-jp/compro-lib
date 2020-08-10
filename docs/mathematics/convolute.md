@@ -11,5 +11,5 @@
 また、原始根`ROOT`が必要。
 
 - `<int K = 3> std::vector<int> arbitrary_mod_convolute(std::vector<int> a, std::vector<int> b, int mod)`  
-`a`と`b`を`mod`を法として畳み込む。  
+`a`と`b`を`mod`を法として畳み込む。`mod`は`long long`の範囲ならOK。  
 `K`個の法について`friendly_mod_convolution`を計算した結果を用いている。
