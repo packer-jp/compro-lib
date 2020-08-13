@@ -8,7 +8,7 @@
 
 template<typename T> long long histogram_largest_rectangle(const std::vector<T> &h) {
     int n = h.size();
-    std::vector<int> left(n), right(n);
+    std::vector<int> left(n);
     {
         std::stack<int> stk;
         for (int i = 0; i < n; i++) {
@@ -17,6 +17,7 @@ template<typename T> long long histogram_largest_rectangle(const std::vector<T> 
             stk.emplace(i);
         }
     }
+    std::vector<int> right(n);
     {
         std::stack<int> stk;
         for (int i = n - 1; i >= 0; i--) {
