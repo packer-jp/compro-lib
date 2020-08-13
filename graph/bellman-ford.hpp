@@ -4,7 +4,7 @@
 #include <cassert>
 
 /*
- * @title ベルマン-フォード法
+ * @title Bellman-Ford法
  * @docs docs/graph/bellman-ford.md
  */
 

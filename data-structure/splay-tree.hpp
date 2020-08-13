@@ -1,6 +1,6 @@
 
 /*
- * @title スプレー木
+ * @title Splay木
  * @docs docs/data-structure/splay-tree.md
  */
 

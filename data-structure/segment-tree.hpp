@@ -3,7 +3,7 @@
 #include <limits>
 
 /*
- * @title セグメント木
+ * @title Segment木
  * @docs docs/data-structure/segment-tree.md
  */
 

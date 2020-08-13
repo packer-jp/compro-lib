@@ -2,7 +2,7 @@
 #include <vector>
 
 /*
- * @title メビウス関数
+ * @title Moebius関数
  * @docs docs/graph/moebius.md
  */
 

@@ -3,7 +3,7 @@
 #include <limits>
 
 /*
- * @title 遅延評価セグメント木
+ * @title 遅延評価Segment木
  * @docs docs/data-structure/lazy-segment-tree.md
  */
 

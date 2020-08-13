@@ -3,7 +3,7 @@
 #include <functional>
 
 /*
- * @title ワーシャル-フロイド法
+ * @title Warshall-Floyd法
  * @docs docs/graph/warshall-floyd.md
  */
 

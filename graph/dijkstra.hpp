@@ -4,7 +4,7 @@
 #include <cassert>
 
 /*
- * @title ダイクストラ法
+ * @title Dijkstra法
  * @docs docs/graph/dijkstra.md
  */
 
