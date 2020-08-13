@@ -1,3 +1,8 @@
+/*
+ * @title タイマー
+ * @docs docs/utility/timer.md
+ */
+
 struct timer {
     unsigned long long begin_cycle;
     double cycle_per_sec = 2.8e9;
