@@ -2,7 +2,7 @@
 #include <stack>
 
 /*
- * @title ヒストグラム中の最大長方形
+ * @title ヒストグラム最大長方形
  * @docs docs/utility/histogram-largest-rectangle.md
  */
 
