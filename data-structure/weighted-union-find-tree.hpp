@@ -1,5 +1,10 @@
 #include <vector>
 
+/*
+ * @title 重みつきUnion-Find木
+ * @docs docs/data-structure/weighted-union-find-tree.md
+ */
+
 template<typename T>
 struct weighted_union_find_tree {
     T zero;
