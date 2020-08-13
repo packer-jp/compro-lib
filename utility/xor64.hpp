@@ -1,5 +1,5 @@
 /*
- * @title XorShift
+ * @title Xorshift
  * @docs docs/utility/xor64.md
  */
 
