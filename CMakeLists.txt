@@ -17,6 +17,9 @@ add_executable(Range-Add-Query-0 test/AOJ/DSL/Range-Add-Query-0.test.cpp data-st
 add_executable(RMQ-and-RUQ-0 test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
 add_executable(RSQ-and-RAQ-0 test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
 add_executable(RMQ-and-RAQ-0 test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
+add_executable(Vector-0 test/AOJ/ITP2/Vector-0.test.cpp data-structure/splay-tree.hpp)
+
+add_executable(Largest-Rectangle-in-a-Histogram-0 test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp utility/histogram-largest-rectangle.hpp)
 
 add_executable(Single-Source-Shortest-Path-0 test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp graph/dijkstra.hpp)
 add_executable(Single-Source-Shortest-Path-Negative-Edges-0 test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp graph/bellman-ford.hpp)
