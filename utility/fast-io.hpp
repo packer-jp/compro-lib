@@ -1,5 +1,10 @@
 #include <iostream>
 
+/*
+ * @title 高速入出力
+ * @docs docs/utility/fast-io.md
+ */
+
 struct fast_io {
     static constexpr int size_in = 1 << 26, size_out = 1 << 26;
     char data_in[size_in], data_out[size_out], *p_in, *p_out, s[30];
