@@ -37,6 +37,8 @@ add_executable(How-Many-Divisors-0 test/AOJ/ITP1/How-Many-Divisors-0.test.cpp ma
 add_executable(Power-0 test/AOJ/NTL/Power-0.test.cpp mathematics/mod-int.hpp)
 add_executable(Prime-Factorize-0 test/AOJ/NTL/Prime-Factorize-0.test.cpp mathematics/get-prime-factors.hpp)
 
+add_executable(RMQ-0 test/AOJ/Volume15/RMQ-0.test.cpp data-structure/splay-tree.hpp)
+
 add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomposition.hpp data-structure/lazy-segment-tree.hpp)
 
 add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
