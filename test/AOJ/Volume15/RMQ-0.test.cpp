@@ -4,33 +4,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using splay = splay_tree<int_st>;
-splay::node node[220000];
 int main() {
     int n, q;
     cin >> n >> q;
-    int vecsize = 0;
-    for (int i = 0; i < q; i++) {
-        node[i].parent = &node[i + 1], node[i + 1].left = &node[i];
-        node[i + 1].update();
+    splay_tree<int_st> st;
+    for (int i = 0; i < n; i++) {
+        int a;
+        cin >> a;
+        st.insert(i, a);
     }
-    splay::node *root = &node[0];
     while (q--) {
-        int ord, x;
-        cin >> ord;
-        if (ord == 0) {
-            cin >> x;
-            root = splay::get(vecsize++, root);
-            root->value = x;
+        int x, y, z;
+        cin >> x >> y >> z;
+        if (x == 0) {
+            splay_tree<int_st> mid0 = st.split(y);
+            splay_tree<int_st> mid1 = mid0.split(z - y);
+            splay_tree<int_st> right = mid1.split(1);
+            st.merge(mid1), st.merge(mid0), st.merge(right);
         }
-        if (ord == 1) {
-            cin >> x;
-            root = splay::get(x, root);
-            cout << root->value << endl;
+        if (x == 1) {
+            cout << st.get_sum(y, z + 1) << endl;
         }
-        if (ord == 2) {
-            vecsize--;
+        if (x == 2) {
+            st.erase(y);
+            st.insert(y, z);
         }
-
     }
 }

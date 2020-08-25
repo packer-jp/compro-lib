@@ -99,6 +99,13 @@ struct splay_tree {
         splay_tree right = split(idx).split(1);
         merge(right);
     }
+    T get_sum(int l, int r) {
+        splay_tree mid = split(l);
+        splay_tree right = mid.split(r - l);
+        T ret = mid.root->res;
+        merge(mid), merge(right);
+        return ret;
+    }
     /*
     void display(node *root) {
         if (root->left) { display(root->left); }
@@ -118,5 +125,5 @@ struct int_st {
     using T = int;
     static T op(T a, T b) { return std::min(a, b); }
 };
-template<> std::vector<splay_tree<int_st>::node> splay_tree<int_st>::nodes(220000);
+template<> std::vector<splay_tree<int_st>::node> splay_tree<int_st>::nodes(440000);
 template<> int splay_tree<int_st>::vecsize(0);
