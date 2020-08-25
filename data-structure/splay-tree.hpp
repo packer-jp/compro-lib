@@ -12,6 +12,7 @@ struct splay_tree {
         node *left, *right, *par;
         int size;
         T val, res;
+        node() {}
         node(T val) : left(nullptr), right(nullptr), par(nullptr), size(1), val(val), res(val) {}
         void rotate() {
             node *p, *pp, *c;
@@ -46,6 +47,7 @@ struct splay_tree {
         }
     };
     static std::vector<node> nodes;
+    static int vecsize;
     node *root;
     splay_tree(node *root = nullptr) : root(root) {}
     int size() {
@@ -89,9 +91,9 @@ struct splay_tree {
         return root_r;
     }
     void insert(int idx, T x) {
-        nodes.emplace_back(x);
+        nodes[vecsize++] = x;
         splay_tree right = split(idx);
-        merge(&nodes.back()), merge(right);
+        merge(&nodes[vecsize - 1]), merge(right);
     }
     void erase(int idx) {
         splay_tree right = split(idx).split(1);
@@ -109,10 +111,12 @@ struct splay_tree {
         cerr << endl;
     }
     */
+
 };
 
 struct int_st {
     using T = int;
     static T op(T a, T b) { return std::min(a, b); }
 };
-template<> std::vector<splay_tree<int_st>::node> splay_tree<int_st>::nodes{};
+template<> std::vector<splay_tree<int_st>::node> splay_tree<int_st>::nodes(220000);
+template<> int splay_tree<int_st>::vecsize(0);
