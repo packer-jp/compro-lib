@@ -67,16 +67,6 @@ struct splay_tree {
         }
     }
     T get(int idx) { return (root = get_node(idx))->val; }
-    void merge(splay_tree right) {
-        if (!root) {
-            root = right.root;
-            return;
-        }
-        if (!right.root) { return; }
-        root = get_node(root->size - 1);
-        root->right = right.root, right.root->par = root;
-        root->update();
-    }
     splay_tree split(int size_left) {
         if (size_left == 0) {
             node *root_r = root;
@@ -89,6 +79,16 @@ struct splay_tree {
         root_r->left = nullptr, root->par = nullptr;
         root_r->update();
         return root_r;
+    }
+    void merge(splay_tree right) {
+        if (!root) {
+            root = right.root;
+            return;
+        }
+        if (!right.root) { return; }
+        root = get_node(root->size - 1);
+        root->right = right.root, right.root->par = root;
+        root->update();
     }
     void insert(int idx, T x) {
         nodes[vecsize++] = x;
@@ -106,19 +106,6 @@ struct splay_tree {
         merge(mid), merge(right);
         return ret;
     }
-    /*
-    void display(node *root) {
-        if (root->left) { display(root->left); }
-        cerr << root->val << " ";
-        if (root->right) { display(root->right); }
-    }
-    void display() {
-        cerr << "st : ";
-        if (root) { display(root); }
-        cerr << endl;
-    }
-    */
-
 };
 
 struct int_st {
