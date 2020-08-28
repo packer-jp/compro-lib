@@ -18,6 +18,7 @@ add_executable(RMQ-and-RUQ-0 test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp data-structure/
 add_executable(RSQ-and-RAQ-0 test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
 add_executable(RMQ-and-RAQ-0 test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp data-structure/lazy-segment-tree.hpp)
 add_executable(Vector-0 test/AOJ/ITP2/Vector-0.test.cpp data-structure/splay-tree.hpp)
+add_executable(Vector-1 test/AOJ/ITP2/Vector-1.test.cpp data-structure/red-black-tree.hpp)
 
 add_executable(Largest-Rectangle-in-a-Histogram-0 test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp utility/histogram-largest-rectangle.hpp)
 
@@ -38,6 +39,7 @@ add_executable(Power-0 test/AOJ/NTL/Power-0.test.cpp mathematics/mod-int.hpp)
 add_executable(Prime-Factorize-0 test/AOJ/NTL/Prime-Factorize-0.test.cpp mathematics/get-prime-factors.hpp)
 
 add_executable(RMQ-0 test/AOJ/Volume15/RMQ-0.test.cpp data-structure/splay-tree.hpp)
+add_executable(RMQ-1 test/AOJ/Volume15/RMQ-1.test.cpp data-structure/red-black-tree.hpp)
 
 add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomposition.hpp data-structure/lazy-segment-tree.hpp)
 
