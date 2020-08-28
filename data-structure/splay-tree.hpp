@@ -46,8 +46,6 @@ struct splay_tree {
             if (right) { size += right->size, res = M::op(res, right->res); }
         }
     };
-    static std::vector<node> nodes;
-    static int vecsize;
     node *root;
     splay_tree(node *root = nullptr) : root(root) {}
     int size() {
@@ -91,9 +89,8 @@ struct splay_tree {
         root->update();
     }
     void insert(int idx, T x) {
-        nodes[vecsize++] = x;
-        splay_tree right = split(idx);
-        merge(&nodes[vecsize - 1]), merge(right);
+        splay_tree xt = new node(x), right = split(idx);
+        merge(xt), merge(right);
     }
     void erase(int idx) {
         splay_tree right = split(idx).split(1);
@@ -112,5 +109,3 @@ struct int_st {
     using T = int;
     static T op(T a, T b) { return std::min(a, b); }
 };
-template<> std::vector<splay_tree<int_st>::node> splay_tree<int_st>::nodes(440000);
-template<> int splay_tree<int_st>::vecsize(0);
