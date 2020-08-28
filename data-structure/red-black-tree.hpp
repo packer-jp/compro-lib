@@ -3,7 +3,7 @@
 
 /*
  * @title 赤黒木
- * @docs docs/data-structure/splay-tree.md
+ * @docs docs/data-structure/red-black-tree.md
  */
 
 template<typename M>
