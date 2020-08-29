@@ -59,12 +59,36 @@ struct splay_tree {
             if (idx < size_l) { cur = cur->left; }
             if (idx == size_l) {
                 cur->splay();
-                return cur;
+                return root = cur;
             }
             if (idx > size_l) { cur = cur->right, idx -= size_l + 1; }
         }
     }
-    T get(int idx) { return (root = get_node(idx))->val; }
+    T get(int idx) { return get_node(idx)->val; }
+    int lower_bound(T x) {
+        if (!root) { return 0; }
+        node *cur = root;
+        int ret = cur->left ? cur->left->size : 0;
+        while (true) {
+            if (M::gr(x, cur->val)) {
+                if (cur->right) {
+                    cur = cur->right;
+                    ret += cur->left ? cur->left->size : 0;
+                } else {
+                    cur->splay(), root = cur;
+                    return ret + 1;
+                }
+            } else {
+                if (cur->left) {
+                    cur = cur->left;
+                    ret -= cur->right ? cur->right->size + 1 : 1;
+                } else {
+                    cur->splay(), root = cur;
+                    return ret;
+                }
+            }
+        }
+    }
     splay_tree split(int size_left) {
         if (size_left == 0) {
             node *root_r = root;
@@ -84,7 +108,7 @@ struct splay_tree {
             return;
         }
         if (!right.root) { return; }
-        root = get_node(root->size - 1);
+        get_node(root->size - 1);
         root->right = right.root, right.root->par = root;
         root->update();
     }
@@ -108,4 +132,5 @@ struct splay_tree {
 struct int_st {
     using T = int;
     static T op(T a, T b) { return std::min(a, b); }
+    static bool gr(const T &a, const T &b) { return a > b; }
 };
