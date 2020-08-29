@@ -3,7 +3,7 @@
 
 /*
  * @title Moebius関数
- * @docs docs/graph/moebius.md
+ * @docs docs/mathematics/moebius.md
  */
 
 std::map<long long, int> moebius(long long n) {

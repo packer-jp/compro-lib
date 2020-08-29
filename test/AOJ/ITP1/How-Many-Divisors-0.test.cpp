@@ -7,8 +7,8 @@ using namespace std;
 int main() {
     int a, b, c;
     cin >> a >> b >> c;
-    vector<long long> div = get_divisors(c);
+    vector<int> div = get_divisors(c);
     int ans = 0;
-    for (int i = 0; i < (int)div.size(); i++) { ans += a <= div[i] && div[i] <= b; }
+    for (int i = 0; i < (int) div.size(); i++) { ans += a <= div[i] && div[i] <= b; }
     cout << ans << endl;
 }

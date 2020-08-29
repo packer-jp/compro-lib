@@ -5,8 +5,7 @@
  * @docs docs/mathematics/prime-factorize.md
  */
 
-template<typename T=long long>
-std::vector<T> prime_factorize(T n) {
+template<typename T> std::vector<T> prime_factorize(T n) {
     std::vector<T> ret;
     for (long long i = 2; i * i <= n; i++) {
         while (n % i == 0) {

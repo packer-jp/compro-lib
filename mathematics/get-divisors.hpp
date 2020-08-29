@@ -6,8 +6,7 @@
  * @docs docs/mathematics/get-divisors.md
  */
 
-template<typename T=long long>
-std::vector<T> get_divisors(T n) {
+template<typename T> std::vector<T> get_divisors(T n) {
     std::vector<T> ret;
     T i;
     for (i = 1; i * i < n; i++) {
