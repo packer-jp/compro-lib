@@ -75,6 +75,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/unit-test/mathematics/moebius.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit-test/mathematics/moebius.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -493,14 +495,7 @@
       <workItem from="1598685143915" duration="1418000" />
       <workItem from="1598687794116" duration="253000" />
       <workItem from="1598731678042" duration="2115000" />
-      <workItem from="1598733843484" duration="373000" />
-    </task>
-    <task id="LOCAL-00110" summary="update">
-      <created>1590155232619</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1590155232621</updated>
+      <workItem from="1598733843484" duration="445000" />
     </task>
     <task id="LOCAL-00111" summary="update">
       <created>1590155433596</created>
@@ -838,7 +833,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598734038258</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="update">
+      <created>1598734225079</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1598734225079</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -880,10 +882,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590171111243" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1598734038037">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1598734224924">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598734038037" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598734224924" />
     <state x="167" y="132" width="1653" height="848" key="DiffContextDialog" timestamp="1590416818451">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -932,10 +934,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="800" y="128" width="367" height="860" key="VCS.ChangeListViewerDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590170223000" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1598734042738">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1598734229559">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598734042738" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598734229559" />
     <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1593185001207">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
