@@ -12,7 +12,6 @@ struct splay_tree {
         node *left, *right, *par;
         int size;
         T val, res;
-        node() {}
         node(T val) : left(nullptr), right(nullptr), par(nullptr), size(1), val(val), res(val) {}
         void rotate() {
             node *p, *pp, *c;
@@ -68,21 +67,19 @@ struct splay_tree {
     int lower_bound(T x) {
         if (!root) { return 0; }
         node *cur = root;
-        int ret = cur->left ? cur->left->size : 0;
+        int ret = -1;
         while (true) {
+            if (cur->state() < 1) { ret += cur->left ? cur->left->size + 1 : 1; }
+            else { ret -= cur->right ? cur->right->size + 1 : 1; }
             if (M::gr(x, cur->val)) {
-                if (cur->right) {
-                    cur = cur->right;
-                    ret += cur->left ? cur->left->size : 0;
-                } else {
+                if (cur->right) { cur = cur->right; }
+                else {
                     cur->splay(), root = cur;
                     return ret + 1;
                 }
             } else {
-                if (cur->left) {
-                    cur = cur->left;
-                    ret -= cur->right ? cur->right->size + 1 : 1;
-                } else {
+                if (cur->left) { cur = cur->left; }
+                else {
                     cur->splay(), root = cur;
                     return ret;
                 }
