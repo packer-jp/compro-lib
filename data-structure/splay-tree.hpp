@@ -47,10 +47,7 @@ struct splay_tree {
     };
     node *root;
     splay_tree(node *root = nullptr) : root(root) {}
-    int size() {
-        if (!root) { return 0; }
-        return root->size;
-    }
+    int size() { return root ? root->size : 0; }
     node *get_node(int idx) {
         node *cur = root;
         while (true) {
