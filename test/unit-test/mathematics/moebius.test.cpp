@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     int n = 1260;
-    map<long long, int> mb = moebius(n);
+    map<int, int> mb = moebius(n);
     for (int i = 1; i <= n; i++) {
         auto pf = run_length_encoding(prime_factorize(i));
         int m = (pf.size() & 1) ? -1 : 1;
