@@ -7,7 +7,7 @@
 
 template<typename T> std::vector<T> prime_factorize(T n) {
     std::vector<T> ret;
-    for (long long i = 2; i * i <= n; i++) {
+    for (T i = 2; i * i <= n; i++) {
         while (n % i == 0) {
             ret.emplace_back(i);
             n /= i;
