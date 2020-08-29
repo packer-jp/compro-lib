@@ -13,6 +13,6 @@ template<typename T> std::vector<T> prime_factorize(T n) {
             n /= i;
         }
     }
-    if (n != 1) { ret.push_back(n); }
+    if (n != 1) { ret.emplace_back(n); }
     return ret;
 }
