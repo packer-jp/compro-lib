@@ -9,7 +9,7 @@ int main() {
     int n = 1260;
     map<long long, int> mb = moebius(n);
     for (int i = 1; i <= n; i++) {
-        auto pf = get_prime_factors(i);
+        auto pf = prime_factorize(i);
         int m = (pf.size() & 1) ? -1 : 1;
         if (n % i) { m = 0; }
         for (int i = 0; i < pf.size(); i++) {
