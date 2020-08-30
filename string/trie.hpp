@@ -24,8 +24,8 @@ struct trie {
     }
     std::vector<int> count_prefix(const std::vector<int> &s) {
         std::vector<int> ret(s.size() + 1);
-        int cur = 0;
         ret[0] = cnt[0];
+        int cur = 0;
         for (int i = 0; i < s.size(); i++) {
             if (adj[cur][s[i]] == -1) { break; }
             cur = adj[cur][s[i]];
