@@ -5,17 +5,17 @@
  * @docs docs/string/trie.md
  */
 
-template<int char_size>
+template<int K>
 struct trie {
     std::vector<std::vector<int>> adj;
     std::vector<int> cnt;
-    trie() : adj(1, std::vector<int>(char_size, -1)), cnt(1) {}
+    trie() : adj(1, std::vector<int>(K, -1)), cnt(1) {}
     void insert(const std::vector<int> &s) {
         int cur = 0;
         for (int c:s) {
             if (adj[cur][c] == -1) {
                 adj[cur][c] = adj.size();
-                adj.emplace_back(char_size, -1);
+                adj.emplace_back(K, -1);
                 cnt.emplace_back(0);
             }
             cur = adj[cur][c];
