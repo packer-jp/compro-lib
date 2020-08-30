@@ -10,7 +10,7 @@ struct trie {
     std::vector<std::vector<int>> adj;
     std::vector<int> cnt;
     trie() : adj(1, std::vector<int>(K, -1)), cnt(1) {}
-    void insert(const std::vector<int> &s) {
+    void insert(const std::vector<int> &s, bool positive = true) {
         int cur = 0;
         for (int c:s) {
             if (adj[cur][c] == -1) {
@@ -20,12 +20,7 @@ struct trie {
             }
             cur = adj[cur][c];
         }
-        cnt[cur]++;
-    }
-    void erase(const std::vector<int> &s) {
-        int cur = 0;
-        for (int c:s) { cur = adj[cur][c]; }
-        cnt[cur]--;
+        cnt[cur] += positive ? 1 : -1;
     }
     std::vector<int> count_prefix(const std::vector<int> &s) {
         std::vector<int> ret(s.size() + 1);
