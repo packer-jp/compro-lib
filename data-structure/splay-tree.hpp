@@ -113,7 +113,7 @@ struct splay_tree {
     void erase(int idx) {
         splay_tree xt = split(idx);
         splay_tree right = xt.split(1);
-        delete xt->root;
+        delete xt.root;
         merge(right);
     }
     T get_sum(int l, int r) {

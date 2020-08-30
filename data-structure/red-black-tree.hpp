@@ -105,7 +105,7 @@ struct red_black_tree {
     void erase(int idx) {
         red_black_tree xt = split(idx);
         red_black_tree right = xt.split(1);
-        delete xt->root;
+        delete xt.root;
         merge(right);
     }
     T get_sum(int l, int r) {
