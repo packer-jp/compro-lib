@@ -36,8 +36,8 @@ add_executable(Articulation-Points-0 test/AOJ/GRL/Articulation-Points-0.test.cpp
 add_executable(How-Many-Divisors-0 test/AOJ/ITP1/How-Many-Divisors-0.test.cpp mathematics/get-divisors.hpp)
 
 add_executable(Power-0 test/AOJ/NTL/Power-0.test.cpp mathematics/mod-int.hpp)
-add_executable(Prime-Factorize-0 test/AOJ/NTL/Prime-Factorize-0.test.cpp mathematics/prime-factorize.hpp string/run-length-encoding.hpp)
-add_executable(Prime-Factorize-1 test/AOJ/NTL/Prime-Factorize-1.test.cpp mathematics/multi-prime-factorize.hpp string/run-length-encoding.hpp)
+add_executable(Prime-Factorize-0 test/AOJ/NTL/Prime-Factorize-0.test.cpp mathematics/prime-factorize.hpp)
+add_executable(Prime-Factorize-1 test/AOJ/NTL/Prime-Factorize-1.test.cpp mathematics/multi-prime-factorize.hpp)
 
 add_executable(RMQ-0 test/AOJ/Volume15/RMQ-0.test.cpp data-structure/splay-tree.hpp)
 add_executable(RMQ-1 test/AOJ/Volume15/RMQ-1.test.cpp data-structure/red-black-tree.hpp)
