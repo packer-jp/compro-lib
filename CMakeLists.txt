@@ -58,6 +58,7 @@ add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/mat
 add_executable(permutation test/unit-test/mathematics/permutation.test.cpp mathematics/permutation.hpp)
 add_executable(moebius test/unit-test/mathematics/moebius.test.cpp mathematics/moebius.hpp string/run-length-encoding.hpp)
 add_executable(rational test/unit-test/mathematics/rational.test.cpp mathematics/rational.hpp)
+add_executable(xor-eliminate test/unit-test/mathematics/xor-eliminate.test.cpp mathematics/xor-eliminate.hpp)
 
 add_executable(trie test/unit-test/string/trie.test.cpp)
 add_executable(run-length-encoding test/unit-test/string/run-length-encoding.test.cpp string/run-length-encoding.hpp)
