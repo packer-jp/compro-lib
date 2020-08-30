@@ -6,7 +6,7 @@
  * @docs docs/utility/histogram-largest-rectangle.md
  */
 
-template<typename T> long long histogram_largest_rectangle(const std::vector<T> &h) {
+template<typename T> T histogram_largest_rectangle(const std::vector<T> &h) {
     int n = h.size();
     std::vector<int> left(n);
     {

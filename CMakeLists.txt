@@ -48,6 +48,7 @@ add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolutio
 
 add_executable(Many-A-Plus-B-0 test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp utility/fast-io.hpp)
 
+
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)
 add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp graph/topological-sort.hpp)
 add_executable(to-rooted-tree test/unit-test/graph/to-rooted-tree.test.cpp graph/to-rooted-tree.hpp)
@@ -58,4 +59,5 @@ add_executable(permutation test/unit-test/mathematics/permutation.test.cpp mathe
 add_executable(moebius test/unit-test/mathematics/moebius.test.cpp mathematics/moebius.hpp string/run-length-encoding.hpp)
 add_executable(rational test/unit-test/mathematics/rational.test.cpp mathematics/rational.hpp)
 
+add_executable(trie test/unit-test/string/trie.test.cpp)
 add_executable(run-length-encoding test/unit-test/string/run-length-encoding.test.cpp string/run-length-encoding.hpp)
