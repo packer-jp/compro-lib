@@ -60,5 +60,5 @@ add_executable(moebius test/unit-test/mathematics/moebius.test.cpp mathematics/m
 add_executable(rational test/unit-test/mathematics/rational.test.cpp mathematics/rational.hpp)
 add_executable(xor-eliminate test/unit-test/mathematics/xor-eliminate.test.cpp mathematics/xor-eliminate.hpp utility/bit-reverse.hpp)
 
-add_executable(trie test/unit-test/string/trie.test.cpp)
+add_executable(trie test/unit-test/string/trie.test.cpp string/trie.hpp)
 add_executable(run-length-encoding test/unit-test/string/run-length-encoding.test.cpp string/run-length-encoding.hpp)
