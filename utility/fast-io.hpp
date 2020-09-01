@@ -6,9 +6,9 @@
  */
 
 struct fast_io {
-    static constexpr int size_in = 1 << 26, size_out = 1 << 26;
-    char data_in[size_in], data_out[size_out], *p_in, *p_out, s[30];
-    fast_io() { fread(data_in, 1, size_in, stdin), p_in = data_in, p_out = data_out; }
+    static constexpr int SIZE_IN = 1 << 26, SIZE_OUT = 1 << 26;
+    char data_in[SIZE_IN], data_out[SIZE_OUT], *p_in, *p_out, s[30];
+    fast_io() { fread(data_in, 1, SIZE_IN, stdin), p_in = data_in, p_out = data_out; }
     ~fast_io() { fwrite(data_out, 1, p_out - data_out, stdout); }
     void putchar(char x) { *p_out++ = x; }
     template<typename T> void putint(T x) {
