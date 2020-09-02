@@ -32,7 +32,7 @@
 "test/AOJ/Volume15/RMQ-1.test.cpp": "2020-08-30 17:46:01 +0900",
 "test/AOJ/Volume26/Tree-0.test.cpp": "2020-08-14 03:15:22 +0900",
 "test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp": "2020-08-14 02:34:49 +0900",
-"test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp": "2020-08-14 03:09:54 +0900",
+"test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp": "2020-09-01 19:19:19 +0900",
 "test/unit-test/graph/heavy-light-decomposition.test.cpp": "2020-08-14 03:15:22 +0900",
 "test/unit-test/graph/to-rooted-tree.test.cpp": "2020-06-27 00:23:28 +0900",
 "test/unit-test/graph/topological-sort.test.cpp": "2020-05-17 18:20:39 +0900",
@@ -41,7 +41,7 @@
 "test/unit-test/mathematics/moebius.test.cpp": "2020-08-30 06:10:36 +0900",
 "test/unit-test/mathematics/permutation.test.cpp": "2020-05-13 20:49:11 +0900",
 "test/unit-test/mathematics/rational.test.cpp": "2020-05-25 23:42:08 +0900",
-"test/unit-test/mathematics/xor-eliminate.test.cpp": "2020-09-01 03:22:39 +0900",
+"test/unit-test/mathematics/xor-eliminate.test.cpp": "2020-09-01 18:40:08 +0900",
 "test/unit-test/string/run-length-encoding.test.cpp": "2020-05-17 18:41:21 +0900",
 "test/unit-test/string/trie.test.cpp": "2020-09-01 03:38:06 +0900"
 }
