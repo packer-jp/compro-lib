@@ -16,19 +16,19 @@ struct fenwick_tree {
         for (i++; i <= n; i += i & -i) { data[i] = M::op(data[i], x); }
     }
     T fold(int i) const {
-        T ret = M::identity();
+        T ret = M::id();
         for (; i > 0; i -= i & -i) { ret = M::op(ret, data[i]); }
         return ret;
     }
-    T fold(int l, int r) const { return M::op(fold(r), M::inv(fold(l))); }
+    T fold(int l, int r) const { return M::op(M::inv(fold(l)), fold(r)); }
 };
 
 template<typename M>
 struct fenwick_tree_range : public fenwick_tree<M> {
     using S = fenwick_tree<M>;
     using T = typename M::T;
-    fenwick_tree_range(int n) { S::fenwick_tree(n); }
-    void apply(int l, int r, const T &x) { S::apply(l, x), S::apply(r, -x); }
+    fenwick_tree_range(int n) : S(n) {}
+    void apply(int l, int r, const T &x) { S::apply(l, x), S::apply(r, M::inv(x)); }
     T operator[](int i) const { return S::fold(i + 1); }
 };
 
