@@ -36,14 +36,14 @@ int main() {
         vector<pair<int, int>> path = hld.get_path(u, v, false);
         for (int i = 0; i < path.size(); i++) {
             int l = path[i].first, r = path[i].second;
-            if (l < r) { ret += st_fwd.get_sum(l, r + 1); }
-            else { ret += st_rev.get_sum(N - l - 1, N - r); }
+            if (l < r) { ret += st_fwd.fold(l, r + 1); }
+            else { ret += st_rev.fold(N - l - 1, N - r); }
         }
         return ret;
     };
     auto subtree = [&](int v) {
         pair<int, int> subtree = hld.get_subtree(v, false);
-        return st_fwd.get_sum(subtree.first, subtree.second + 1);
+        return st_fwd.fold(subtree.first, subtree.second + 1);
     };
     assert(path(2, 1) == "cefb");
     assert(path(5, 3) == "fed");

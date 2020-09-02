@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;
-        if (com == 0) { ft.add(x, y); }
-        else if (com == 1) { cout << ft.get_sum(x, y + 1) << endl; }
+        if (com == 0) { ft.apply(x, y); }
+        else if (com == 1) { cout << ft.fold(x, y + 1) << endl; }
     }
 }

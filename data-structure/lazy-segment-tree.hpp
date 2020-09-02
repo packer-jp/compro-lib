@@ -28,16 +28,16 @@ struct lazy_segment_tree {
         }
         lazy[i] = M::id_E();
     }
-    void add(int l, int r, const E &x) {
+    void apply(int l, int r, const E &x) {
         l += n, r += n - 1;
         for (int i = std::__lg(r); i > 0; i--) {
             propagate(l >> i);
             propagate(r >> i);
         }
-        auto apply = [&](int i) { lazy[i] = M::op_EE(lazy[i], x), propagate(i); };
+        auto update = [&](int i) { lazy[i] = M::op_EE(lazy[i], x), propagate(i); };
         for (int i = l, j = r + 1; i < j; i >>= 1, j >>= 1) {
-            if (i & 1) { apply(i++); }
-            if (j & 1) { apply(--j); }
+            if (i & 1) { update(i++); }
+            if (j & 1) { update(--j); }
         }
         while (l >>= 1, r >>= 1) {
             data[l] = M::op_TT(M::op_TE(data[l << 1 | 0], lazy[l << 1 | 0]),
@@ -46,7 +46,7 @@ struct lazy_segment_tree {
                                M::op_TE(data[r << 1 | 1], lazy[r << 1 | 1]));
         }
     }
-    T get_sum(int l, int r) {
+    T fold(int l, int r) {
         l += n, r += n - 1;
         for (int i = std::__lg(r); i > 0; i--) { propagate(l >> i), propagate(r >> i); }
         T a = M::id_T(), b = M::id_T();

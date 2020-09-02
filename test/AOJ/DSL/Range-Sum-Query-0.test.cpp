@@ -12,6 +12,6 @@ int main() {
         int com, x, y;
         cin >> com >> x >> y;
         if (com == 0) { rsq.set(x, rsq[x] + y); }
-        else if (com == 1) { cout << rsq.get_sum(x, y + 1) << endl; }
+        else if (com == 1) { cout << rsq.fold(x, y + 1) << endl; }
     }
 }

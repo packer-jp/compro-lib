@@ -22,7 +22,7 @@ struct segment_tree {
         while (i >>= 1) { data[i] = M::op(data[i << 1 | 0], data[i << 1 | 1]); }
     }
     const T &operator[](int i) const { return data[i + n]; }
-    T get_sum(int l, int r) const {
+    T fold(int l, int r) const {
         T a = M::id(), b = M::id();
         for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
             if (l & 1) { a = M::op(a, data[l++]); }

@@ -12,24 +12,24 @@ struct fenwick_tree {
     int n;
     std::vector<T> data;
     fenwick_tree(int n) : n(n), data(n + 1, M::id()) {}
-    void add(int i, const T &x) { for (i++; i <= n; i += i & -i) { data[i] = M::op(data[i], x); }}
-    T get_sum(int i) const {
-        T ret = M::id();
+    void apply(int i, const T &x) {
+        for (i++; i <= n; i += i & -i) { data[i] = M::op(data[i], x); }
+    }
+    T fold(int i) const {
+        T ret = M::identity();
         for (; i > 0; i -= i & -i) { ret = M::op(ret, data[i]); }
         return ret;
     }
-    T get_sum(int l, int r) const {
-        return M::op(get_sum(r), M::inv(get_sum(l)));
-    }
+    T fold(int l, int r) const { return M::op(fold(r), M::inv(fold(l))); }
 };
 
 template<typename M>
-struct fenwick_tree_range {
+struct fenwick_tree_range : public fenwick_tree<M> {
+    using S = fenwick_tree<M>;
     using T = typename M::T;
-    fenwick_tree<M> ft;
-    fenwick_tree_range(int n) : ft(n + 1) {}
-    void add(int l, int r, const T &x) { ft.add(l, x), ft.add(r, -x); }
-    T operator[](int i) const { return ft.get_sum(i + 1); }
+    fenwick_tree_range(int n) { S::fenwick_tree(n); }
+    void apply(int l, int r, const T &x) { S::apply(l, x), S::apply(r, -x); }
+    T operator[](int i) const { return S::fold(i + 1); }
 };
 
 struct rsq {

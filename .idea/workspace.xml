@@ -78,7 +78,18 @@
   <component name="ChangeListManager">
     <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/fast-io.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/utility/fast-io.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/fenwick-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/fenwick-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/lazy-segment-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structure/segment-tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/data-structure/segment-tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Add-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Add-Query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Minimum-Query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-1.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/DSL/Range-Sum-Query-1.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AOJ/Volume26/Tree-0.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/AOJ/Volume26/Tree-0.test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit-test/graph/heavy-light-decomposition.test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit-test/graph/heavy-light-decomposition.test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +118,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../competitive-programming" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -519,13 +530,8 @@
       <workItem from="1598811153253" duration="4536000" />
       <workItem from="1598849195329" duration="11650000" />
       <workItem from="1598893544190" duration="2788000" />
-    </task>
-    <task id="LOCAL-00130" summary="update">
-      <created>1590781161757</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1590781161757</updated>
+      <workItem from="1598967040243" duration="49000" />
+      <workItem from="1599041640089" duration="3722000" />
     </task>
     <task id="LOCAL-00131" summary="update">
       <created>1590945442186</created>
@@ -863,7 +869,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598953208153</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="update">
+      <created>1598955559472</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1598955559472</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -905,18 +918,18 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598854093643" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1598953208015">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1598955559371">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598953208015" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598955559371" />
     <state x="167" y="132" width="1653" height="848" key="DiffContextDialog" timestamp="1590416818451">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="167" y="132" width="1653" height="848" key="DiffContextDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1590416818451" />
-    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1598867832628">
+    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1599041759201">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598867832628" />
+    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1599041759201" />
     <state width="1789" height="251" key="GridCell.Tab.0.bottom" timestamp="1598899034978">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -949,10 +962,10 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="251" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598899034978" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1598951726216">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1598955564334">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598951726216" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598955564334" />
     <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1593185001207">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>

@@ -15,7 +15,7 @@ int main() {
             int s, t, x;
             cin >> s >> t >> x;
             s--, t--;
-            ft.add(s, t + 1, x);
+            ft.apply(s, t + 1, x);
         } else if (com == 1) {
             int i;
             cin >> i;

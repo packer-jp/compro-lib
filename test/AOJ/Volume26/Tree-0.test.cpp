@@ -27,14 +27,14 @@ int main() {
             vector<pair<int, int>> segs = hld.get_path(u, v, true);
             for (int j = 0; j < segs.size(); j++) {
                 if (segs[j].first > segs[j].second) { swap(segs[j].first, segs[j].second); }
-                ans += lst.get_sum(segs[j].first, segs[j].second + 1).first;
+                ans += lst.fold(segs[j].first, segs[j].second + 1).first;
             }
             cout << ans << endl;
         } else {
             int v, x;
             cin >> v >> x;
             pair<int, int> seg = hld.get_subtree(v, true);
-            if (seg.first <= seg.second) { lst.add(seg.first, seg.second + 1, x); }
+            if (seg.first <= seg.second) { lst.apply(seg.first, seg.second + 1, x); }
         }
     }
 }

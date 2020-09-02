@@ -15,11 +15,11 @@ int main() {
             int s, t;
             long long x;
             cin >> s >> t >> x;
-            lst.add(s, t + 1, x);
+            lst.apply(s, t + 1, x);
         } else if (com == 1) {
             int s, t;
             cin >> s >> t;
-            cout << lst.get_sum(s, t + 1).first << endl;
+            cout << lst.fold(s, t + 1).first << endl;
         }
     }
 }
