@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(compro-lib)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Binary-Search-0 test/AOJ/ALDS1/Binary-Search-0.test.cpp utility/binary-search.hpp)
 add_executable(String-Search-0 test/AOJ/ALDS1/String-Search-0.test.cpp string/rolling-hash.hpp)
