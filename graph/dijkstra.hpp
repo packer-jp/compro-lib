@@ -15,14 +15,14 @@ struct dijkstra {
     std::vector<std::vector<int>> adj;
     std::vector<std::vector<E>> cost;
     dijkstra(int n) : adj(n), cost(n) {}
-    void add_edge(int from, int to, E cost_) { adj[from].emplace_back(to), cost[from].emplace_back(cost_); }
+    void add_edge(int from, int to, E cost) { adj[from].emplace_back(to), this->cost[from].emplace_back(cost); }
     std::vector<typename M::T> get_dist(int s) {
         std::vector<T> ret(adj.size(), M::inf());
         using P = std::pair<T, int>;
         auto c = [&](P a, P b) -> bool { return M::less(b.first, a.first); };
         std::priority_queue<P, std::vector<P>, decltype(c)> pq(c);
         ret[s] = M::id();
-        pq.push({ret[s], s});
+        pq.emplace(ret[s], s);
         while (!pq.empty()) {
             P p = pq.top();
             pq.pop();
@@ -41,8 +41,8 @@ struct dijkstra {
 struct int_dij {
     using T = int;
     using E = int;
-    static T id() { return 0; }
+    static T zero() { return 0; }
     static T inf() { return std::numeric_limits<T>::max(); }
-    static T op(const T &a, const E &b) { return a == inf() ? inf() : a + b; }
+    static T plus(const T &a, const E &b) { return a == inf() ? inf() : a + b; }
     static bool less(const T &a, const T &b) { return a < b; }
 };

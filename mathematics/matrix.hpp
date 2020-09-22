@@ -12,7 +12,7 @@ template<typename S>
 struct matrix {
     using T = typename S::T;
     std::vector<std::vector<T>> data;
-    matrix(int h, int w) : data(h, std::vector<T>(w, S::id_plus())) {}
+    matrix(int h, int w) : data(h, std::vector<T>(w, S::zero())) {}
     matrix(const std::vector<std::vector<T>> &src) : data(src) {}
     std::vector<T> &operator[](int i) { return data[i]; }
     const std::vector<T> &operator[](int i) const { return data[i]; }
@@ -20,7 +20,7 @@ struct matrix {
     int width() const { return data[0].size(); }
     static matrix identity(int n) {
         matrix ret(n, n);
-        for (int i = 0; i < n; i++) { ret[i][i] = S::id_cross(); }
+        for (int i = 0; i < n; i++) { ret[i][i] = S::one(); }
         return ret;
     }
     bool operator==(const matrix &rhs) const {
@@ -44,13 +44,13 @@ struct matrix {
     matrix &operator-=(const matrix &rhs) {
         for (int i = 0; i < height(); i++) {
             for (int j = 0; j < width(); j++) {
-                (*this)[i][j] = S::plus((*this)[i][j], S::inv_plus(rhs[i][j]));
+                (*this)[i][j] = S::plus((*this)[i][j], S::minus(rhs[i][j]));
             }
         }
         return *this;
     }
     matrix &operator*=(const matrix &rhs) {
-        std::vector<std::vector<T>> ret(height(), std::vector<T>(rhs.width(), S::id_plus()));
+        std::vector<std::vector<T>> ret(height(), std::vector<T>(rhs.width(), S::zero()));
         for (int i = 0; i < height(); i++) {
             for (int j = 0; j < rhs.width(); j++) {
                 for (int k = 0; k < width(); k++) {
@@ -75,11 +75,11 @@ struct matrix {
                 if (S::less_abs(ret[m][i], ret[j][i])) { swap(ret[m], ret[j]); }
             }
             if (S::less_abs(ret[m][i], S::eps())) { continue; }
-            for (int j = width() - 1; j >= i; j--) { ret[m][j] = S::cross(ret[m][j], S::inv_cross(ret[m][i])); }
+            for (int j = width() - 1; j >= i; j--) { ret[m][j] = S::cross(ret[m][j], S::inv(ret[m][i])); }
             for (int j = 0; j < height(); j++) {
                 if (j == m) { continue; }
                 for (int k = width() - 1; k >= i; k--) {
-                    ret[j][k] = S::plus(ret[j][k], S::inv_plus(S::cross(ret[m][k], ret[j][i])));
+                    ret[j][k] = S::plus(ret[j][k], S::minus(S::cross(ret[m][k], ret[j][i])));
                 }
             }
             m++;
@@ -126,10 +126,10 @@ struct double_mat {
     using T = double;
     static T plus(const T &a, const T &b) { return a + b; }
     static T cross(const T &a, const T &b) { return a * b; }
-    static T id_plus() { return 0; }
-    static T id_cross() { return 1; }
-    static T inv_plus(const T &a) { return -a; }
-    static T inv_cross(const T &a) { return 1 / a; }
+    static T zero() { return 0; }
+    static T one() { return 1; }
+    static T minus(const T &a) { return -a; }
+    static T inv(const T &a) { return 1 / a; }
     static T eps() { return 1e-10; };
     static bool less_abs(const T &a, const T &b) { return std::abs(a) < std::abs(b); };
 };

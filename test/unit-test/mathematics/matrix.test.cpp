@@ -11,10 +11,10 @@ int main() {
         using T = mint;
         static T plus(const T &a, const T &b) { return a + b; }
         static T cross(const T &a, const T &b) { return a * b; }
-        static T id_plus() { return 0; }
-        static T id_cross() { return 1; }
-        static T inv_plus(const T &a) { return -a; }
-        static T inv_cross(const T &a) { return a.inv(); }
+        static T zero() { return 0; }
+        static T one() { return 1; }
+        static T minus(const T &a) { return -a; }
+        static T inv(const T &a) { return a.inv(); }
         static T eps() { return 0; };
         static bool less_abs(const T &a, const T &b) { return a.val < b.val; };
     };
