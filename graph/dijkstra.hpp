@@ -12,13 +12,12 @@ template<typename M>
 struct dijkstra {
     using T = typename M::T;
     using E = typename M::E;
-    int n;
     std::vector<std::vector<int>> adj;
     std::vector<std::vector<E>> cost;
-    dijkstra(int n) : n(n), adj(n), cost(n) {}
+    dijkstra(int n) : adj(n), cost(n) {}
     void add_edge(int from, int to, E cost_) { adj[from].emplace_back(to), cost[from].emplace_back(cost_); }
     std::vector<typename M::T> get_dist(int s) {
-        std::vector<T> ret(n, M::inf());
+        std::vector<T> ret(adj.size(), M::inf());
         using P = std::pair<T, int>;
         auto c = [&](P a, P b) -> bool { return M::less(b.first, a.first); };
         std::priority_queue<P, std::vector<P>, decltype(c)> pq(c);
@@ -32,7 +31,7 @@ struct dijkstra {
             for (int i = 0; i < adj[v].size(); i++) {
                 int u = adj[v][i];
                 T dist = M::op(ret[v], cost[v][i]);
-                if (M::less(dist, ret[u])) { ret[u] = dist, pq.push({ret[u], u}); }
+                if (M::less(dist, ret[u])) { ret[u] = dist, pq.emplace(ret[u], u); }
             }
         }
         return ret;

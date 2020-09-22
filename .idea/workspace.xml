@@ -23,6 +23,7 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="compro-lib" targetName="Power-0" />
       <config projectName="compro-lib" targetName="Convex-Hull-0" />
       <config projectName="compro-lib" targetName="Strongly-Connected-Components-0" />
       <config projectName="compro-lib" targetName="RMQ-1" />
@@ -31,43 +32,42 @@
       <config projectName="compro-lib" targetName="Maximum-Flow-1" />
       <config projectName="compro-lib" targetName="Maximum-Flow-0" />
       <config projectName="compro-lib" targetName="permutation" />
-      <config projectName="compro-lib" targetName="Power-0" />
-      <config projectName="compro-lib" targetName="heavy-light-decomposition" />
+      <config projectName="compro-lib" targetName="How-Many-Divisors-0" />
       <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
-      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
-      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
-      <config projectName="compro-lib" targetName="Bipartite-Matching-0" />
       <config projectName="compro-lib" targetName="Prime-Factorize-0" />
+      <config projectName="compro-lib" targetName="heavy-light-decomposition" />
+      <config projectName="compro-lib" targetName="matrix" />
+      <config projectName="compro-lib" targetName="Bipartite-Matching-0" />
       <config projectName="compro-lib" targetName="Prime-Factorize-1" />
-      <config projectName="compro-lib" targetName="Articulation-Points-0" />
       <config projectName="compro-lib" targetName="xor-eliminate" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
-      <config projectName="compro-lib" targetName="How-Many-Divisors-0" />
       <config projectName="compro-lib" targetName="Largest-Rectangle-in-a-Histogram-0" />
-      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
-      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
-      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
+      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
+      <config projectName="compro-lib" targetName="Articulation-Points-0" />
       <config projectName="compro-lib" targetName="Pattern-Search-0" />
       <config projectName="compro-lib" targetName="topological-sort" />
       <config projectName="compro-lib" targetName="rational" />
-      <config projectName="compro-lib" targetName="matrix" />
+      <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
       <config projectName="compro-lib" targetName="to-rooted-tree" />
       <config projectName="compro-lib" targetName="Tree-0" />
-      <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
       <config projectName="compro-lib" targetName="moebius" />
-      <config projectName="compro-lib" targetName="Bridges-0" />
       <config projectName="compro-lib" targetName="Prime-Numbers-0" />
-      <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
       <config projectName="compro-lib" targetName="Binary-Search-0" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
+      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
       <config projectName="compro-lib" targetName="RMQ-and-RAQ-0" />
       <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
+      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
       <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
       <config projectName="compro-lib" targetName="Vector-1" />
-      <config projectName="compro-lib" targetName="Vector-0" />
+      <config projectName="compro-lib" targetName="Bridges-0" />
       <config projectName="compro-lib" targetName="trie" />
+      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
       <config projectName="compro-lib" targetName="mod-int" />
       <config projectName="compro-lib" targetName="run-length-encoding" />
       <config projectName="compro-lib" targetName="String-Search-0" />
+      <config projectName="compro-lib" targetName="Vector-0" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -76,7 +76,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="" />
+    <list default="true" id="12443dc2-d754-467d-a2de-5312c34bde76" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/dijkstra.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph/dijkstra.hpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -355,11 +358,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.All-Pairs-Shortest-Path-0" />
       <item itemvalue="CMake Application.Articulation-Points-0" />
@@ -393,10 +391,8 @@
       <item itemvalue="CMake Application.String-Search-0" />
       <item itemvalue="CMake Application.Strongly-Connected-Components-0" />
       <item itemvalue="CMake Application.Tree-0" />
-      <item itemvalue="CMake Application.trie" />
       <item itemvalue="CMake Application.Vector-0" />
       <item itemvalue="CMake Application.Vector-1" />
-      <item itemvalue="CMake Application.xor-eliminate" />
       <item itemvalue="CMake Application.heavy-light-decomposition" />
       <item itemvalue="CMake Application.matrix" />
       <item itemvalue="CMake Application.mod-int" />
@@ -406,6 +402,8 @@
       <item itemvalue="CMake Application.run-length-encoding" />
       <item itemvalue="CMake Application.to-rooted-tree" />
       <item itemvalue="CMake Application.topological-sort" />
+      <item itemvalue="CMake Application.trie" />
+      <item itemvalue="CMake Application.xor-eliminate" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -521,14 +519,8 @@
       <workItem from="1599998209005" duration="24000" />
       <workItem from="1600428506904" duration="1378000" />
       <workItem from="1600432890215" duration="10206000" />
-      <workItem from="1600450941922" duration="840000" />
-    </task>
-    <task id="LOCAL-00136" summary="update">
-      <created>1597081710058</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1597081710059</updated>
+      <workItem from="1600450941922" duration="1132000" />
+      <workItem from="1600789873104" duration="2287000" />
     </task>
     <task id="LOCAL-00137" summary="update">
       <created>1597339479206</created>
@@ -866,7 +858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600451440451</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="update">
+      <created>1600451917004</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1600451917004</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -908,11 +907,11 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="661" y="243" width="655" height="627" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1598854093643" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1600451440223">
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1600452065735">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1599060744371" />
-    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1600451440223" />
+    <state x="514" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1600452065735" />
     <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1600450913393">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -966,11 +965,11 @@
     <state width="1856" height="261" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599727895591" />
     <state width="1789" height="250" key="GridCell.Tab.1.right/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1599117182271" />
     <state width="1789" height="248" key="GridCell.Tab.1.right/67.34.1853.1046@67.34.1853.1046" timestamp="1600450915864" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1600451447900">
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1600451922291">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046/1920.0.1920.1080@67.34.1853.1046" timestamp="1599060748988" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1600451447900" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1600451922291" />
     <state x="629" y="139" width="729" height="834" key="find.popup" timestamp="1593185001207">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
