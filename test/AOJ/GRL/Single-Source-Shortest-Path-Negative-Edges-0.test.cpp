@@ -7,13 +7,13 @@ using namespace std;
 int main() {
     int V, E, r;
     cin >> V >> E >> r;
-    vector<vector<int>> adj(V, vector<int>()), cost(V, vector<int>());
+    bellman_ford<int_bf> bf(V);
     for (int i = 0; i < E; i++) {
         int s, t, d;
         cin >> s >> t >> d;
-        adj[s].push_back(t), cost[s].push_back(d);
+        bf.add_edge(s, t, d);
     }
-    vector<int> dist = bellman_ford<int_bf>(adj, cost, r);
+    vector<int> dist = bf.get_dist(r);
     if (dist.empty()) {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;
