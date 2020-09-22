@@ -8,30 +8,30 @@
  * @docs docs/graph/dijkstra.md
  */
 
-template<typename M>
+template<typename S>
 struct dijkstra {
-    using T = typename M::T;
-    using E = typename M::E;
+    using T = typename S::T;
+    using E = typename S::E;
     std::vector<std::vector<int>> adj;
     std::vector<std::vector<E>> cost;
     dijkstra(int n) : adj(n), cost(n) {}
     void add_edge(int from, int to, E cost) { adj[from].emplace_back(to), this->cost[from].emplace_back(cost); }
-    std::vector<typename M::T> get_dist(int s) {
-        std::vector<T> ret(adj.size(), M::inf());
+    std::vector<T> get_dist(int s) {
+        std::vector<T> ret(adj.size(), S::inf());
         using P = std::pair<T, int>;
-        auto c = [&](P a, P b) -> bool { return M::less(b.first, a.first); };
+        auto c = [&](P a, P b) -> bool { return S::less(b.first, a.first); };
         std::priority_queue<P, std::vector<P>, decltype(c)> pq(c);
-        ret[s] = M::zero();
+        ret[s] = S::zero();
         pq.emplace(ret[s], s);
         while (!pq.empty()) {
             P p = pq.top();
             pq.pop();
             int v = p.second;
-            if (M::less(ret[v], p.first)) { continue; }
+            if (S::less(ret[v], p.first)) { continue; }
             for (int i = 0; i < adj[v].size(); i++) {
                 int u = adj[v][i];
-                T dist = M::plus(ret[v], cost[v][i]);
-                if (M::less(dist, ret[u])) { ret[u] = dist, pq.emplace(ret[u], u); }
+                T dist = S::plus(ret[v], cost[v][i]);
+                if (S::less(dist, ret[u])) { ret[u] = dist, pq.emplace(ret[u], u); }
             }
         }
         return ret;
