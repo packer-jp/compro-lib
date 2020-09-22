@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="compro-lib" targetName="Diameter-of-a-Tree-0" />
+      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-Negative-Edges-0" />
+      <config projectName="compro-lib" targetName="Range-Minimum-Query-0" />
+      <config projectName="compro-lib" targetName="Tree-0" />
+      <config projectName="compro-lib" targetName="Binary-Search-0" />
+      <config projectName="compro-lib" targetName="Bipartite-Matching-0" />
+      <config projectName="compro-lib" targetName="Range-Add-Query-0" />
+      <config projectName="compro-lib" targetName="xor-eliminate" />
+      <config projectName="compro-lib" targetName="Single-Source-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="Vector-0" />
+      <config projectName="compro-lib" targetName="RMQ-and-RUQ-0" />
+      <config projectName="compro-lib" targetName="Vector-1" />
+      <config projectName="compro-lib" targetName="RMQ-and-RAQ-0" />
+      <config projectName="compro-lib" targetName="Convex-Hull-0" />
+      <config projectName="compro-lib" targetName="String-Search-0" />
+      <config projectName="compro-lib" targetName="trie" />
+      <config projectName="compro-lib" targetName="rational" />
+      <config projectName="compro-lib" targetName="run-length-encoding" />
+      <config projectName="compro-lib" targetName="Largest-Rectangle-in-a-Histogram-0" />
+      <config projectName="compro-lib" targetName="Pattern-Search-0" />
+      <config projectName="compro-lib" targetName="Prime-Factorize-1" />
+      <config projectName="compro-lib" targetName="moebius" />
+      <config projectName="compro-lib" targetName="Prime-Factorize-0" />
+      <config projectName="compro-lib" targetName="RSQ-and-RAQ-0" />
+      <config projectName="compro-lib" targetName="RMQ-0" />
+      <config projectName="compro-lib" targetName="Many-A-Plus-B-0" />
+      <config projectName="compro-lib" targetName="Maximum-Flow-0" />
+      <config projectName="compro-lib" targetName="Power-0" />
+      <config projectName="compro-lib" targetName="RMQ-1" />
+      <config projectName="compro-lib" targetName="All-Pairs-Shortest-Path-0" />
+      <config projectName="compro-lib" targetName="Maximum-Flow-1" />
+      <config projectName="compro-lib" targetName="permutation" />
+      <config projectName="compro-lib" targetName="matrix" />
+      <config projectName="compro-lib" targetName="Strongly-Connected-Components-0" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-1" />
+      <config projectName="compro-lib" targetName="How-Many-Divisors-0" />
+      <config projectName="compro-lib" targetName="Convolution-mod-1000000007-0" />
+      <config projectName="compro-lib" targetName="Prime-Numbers-0" />
+      <config projectName="compro-lib" targetName="Range-Sum-Query-0" />
+      <config projectName="compro-lib" targetName="Bridges-0" />
+      <config projectName="compro-lib" targetName="to-rooted-tree" />
+      <config projectName="compro-lib" targetName="mod-int" />
+      <config projectName="compro-lib" targetName="Articulation-Points-0" />
+      <config projectName="compro-lib" targetName="heavy-light-decomposition" />
+      <config projectName="compro-lib" targetName="topological-sort" />
+    </generated>
   </component>
   <component name="CMakeSettings">
-    <configurations />
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40341ceb-49fb-49b1-81bf-6027830bd441" name="Default Changelist" comment="" />
+    <list default="true" id="40341ceb-49fb-49b1-81bf-6027830bd441" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +68,9 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1hsTabApzJtFgw7mnKLUQZrbfIb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -33,6 +85,291 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunManager" selected="CMake Application.All-Pairs-Shortest-Path-0">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All-Pairs-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="All-Pairs-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="All-Pairs-Shortest-Path-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Articulation-Points-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Articulation-Points-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Articulation-Points-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Binary-Search-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Binary-Search-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Binary-Search-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bipartite-Matching-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Bipartite-Matching-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Bipartite-Matching-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bridges-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Bridges-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Bridges-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Convex-Hull-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Convex-Hull-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Convex-Hull-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Convolution-mod-1000000007-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Convolution-mod-1000000007-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Convolution-mod-1000000007-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Diameter-of-a-Tree-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Diameter-of-a-Tree-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Diameter-of-a-Tree-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="How-Many-Divisors-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="How-Many-Divisors-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="How-Many-Divisors-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Largest-Rectangle-in-a-Histogram-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Largest-Rectangle-in-a-Histogram-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Largest-Rectangle-in-a-Histogram-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Many-A-Plus-B-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Many-A-Plus-B-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Many-A-Plus-B-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Maximum-Flow-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Maximum-Flow-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Maximum-Flow-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Maximum-Flow-1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Maximum-Flow-1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Maximum-Flow-1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pattern-Search-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Pattern-Search-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Pattern-Search-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Power-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Power-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Power-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Prime-Factorize-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Prime-Factorize-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Prime-Factorize-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Prime-Factorize-1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Prime-Factorize-1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Prime-Factorize-1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Prime-Numbers-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Prime-Numbers-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Prime-Numbers-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RMQ-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RMQ-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RMQ-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RMQ-1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RMQ-1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RMQ-1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RMQ-and-RAQ-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RMQ-and-RAQ-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RMQ-and-RAQ-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RMQ-and-RUQ-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RMQ-and-RUQ-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RMQ-and-RUQ-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RSQ-and-RAQ-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="RSQ-and-RAQ-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="RSQ-and-RAQ-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Range-Add-Query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Range-Add-Query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Range-Add-Query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Range-Minimum-Query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Range-Minimum-Query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Range-Minimum-Query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Range-Sum-Query-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Range-Sum-Query-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Range-Sum-Query-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Range-Sum-Query-1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Range-Sum-Query-1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Range-Sum-Query-1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Single-Source-Shortest-Path-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Single-Source-Shortest-Path-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Single-Source-Shortest-Path-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Single-Source-Shortest-Path-Negative-Edges-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Single-Source-Shortest-Path-Negative-Edges-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Single-Source-Shortest-Path-Negative-Edges-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="String-Search-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="String-Search-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="String-Search-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Strongly-Connected-Components-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Strongly-Connected-Components-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Strongly-Connected-Components-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tree-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Tree-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Tree-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vector-0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Vector-0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Vector-0">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vector-1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="Vector-1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="Vector-1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="heavy-light-decomposition" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="heavy-light-decomposition" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="heavy-light-decomposition">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="matrix" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="matrix" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="matrix">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mod-int" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="mod-int" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="mod-int">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="moebius" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="moebius" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="moebius">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="permutation" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="permutation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="permutation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rational" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="rational" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="rational">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run-length-encoding" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="run-length-encoding" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="run-length-encoding">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="to-rooted-tree" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="to-rooted-tree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="to-rooted-tree">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="topological-sort" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="topological-sort" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="topological-sort">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="trie" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="trie" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="trie">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="xor-eliminate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="compro-lib" TARGET_NAME="xor-eliminate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="compro-lib" RUN_TARGET_NAME="xor-eliminate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.All-Pairs-Shortest-Path-0" />
+      <item itemvalue="CMake Application.Articulation-Points-0" />
+      <item itemvalue="CMake Application.Binary-Search-0" />
+      <item itemvalue="CMake Application.Bipartite-Matching-0" />
+      <item itemvalue="CMake Application.Bridges-0" />
+      <item itemvalue="CMake Application.Convex-Hull-0" />
+      <item itemvalue="CMake Application.Convolution-mod-1000000007-0" />
+      <item itemvalue="CMake Application.Diameter-of-a-Tree-0" />
+      <item itemvalue="CMake Application.heavy-light-decomposition" />
+      <item itemvalue="CMake Application.How-Many-Divisors-0" />
+      <item itemvalue="CMake Application.Largest-Rectangle-in-a-Histogram-0" />
+      <item itemvalue="CMake Application.Many-A-Plus-B-0" />
+      <item itemvalue="CMake Application.matrix" />
+      <item itemvalue="CMake Application.Maximum-Flow-0" />
+      <item itemvalue="CMake Application.Maximum-Flow-1" />
+      <item itemvalue="CMake Application.mod-int" />
+      <item itemvalue="CMake Application.moebius" />
+      <item itemvalue="CMake Application.Pattern-Search-0" />
+      <item itemvalue="CMake Application.permutation" />
+      <item itemvalue="CMake Application.Power-0" />
+      <item itemvalue="CMake Application.Prime-Factorize-0" />
+      <item itemvalue="CMake Application.Prime-Factorize-1" />
+      <item itemvalue="CMake Application.Prime-Numbers-0" />
+      <item itemvalue="CMake Application.Range-Add-Query-0" />
+      <item itemvalue="CMake Application.Range-Minimum-Query-0" />
+      <item itemvalue="CMake Application.Range-Sum-Query-0" />
+      <item itemvalue="CMake Application.Range-Sum-Query-1" />
+      <item itemvalue="CMake Application.rational" />
+      <item itemvalue="CMake Application.RMQ-0" />
+      <item itemvalue="CMake Application.RMQ-1" />
+      <item itemvalue="CMake Application.RMQ-and-RAQ-0" />
+      <item itemvalue="CMake Application.RMQ-and-RUQ-0" />
+      <item itemvalue="CMake Application.RSQ-and-RAQ-0" />
+      <item itemvalue="CMake Application.run-length-encoding" />
+      <item itemvalue="CMake Application.Single-Source-Shortest-Path-0" />
+      <item itemvalue="CMake Application.Single-Source-Shortest-Path-Negative-Edges-0" />
+      <item itemvalue="CMake Application.String-Search-0" />
+      <item itemvalue="CMake Application.Strongly-Connected-Components-0" />
+      <item itemvalue="CMake Application.to-rooted-tree" />
+      <item itemvalue="CMake Application.topological-sort" />
+      <item itemvalue="CMake Application.Tree-0" />
+      <item itemvalue="CMake Application.trie" />
+      <item itemvalue="CMake Application.Vector-0" />
+      <item itemvalue="CMake Application.Vector-1" />
+      <item itemvalue="CMake Application.xor-eliminate" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -59,8 +396,17 @@
       <workItem from="1600798869198" duration="320000" />
       <workItem from="1600799213651" duration="5000" />
       <workItem from="1600799230300" duration="454000" />
+      <workItem from="1600799696523" duration="66000" />
+      <workItem from="1600799772399" duration="300000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1600799724476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600799724476</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,18 +430,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="447" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600799323156">
+    <state x="447" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600799929959">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="447" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1600799323156" />
-    <state x="456" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1600798700113">
+    <state x="447" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1600799929959" />
+    <state x="456" y="34" width="1064" height="1046" key="CommitChangelistDialog2" timestamp="1600799724231">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="456" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1600798700113" />
-    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1600799084054">
+    <state x="456" y="34" width="1064" height="1046" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1600799724231" />
+    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl" timestamp="1600799874271">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1600799084054" />
+    <state x="723" y="257" width="530" height="600" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1600799874271" />
     <state width="1789" height="248" key="GridCell.Tab.0.bottom" timestamp="1600798853414">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
@@ -128,9 +474,13 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1789" height="248" key="GridCell.Tab.1.right/67.34.1853.1046@67.34.1853.1046" timestamp="1600798853414" />
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1600798704835">
+    <state x="358" y="103" width="1271" height="907" key="SettingsEditor" timestamp="1600800026666">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1600798704835" />
+    <state x="358" y="103" width="1271" height="907" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1600800026666" />
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2" timestamp="1600799736300">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="488" y="228" width="1000" height="657" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1600799736300" />
   </component>
 </project>
