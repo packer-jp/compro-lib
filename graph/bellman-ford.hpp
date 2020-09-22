@@ -15,20 +15,21 @@ struct bellman_ford {
     struct edge {
         int from, to;
         E cost;
+        edge(int from, int to, E cost) : from(from), to(to), cost(cost) {}
     };
     int n;
     std::vector<edge> edges;
     bellman_ford(int n) : n(n) {}
     void add_edge(int from, int to, E cost) { edges.emplace_back(from, to, cost); }
     std::vector<T> get_dist(int s) {
-        std::vector<T> ret(n, M::inf());
-        ret[s] = M::zero();
+        std::vector<T> ret(n, S::inf());
+        ret[s] = S::zero();
         for (int i = 0; i < n; i++) {
             bool upd = false;
             for (int j = 0; j < edges.size(); j++) {
                 edge e = edges[j];
-                T dist = M::plus(ret[e.from], e.cost);
-                if (M::less(dist, ret[e.to])) { ret[e.to] = dist, upd = true; }
+                T dist = S::plus(ret[e.from], e.cost);
+                if (S::less(dist, ret[e.to])) { ret[e.to] = dist, upd = true; }
             }
             if (!upd) { return ret; }
         }
@@ -41,6 +42,6 @@ struct int_bf {
     using E = int;
     static T zero() { return 0; }
     static T inf() { return std::numeric_limits<T>::max(); }
-    static T plus(const T &a, const E &b) { return a == ab() ? ab() : a + b; }
+    static T plus(const T &a, const E &b) { return a == inf() ? inf() : a + b; }
     static bool less(const T &a, const T &b) { return a < b; }
 };
