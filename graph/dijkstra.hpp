@@ -21,7 +21,7 @@ struct dijkstra {
         using P = std::pair<T, int>;
         auto c = [&](P a, P b) -> bool { return M::less(b.first, a.first); };
         std::priority_queue<P, std::vector<P>, decltype(c)> pq(c);
-        ret[s] = M::id();
+        ret[s] = M::zero();
         pq.emplace(ret[s], s);
         while (!pq.empty()) {
             P p = pq.top();
@@ -30,7 +30,7 @@ struct dijkstra {
             if (M::less(ret[v], p.first)) { continue; }
             for (int i = 0; i < adj[v].size(); i++) {
                 int u = adj[v][i];
-                T dist = M::op(ret[v], cost[v][i]);
+                T dist = M::plus(ret[v], cost[v][i]);
                 if (M::less(dist, ret[u])) { ret[u] = dist, pq.emplace(ret[u], u); }
             }
         }
