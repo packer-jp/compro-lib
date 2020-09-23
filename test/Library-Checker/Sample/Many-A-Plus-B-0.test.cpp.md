@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: utility/fast-io.hpp
-    title: "\u9AD8\u901F\u5165\u51FA\u529B"
+    title: utility/fast-io.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
@@ -15,9 +15,8 @@ data:
     - https://judge.yosupo.jp/problem/many_aplusb
   bundledCode: "#line 1 \"test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp\"\n\
     #define PROBLEM \"https://judge.yosupo.jp/problem/many_aplusb\"\n#line 1 \"utility/fast-io.hpp\"\
-    \n#include <iostream>\n\n/*\n * @title \u9AD8\u901F\u5165\u51FA\u529B\n * @docs\
-    \ docs/utility/fast-io.md\n */\n\nstruct fast_io {\n    static constexpr int SIZE_IN\
-    \ = 1 << 26, SIZE_OUT = 1 << 26;\n    char data_in[SIZE_IN], data_out[SIZE_OUT],\
+    \n#include <iostream>\n\nstruct fast_io {\n    static constexpr int SIZE_IN =\
+    \ 1 << 26, SIZE_OUT = 1 << 26;\n    char data_in[SIZE_IN], data_out[SIZE_OUT],\
     \ *p_in, *p_out, s[30];\n    fast_io() { fread(data_in, 1, SIZE_IN, stdin), p_in\
     \ = data_in, p_out = data_out; }\n    ~fast_io() { fwrite(data_out, 1, p_out -\
     \ data_out, stdout); }\n    void putchar(char x) { *p_out++ = x; }\n    template<typename\
@@ -41,7 +40,7 @@ data:
   isVerificationFile: true
   path: test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-01 19:19:19+09:00'
+  timestamp: '2020-09-23 17:29:24+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp

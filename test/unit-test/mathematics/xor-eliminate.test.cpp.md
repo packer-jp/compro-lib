@@ -27,11 +27,10 @@ data:
     \ (src[i].none()) { break; }\n        ret.emplace_back(src[i]);\n    }\n    for\
     \ (int i = ret.size() - 1; i > 0; i--) {\n        for (int j = 0; j < i; j++)\
     \ {\n            if (ret[j][ret[i]._Find_first()]) { ret[j] ^= ret[i]; }\n   \
-    \     }\n    }\n    return ret;\n}\n#line 2 \"utility/bit-reverse.hpp\"\n\n/*\n\
-    \ * @title \u30D3\u30C3\u30C8\u30EA\u30D0\u30FC\u30B9\n * @docs docs/utility/bit-reverse.md\n\
-    \ */\n\ntemplate<typename T> T bit_reverse(T x) {\n    for (int i = 0; i < x.size()\
-    \ / 2; i++) {\n        bool tmp = x[x.size() - i - 1];\n        x[x.size() - i\
-    \ - 1] = x[i], x[i] = tmp;\n    }\n    return x;\n}\n#line 4 \"test/unit-test/mathematics/xor-eliminate.test.cpp\"\
+    \     }\n    }\n    return ret;\n}\n#line 2 \"utility/bit-reverse.hpp\"\n\ntemplate<typename\
+    \ T> T bit_reverse(T x) {\n    for (int i = 0; i < x.size() / 2; i++) {\n    \
+    \    bool tmp = x[x.size() - i - 1];\n        x[x.size() - i - 1] = x[i], x[i]\
+    \ = tmp;\n    }\n    return x;\n}\n#line 4 \"test/unit-test/mathematics/xor-eliminate.test.cpp\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    bitset<5>\
     \ a0(\"11000\"), a1(\"10110\"), a2(\"11111\"), a3(\"00111\"), a4(\"01110\");\n\
     \    vector<bitset<5>> a = {a0, a1, a2, a3, a4};\n    for (auto &x:a) { x = bit_reverse(x);\
@@ -52,7 +51,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/mathematics/xor-eliminate.test.cpp
   requiredBy: []
-  timestamp: '2020-09-23 16:37:45+09:00'
+  timestamp: '2020-09-23 17:29:24+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/mathematics/xor-eliminate.test.cpp

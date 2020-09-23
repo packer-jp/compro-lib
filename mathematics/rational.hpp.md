@@ -93,6 +93,6 @@ data:
   - test/unit-test/mathematics/rational.test.cpp
 documentation_of: mathematics/rational.hpp
 layout: document
-title: "\u5B9F\u6570"
+title: "\u6709\u7406\u6570"
 ---
 

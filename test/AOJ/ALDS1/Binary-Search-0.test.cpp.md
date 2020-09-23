@@ -15,8 +15,7 @@ data:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B&lang=ja
   bundledCode: "#line 1 \"test/AOJ/ALDS1/Binary-Search-0.test.cpp\"\n#define PROBLEM\
     \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B&lang=ja\"\
-    \n#line 1 \"utility/binary-search.hpp\"\n#include <cstdlib>\n\n/*\n * @title \u4E8C\
-    \u5206\u63A2\u7D22\n * @docs docs/utility/binary-search.md\n */\n\ntemplate<typename\
+    \n#line 1 \"utility/binary-search.hpp\"\n#include <cstdlib>\n\ntemplate<typename\
     \ F> long long discrete_binary_search(long long ok, long long ng, F is_ok) {\n\
     \    while (abs(ok - ng) > 1) {\n        long long mid = (ok + ng) / 2;\n    \
     \    (is_ok(mid) ? ok : ng) = mid;\n    }\n    return ok;\n}\n\ntemplate<typename\
@@ -44,7 +43,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/ALDS1/Binary-Search-0.test.cpp
   requiredBy: []
-  timestamp: '2020-05-12 23:01:08+09:00'
+  timestamp: '2020-09-23 17:29:24+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/ALDS1/Binary-Search-0.test.cpp

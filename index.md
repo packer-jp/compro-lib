@@ -106,7 +106,7 @@ data:
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: mathematics/rational.hpp
-      title: "\u5B9F\u6570"
+      title: "\u6709\u7406\u6570"
     - icon: ':heavy_check_mark:'
       path: mathematics/xor-eliminate.hpp
       title: "xor \u6383\u304D\u51FA\u3057"
@@ -139,7 +139,7 @@ data:
       title: "\u30D3\u30C3\u30C8\u30EA\u30D0\u30FC\u30B9"
     - icon: ':heavy_check_mark:'
       path: utility/fast-io.hpp
-      title: "\u9AD8\u901F\u5165\u51FA\u529B"
+      title: utility/fast-io.hpp
     - icon: ':heavy_check_mark:'
       path: utility/histogram-largest-rectangle.hpp
       title: "\u30D2\u30B9\u30C8\u30B0\u30E9\u30E0\u6700\u5927\u9577\u65B9\u5F62"
