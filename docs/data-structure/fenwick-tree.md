@@ -33,7 +33,7 @@ documentation_of: data-structure/fenwick-tree.hpp
 - `struct S`  
 可換群をなす。
   - `using T`  
-  頂点の距離の型。
+  列に載せる値の型。
 
   - `T zero()`  
   `T`の`plus`に関する単位元。
