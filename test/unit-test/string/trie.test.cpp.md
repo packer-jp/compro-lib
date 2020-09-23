@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: string/trie.hpp
-    title: string/trie.hpp
+    title: Trie
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

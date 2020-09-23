@@ -66,8 +66,6 @@ data:
   - test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
 documentation_of: graph/re-rooting.hpp
 layout: document
-redirect_from:
-- /library/graph/re-rooting.hpp
-- /library/graph/re-rooting.hpp.html
-title: graph/re-rooting.hpp
+title: "\u5168\u65B9\u4F4D\u6728 DP"
 ---
+

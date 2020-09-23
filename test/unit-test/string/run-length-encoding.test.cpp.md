@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: string/run-length-encoding.hpp
-    title: string/run-length-encoding.hpp
+    title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

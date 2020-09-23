@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/permutation.hpp
-    title: mathematics/permutation.hpp
+    title: "\u9806\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

@@ -22,8 +22,6 @@ data:
   verifiedWith: []
 documentation_of: utility/xor64.hpp
 layout: document
-redirect_from:
-- /library/utility/xor64.hpp
-- /library/utility/xor64.hpp.html
-title: utility/xor64.hpp
+title: Xorshift
 ---
+

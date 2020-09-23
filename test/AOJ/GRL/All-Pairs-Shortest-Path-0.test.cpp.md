@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/warshall-floyd.hpp
-    title: graph/warshall-floyd.hpp
+    title: "Warshall-Floyd \u6CD5"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

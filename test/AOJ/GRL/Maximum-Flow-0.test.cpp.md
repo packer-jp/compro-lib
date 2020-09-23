@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/ford-fulkerson.hpp
-    title: graph/ford-fulkerson.hpp
+    title: "Ford-Fulkerson \u6CD5"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

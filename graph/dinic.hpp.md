@@ -122,8 +122,6 @@ data:
   - test/AOJ/GRL/Maximum-Flow-1.test.cpp
 documentation_of: graph/dinic.hpp
 layout: document
-redirect_from:
-- /library/graph/dinic.hpp
-- /library/graph/dinic.hpp.html
-title: graph/dinic.hpp
+title: "Dinic \u6CD5"
 ---
+

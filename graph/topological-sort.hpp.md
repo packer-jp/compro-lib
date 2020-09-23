@@ -39,8 +39,6 @@ data:
   - test/unit-test/graph/topological-sort.test.cpp
 documentation_of: graph/topological-sort.hpp
 layout: document
-redirect_from:
-- /library/graph/topological-sort.hpp
-- /library/graph/topological-sort.hpp.html
-title: graph/topological-sort.hpp
+title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
 ---
+

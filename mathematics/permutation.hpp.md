@@ -74,8 +74,6 @@ data:
   - test/unit-test/mathematics/permutation.test.cpp
 documentation_of: mathematics/permutation.hpp
 layout: document
-redirect_from:
-- /library/mathematics/permutation.hpp
-- /library/mathematics/permutation.hpp.html
-title: mathematics/permutation.hpp
+title: "\u9806\u5217"
 ---
+

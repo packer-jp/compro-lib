@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.hpp
-    title: graph/dijkstra.hpp
+    title: "Dijkstra \u6CD5"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

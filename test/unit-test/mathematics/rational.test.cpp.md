@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/rational.hpp
-    title: mathematics/rational.hpp
+    title: "\u6709\u7406\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

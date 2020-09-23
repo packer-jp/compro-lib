@@ -40,8 +40,6 @@ data:
   - test/unit-test/mathematics/xor-eliminate.test.cpp
 documentation_of: mathematics/xor-eliminate.hpp
 layout: document
-redirect_from:
-- /library/mathematics/xor-eliminate.hpp
-- /library/mathematics/xor-eliminate.hpp.html
-title: mathematics/xor-eliminate.hpp
+title: "xor \u6383\u304D\u51FA\u3057"
 ---
+

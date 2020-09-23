@@ -90,8 +90,6 @@ data:
   - test/AOJ/ALDS1/Pattern-Search-0.test.cpp
 documentation_of: string/rolling-hash-2d.hpp
 layout: document
-redirect_from:
-- /library/string/rolling-hash-2d.hpp
-- /library/string/rolling-hash-2d.hpp.html
-title: string/rolling-hash-2d.hpp
+title: "2 \u6B21\u5143\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
 ---
+

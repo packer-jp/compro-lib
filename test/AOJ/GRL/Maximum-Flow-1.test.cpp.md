@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/dinic.hpp
-    title: graph/dinic.hpp
+    title: "Dinic \u6CD5"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

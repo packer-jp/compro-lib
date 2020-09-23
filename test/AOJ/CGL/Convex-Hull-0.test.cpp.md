@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometry/geometry.hpp
-    title: geometry/geometry.hpp
+    title: "\u5E7E\u4F55"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

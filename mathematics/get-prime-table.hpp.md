@@ -32,8 +32,6 @@ data:
   - test/AOJ/ALDS1/Prime-Numbers-0.test.cpp
 documentation_of: mathematics/get-prime-table.hpp
 layout: document
-redirect_from:
-- /library/mathematics/get-prime-table.hpp
-- /library/mathematics/get-prime-table.hpp.html
-title: mathematics/get-prime-table.hpp
+title: "\u7D20\u6570\u30C6\u30FC\u30D6\u30EB"
 ---
+

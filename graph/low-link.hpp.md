@@ -57,8 +57,6 @@ data:
   - test/AOJ/GRL/Articulation-Points-0.test.cpp
 documentation_of: graph/low-link.hpp
 layout: document
-redirect_from:
-- /library/graph/low-link.hpp
-- /library/graph/low-link.hpp.html
-title: graph/low-link.hpp
+title: Low Link
 ---
+

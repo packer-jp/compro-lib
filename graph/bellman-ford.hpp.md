@@ -55,8 +55,34 @@ data:
   - test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp
 documentation_of: graph/bellman-ford.hpp
 layout: document
-redirect_from:
-- /library/graph/bellman-ford.hpp
-- /library/graph/bellman-ford.hpp.html
-title: graph/bellman-ford.hpp
+title: "Bellman-Ford \u6CD5"
 ---
+
+## 概要
+グラフの単一始点最短距離を頂点数$N$、辺数$M$に対し$O(NM)$で求める。
+
+## テンプレートパラメータ
+- `typename T`  
+距離のデータ型。
+
+## 引数
+- `std::vector<std::vector<int>> adj`  
+隣接リスト。
+
+- `std::vector<std::vector<E>> cost`  
+コストのリスト (隣接リストと同じ構造) 。
+
+- `int s`  
+始点。
+
+- `F f`  
+距離とコストを受けとり、距離を返す二項演算。
+
+- `G g`  
+距離`a, b`を受けとり、`a > b`を返す二項演算。
+
+- `ID id`  
+距離の`f`に関する単位元。
+
+- `AB ab`  
+距離の`f`に関する吸収元。`g(ab, y)`を要請する。

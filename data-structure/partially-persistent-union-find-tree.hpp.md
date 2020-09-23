@@ -52,8 +52,6 @@ data:
   verifiedWith: []
 documentation_of: data-structure/partially-persistent-union-find-tree.hpp
 layout: document
-redirect_from:
-- /library/data-structure/partially-persistent-union-find-tree.hpp
-- /library/data-structure/partially-persistent-union-find-tree.hpp.html
-title: data-structure/partially-persistent-union-find-tree.hpp
+title: "\u90E8\u5206\u6C38\u7D9A Union-Find \u6728"
 ---
+

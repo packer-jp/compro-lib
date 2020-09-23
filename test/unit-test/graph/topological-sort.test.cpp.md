@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/topological-sort.hpp
-    title: graph/topological-sort.hpp
+    title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

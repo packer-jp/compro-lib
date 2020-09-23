@@ -3,13 +3,13 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/moebius.hpp
-    title: mathematics/moebius.hpp
+    title: "Moebius \u95A2\u6570"
   - icon: ':heavy_check_mark:'
     path: mathematics/prime-factorize.hpp
-    title: mathematics/prime-factorize.hpp
+    title: "\u7D20\u56E0\u6570\u5206\u89E3"
   - icon: ':heavy_check_mark:'
     path: string/run-length-encoding.hpp
-    title: string/run-length-encoding.hpp
+    title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

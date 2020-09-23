@@ -44,8 +44,6 @@ data:
   - test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp
 documentation_of: utility/histogram-largest-rectangle.hpp
 layout: document
-redirect_from:
-- /library/utility/histogram-largest-rectangle.hpp
-- /library/utility/histogram-largest-rectangle.hpp.html
-title: utility/histogram-largest-rectangle.hpp
+title: "\u30D2\u30B9\u30C8\u30B0\u30E9\u30E0\u6700\u5927\u9577\u65B9\u5F62"
 ---
+

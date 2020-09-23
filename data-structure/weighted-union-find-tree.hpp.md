@@ -46,8 +46,6 @@ data:
   verifiedWith: []
 documentation_of: data-structure/weighted-union-find-tree.hpp
 layout: document
-redirect_from:
-- /library/data-structure/weighted-union-find-tree.hpp
-- /library/data-structure/weighted-union-find-tree.hpp.html
-title: data-structure/weighted-union-find-tree.hpp
+title: "\u91CD\u307F\u4ED8\u304D Union-Find \u6728"
 ---
+

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/to-rooted-tree.hpp
-    title: graph/to-rooted-tree.hpp
+    title: "\u6839\u4ED8\u304D\u6728\u306B\u5909\u63DB"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
