@@ -4,45 +4,44 @@ documentation_of: data-structure/lazy-segment-tree.hpp
 ---
 
 - `<S> struct lazy_segment_tree`  
-列への区間適用クエリと区間演算クエリを処理する。
+  列への区間適用クエリと区間演算クエリを処理する。
 
   - `(constructor)(int n)`  
-  `n`は頂点数。列の全要素を単位元で初期化。
-  
+    `n`は頂点数。列の全要素を単位元で初期化。
+
   - `(constructor)(std::vector<std::vector<T>> src)`  
-  `n`は頂点数。列を`src`で初期化。
+    `n`は頂点数。列を`src`で初期化。
 
   - `void apply(int l, int r, T x)`  
-  `[l, r)`を`x`に適用。
+    `[l, r)`を`x`に適用。
 
   - `T fold(int l, int r)`  
-  `[l, r)`の区間演算を返す。
+    `[l, r)`の区間演算を返す。
 
 - `struct S`  
-列に載せる値、作用素はいずれもモノイドをなす。  
-  
+  列に載せる値、作用素はいずれもモノイドをなす。  
+
   - `using T`  
-  列に載せる値の型。
+    列に載せる値の型。
 
   - `using E`  
-  作用素の型。
+    作用素の型。
 
   - `T id_T()`  
-  `T`の`op_TT`に関する単位元。
+    `T`の`op_TT`に関する単位元。
 
   - `E id_E()`  
-  `E`の`op_EE`に関する単位元。
+    `E`の`op_EE`に関する単位元。
 
   - `T op_TT(T a, T b)`  
-  `T`と`T`の演算。
+    `T`と`T`の演算。
 
   - `T op_TE(T a, E b)`  
-  `T`と`E`の演算。
+    `T`と`E`の演算。
 
   - `E op_EE(E a, E b)`  
-  `E`と`E`の演算。  
+    `E`と`E`の演算。  
 
   これらの演算は以下を満たす。  
   - `op_TE(op_TT(a, b), c) = op_TT(op_TE(a, c), op_TE(b, c))`
   - `op_TE(op_TE(a, b), c) = op_TE(a, op_EE(b, c))`
-  
