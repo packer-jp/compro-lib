@@ -3,14 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/unit-test/string/run-length-encoding.test.cpp
     title: test/unit-test/string/run-length-encoding.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/unit-test/mathematics/moebius.test.cpp
     title: test/unit-test/mathematics/moebius.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -31,7 +31,7 @@ data:
   path: string/run-length-encoding.hpp
   requiredBy: []
   timestamp: '2020-09-23 16:37:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/unit-test/string/run-length-encoding.test.cpp
   - test/unit-test/mathematics/moebius.test.cpp

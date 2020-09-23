@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/red-black-tree.hpp
     title: "\u8D64\u9ED2\u6728"
   _extendedRequiredBy: []

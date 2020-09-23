@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/splay-tree.hpp
     title: "Splay \u6728"
   _extendedRequiredBy: []

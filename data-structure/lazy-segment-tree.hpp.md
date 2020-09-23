@@ -12,11 +12,11 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
     title: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume26/Tree-0.test.cpp
     title: test/AOJ/Volume26/Tree-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -112,7 +112,7 @@ data:
   path: data-structure/lazy-segment-tree.hpp
   requiredBy: []
   timestamp: '2020-09-23 16:37:45+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
   - test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp

@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
     title: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -217,7 +217,7 @@ data:
   path: mathematics/convolute.hpp
   requiredBy: []
   timestamp: '2020-09-23 16:37:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
 documentation_of: mathematics/convolute.hpp

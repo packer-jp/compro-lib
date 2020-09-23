@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/unit-test/mathematics/xor-eliminate.test.cpp
     title: test/unit-test/mathematics/xor-eliminate.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     _deprecated_at_docs: docs/utility/bit-reverse.md
@@ -28,7 +28,7 @@ data:
   path: utility/bit-reverse.hpp
   requiredBy: []
   timestamp: '2020-09-01 03:22:39+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/unit-test/mathematics/xor-eliminate.test.cpp
 documentation_of: utility/bit-reverse.hpp

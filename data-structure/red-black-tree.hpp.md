@@ -3,14 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume15/RMQ-1.test.cpp
     title: test/AOJ/Volume15/RMQ-1.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/AOJ/ITP2/Vector-1.test.cpp
     title: test/AOJ/ITP2/Vector-1.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -130,7 +130,7 @@ data:
   path: data-structure/red-black-tree.hpp
   requiredBy: []
   timestamp: '2020-09-23 16:37:45+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/Volume15/RMQ-1.test.cpp
   - test/AOJ/ITP2/Vector-1.test.cpp
