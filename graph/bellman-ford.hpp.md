@@ -58,31 +58,35 @@ layout: document
 title: "Bellman-Ford \u6CD5"
 ---
 
-## 概要
-グラフの単一始点最短距離を頂点数$N$、辺数$M$に対し$O(NM)$で求める。
+- `<S> struct bellman-ford`  
+グラフの単一始点最短距離を求める。
 
-## テンプレートパラメータ
-- `typename T`  
-距離のデータ型。
+  - `(constructor)(int n)`  
+  `n`は頂点数。
 
-## 引数
-- `std::vector<std::vector<int>> adj`  
-隣接リスト。
+  - `void add_edge(int from, int to, E cost)`  
+  `from`から`to`にコスト`cost`の辺を貼る。
 
-- `std::vector<std::vector<E>> cost`  
-コストのリスト (隣接リストと同じ構造) 。
+  - `std::vector<T> get_dist(int s)`  
+  `s`を始点とする最短距離列を返す。`m`を辺数として、時間計算量`O(nm)`。
 
-- `int s`  
-始点。
 
-- `F f`  
-距離とコストを受けとり、距離を返す二項演算。
+- `struct S`
+  - `using T`  
+  頂点の距離の型。
 
-- `G g`  
-距離`a, b`を受けとり、`a > b`を返す二項演算。
+  - `using E`
+  辺のコストの型。
 
-- `ID id`  
-距離の`f`に関する単位元。
+  - `T zero()`  
+  `T`の`plus`に関する単位元。
 
-- `AB ab`  
-距離の`f`に関する吸収元。`g(ab, y)`を要請する。
+  - `T inf()`  
+  `T`の`plus`に関する吸収元、`less`に関する巨大元。
+
+  - `T plus(T a, E b)`  
+  演算。
+
+  - `bool less(T a, T b)`  
+  `a < b`かどうか。以下を要請。
+    - `less(a, b) => less(plus(a, c), plus(b, c))`
