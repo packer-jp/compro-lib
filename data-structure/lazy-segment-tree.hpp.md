@@ -123,43 +123,46 @@ layout: document
 title: "\u9045\u5EF6\u8A55\u4FA1 Segment \u6728"
 ---
 
-## 概要
-モノイド列の区間加算クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
+- `<S> struct lazy_segment_tree`  
+列への区間適用クエリと区間演算クエリを処理する。
 
-## テンプレートパラメータ
-- `typename T`  
-メインモノイドのデータ型。
+  - `(constructor)(int n)`  
+  `n`は頂点数。列の全要素を単位元で初期化。
+  
+  - `(constructor)(std::vector<std::vector<T>> src)`  
+  `n`は頂点数。列を`src`で初期化。
 
-- `typename E`  
-作用素モノイドのデータ型。
+  - `void apply(int l, int r, T x)`  
+  `[l, r)`を`x`に適用。
 
-- `typename F`  
-メインモノイドの二項演算の型。
+  - `T fold(int l, int r)`  
+  `[l, r)`の区間演算を返す。
 
-- `typename G`  
-作用素モノイドの二項演算の型。
+- `struct S`  
+列に載せる値、作用素はいずれもモノイドをなす。  
+  
+  - `using T`  
+  列に載せる値の型。
 
-- `typename H`  
-メインモノイド、作用素モノイド、列長からメインモノイドを得る演算の型。
+  - `using E`  
+  作用素の型。
 
-- `typename ID_T`  
-メインモノイドの単位元を返す関数の型。
+  - `T id_T()`  
+  `T`の`op_TT`に関する単位元。
 
-- `typename ID_E`  
-作用素モノイドの単位元を返す関数の型。
+  - `E id_E()`  
+  `E`の`op_EE`に関する単位元。
 
-## メンバ
-- `(constructor)(int n, F f, G g, H h, ID_T id_t, ID_E id_e)`  
-列長`n`、各演算で初期化。
+  - `T op_TT(T a, T b)`  
+  `T`と`T`の演算。
 
-- `(constructor)(std::vector<T> src, F f, G g, H h, ID_T id_t, ID_E id_e)`  
-`src`を元に、各演算で初期化。
+  - `T op_TE(T a, E b)`  
+  `T`と`E`の演算。
 
-- `int n`  
-列長。
+  - `E op_EE(E a, E b)`  
+  `E`と`E`の演算。  
 
-- `void add(int l, int r, E x)`  
-`[l, r)`に`x`を作用させる。
-
-- `T get_sum(int l, int r)`  
-`[l, r)`の区間和を取得する。
+  これらの演算は以下を満たす。  
+  - `op_TE(op_TT(a, b), c) = op_TT(op_TE(a, c), op_TE(b, c))`
+  - `op_TE(op_TE(a, b), c) = op_TE(a, op_EE(b, c))`
+  
