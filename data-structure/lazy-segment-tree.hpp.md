@@ -1,0 +1,165 @@
+---
+data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
+    title: test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
+    title: test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
+    title: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
+  - icon: ':x:'
+    path: test/AOJ/Volume26/Tree-0.test.cpp
+    title: test/AOJ/Volume26/Tree-0.test.cpp
+  _pathExtension: hpp
+  _verificationStatusIcon: ':question:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    links: []
+  bundledCode: "#line 1 \"data-structure/lazy-segment-tree.hpp\"\n#include <vector>\n\
+    #include <cassert>\n#include <limits>\n\ntemplate<typename M>\nstruct lazy_segment_tree\
+    \ {\n    using T = typename M::T;\n    using E = typename M::E;\n    int n;\n\
+    \    std::vector<T> data;\n    std::vector<E> lazy;\n    lazy_segment_tree(int\
+    \ n) : n(n), data(n << 1, M::id_T()), lazy(n << 1, M::id_E()) {}\n    lazy_segment_tree(const\
+    \ std::vector<T> &src) : n(src.size()), data(n << 1), lazy(n << 1, M::id_E())\
+    \ {\n        std::copy(src.begin(), src.end(), data.begin() + n);\n        for\
+    \ (int i = n - 1; i > 0; i--) { data[i] = M::op_TT(data[i << 1 | 0], data[i <<\
+    \ 1 | 1]); }\n    }\n    void propagate(int i) {\n        if (i < 1) { return;\
+    \ }\n        data[i] = M::op_TE(data[i], lazy[i]);\n        if (i < n) {\n   \
+    \         lazy[i << 1 | 0] = M::op_EE(lazy[i << 1 | 0], lazy[i]);\n          \
+    \  lazy[i << 1 | 1] = M::op_EE(lazy[i << 1 | 1], lazy[i]);\n        }\n      \
+    \  lazy[i] = M::id_E();\n    }\n    void apply(int l, int r, const E &x) {\n \
+    \       l += n, r += n - 1;\n        for (int i = std::__lg(r); i > 0; i--) {\n\
+    \            propagate(l >> i);\n            propagate(r >> i);\n        }\n \
+    \       auto update = [&](int i) { lazy[i] = M::op_EE(lazy[i], x), propagate(i);\
+    \ };\n        for (int i = l, j = r + 1; i < j; i >>= 1, j >>= 1) {\n        \
+    \    if (i & 1) { update(i++); }\n            if (j & 1) { update(--j); }\n  \
+    \      }\n        while (l >>= 1, r >>= 1) {\n            data[l] = M::op_TT(M::op_TE(data[l\
+    \ << 1 | 0], lazy[l << 1 | 0]),\n                               M::op_TE(data[l\
+    \ << 1 | 1], lazy[l << 1 | 1]));\n            data[r] = M::op_TT(M::op_TE(data[r\
+    \ << 1 | 0], lazy[r << 1 | 0]),\n                               M::op_TE(data[r\
+    \ << 1 | 1], lazy[r << 1 | 1]));\n        }\n    }\n    T fold(int l, int r) {\n\
+    \        l += n, r += n - 1;\n        for (int i = std::__lg(r); i > 0; i--) {\
+    \ propagate(l >> i), propagate(r >> i); }\n        T a = M::id_T(), b = M::id_T();\n\
+    \        for (r++; l < r; l >>= 1, r >>= 1) {\n            if (l & 1) { propagate(l),\
+    \ a = M::op_TT(a, data[l++]); }\n            if (r & 1) { propagate(--r), b =\
+    \ M::op_TT(data[r], b); }\n        }\n        return M::op_TT(a, b);\n    }\n\
+    };\n\nstruct rminq_and_ruq {\n    using T = int;\n    using E = int;\n    static\
+    \ T id_T() { return std::numeric_limits<T>::max(); };\n    static E id_E() { return\
+    \ -1; };\n    static T op_TT(const T &a, const T &b) { return std::min(a, b);\
+    \ }\n    static E op_EE(const E &a, const E &b) { return b == id_E() ? a : b;\
+    \ }\n    static T op_TE(const T &a, const E &b) { return b == id_E() ? a : b;\
+    \ }\n};\n\nstruct rsq_and_raq {\n    using T = std::pair<long long, int>;\n  \
+    \  using E = long long;\n    static T id_T() { return {0, 0}; };\n    static E\
+    \ id_E() { return 0; };\n    static T op_TT(const T &a, const T &b) { return {a.first\
+    \ + b.first, a.second + b.second}; }\n    static E op_EE(const E &a, const E &b)\
+    \ { return a + b; }\n    static T op_TE(const T &a, const E &b) { return {a.first\
+    \ + b * a.second, a.second}; }\n};\n\nstruct rminq_and_raq {\n    using T = long\
+    \ long;\n    using E = long long;\n    static T id_T() { return std::numeric_limits<T>::max();\
+    \ };\n    static E id_E() { return 0; };\n    static T op_TT(const T &a, const\
+    \ T &b) { return std::min(a, b); }\n    static E op_EE(const E &a, const E &b)\
+    \ { return a + b; }\n    static T op_TE(const T &a, const E &b) { return a + b;\
+    \ }\n};\n"
+  code: "#include <vector>\n#include <cassert>\n#include <limits>\n\ntemplate<typename\
+    \ M>\nstruct lazy_segment_tree {\n    using T = typename M::T;\n    using E =\
+    \ typename M::E;\n    int n;\n    std::vector<T> data;\n    std::vector<E> lazy;\n\
+    \    lazy_segment_tree(int n) : n(n), data(n << 1, M::id_T()), lazy(n << 1, M::id_E())\
+    \ {}\n    lazy_segment_tree(const std::vector<T> &src) : n(src.size()), data(n\
+    \ << 1), lazy(n << 1, M::id_E()) {\n        std::copy(src.begin(), src.end(),\
+    \ data.begin() + n);\n        for (int i = n - 1; i > 0; i--) { data[i] = M::op_TT(data[i\
+    \ << 1 | 0], data[i << 1 | 1]); }\n    }\n    void propagate(int i) {\n      \
+    \  if (i < 1) { return; }\n        data[i] = M::op_TE(data[i], lazy[i]);\n   \
+    \     if (i < n) {\n            lazy[i << 1 | 0] = M::op_EE(lazy[i << 1 | 0],\
+    \ lazy[i]);\n            lazy[i << 1 | 1] = M::op_EE(lazy[i << 1 | 1], lazy[i]);\n\
+    \        }\n        lazy[i] = M::id_E();\n    }\n    void apply(int l, int r,\
+    \ const E &x) {\n        l += n, r += n - 1;\n        for (int i = std::__lg(r);\
+    \ i > 0; i--) {\n            propagate(l >> i);\n            propagate(r >> i);\n\
+    \        }\n        auto update = [&](int i) { lazy[i] = M::op_EE(lazy[i], x),\
+    \ propagate(i); };\n        for (int i = l, j = r + 1; i < j; i >>= 1, j >>= 1)\
+    \ {\n            if (i & 1) { update(i++); }\n            if (j & 1) { update(--j);\
+    \ }\n        }\n        while (l >>= 1, r >>= 1) {\n            data[l] = M::op_TT(M::op_TE(data[l\
+    \ << 1 | 0], lazy[l << 1 | 0]),\n                               M::op_TE(data[l\
+    \ << 1 | 1], lazy[l << 1 | 1]));\n            data[r] = M::op_TT(M::op_TE(data[r\
+    \ << 1 | 0], lazy[r << 1 | 0]),\n                               M::op_TE(data[r\
+    \ << 1 | 1], lazy[r << 1 | 1]));\n        }\n    }\n    T fold(int l, int r) {\n\
+    \        l += n, r += n - 1;\n        for (int i = std::__lg(r); i > 0; i--) {\
+    \ propagate(l >> i), propagate(r >> i); }\n        T a = M::id_T(), b = M::id_T();\n\
+    \        for (r++; l < r; l >>= 1, r >>= 1) {\n            if (l & 1) { propagate(l),\
+    \ a = M::op_TT(a, data[l++]); }\n            if (r & 1) { propagate(--r), b =\
+    \ M::op_TT(data[r], b); }\n        }\n        return M::op_TT(a, b);\n    }\n\
+    };\n\nstruct rminq_and_ruq {\n    using T = int;\n    using E = int;\n    static\
+    \ T id_T() { return std::numeric_limits<T>::max(); };\n    static E id_E() { return\
+    \ -1; };\n    static T op_TT(const T &a, const T &b) { return std::min(a, b);\
+    \ }\n    static E op_EE(const E &a, const E &b) { return b == id_E() ? a : b;\
+    \ }\n    static T op_TE(const T &a, const E &b) { return b == id_E() ? a : b;\
+    \ }\n};\n\nstruct rsq_and_raq {\n    using T = std::pair<long long, int>;\n  \
+    \  using E = long long;\n    static T id_T() { return {0, 0}; };\n    static E\
+    \ id_E() { return 0; };\n    static T op_TT(const T &a, const T &b) { return {a.first\
+    \ + b.first, a.second + b.second}; }\n    static E op_EE(const E &a, const E &b)\
+    \ { return a + b; }\n    static T op_TE(const T &a, const E &b) { return {a.first\
+    \ + b * a.second, a.second}; }\n};\n\nstruct rminq_and_raq {\n    using T = long\
+    \ long;\n    using E = long long;\n    static T id_T() { return std::numeric_limits<T>::max();\
+    \ };\n    static E id_E() { return 0; };\n    static T op_TT(const T &a, const\
+    \ T &b) { return std::min(a, b); }\n    static E op_EE(const E &a, const E &b)\
+    \ { return a + b; }\n    static T op_TE(const T &a, const E &b) { return a + b;\
+    \ }\n};"
+  dependsOn: []
+  isVerificationFile: false
+  path: data-structure/lazy-segment-tree.hpp
+  requiredBy: []
+  timestamp: '2020-09-23 16:37:45+09:00'
+  verificationStatus: LIBRARY_SOME_WA
+  verifiedWith:
+  - test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
+  - test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
+  - test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
+  - test/AOJ/Volume26/Tree-0.test.cpp
+documentation_of: data-structure/lazy-segment-tree.hpp
+layout: document
+title: "\u9045\u5EF6\u8A55\u4FA1 Segment \u6728"
+---
+
+## 概要
+モノイド列の区間加算クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
+
+## テンプレートパラメータ
+- `typename T`  
+メインモノイドのデータ型。
+
+- `typename E`  
+作用素モノイドのデータ型。
+
+- `typename F`  
+メインモノイドの二項演算の型。
+
+- `typename G`  
+作用素モノイドの二項演算の型。
+
+- `typename H`  
+メインモノイド、作用素モノイド、列長からメインモノイドを得る演算の型。
+
+- `typename ID_T`  
+メインモノイドの単位元を返す関数の型。
+
+- `typename ID_E`  
+作用素モノイドの単位元を返す関数の型。
+
+## メンバ
+- `(constructor)(int n, F f, G g, H h, ID_T id_t, ID_E id_e)`  
+列長`n`、各演算で初期化。
+
+- `(constructor)(std::vector<T> src, F f, G g, H h, ID_T id_t, ID_E id_e)`  
+`src`を元に、各演算で初期化。
+
+- `int n`  
+列長。
+
+- `void add(int l, int r, E x)`  
+`[l, r)`に`x`を作用させる。
+
+- `T get_sum(int l, int r)`  
+`[l, r)`の区間和を取得する。
