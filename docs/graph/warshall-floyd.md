@@ -3,7 +3,7 @@ title: Warshall-Floyd 法
 documentation_of: graph/warshall-floyd.hpp
 ---
 
-- `struct warshall_floyd<S>`  
+- `<S> struct warshall_floyd`  
 グラフの全対間最短距離を求める。
 
   - `(constructor)(int n)`  
