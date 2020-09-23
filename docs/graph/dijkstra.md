@@ -10,6 +10,8 @@ documentation_of: graph/dijkstra.hpp
 - `typename T`  
 距離のデータ型。
 
+## `<typename T>dijkstra<T>`
+
 ## 引数
 - `std::vector<std::vector<int>> adj`  
 隣接リスト。
