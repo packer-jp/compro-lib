@@ -3,11 +3,6 @@
 #include <vector>
 #include <cassert>
 
-/*
- * @title 剰余環/体
- * @docs docs/mathematics/mod-int.md
- */
-
 template<int MOD = 1000000007>
 struct mod_int {
     int val;

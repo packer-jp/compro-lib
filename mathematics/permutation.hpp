@@ -2,11 +2,6 @@
 #include <iostream>
 #include <vector>
 
-/*
- * @title 順列
- * @docs docs/mathematics/permutation.md
- */
-
 struct permutation {
     int n;
     std::vector<int> data;

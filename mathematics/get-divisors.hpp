@@ -1,11 +1,6 @@
 #include <algorithm>
 #include <vector>
 
-/*
- * @title 約数列挙
- * @docs docs/mathematics/get-divisors.md
- */
-
 template<typename T> std::vector<T> get_divisors(T n) {
     std::vector<T> ret;
     T i;

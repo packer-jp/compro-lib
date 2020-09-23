@@ -2,11 +2,6 @@
 #include <cassert>
 #include <limits>
 
-/*
- * @title 遅延評価Segment木
- * @docs docs/data-structure/lazy-segment-tree.md
- */
-
 template<typename M>
 struct lazy_segment_tree {
     using T = typename M::T;

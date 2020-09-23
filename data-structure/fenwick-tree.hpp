@@ -1,11 +1,6 @@
 #include <vector>
 #include <cassert>
 
-/*
- * @title Fenwick木
- * @docs docs/data-structure/fenwick-tree.md
- */
-
 template<typename M>
 struct fenwick_tree {
     using T = typename M::T;

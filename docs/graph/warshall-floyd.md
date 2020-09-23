@@ -1,3 +1,8 @@
+---
+title: Warshall-Floyd 法
+documentation_of: graph/warshall-floyd.hpp
+---
+
 ## 概要
 グラフの全対間最短距離を頂点数$N$に対し$O(N^3)$で求める。
 

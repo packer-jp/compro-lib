@@ -1,3 +1,8 @@
+---
+title: Segment 木
+documentation_of: data-structure/segment-tree.hpp
+---
+
 ## 概要
 モノイド列の一点変更クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
 

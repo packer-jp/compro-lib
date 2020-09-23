@@ -1,3 +1,8 @@
+---
+title: Dijkstra 法
+documentation_of: graph/dijkstra.hpp
+---
+
 ## 概要
 辺のコストが非負なグラフの単一始点最短距離を頂点数$N$、辺数$M$に対し$O((N+M)\log N)$で求める。
 

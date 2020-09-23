@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 素因数分解 (複数クエリ)
- * @docs docs/mathematics/multi-prime-factorize.md
- */
-
 std::vector<int> smallest_prime_factors(int n) {
     std::vector<int> ret(n + 1);
     for (int i = 0; i <= n; i++) { ret[i] = i; }

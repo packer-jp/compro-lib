@@ -1,11 +1,6 @@
 #include <vector>
 #include <bitset>
 
-/*
- * @title xor掃き出し
- * @docs docs/mathematics/xor-eliminate.md
- */
-
 template<typename T> std::vector<T> xor_eliminate(std::vector<T> src) {
     std::vector<T> ret;
     for (int i = 0; i < src.size(); i++) {

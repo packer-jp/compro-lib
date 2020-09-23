@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 強連結成分分解
- * @docs docs/graph/strongly-connected-components.md
- */
-
 std::vector<int> strongly_connected_components(const std::vector<std::vector<int>> &adj) {
     int n = adj.size();
     std::vector<int> vs;

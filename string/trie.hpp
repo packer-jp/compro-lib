@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title トライ木
- * @docs docs/string/trie.md
- */
-
 template<int K>
 struct trie {
     std::vector<std::vector<int>> adj;

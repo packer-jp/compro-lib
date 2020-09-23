@@ -3,11 +3,6 @@
 #include <cassert>
 #include <utility>
 
-/*
- * @title 行列
- * @docs docs/mathematics/matrix.md
- */
-
 template<typename S>
 struct matrix {
     using T = typename S::T;

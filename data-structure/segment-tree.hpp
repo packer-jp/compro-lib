@@ -2,11 +2,6 @@
 #include <cassert>
 #include <limits>
 
-/*
- * @title Segment木
- * @docs docs/data-structure/segment-tree.md
- */
-
 template<typename M>
 struct segment_tree {
     using T = typename M::T;

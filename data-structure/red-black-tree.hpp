@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 赤黒木
- * @docs docs/data-structure/red-black-tree.md
- */
-
 template<typename M>
 struct red_black_tree {
     enum COLOR { RED, BLACK };

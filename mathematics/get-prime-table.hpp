@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 素数テーブル
- * @docs docs/mathematics/get-prime-table.md
- */
-
 std::vector<bool> get_prime_table(int n) {
     std::vector<bool> ret(n + 1, true);
     if (n >= 0) { ret[0] = false; }

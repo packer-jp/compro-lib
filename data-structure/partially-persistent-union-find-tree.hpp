@@ -1,11 +1,6 @@
 #include <vector>
 #include <climits>
 
-/*
- * @title 部分永続Union-Find木
- * @docs docs/data-structure/partially-persistent-union-find-tree.md
- */
-
 struct partially_persistent_union_find_tree {
     int now = 0;
     std::vector<int> parent, time;

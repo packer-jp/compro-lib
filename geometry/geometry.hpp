@@ -3,11 +3,6 @@
 #include <vector>
 #include <algorithm>
 
-/*
- * @title 幾何
- * @docs docs/geometry/geometry.md
- */
-
 struct point {
     double x, y;
     point() : x(0), y(0) {};

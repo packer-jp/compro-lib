@@ -2,11 +2,6 @@
 #include <vector>
 #include <cassert>
 
-/*
- * @title HL分解
- * @docs docs/graph/heavy-light-decomposition.md
- */
-
 struct heavy_light_decomposition {
     int n;
     std::vector<std::vector<int>> adj;

@@ -1,11 +1,6 @@
 #include <vector>
 #include <stack>
 
-/*
- * @title トポロジカルソート
- * @docs docs/graph/topological-sort.md
- */
-
 std::vector<int> topological_sort(const std::vector<std::vector<int>> &adj) {
     int n = adj.size();
     std::vector<int> in_deg(n);

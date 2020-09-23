@@ -1,3 +1,8 @@
+---
+title: 剰余環 / 体
+documentation_of: mathematics/mod-int.hpp
+---
+
 ## 概要
 演算時に自動で剰余をとる整数。
 

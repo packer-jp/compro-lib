@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title Union-Find木
- * @docs docs/data-structure/union-find-tree.md
- */
-
 struct union_find_tree {
     std::vector<int> par, size;
     union_find_tree(int n) : par(n), size(n) {

@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 根付き木に変換
- * @docs docs/graph/to-rooted-tree.md
- */
-
 std::vector<int> to_rooted_tree(const std::vector<std::vector<int>> &adj, int s) {
     std::vector<int> ret(adj.size());
     auto dfs = [&](auto &&self, int cur, int par) -> void {

@@ -1,11 +1,6 @@
 #include <map>
 #include <vector>
 
-/*
- * @title Moebius関数
- * @docs docs/mathematics/moebius.md
- */
-
 template<typename T> std::map<T, int> moebius(T n) {
     std::map<T, int> ret;
     std::vector<T> primes;

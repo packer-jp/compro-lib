@@ -3,11 +3,6 @@
 #include <vector>
 #include <cassert>
 
-/*
- * @title Dijkstra法
- * @docs docs/graph/dijkstra.md
- */
-
 template<typename S>
 struct dijkstra {
     using T = typename S::T;

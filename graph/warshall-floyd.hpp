@@ -2,11 +2,6 @@
 #include <vector>
 #include <functional>
 
-/*
- * @title Warshall-Floyd法
- * @docs docs/graph/warshall-floyd.md
- */
-
 template<typename S>
 struct warshall_floyd {
     using T = typename S::T;

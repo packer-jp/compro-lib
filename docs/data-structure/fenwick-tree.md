@@ -1,3 +1,8 @@
+---
+title: Fenwick 木
+documentation_of: data-structure/fenwick-tree.hpp
+---
+
 ## 概要
 数列の一点加算クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
 

@@ -3,11 +3,6 @@
 #include <functional>
 #include <cassert>
 
-/*
- * @title Bellman-Ford法
- * @docs docs/graph/bellman-ford.md
- */
-
 template<typename S>
 struct bellman_ford {
     using T = typename S::T;

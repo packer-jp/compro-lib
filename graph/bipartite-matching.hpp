@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 二部最大マッチング
- * @docs docs/graph/bipartite-matching.md
- */
-
 std::vector<std::pair<int, int>> bipartite_matching(const std::vector<std::vector<int>> &adj) {
     int n = adj.size();
     std::vector<int> match(n, -1), used(n);

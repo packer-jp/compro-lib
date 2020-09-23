@@ -2,11 +2,6 @@
 #include <vector>
 #include "mod-int.hpp"
 
-/*
- * @title 畳み込み
- * @docs docs/mathematics/convolute.md
- */
-
 constexpr double PI = 3.1415926535897932384626433832795028;
 
 struct my_complex {

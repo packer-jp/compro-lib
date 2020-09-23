@@ -3,11 +3,6 @@
 #include <queue>
 #include <vector>
 
-/*
- * @title Ford-Fulkerson法
- * @docs docs/graph/ford-fulkerson.md
- */
-
 template<typename S>
 struct ford_fulkerson {
     using T = typename S::T;

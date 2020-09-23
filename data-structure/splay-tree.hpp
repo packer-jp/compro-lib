@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title Splay木
- * @docs docs/data-structure/splay-tree.md
- */
-
 template<typename M>
 struct splay_tree {
     using T = typename M::T;

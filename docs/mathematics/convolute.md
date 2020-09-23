@@ -1,3 +1,8 @@
+---
+title: 畳み込み
+documentation_of: mathematics/convolute.hpp
+---
+
 ## 概要
 二数列の畳み込み演算を列長$N, M$に対し$O((N+M) \log (N+M))$で処理する。
 

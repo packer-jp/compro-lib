@@ -1,10 +1,5 @@
 #include <vector>
 
-/*
- * @title 全方位木DP
- * @docs docs/graph/re-rooting.md
- */
-
 template<typename M>
 std::vector<typename M::T> re_rooting(const std::vector<std::vector<int>> &adj,
                                       const std::vector<std::vector<typename M::E>> &cost) {

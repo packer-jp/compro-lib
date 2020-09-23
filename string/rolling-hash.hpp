@@ -2,11 +2,6 @@
 #include <vector>
 #include <cassert>
 
-/*
- * @title ローリングハッシュ
- * @docs docs/string/rolling-hash.md
- */
-
 struct rolling_hash {
     using ull = unsigned long long;
     static constexpr ull MASK30 = (1ULL << 30) - 1;

@@ -1,3 +1,8 @@
+---
+title: Bellman-Ford 法
+documentation_of: graph/bellman-ford.hpp
+---
+
 ## 概要
 グラフの単一始点最短距離を頂点数$N$、辺数$M$に対し$O(NM)$で求める。
 

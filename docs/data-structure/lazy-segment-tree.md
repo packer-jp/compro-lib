@@ -1,3 +1,8 @@
+---
+title: 遅延評価 Segment 木
+documentation_of: data-structure/lazy-segment-tree.hpp
+---
+
 ## 概要
 モノイド列の区間加算クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
 

@@ -3,11 +3,6 @@
 #include <queue>
 #include <vector>
 
-/*
- * @title Dinic法
- * @docs docs/graph/dinic.md
- */
-
 template<typename M>
 struct dinic {
     using T = typename M::T;
