@@ -58,7 +58,7 @@ layout: document
 title: "Bellman-Ford \u6CD5"
 ---
 
-- `<S> struct bellman-ford`  
+- `<S> struct bellman_ford`  
 グラフの単一始点最短距離を求める。
 
   - `(constructor)(int n)`  
@@ -75,7 +75,7 @@ title: "Bellman-Ford \u6CD5"
   - `using T`  
   頂点の距離の型。
 
-  - `using E`
+  - `using E`  
   辺のコストの型。
 
   - `T zero()`  

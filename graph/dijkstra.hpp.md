@@ -79,7 +79,7 @@ title: "Dijkstra \u6CD5"
   - `using T`  
   頂点の距離の型。
 
-  - `using E`
+  - `using E`  
   辺のコストの型。
 
   - `T zero()`  
