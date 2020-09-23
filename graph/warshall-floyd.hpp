@@ -7,25 +7,33 @@
  * @docs docs/graph/warshall-floyd.md
  */
 
-template<typename M>
-std::vector<std::vector<typename M::T>> warshall_floyd(const std::vector<std::vector<typename M::T>> &graph) {
-    using T = typename M::T;
-    int n = graph.size();
-    std::vector<std::vector<T>> ret(graph);
-    for (int k = 0; k < n; k++) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                T dist = M::op(ret[i][k], ret[k][j]);
-                if (M::gr(ret[i][j], dist)) { ret[i][j] = dist; }
+template<typename S>
+struct warshall_floyd {
+    using T = typename S::T;
+    std::vector<std::vector<T>> cost;
+    warshall_floyd(int n) : cost(n, std::vector<T>(n, S::inf())) {
+        for (int i = 0; i < n; i++) { cost[i][i] = S::zero(); }
+    }
+    void add_edge(int from, int to, T cost) { this->cost[from][to] = cost; }
+    std::vector<std::vector<T>> get_dist() {
+        int n = cost.size();
+        std::vector<std::vector<T>> ret(cost);
+        for (int k = 0; k < n; k++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    T dist = S::plus(ret[i][k], ret[k][j]);
+                    if (S::less(dist, ret[i][j])) { ret[i][j] = dist; }
+                }
             }
         }
+        return ret;
     }
-    return ret;
-}
+};
 
 struct int_wf {
     using T = int;
-    static T ab() { return std::numeric_limits<T>::max(); }
-    static T op(const T &a, const T &b) { return a == ab() || b == ab() ? ab() : a + b; }
-    static bool gr(const T &a, const T &b) { return a > b; }
+    static T zero() { return 0; }
+    static T inf() { return std::numeric_limits<T>::max(); }
+    static T plus(const T &a, const T &b) { return a == inf() || b == inf() ? inf() : a + b; }
+    static bool less(const T &a, const T &b) { return a < b; }
 };

@@ -7,14 +7,13 @@ using namespace std;
 int main() {
     int V, E;
     cin >> V >> E;
-    vector<vector<int>> graph(V, vector<int>(V, INT_MAX));
-    for (int i = 0; i < V; i++) { graph[i][i] = 0; }
+    warshall_floyd<int_wf> wf(V);
     for (int i = 0; i < E; i++) {
         int s, t, d;
         cin >> s >> t >> d;
-        graph[s][t] = d;
+        wf.add_edge(s, t, d);
     }
-    vector<vector<int>> dist = warshall_floyd<int_wf>(graph);
+    vector<vector<int>> dist = wf.get_dist();
     for (int i = 0; i < V; i++) {
         if (dist[i][i] < 0) {
             cout << "NEGATIVE CYCLE" << endl;
