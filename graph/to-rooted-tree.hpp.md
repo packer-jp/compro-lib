@@ -34,6 +34,8 @@ data:
   - test/unit-test/graph/to-rooted-tree.test.cpp
 documentation_of: graph/to-rooted-tree.hpp
 layout: document
-title: "\u6839\u4ED8\u304D\u6728\u306B\u5909\u63DB"
+redirect_from:
+- /library/graph/to-rooted-tree.hpp
+- /library/graph/to-rooted-tree.hpp.html
+title: graph/to-rooted-tree.hpp
 ---
-

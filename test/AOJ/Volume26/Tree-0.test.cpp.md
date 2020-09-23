@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/heavy-light-decomposition.hpp
-    title: "HL \u5206\u89E3"
+    title: graph/heavy-light-decomposition.hpp
   - icon: ':heavy_check_mark:'
     path: data-structure/lazy-segment-tree.hpp
-    title: "\u9045\u5EF6\u8A55\u4FA1 Segment \u6728"
+    title: data-structure/lazy-segment-tree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

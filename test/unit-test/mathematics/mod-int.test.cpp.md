@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
-    title: "\u5270\u4F59\u74B0 / \u4F53"
+    title: mathematics/mod-int.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

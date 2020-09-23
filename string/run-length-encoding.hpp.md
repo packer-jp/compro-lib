@@ -37,6 +37,8 @@ data:
   - test/unit-test/mathematics/moebius.test.cpp
 documentation_of: string/run-length-encoding.hpp
 layout: document
-title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
+redirect_from:
+- /library/string/run-length-encoding.hpp
+- /library/string/run-length-encoding.hpp.html
+title: string/run-length-encoding.hpp
 ---
-

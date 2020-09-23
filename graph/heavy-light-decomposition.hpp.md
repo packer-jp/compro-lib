@@ -90,6 +90,8 @@ data:
   - test/AOJ/Volume26/Tree-0.test.cpp
 documentation_of: graph/heavy-light-decomposition.hpp
 layout: document
-title: "HL \u5206\u89E3"
+redirect_from:
+- /library/graph/heavy-light-decomposition.hpp
+- /library/graph/heavy-light-decomposition.hpp.html
+title: graph/heavy-light-decomposition.hpp
 ---
-

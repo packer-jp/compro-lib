@@ -45,6 +45,8 @@ data:
   - test/AOJ/GRL/Bipartite-Matching-0.test.cpp
 documentation_of: graph/bipartite-matching.hpp
 layout: document
-title: "\u4E8C\u90E8\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+redirect_from:
+- /library/graph/bipartite-matching.hpp
+- /library/graph/bipartite-matching.hpp.html
+title: graph/bipartite-matching.hpp
 ---
-

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/get-prime-table.hpp
-    title: "\u7D20\u6570\u30C6\u30FC\u30D6\u30EB"
+    title: mathematics/get-prime-table.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

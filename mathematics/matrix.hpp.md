@@ -152,6 +152,8 @@ data:
   - test/unit-test/mathematics/matrix.test.cpp
 documentation_of: mathematics/matrix.hpp
 layout: document
-title: "\u884C\u5217"
+redirect_from:
+- /library/mathematics/matrix.hpp
+- /library/mathematics/matrix.hpp.html
+title: mathematics/matrix.hpp
 ---
-

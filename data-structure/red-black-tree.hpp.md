@@ -136,6 +136,8 @@ data:
   - test/AOJ/ITP2/Vector-1.test.cpp
 documentation_of: data-structure/red-black-tree.hpp
 layout: document
-title: "\u8D64\u9ED2\u6728"
+redirect_from:
+- /library/data-structure/red-black-tree.hpp
+- /library/data-structure/red-black-tree.hpp.html
+title: data-structure/red-black-tree.hpp
 ---
-

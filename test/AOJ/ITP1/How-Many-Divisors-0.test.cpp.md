@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/get-divisors.hpp
-    title: "\u7D04\u6570\u5217\u6319"
+    title: mathematics/get-divisors.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

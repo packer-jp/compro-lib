@@ -88,6 +88,8 @@ data:
   - test/AOJ/CGL/Convex-Hull-0.test.cpp
 documentation_of: geometry/geometry.hpp
 layout: document
-title: "\u5E7E\u4F55"
+redirect_from:
+- /library/geometry/geometry.hpp
+- /library/geometry/geometry.hpp.html
+title: geometry/geometry.hpp
 ---
-

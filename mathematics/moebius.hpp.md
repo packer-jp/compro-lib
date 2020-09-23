@@ -38,6 +38,8 @@ data:
   - test/unit-test/mathematics/moebius.test.cpp
 documentation_of: mathematics/moebius.hpp
 layout: document
-title: "Moebius \u95A2\u6570"
+redirect_from:
+- /library/mathematics/moebius.hpp
+- /library/mathematics/moebius.hpp.html
+title: mathematics/moebius.hpp
 ---
-

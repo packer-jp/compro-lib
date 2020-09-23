@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/multi-prime-factorize.hpp
-    title: "\u7D20\u56E0\u6570\u5206\u89E3 (\u8907\u6570\u30AF\u30A8\u30EA)"
+    title: mathematics/multi-prime-factorize.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

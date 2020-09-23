@@ -38,6 +38,8 @@ data:
   - test/AOJ/NTL/Prime-Factorize-1.test.cpp
 documentation_of: mathematics/multi-prime-factorize.hpp
 layout: document
-title: "\u7D20\u56E0\u6570\u5206\u89E3 (\u8907\u6570\u30AF\u30A8\u30EA)"
+redirect_from:
+- /library/mathematics/multi-prime-factorize.hpp
+- /library/mathematics/multi-prime-factorize.hpp.html
+title: mathematics/multi-prime-factorize.hpp
 ---
-

@@ -36,6 +36,8 @@ data:
   verifiedWith: []
 documentation_of: data-structure/union-find-tree.hpp
 layout: document
-title: "Union-Find \u6728"
+redirect_from:
+- /library/data-structure/union-find-tree.hpp
+- /library/data-structure/union-find-tree.hpp.html
+title: data-structure/union-find-tree.hpp
 ---
-

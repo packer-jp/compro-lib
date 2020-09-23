@@ -131,6 +131,8 @@ data:
   - test/AOJ/ITP2/Vector-0.test.cpp
 documentation_of: data-structure/splay-tree.hpp
 layout: document
-title: "Splay \u6728"
+redirect_from:
+- /library/data-structure/splay-tree.hpp
+- /library/data-structure/splay-tree.hpp.html
+title: data-structure/splay-tree.hpp
 ---
-

@@ -33,6 +33,8 @@ data:
   - test/AOJ/ITP1/How-Many-Divisors-0.test.cpp
 documentation_of: mathematics/get-divisors.hpp
 layout: document
-title: "\u7D04\u6570\u5217\u6319"
+redirect_from:
+- /library/mathematics/get-divisors.hpp
+- /library/mathematics/get-divisors.hpp.html
+title: mathematics/get-divisors.hpp
 ---
-

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: utility/binary-search.hpp
-    title: "\u4E8C\u5206\u63A2\u7D22"
+    title: utility/binary-search.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

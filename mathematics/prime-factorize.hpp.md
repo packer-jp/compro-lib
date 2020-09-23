@@ -35,6 +35,8 @@ data:
   - test/AOJ/NTL/Prime-Factorize-0.test.cpp
 documentation_of: mathematics/prime-factorize.hpp
 layout: document
-title: "\u7D20\u56E0\u6570\u5206\u89E3"
+redirect_from:
+- /library/mathematics/prime-factorize.hpp
+- /library/mathematics/prime-factorize.hpp.html
+title: mathematics/prime-factorize.hpp
 ---
-

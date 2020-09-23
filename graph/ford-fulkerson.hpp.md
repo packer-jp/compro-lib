@@ -104,6 +104,8 @@ data:
   - test/AOJ/GRL/Maximum-Flow-0.test.cpp
 documentation_of: graph/ford-fulkerson.hpp
 layout: document
-title: "Ford-Fulkerson \u6CD5"
+redirect_from:
+- /library/graph/ford-fulkerson.hpp
+- /library/graph/ford-fulkerson.hpp.html
+title: graph/ford-fulkerson.hpp
 ---
-

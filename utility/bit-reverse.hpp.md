@@ -28,6 +28,8 @@ data:
   - test/unit-test/mathematics/xor-eliminate.test.cpp
 documentation_of: utility/bit-reverse.hpp
 layout: document
-title: "\u30D3\u30C3\u30C8\u30EA\u30D0\u30FC\u30B9"
+redirect_from:
+- /library/utility/bit-reverse.hpp
+- /library/utility/bit-reverse.hpp.html
+title: utility/bit-reverse.hpp
 ---
-

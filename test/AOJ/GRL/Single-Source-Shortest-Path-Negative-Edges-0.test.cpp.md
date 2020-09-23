@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/bellman-ford.hpp
-    title: "Bellman-Ford \u6CD5"
+    title: graph/bellman-ford.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/xor-eliminate.hpp
-    title: "xor \u6383\u304D\u51FA\u3057"
+    title: mathematics/xor-eliminate.hpp
   - icon: ':heavy_check_mark:'
     path: utility/bit-reverse.hpp
-    title: "\u30D3\u30C3\u30C8\u30EA\u30D0\u30FC\u30B9"
+    title: utility/bit-reverse.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

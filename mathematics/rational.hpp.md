@@ -93,6 +93,8 @@ data:
   - test/unit-test/mathematics/rational.test.cpp
 documentation_of: mathematics/rational.hpp
 layout: document
-title: "\u6709\u7406\u6570"
+redirect_from:
+- /library/mathematics/rational.hpp
+- /library/mathematics/rational.hpp.html
+title: mathematics/rational.hpp
 ---
-

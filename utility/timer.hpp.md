@@ -29,6 +29,8 @@ data:
   verifiedWith: []
 documentation_of: utility/timer.hpp
 layout: document
-title: "\u30BF\u30A4\u30DE\u30FC"
+redirect_from:
+- /library/utility/timer.hpp
+- /library/utility/timer.hpp.html
+title: utility/timer.hpp
 ---
-

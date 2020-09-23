@@ -53,6 +53,8 @@ data:
   - test/AOJ/GRL/Strongly-Connected-Components-0.test.cpp
 documentation_of: graph/strongly-connected-components.hpp
 layout: document
-title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+redirect_from:
+- /library/graph/strongly-connected-components.hpp
+- /library/graph/strongly-connected-components.hpp.html
+title: graph/strongly-connected-components.hpp
 ---
-

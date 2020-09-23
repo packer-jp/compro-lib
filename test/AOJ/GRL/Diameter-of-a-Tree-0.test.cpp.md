@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/re-rooting.hpp
-    title: "\u5168\u65B9\u4F4D\u6728 DP"
+    title: graph/re-rooting.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

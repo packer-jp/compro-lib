@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/bipartite-matching.hpp
-    title: "\u4E8C\u90E8\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+    title: graph/bipartite-matching.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

@@ -35,6 +35,8 @@ data:
   - test/AOJ/ALDS1/Binary-Search-0.test.cpp
 documentation_of: utility/binary-search.hpp
 layout: document
-title: "\u4E8C\u5206\u63A2\u7D22"
+redirect_from:
+- /library/utility/binary-search.hpp
+- /library/utility/binary-search.hpp.html
+title: utility/binary-search.hpp
 ---
-

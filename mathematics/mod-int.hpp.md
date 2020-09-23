@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: mathematics/convolute.hpp
-    title: "\u7573\u307F\u8FBC\u307F"
+    title: mathematics/convolute.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
@@ -116,16 +116,8 @@ data:
   - test/AOJ/NTL/Power-0.test.cpp
 documentation_of: mathematics/mod-int.hpp
 layout: document
-title: "\u5270\u4F59\u74B0 / \u4F53"
+redirect_from:
+- /library/mathematics/mod-int.hpp
+- /library/mathematics/mod-int.hpp.html
+title: mathematics/mod-int.hpp
 ---
-
-## 概要
-演算時に自動で剰余をとる整数。
-
-## テンプレートパラメータ
-- `int MOD = 1000000007`  
-法。
-
-## 内部クラス
-- `combination`  
-組み合わせ計算のための機能を持つ。

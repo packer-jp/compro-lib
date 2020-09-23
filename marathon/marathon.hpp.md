@@ -60,6 +60,8 @@ data:
   verifiedWith: []
 documentation_of: marathon/marathon.hpp
 layout: document
-title: "\u30DE\u30E9\u30BD\u30F3\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+redirect_from:
+- /library/marathon/marathon.hpp
+- /library/marathon/marathon.hpp.html
+title: marathon/marathon.hpp
 ---
-

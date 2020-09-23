@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/red-black-tree.hpp
-    title: "\u8D64\u9ED2\u6728"
+    title: data-structure/red-black-tree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
