@@ -1,11 +1,6 @@
 #include <vector>
 #include <stack>
 
-/*
- * @title ヒストグラム最大長方形
- * @docs docs/utility/histogram-largest-rectangle.md
- */
-
 template<typename T> T histogram_largest_rectangle(const std::vector<T> &h) {
     int n = h.size();
     std::vector<int> left(n);

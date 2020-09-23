@@ -1,5 +1,5 @@
 ---
-title: 実数
+title: 有理数
 documentation_of: mathematics/rational.hpp
 ---
 

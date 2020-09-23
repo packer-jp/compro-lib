@@ -1,10 +1,5 @@
 #include <cstdlib>
 
-/*
- * @title 二分探索
- * @docs docs/utility/binary-search.md
- */
-
 template<typename F> long long discrete_binary_search(long long ok, long long ng, F is_ok) {
     while (abs(ok - ng) > 1) {
         long long mid = (ok + ng) / 2;
