@@ -38,5 +38,5 @@ documentation_of: data-structure/fenwick-tree.hpp
   - `T zero()`  
   `T`の`plus`に関する単位元。
   
-  - `T plus(T a, E b)`  
+  - `T plus(T a, T b)`  
   演算。
