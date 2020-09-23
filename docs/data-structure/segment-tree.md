@@ -26,8 +26,8 @@ documentation_of: data-structure/segment-tree.hpp
   - `using T`  
   列に載せる値の型。
 
-  - `T zero()`  
+  - `T id()`  
   `T`の`plus`に関する単位元。
   
-  - `T plus(T a, T b)`  
+  - `T zero(T a, T b)`  
   演算。
