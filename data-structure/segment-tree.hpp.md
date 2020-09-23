@@ -65,34 +65,31 @@ layout: document
 title: "Segment \u6728"
 ---
 
-## 概要
-モノイド列の一点変更クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
+- `<S> struct segment_tree`  
+列への一点変更クエリと区間演算クエリを処理する。
 
-## テンプレートパラメータ
-- `typename T`  
-モノイドのデータ型。
+  - `(constructor)(int n)`  
+  `n`は頂点数。列の全要素を単位元で初期化。
+  
+  - `(constructor)(std::vector<std::vector<T>> src)`  
+  `n`は頂点数。列を`src`で初期化。
 
-- `typename F`  
-モノイドの二項演算の型。
+  - `void set(int i, T x)`  
+  要素`i`を`x`に変更。
+  
+  - `T operator[](int i)`  
+  要素`i`を返す。
+  
+  - `T fold(int l, int r)`  
+  `[l, r)`の区間演算を返す。
 
-- `typename ID`  
-モノイドの単位元を返す関数の型。
+- `struct S`  
+モノイドをなす。
+  - `using T`  
+  列に載せる値の型。
 
-## メンバ
-- `(constructor)(int n, F f, ID id)`  
-列長`n`、二項演算`f`、単位元`id`で初期化。
-
-- `(constructor)(std::vector<T> src, F f, ID id)`  
-`src`を元に、二項演算`f`、単位元`id`で初期化。
-
-- `int n`  
-列長。
-
-- `void set(int i, T x)`  
-要素`i`を`x`に変更する。
-
-- `T operator[](int i)`  
-要素`i`を取得する。
-
-- `T get_sum(int l, int r)`  
-`[l, r)`の区間和を取得する。
+  - `T zero()`  
+  `T`の`plus`に関する単位元。
+  
+  - `T plus(T a, T b)`  
+  演算。
