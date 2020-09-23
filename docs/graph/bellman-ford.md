@@ -3,7 +3,7 @@ title: Bellman-Ford 法
 documentation_of: graph/bellman-ford.hpp
 ---
 
-- `<S> struct bellman-ford`  
+- `<S> struct bellman_ford`  
 グラフの単一始点最短距離を求める。
 
   - `(constructor)(int n)`  
@@ -20,7 +20,7 @@ documentation_of: graph/bellman-ford.hpp
   - `using T`  
   頂点の距離の型。
 
-  - `using E`
+  - `using E`  
   辺のコストの型。
 
   - `T zero()`  

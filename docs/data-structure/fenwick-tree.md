@@ -3,22 +3,40 @@ title: Fenwick 木
 documentation_of: data-structure/fenwick-tree.hpp
 ---
 
-## 概要
-数列の一点加算クエリと区間和クエリを列長$N$に対し$O(\log N)$で処理する。
+- `<S> struct fenwick_tree`  
+列への一点加算クエリと区間和クエリを処理する。
 
-## テンプレートパラメータ
-- `typename T`  
-基本データ型。
+  - `(constructor)(int n)`  
+  `n`は頂点数。列の全要素を単位元で初期化。
 
-## メンバ
-- `(constructor)(int n)`  
-列長`n`で初期化。
+  - `void add(int i, T x)`  
+  要素`i`に`x`を加算。
 
-- `int n`  
-列長。
+  - `T sum(int i)`  
+  `[0, i)`の区間和を返す。
+  
+  - `T sum(int l, int r)`  
+  `[l, r)`の区間和を返す。
 
-- `void add(int i, T x)`  
-要素`i`に`x`を加算する。
+- `<S> struct fenwick_tree_range : public fenwick_tree<S>`  
+列への区間加算クエリと一点取得クエリを処理する。
 
-- `T get_sum(int l, int r)`  
-`[l, r)`の区間和を取得する。
+  - `(constructor)(int n)`  
+  `n`は頂点数。列の全要素を単位元で初期化。
+
+  - `void add(int l, int r, T x)`  
+  `[l, r)`に`x`を加算。
+  
+  - `T operator[](int i)`  
+  要素`i`を返す。
+
+- `struct S`  
+可換群をなす。
+  - `using T`  
+  頂点の距離の型。
+
+  - `T zero()`  
+  `T`の`plus`に関する単位元。
+  
+  - `T plus(T a, E b)`  
+  演算。
