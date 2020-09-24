@@ -21,7 +21,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/splay-tree.hpp
       title: "Splay \u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/union-find-tree.hpp
       title: "Union-Find \u6728"
     - icon: ':warning:'
@@ -197,7 +197,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL/Range-Sum-Query-1.test.cpp
       title: test/AOJ/DSL/Range-Sum-Query-1.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL/Union-Find-Tree-0.test.cpp
       title: test/AOJ/DSL/Union-Find-Tree-0.test.cpp
   - name: test/AOJ/GRL
