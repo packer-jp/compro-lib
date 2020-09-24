@@ -21,10 +21,10 @@ documentation_of: data-structure/lazy-segment-tree.hpp
 - `struct S`  
   列に載せる値、作用素はいずれもモノイドをなす。  
 
-  - `using T`  
+  - `struct T`  
     列に載せる値の型。
 
-  - `using E`  
+  - `struct E`  
     作用素の型。
 
   - `T id_T()`  

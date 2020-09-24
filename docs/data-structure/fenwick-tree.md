@@ -32,7 +32,7 @@ documentation_of: data-structure/fenwick-tree.hpp
 
 - `struct S`  
 可換群をなす。
-  - `using T`  
+  - `struct T`  
   列に載せる値の型。
 
   - `T zero()`  

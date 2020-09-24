@@ -23,7 +23,7 @@ documentation_of: data-structure/segment-tree.hpp
 
 - `struct S`  
   モノイドをなす。
-  - `using T`  
+  - `struct T`  
     列に載せる値の型。
 
   - `T id()`  
