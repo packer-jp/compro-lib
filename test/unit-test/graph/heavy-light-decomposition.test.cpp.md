@@ -51,17 +51,17 @@ data:
     \ a.insert(a.end(), b.begin(), b.end());\n        return a;\n    }\n    std::pair<int,\
     \ int> get_subtree(int v, bool edge) { return {in[v] + edge, out[v] - 1}; }\n\
     };\n#line 3 \"data-structure/segment-tree.hpp\"\n#include <limits>\n\ntemplate<typename\
-    \ M>\nstruct segment_tree {\n    using T = typename M::T;\n    int n;\n    std::vector<T>\
-    \ data;\n    segment_tree(int n) : n(n), data(n << 1, M::id()) {}\n    segment_tree(const\
+    \ S>\nstruct segment_tree {\n    using T = typename S::T;\n    int n;\n    std::vector<T>\
+    \ data;\n    segment_tree(int n) : n(n), data(n << 1, S::id()) {}\n    segment_tree(const\
     \ std::vector<T> &src) : n(src.size()), data(n << 1) {\n        std::copy(src.begin(),\
     \ src.end(), data.begin() + n);\n        for (int i = n - 1; i > 0; i--) { data[i]\
-    \ = M::op(data[i << 1 | 0], data[i << 1 | 1]); }\n    }\n    void set(int i, const\
-    \ T &x) {\n        data[i += n] = x;\n        while (i >>= 1) { data[i] = M::op(data[i\
+    \ = S::op(data[i << 1 | 0], data[i << 1 | 1]); }\n    }\n    void set(int i, const\
+    \ T &x) {\n        data[i += n] = x;\n        while (i >>= 1) { data[i] = S::op(data[i\
     \ << 1 | 0], data[i << 1 | 1]); }\n    }\n    const T &operator[](int i) const\
-    \ { return data[i + n]; }\n    T fold(int l, int r) const {\n        T a = M::id(),\
-    \ b = M::id();\n        for (l += n, r += n; l < r; l >>= 1, r >>= 1) {\n    \
-    \        if (l & 1) { a = M::op(a, data[l++]); }\n            if (r & 1) { b =\
-    \ M::op(data[--r], b); }\n        }\n        return M::op(a, b);\n    }\n};\n\n\
+    \ { return data[i + n]; }\n    T fold(int l, int r) const {\n        T a = S::id(),\
+    \ b = S::id();\n        for (l += n, r += n; l < r; l >>= 1, r >>= 1) {\n    \
+    \        if (l & 1) { a = S::op(a, data[l++]); }\n            if (r & 1) { b =\
+    \ S::op(data[--r], b); }\n        }\n        return S::op(a, b);\n    }\n};\n\n\
     struct rsq {\n    using T = int;\n    static T op(const T &a, const T &b) { return\
     \ a + b; }\n    static T id() { return 0; }\n};\n\nstruct rminq {\n    using T\
     \ = int;\n    static T op(const T &a, const T &b) { return std::min(a, b); }\n\
@@ -120,7 +120,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/graph/heavy-light-decomposition.test.cpp
   requiredBy: []
-  timestamp: '2020-09-23 16:37:45+09:00'
+  timestamp: '2020-09-24 22:53:36+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/graph/heavy-light-decomposition.test.cpp
