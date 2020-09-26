@@ -7,10 +7,10 @@ documentation_of: data-structure/segment-tree.hpp
   列への一点変更クエリと区間演算クエリを処理する。
 
   - `(constructor)(int n)`  
-    `n`は頂点数。列の全要素を単位元で初期化。
+    `n`は要素数。列の全要素を単位元で初期化。
   
   - `(constructor)(std::vector<std::vector<T>> src)`  
-    `n`は頂点数。列を`src`で初期化。
+    `n`は要素数。列を`src`で初期化。
 
   - `void set(int i, T x)`  
     要素`i`を`x`に変更。
