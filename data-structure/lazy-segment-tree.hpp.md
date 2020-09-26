@@ -127,10 +127,10 @@ title: "\u9045\u5EF6\u8A55\u4FA1 Segment \u6728"
   列への区間適用クエリと区間演算クエリを処理する。
 
   - `(constructor)(int n)`  
-    `n`は頂点数。列の全要素を単位元で初期化。
+    `n`は要素数。列の全要素を単位元で初期化。
 
   - `(constructor)(std::vector<std::vector<T>> src)`  
-    `n`は頂点数。列を`src`で初期化。
+    `n`は要素数。列を`src`で初期化。
 
   - `void apply(int l, int r, T x)`  
     `[l, r)`を`x`に適用。
