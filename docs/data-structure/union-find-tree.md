@@ -4,7 +4,7 @@ documentation_of: data-structure/union-find-tree.hpp
 ---
 
 - `<S> struct union_find_tree`  
-互いに素な集合を管理する。各集合に可換半環`S`の要素を載せられる。
+互いに素な集合を管理する。各集合に可換半群`S`の要素を載せられる。
 
   - `(constructor)(int n, T x = {})`  
   `n`は要素数。列の全要素を`x`で初期化。
