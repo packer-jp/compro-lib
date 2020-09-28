@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/convolute.hpp
     title: "\u7573\u307F\u8FBC\u307F"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/convolution_mod_1000000007
@@ -115,7 +115,7 @@ data:
     \  fft(a_mint, w);\n    fft(b_mint, w);\n    for (int i = 0; i < n; i++) { a_mint[i]\
     \ *= b_mint[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m; i++) { w[i]\
     \ = w[i - 1] * w[1]; }\n    ifft(a_mint, w);\n    std::vector<int> ret(n_);\n\
-    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val; }\n    return ret;\n\
+    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }\n    return ret;\n\
     }\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const std::vector<int>\
     \ &a, const std::vector<int> &b, int mod) {\n    static constexpr int MS[] = {998244353,\
     \ 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod = [](int a, int\
@@ -154,8 +154,8 @@ data:
   isVerificationFile: true
   path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-28 19:18:29+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-09-28 19:25:09+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
 layout: document

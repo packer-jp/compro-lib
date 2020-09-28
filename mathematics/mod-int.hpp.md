@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/convolute.hpp
     title: "\u7573\u307F\u8FBC\u307F"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
     title: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   - icon: ':heavy_check_mark:'
@@ -19,7 +19,7 @@ data:
     path: test/AOJ/NTL/Power-0.test.cpp
     title: test/AOJ/NTL/Power-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -108,7 +108,7 @@ data:
   requiredBy:
   - mathematics/convolute.hpp
   timestamp: '2020-09-28 19:18:29+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   - test/unit-test/mathematics/mod-int.test.cpp

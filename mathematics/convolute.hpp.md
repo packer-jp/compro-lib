@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
     title: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -111,7 +111,7 @@ data:
     \  fft(a_mint, w);\n    fft(b_mint, w);\n    for (int i = 0; i < n; i++) { a_mint[i]\
     \ *= b_mint[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m; i++) { w[i]\
     \ = w[i - 1] * w[1]; }\n    ifft(a_mint, w);\n    std::vector<int> ret(n_);\n\
-    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val; }\n    return ret;\n\
+    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }\n    return ret;\n\
     }\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const std::vector<int>\
     \ &a, const std::vector<int> &b, int mod) {\n    static constexpr int MS[] = {998244353,\
     \ 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod = [](int a, int\
@@ -189,7 +189,7 @@ data:
     \  fft(a_mint, w);\n    fft(b_mint, w);\n    for (int i = 0; i < n; i++) { a_mint[i]\
     \ *= b_mint[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m; i++) { w[i]\
     \ = w[i - 1] * w[1]; }\n    ifft(a_mint, w);\n    std::vector<int> ret(n_);\n\
-    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val; }\n    return ret;\n\
+    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }\n    return ret;\n\
     }\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const std::vector<int>\
     \ &a, const std::vector<int> &b, int mod) {\n    static constexpr int MS[] = {998244353,\
     \ 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod = [](int a, int\
@@ -216,8 +216,8 @@ data:
   isVerificationFile: false
   path: mathematics/convolute.hpp
   requiredBy: []
-  timestamp: '2020-09-28 19:18:29+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-09-28 19:25:09+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
 documentation_of: mathematics/convolute.hpp
