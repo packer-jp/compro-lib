@@ -77,7 +77,7 @@ data:
       title: "\u30DE\u30E9\u30BD\u30F3\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   - name: mathematics
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: mathematics/convolute.hpp
       title: "\u7573\u307F\u8FBC\u307F"
     - icon: ':heavy_check_mark:'
@@ -89,7 +89,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: mathematics/matrix.hpp
       title: "\u884C\u5217"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: mathematics/mod-int.hpp
       title: "\u5270\u4F59\u74B0 / \u4F53"
     - icon: ':heavy_check_mark:'
@@ -271,7 +271,7 @@ data:
       title: test/AOJ/Volume26/Tree-0.test.cpp
   - name: test/Library-Checker/Math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
       title: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   - name: test/Library-Checker/Sample
