@@ -122,7 +122,7 @@ std::vector<int> friendly_mod_convolute(const std::vector<int> &a, const std::ve
     for (int i = 2; i < m; i++) { w[i] = w[i - 1] * w[1]; }
     ifft(a_mint, w);
     std::vector<int> ret(n_);
-    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val; }
+    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }
     return ret;
 }
 
