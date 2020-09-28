@@ -17,30 +17,30 @@ struct rational {
         if (reduction) { reduce(); }
         if (den < 0) { num = -num, den = -den; }
     }
-    bool operator==(const rational &rhs) const { return num == rhs.num && den == rhs.den; }
-    bool operator!=(const rational &rhs) const { return std::rel_ops::operator!=(*this, rhs); }
-    bool operator<(const rational &rhs) const { return num * rhs.den < rhs.num * den; }
-    bool operator>(const rational &rhs) const { return std::rel_ops::operator>(*this, rhs); }
-    bool operator<=(const rational &rhs) const { return std::rel_ops::operator<=(*this, rhs); }
-    bool operator>=(const rational &rhs) const { return std::rel_ops::operator>=(*this, rhs); }
-    rational &operator+=(const rational &rhs) {
-        num = num * rhs.den + rhs.num * den, den *= rhs.den;
+    rational &operator+=(const rational &a) {
+        num = num * a.den + a.num * den, den *= a.den;
         reduce();
         return *this;
     }
-    rational &operator-=(const rational &rhs) { return *this += -rhs; }
-    rational &operator*=(const rational &rhs) {
-        num *= rhs.num, den *= rhs.den;
+    rational &operator-=(const rational &a) { return *this += -a; }
+    rational &operator*=(const rational &a) {
+        num *= a.num, den *= a.den;
         reduce();
         return *this;
     }
-    rational &operator/=(const rational &rhs) { return *this *= rhs.inv(); }
+    rational &operator/=(const rational &a) { return *this *= a.inv(); }
     rational operator+() const { return *this; }
     rational operator-() const { return rational(-num, den, false); }
-    rational operator+(const rational &rhs) const { return rational(*this) += rhs; }
-    rational operator-(const rational &rhs) const { return rational(*this) -= rhs; }
-    rational operator*(const rational &rhs) const { return rational(*this) *= rhs; }
-    rational operator/(const rational &rhs) const { return rational(*this) /= rhs; }
+    friend bool operator==(const rational &a, const rational &b) { return a.num == b.num && a.den == b.den; }
+    friend bool operator!=(const rational &a, const rational &b) { return std::rel_ops::operator!=(a, b); }
+    friend bool operator<(const rational &a, const rational &b) { return a.num * b.den < b.num * a.den; }
+    friend bool operator>(const rational &a, const rational &b) { return std::rel_ops::operator>(a, b); }
+    friend bool operator<=(const rational &a, const rational &b) { return std::rel_ops::operator<=(a, b); }
+    friend bool operator>=(const rational &a, const rational &b) { return std::rel_ops::operator>=(a, b); }
+    friend rational operator+(rational a, const rational &b) { return a += b; }
+    friend rational operator-(rational a, const rational &b) { return a -= b; }
+    friend rational operator*(rational a, const rational &b) { return a *= b; }
+    friend rational operator/(rational a, const rational &b) { return a /= b; }
     rational inv() const { return rational(den, num, false); }
     rational pow(long long n) const {
         if (n < 0) { return pow(-n).inv(); }

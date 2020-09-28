@@ -1,34 +1,40 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+#include <numeric>
 
 struct permutation {
-    int n;
     std::vector<int> data;
-    permutation(int n) : n(n), data(n) { for (int i = 0; i < n; i++) { data[i] = i; }}
-    permutation(const std::vector<int> &src) : n(src.size()), data(src) {}
+    permutation(int n) : data(n) { for (int i = 0; i < n; i++) { data[i] = i; }}
+    permutation(const std::vector<int> &src) : data(src) {}
+    int size() const { return data.size(); }
+    static permutation id(int n) {
+        std::vector<int> ret(n);
+        std::iota(ret.begin(), ret.end(), 0LL);
+        return ret;
+    }
     bool next() { return std::next_permutation(data.begin(), data.end()); }
     bool prev() { return std::prev_permutation(data.begin(), data.end()); }
-    bool operator==(const permutation &rhs) const { return data == rhs.data; }
-    bool operator!=(const permutation &rhs) const { return std::rel_ops::operator!=(*this, rhs); }
     int operator[](int i) const { return data[i]; }
-    permutation &operator*=(const permutation &rhs) {
+    permutation &operator*=(const permutation &a) {
         std::vector<int> tmp(data);
-        for (int i = 0; i < n; i++) { data[i] = tmp[rhs[i]]; }
+        for (int i = 0; i < size(); i++) { data[i] = tmp[a[i]]; }
         return *this;
     }
-    permutation &operator/=(const permutation &rhs) { return *this *= rhs.inv(); }
-    permutation operator*(const permutation &rhs) const { return permutation(*this) *= rhs; }
-    permutation operator/(const permutation &rhs) const { return permutation(*this) /= rhs; }
+    permutation &operator/=(const permutation &a) { return *this *= a.inv(); }
+    friend bool operator==(const permutation &a, const permutation &b) { return a.data == b.data; }
+    friend bool operator!=(const permutation &a, const permutation &b) { return std::rel_ops::operator!=(a, b); }
+    friend permutation operator*(permutation a, const permutation &b) { return a *= b; }
+    friend permutation operator/(permutation a, const permutation &b) { return a /= b; }
     permutation inv() const {
-        std::vector<int> ret(n);
-        for (int i = 0; i < n; i++) { ret[data[i]] = i; }
+        std::vector<int> ret(size());
+        for (int i = 0; i < size(); i++) { ret[data[i]] = i; }
         return ret;
     }
     permutation pow(long long m) const {
-        std::vector<int> ret(n);
-        std::vector<bool> used(n);
-        for (int i = 0; i < n; i++) {
+        std::vector<int> ret(size());
+        std::vector<bool> used(size());
+        for (int i = 0; i < size(); i++) {
             if (used[i]) { continue; }
             std::vector<int> cyc;
             int cur = i;
@@ -41,9 +47,9 @@ struct permutation {
         }
         return ret;
     }
-    friend std::ostream &operator<<(std::ostream &os, const permutation &rhs) {
+    friend std::ostream &operator<<(std::ostream &os, const permutation &a) {
         os << "{";
-        for (int i = 0; i < rhs.n; i++) { os << rhs[i] << (i + 1 != rhs.n ? ", " : ""); }
+        for (int i = 0; i < a.size(); i++) { os << a[i] << (i + 1 != a.size() ? ", " : ""); }
         os << "}";
         return os;
     }

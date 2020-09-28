@@ -16,7 +16,7 @@ int main() {
         static T minus(const T &a) { return -a; }
         static T inv(const T &a) { return a.inv(); }
         static T eps() { return 0; };
-        static bool less_abs(const T &a, const T &b) { return a.val < b.val; };
+        static bool less_abs(const T &a, const T &b) { return a.val() < b.val(); };
     };
     using mat = matrix<mint_mat>;
     mat A({{8, 2, 3, 2},
@@ -29,8 +29,9 @@ int main() {
             {39, 110, 120, 135}});
     assert(A * A == A2);
     assert(A * A * A * A * A * A * A * A * A * A == A.pow(10));
-    assert(A / A == mat::identity(A.height()));
+    assert(A / A == mat::id(A.height()));
     assert(A.pow(12) / A.pow(2) / A.pow(3) / A.pow(5) == A * A);
     assert(-A == mat(A.height(), A.width()) - A);
+    cerr << A << endl;
     cout << "Hello World" << endl;
 }

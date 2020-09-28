@@ -16,27 +16,27 @@ mint fact(int n) {
 int main() {
     constexpr long long A = 1145141919810LL;
 
-    assert(mint() == mint(0));
-    assert(mint(A) == mint(A % MOD));
-    assert(mint(-A) == mint(MOD - A % MOD));
-    assert(mint(-MOD) == mint(0));
-    assert(+mint(A) == mint(A));
-    assert(-mint(A) == mint(-A));
+    assert(mint() == 0);
+    assert(mint(A) == A % MOD);
+    assert(mint(-A) == MOD - A % MOD);
+    assert(mint(-MOD) == 0);
+    assert(+mint(A) == A);
+    assert(-mint(A) == -A);
 
     mint m = MOD;
-    assert(++m == mint(MOD + 1));
-    assert(--m == mint(MOD));
-    assert(m++ == mint(MOD));
-    assert(m-- == mint(MOD + 1));
-    assert(m == mint(MOD));
+    assert(++m == MOD + 1);
+    assert(--m == MOD);
+    assert(m++ == MOD);
+    assert(m-- == MOD + 1);
+    assert(m == MOD);
 
-    assert(mint(A) +mint(A) == mint(A + A));
-    assert(mint(A + A) - mint(A) == mint(A));
-    assert(mint(A) / mint(A) == mint(1));
-    assert(mint(A).pow(A) * mint(A).pow(-A) == mint(1));
+    assert(mint(A) +mint(A) == A + A);
+    assert(mint(A + A) - mint(A) == A);
+    assert(mint(A) / mint(A) == 1);
+    assert(mint(A).pow(A) * mint(A).pow(-A) == 1);
 
     constexpr int n = 1000, r = 100;
-    mint::combination comb;
+    combination<mint> comb(n + r);
 
     assert(comb.P(n, r) == fact(n) / fact(n - r));
     assert(comb.C(n, r) == fact(n) / fact(r) / fact(n - r));
