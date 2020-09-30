@@ -21,6 +21,7 @@ add_executable(Vector-0 test/AOJ/ITP2/Vector-0.test.cpp data-structure/splay-tre
 add_executable(Vector-1 test/AOJ/ITP2/Vector-1.test.cpp data-structure/red-black-tree.hpp)
 
 add_executable(Largest-Rectangle-in-a-Histogram-0 test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp utility/histogram-largest-rectangle.hpp)
+add_executable(Balls-and-Boxes-9-0 test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp mathematics/stirling-number-2-table.hpp mathematics/mod-int.hpp)
 
 add_executable(Single-Source-Shortest-Path-0 test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp graph/dijkstra.hpp)
 add_executable(Single-Source-Shortest-Path-Negative-Edges-0 test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp graph/bellman-ford.hpp)
@@ -47,7 +48,6 @@ add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomp
 add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
 
 add_executable(Many-A-Plus-B-0 test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp utility/fast-io.hpp)
-
 
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)
 add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp graph/topological-sort.hpp)
