@@ -31,8 +31,10 @@ data:
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
 documentation_of: mathematics/stirling-number-2-table.hpp
 layout: document
-redirect_from:
-- /library/mathematics/stirling-number-2-table.hpp
-- /library/mathematics/stirling-number-2-table.hpp.html
-title: mathematics/stirling-number-2-table.hpp
+title: "\u7B2C 2 \u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u30C6\u30FC\u30D6\
+  \u30EB"
 ---
+
+- `<T> std::vector<std::vector<T>> stirling_number_2_table(int n)`  
+  `T`は整数型もしくは`mod_int`。サイズ`n`の第 2 種スターリング数テーブルを時間計算量`O(n^2)`で作る。
+  ここで、第 2 種スターリング数`S(n, k)`は、`n`個の区別できるボールを`k`個の区別できない箱に入れる場合の数である。

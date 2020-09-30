@@ -109,7 +109,8 @@ data:
       title: "\u6709\u7406\u6570"
     - icon: ':heavy_check_mark:'
       path: mathematics/stirling-number-2-table.hpp
-      title: mathematics/stirling-number-2-table.hpp
+      title: "\u7B2C 2 \u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u30C6\u30FC\
+        \u30D6\u30EB"
     - icon: ':heavy_check_mark:'
       path: mathematics/xor-eliminate.hpp
       title: "xor \u6383\u304D\u51FA\u3057"

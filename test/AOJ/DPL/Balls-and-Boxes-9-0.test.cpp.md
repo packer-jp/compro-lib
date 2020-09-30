@@ -6,7 +6,8 @@ data:
     title: "\u5270\u4F59\u74B0 / \u4F53"
   - icon: ':heavy_check_mark:'
     path: mathematics/stirling-number-2-table.hpp
-    title: mathematics/stirling-number-2-table.hpp
+    title: "\u7B2C 2 \u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u30C6\u30FC\u30D6\
+      \u30EB"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
