@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/to-rooted-tree.hpp\"\n#include <vector>\n\nstd::vector<int>\
     \ to_rooted_tree(const std::vector<std::vector<int>> &adj, int s) {\n    std::vector<int>\

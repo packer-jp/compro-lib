@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/re-rooting.hpp\"\n#include <vector>\n\ntemplate<typename\
     \ M>\nstd::vector<typename M::T> re_rooting(const std::vector<std::vector<int>>\

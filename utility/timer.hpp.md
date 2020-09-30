@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"utility/timer.hpp\"\nstruct timer {\n    unsigned long long\
     \ begin_cycle;\n    double cycle_per_sec = 2.8e9;\n    unsigned long long get_cycle()\

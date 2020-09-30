@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"utility/fast-io.hpp\"\n#include <iostream>\n\nstruct fast_io\
     \ {\n    static constexpr int SIZE_IN = 1 << 26, SIZE_OUT = 1 << 26;\n    char\

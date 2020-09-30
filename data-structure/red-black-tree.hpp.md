@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/Volume15/RMQ-1.test.cpp
-    title: test/AOJ/Volume15/RMQ-1.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/ITP2/Vector-1.test.cpp
     title: test/AOJ/ITP2/Vector-1.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/Volume15/RMQ-1.test.cpp
+    title: test/AOJ/Volume15/RMQ-1.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/red-black-tree.hpp\"\n#include <vector>\n\
     \ntemplate<typename M>\nstruct red_black_tree {\n    enum COLOR { RED, BLACK };\n\

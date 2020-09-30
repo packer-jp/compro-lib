@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"string/trie.hpp\"\n#include <vector>\n\ntemplate<int K>\n\
     struct trie {\n    std::vector<std::vector<int>> adj;\n    std::vector<int> cnt;\n\

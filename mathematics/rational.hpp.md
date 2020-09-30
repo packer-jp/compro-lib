@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/rational.hpp\"\n#include <iostream>\n#include\
     \ <utility>\n\nstruct rational {\n    long long num, den;\n    static long long\

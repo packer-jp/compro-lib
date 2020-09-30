@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/moebius.hpp\"\n#include <map>\n#include <vector>\n\
     \ntemplate<typename T> std::map<T, int> moebius(T n) {\n    std::map<T, int> ret;\n\

@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/get-prime-table.hpp\"\n#include <vector>\n\n\
     std::vector<bool> get_prime_table(int n) {\n    std::vector<bool> ret(n + 1, true);\n\

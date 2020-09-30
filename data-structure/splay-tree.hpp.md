@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/Volume15/RMQ-0.test.cpp
-    title: test/AOJ/Volume15/RMQ-0.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/ITP2/Vector-0.test.cpp
     title: test/AOJ/ITP2/Vector-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/Volume15/RMQ-0.test.cpp
+    title: test/AOJ/Volume15/RMQ-0.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/splay-tree.hpp\"\n#include <vector>\n\ntemplate<typename\
     \ M>\nstruct splay_tree {\n    using T = typename M::T;\n    struct node {\n \

@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/unit-test/string/run-length-encoding.test.cpp
-    title: test/unit-test/string/run-length-encoding.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/unit-test/mathematics/moebius.test.cpp
     title: test/unit-test/mathematics/moebius.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/unit-test/string/run-length-encoding.test.cpp
+    title: test/unit-test/string/run-length-encoding.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"string/run-length-encoding.hpp\"\n#include <vector>\n\n\
     template<typename T> std::vector<std::pair<T, int>> run_length_encoding(const\

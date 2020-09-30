@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/union-find-tree.hpp\"\n#include <vector>\n\
     \ntemplate<typename S>\nstruct union_find_tree {\n    using T = typename S::T;\n\

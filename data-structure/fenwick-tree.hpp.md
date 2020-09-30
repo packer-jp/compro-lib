@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/DSL/Range-Sum-Query-1.test.cpp
-    title: test/AOJ/DSL/Range-Sum-Query-1.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL/Range-Add-Query-0.test.cpp
     title: test/AOJ/DSL/Range-Add-Query-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/DSL/Range-Sum-Query-1.test.cpp
+    title: test/AOJ/DSL/Range-Sum-Query-1.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/fenwick-tree.hpp\"\n#include <vector>\n#include\
     \ <cassert>\n\ntemplate<typename S>\nstruct fenwick_tree {\n    using T = typename\

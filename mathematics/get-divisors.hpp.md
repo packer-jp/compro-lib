@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/get-divisors.hpp\"\n#include <algorithm>\n#include\
     \ <vector>\n\ntemplate<typename T> std::vector<T> get_divisors(T n) {\n    std::vector<T>\

@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"marathon/marathon.hpp\"\nvoid simulated_annealing() {\n\
     \    timer.init();\n    double T = 5.95;\n    double start_temp = 0.01;\n    double\

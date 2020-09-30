@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/xor-eliminate.hpp\"\n#include <vector>\n#include\
     \ <bitset>\n\ntemplate<typename T> std::vector<T> xor_eliminate(std::vector<T>\

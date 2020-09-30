@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/unit-test/mathematics/moebius.test.cpp
-    title: test/unit-test/mathematics/moebius.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/NTL/Prime-Factorize-0.test.cpp
     title: test/AOJ/NTL/Prime-Factorize-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/unit-test/mathematics/moebius.test.cpp
+    title: test/unit-test/mathematics/moebius.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/prime-factorize.hpp\"\n#include <vector>\n\n\
     template<typename T> std::vector<T> prime_factorize(T n) {\n    std::vector<T>\

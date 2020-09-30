@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/strongly-connected-components.hpp\"\n#include <vector>\n\
     \nstd::vector<int> strongly_connected_components(const std::vector<std::vector<int>>\

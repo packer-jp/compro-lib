@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/warshall-floyd.hpp\"\n#include <limits>\n#include\
     \ <vector>\n#include <functional>\n\ntemplate<typename S>\nstruct warshall_floyd\

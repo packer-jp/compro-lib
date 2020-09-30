@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/topological-sort.hpp\"\n#include <vector>\n#include\
     \ <stack>\n\nstd::vector<int> topological_sort(const std::vector<std::vector<int>>\

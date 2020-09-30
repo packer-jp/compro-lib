@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/dijkstra.hpp\"\n#include <limits>\n#include <queue>\n\
     #include <vector>\n#include <cassert>\n\ntemplate<typename S>\nstruct dijkstra\

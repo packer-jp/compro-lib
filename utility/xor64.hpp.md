@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"utility/xor64.hpp\"\nlong long xor64(long long range) {\n\
     \    static unsigned long long x = 1145141919810ULL;\n    x ^= x << 13;\n    x\

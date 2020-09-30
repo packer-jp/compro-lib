@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/weighted-union-find-tree.hpp\"\n#include\
     \ <vector>\n\ntemplate<typename T>\nstruct weighted_union_find_tree {\n    T zero;\n\

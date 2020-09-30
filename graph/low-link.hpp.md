@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/GRL/Bridges-0.test.cpp
-    title: test/AOJ/GRL/Bridges-0.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/GRL/Articulation-Points-0.test.cpp
     title: test/AOJ/GRL/Articulation-Points-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/GRL/Bridges-0.test.cpp
+    title: test/AOJ/GRL/Bridges-0.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/low-link.hpp\"\n#include <vector>\n#include <algorithm>\n\
     \nstruct low_link {\n    int n;\n    std::vector<int> ord, low, articulations;\n\

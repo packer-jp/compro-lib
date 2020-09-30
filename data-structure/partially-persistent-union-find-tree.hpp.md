@@ -6,7 +6,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/partially-persistent-union-find-tree.hpp\"\
     \n#include <vector>\n#include <climits>\n\nstruct partially_persistent_union_find_tree\

@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"utility/bit-reverse.hpp\"\n#include <bitset>\n\ntemplate<typename\
     \ T> T bit_reverse(T x) {\n    for (int i = 0; i < x.size() / 2; i++) {\n    \

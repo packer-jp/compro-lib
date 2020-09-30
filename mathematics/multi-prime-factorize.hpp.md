@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/multi-prime-factorize.hpp\"\n#include <vector>\n\
     \nstd::vector<int> smallest_prime_factors(int n) {\n    std::vector<int> ret(n\

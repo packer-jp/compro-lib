@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"string/rolling-hash-2d.hpp\"\n#include <random>\n#include\
     \ <vector>\n#include <cassert>\n\nstruct rolling_hash_2d {\n    using ull = unsigned\

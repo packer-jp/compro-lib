@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"geometry/geometry.hpp\"\n#include <cmath>\n#include <utility>\n\
     #include <vector>\n#include <algorithm>\n\nstruct point {\n    double x, y;\n\

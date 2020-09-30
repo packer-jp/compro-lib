@@ -108,6 +108,9 @@ data:
       path: mathematics/rational.hpp
       title: "\u6709\u7406\u6570"
     - icon: ':heavy_check_mark:'
+      path: mathematics/stirling-number-2-table.hpp
+      title: mathematics/stirling-number-2-table.hpp
+    - icon: ':heavy_check_mark:'
       path: mathematics/xor-eliminate.hpp
       title: "xor \u6383\u304D\u51FA\u3057"
   - name: string
@@ -171,6 +174,9 @@ data:
       title: test/AOJ/CGL/Convex-Hull-0.test.cpp
   - name: test/AOJ/DPL
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+      title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp
       title: test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp

@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"string/rolling-hash.hpp\"\n#include <random>\n#include <vector>\n\
     #include <cassert>\n\nstruct rolling_hash {\n    using ull = unsigned long long;\n\

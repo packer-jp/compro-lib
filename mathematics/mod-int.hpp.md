@@ -7,21 +7,23 @@ data:
     title: "\u7573\u307F\u8FBC\u307F"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+    title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/NTL/Power-0.test.cpp
+    title: test/AOJ/NTL/Power-0.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
     title: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/unit-test/mathematics/mod-int.test.cpp
-    title: test/unit-test/mathematics/mod-int.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/unit-test/mathematics/matrix.test.cpp
     title: test/unit-test/mathematics/matrix.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/NTL/Power-0.test.cpp
-    title: test/AOJ/NTL/Power-0.test.cpp
+    path: test/unit-test/mathematics/mod-int.test.cpp
+    title: test/unit-test/mathematics/mod-int.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include\
     \ <utility>\n#include <vector>\n#include <cassert>\n\ntemplate<int MOD = 1'000'000'007>\n\
@@ -114,6 +116,7 @@ data:
   - test/unit-test/mathematics/mod-int.test.cpp
   - test/unit-test/mathematics/matrix.test.cpp
   - test/AOJ/NTL/Power-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
 documentation_of: mathematics/mod-int.hpp
 layout: document
 title: "\u5270\u4F59\u74B0 / \u4F53"

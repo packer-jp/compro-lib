@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"utility/binary-search.hpp\"\n#include <cstdlib>\n\ntemplate<typename\
     \ F> long long discrete_binary_search(long long ok, long long ng, F is_ok) {\n\

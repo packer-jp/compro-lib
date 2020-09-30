@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/unit-test/graph/heavy-light-decomposition.test.cpp
-    title: test/unit-test/graph/heavy-light-decomposition.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume26/Tree-0.test.cpp
     title: test/AOJ/Volume26/Tree-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/unit-test/graph/heavy-light-decomposition.test.cpp
+    title: test/unit-test/graph/heavy-light-decomposition.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/heavy-light-decomposition.hpp\"\n#include <algorithm>\n\
     #include <vector>\n#include <cassert>\n\nstruct heavy_light_decomposition {\n\

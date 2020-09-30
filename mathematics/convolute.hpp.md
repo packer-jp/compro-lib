@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/convolute.hpp\"\n#include <cmath>\n#include\
     \ <vector>\n#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include\

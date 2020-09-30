@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/bipartite-matching.hpp\"\n#include <vector>\n\nstd::vector<std::pair<int,\
     \ int>> bipartite_matching(const std::vector<std::vector<int>> &adj) {\n    int\

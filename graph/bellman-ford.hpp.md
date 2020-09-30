@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/bellman-ford.hpp\"\n#include <limits>\n#include <vector>\n\
     #include <functional>\n#include <cassert>\n\ntemplate<typename S>\nstruct bellman_ford\

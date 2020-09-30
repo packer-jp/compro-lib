@@ -4,18 +4,17 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/unit-test/graph/heavy-light-decomposition.test.cpp
-    title: test/unit-test/graph/heavy-light-decomposition.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL/Range-Minimum-Query-0.test.cpp
     title: test/AOJ/DSL/Range-Minimum-Query-0.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL/Range-Sum-Query-0.test.cpp
     title: test/AOJ/DSL/Range-Sum-Query-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/unit-test/graph/heavy-light-decomposition.test.cpp
+    title: test/unit-test/graph/heavy-light-decomposition.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/segment-tree.hpp\"\n#include <vector>\n#include\
     \ <cassert>\n#include <limits>\n\ntemplate<typename S>\nstruct segment_tree {\n\

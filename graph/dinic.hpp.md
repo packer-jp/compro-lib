@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"graph/dinic.hpp\"\n#include <limits>\n#include <map>\n#include\
     \ <queue>\n#include <vector>\n\ntemplate<typename M>\nstruct dinic {\n    using\

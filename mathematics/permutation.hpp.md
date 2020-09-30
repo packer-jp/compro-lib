@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"mathematics/permutation.hpp\"\n#include <algorithm>\n#include\
     \ <iostream>\n#include <vector>\n#include <numeric>\n\nstruct permutation {\n\

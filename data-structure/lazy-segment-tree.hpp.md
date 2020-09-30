@@ -4,21 +4,20 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
+    title: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
     title: test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
     title: test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
-    title: test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume26/Tree-0.test.cpp
     title: test/AOJ/Volume26/Tree-0.test.cpp
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"data-structure/lazy-segment-tree.hpp\"\n#include <vector>\n\
     #include <cassert>\n#include <limits>\n\ntemplate<typename S>\nstruct lazy_segment_tree\

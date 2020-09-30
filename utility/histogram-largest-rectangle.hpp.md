@@ -9,7 +9,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"utility/histogram-largest-rectangle.hpp\"\n#include <vector>\n\
     #include <stack>\n\ntemplate<typename T> T histogram_largest_rectangle(const std::vector<T>\
