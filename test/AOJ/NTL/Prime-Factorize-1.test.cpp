@@ -8,7 +8,8 @@ int main() {
     int n;
     cin >> n;
     cout << n << ":";
-    auto v = prime_factorize(n, smallest_prime_factors(n));
+    multi_prime_factorize mpf(n);
+    auto v = mpf.prime_factorize(n);
     for (int i = 0; i < v.size(); i++) { cout << " " << v[i]; }
     cout << endl;
 }
