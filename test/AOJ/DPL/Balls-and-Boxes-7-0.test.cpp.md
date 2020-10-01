@@ -21,40 +21,40 @@ data:
     \n#line 1 \"mathematics/bell-number-table.hpp\"\n#include <vector>\n\ntemplate<typename\
     \ T> std::vector<std::vector<T>> bell_number_table(int n, int k) {\n    std::vector\
     \ ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0] = 1;\n    for (int i = 1;\
-    \ i <= n; i++) {\n        ret[i][1] = 1;\n        for (int j = 2; j <= i && j\
-    \ <= k; j++) { ret[i][j] = ret[i][j - 1] + ret[i - 1][j - 1] + j * ret[i - 1][j];\
-    \ }\n    }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\n#include\
-    \ <iostream>\n#include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include\
-    \ <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n\
-    \    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n   \
-    \ static int mod() { return MOD; }\n    int val() const { return v; }\n    mod_int\
-    \ &operator+=(const mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD;\
-    \ }\n        return *this;\n    }\n    mod_int &operator-=(const mod_int &a) {\n\
-    \        if ((v += MOD - a.v) >= MOD) { v -= MOD; }\n        return *this;\n \
-    \   }\n    mod_int &operator*=(const mod_int &a) {\n        v = (int) ((long long)\
-    \ v * a.v % MOD);\n        return *this;\n    }\n    mod_int &operator/=(const\
-    \ mod_int &a) { return *this *= a.inv(); }\n    mod_int operator+() const { return\
-    \ *this; }\n    mod_int operator-() const { return -v; }\n    mod_int operator++()\
-    \ { return *this += 1; }\n    mod_int operator--() { return *this -= 1; }\n  \
-    \  mod_int operator++(signed) {\n        const mod_int ret(*this);\n        ++*this;\n\
-    \        return ret;\n    }\n    mod_int operator--(signed) {\n        const mod_int\
-    \ ret(*this);\n        --*this;\n        return ret;\n    }\n    mod_int inv()\
-    \ const {\n        int a = v, b = MOD, x = 1, u = 0;\n        while (b) {\n  \
-    \          int t = a / b;\n            std::swap(a -= t * b, b), std::swap(x -=\
-    \ t * u, u);\n        }\n        return x;\n    }\n    mod_int pow(long long n)\
-    \ const {\n        if (n < 0) { return pow(-n).inv(); }\n        mod_int ret =\
-    \ 1, mul = *this;\n        while (n) {\n            if (n & 1) { ret *= mul; }\n\
-    \            mul *= mul, n >>= 1;\n        }\n        return ret;\n    }\n   \
-    \ friend bool operator==(const mod_int &a, const mod_int &b) { return a.v == b.v;\
-    \ }\n    friend bool operator!=(const mod_int &a, const mod_int &b) { return std::rel_ops::operator!=(a,\
-    \ b); }\n    friend mod_int operator+(mod_int a, const mod_int &b) { return a\
-    \ += b; }\n    friend mod_int operator-(mod_int a, const mod_int &b) { return\
-    \ a -= b; }\n    friend mod_int operator*(mod_int a, const mod_int &b) { return\
-    \ a *= b; }\n    friend mod_int operator/(mod_int a, const mod_int &b) { return\
-    \ a /= b; }\n    friend std::istream &operator>>(std::istream &is, mod_int &a)\
-    \ {\n        long long v;\n        is >> v, a = v;\n        return is;\n    }\n\
-    \    friend std::ostream &operator<<(std::ostream &os, const mod_int &a) { return\
-    \ os << a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
+    \ i <= n; i++) {\n        ret[i][1] = 1;\n        for (int j = 2; j <= k; j++)\
+    \ { ret[i][j] = ret[i][j - 1] + ret[i - 1][j - 1] + j * ret[i - 1][j]; }\n   \
+    \ }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n\
+    #include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include <cassert>\n\n\
+    template<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n    mod_int(long\
+    \ long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n    static int mod()\
+    \ { return MOD; }\n    int val() const { return v; }\n    mod_int &operator+=(const\
+    \ mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD; }\n        return\
+    \ *this;\n    }\n    mod_int &operator-=(const mod_int &a) {\n        if ((v +=\
+    \ MOD - a.v) >= MOD) { v -= MOD; }\n        return *this;\n    }\n    mod_int\
+    \ &operator*=(const mod_int &a) {\n        v = (int) ((long long) v * a.v % MOD);\n\
+    \        return *this;\n    }\n    mod_int &operator/=(const mod_int &a) { return\
+    \ *this *= a.inv(); }\n    mod_int operator+() const { return *this; }\n    mod_int\
+    \ operator-() const { return -v; }\n    mod_int operator++() { return *this +=\
+    \ 1; }\n    mod_int operator--() { return *this -= 1; }\n    mod_int operator++(signed)\
+    \ {\n        const mod_int ret(*this);\n        ++*this;\n        return ret;\n\
+    \    }\n    mod_int operator--(signed) {\n        const mod_int ret(*this);\n\
+    \        --*this;\n        return ret;\n    }\n    mod_int inv() const {\n   \
+    \     int a = v, b = MOD, x = 1, u = 0;\n        while (b) {\n            int\
+    \ t = a / b;\n            std::swap(a -= t * b, b), std::swap(x -= t * u, u);\n\
+    \        }\n        return x;\n    }\n    mod_int pow(long long n) const {\n \
+    \       if (n < 0) { return pow(-n).inv(); }\n        mod_int ret = 1, mul = *this;\n\
+    \        while (n) {\n            if (n & 1) { ret *= mul; }\n            mul\
+    \ *= mul, n >>= 1;\n        }\n        return ret;\n    }\n    friend bool operator==(const\
+    \ mod_int &a, const mod_int &b) { return a.v == b.v; }\n    friend bool operator!=(const\
+    \ mod_int &a, const mod_int &b) { return std::rel_ops::operator!=(a, b); }\n \
+    \   friend mod_int operator+(mod_int a, const mod_int &b) { return a += b; }\n\
+    \    friend mod_int operator-(mod_int a, const mod_int &b) { return a -= b; }\n\
+    \    friend mod_int operator*(mod_int a, const mod_int &b) { return a *= b; }\n\
+    \    friend mod_int operator/(mod_int a, const mod_int &b) { return a /= b; }\n\
+    \    friend std::istream &operator>>(std::istream &is, mod_int &a) {\n       \
+    \ long long v;\n        is >> v, a = v;\n        return is;\n    }\n    friend\
+    \ std::ostream &operator<<(std::ostream &os, const mod_int &a) { return os <<\
+    \ a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
     \ fact, fact_inv, inv;\n    combination(int n) : fact(n + 1), fact_inv(n + 1),\
     \ inv(n + 1) {\n        fact[0] = fact[1] = fact_inv[0] = fact_inv[1] = inv[1]\
     \ = 1;\n        for (int i = 2; i <= n; i++) {\n            fact[i] = fact[i -\
@@ -77,7 +77,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-01 10:04:15+09:00'
+  timestamp: '2020-10-01 10:08:48+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
