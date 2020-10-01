@@ -130,13 +130,29 @@ layout: document
 title: "\u5270\u4F59\u74B0 / \u4F53"
 ---
 
-## 概要
-演算時に自動で剰余をとる整数。
+- `<int MOD=1'000'000'0007> struct mod_int`  
+`MOD`を法とした剰余環 / 体。
 
-## テンプレートパラメータ
-- `int MOD = 1000000007`  
-法。
+  - `(constructor)(long long v_)`  
+  値`v_`で初期化。
 
-## 内部クラス
-- `combination`  
-組み合わせ計算のための機能を持つ。
+  - `static int mod()`  
+  `MOD`を返す。
+
+  - 各種`operator`  
+  演算をする。特に、割り算の可能性・計算量は`inv`メソッドに準拠する。
+  
+  - `mod_int inv()`  
+  逆元を返す。値と`MOD`が互いに素である場合のみ使える。時間計算量`O(log MOD)`。
+  
+  - `mod_int pow(int n)`  
+  `n`乗を返す。時間計算量`O(log n)`。
+
+- `<T> struct combination`  
+  組み合わせの計算を行う。`T`は`mod_int`。
+  
+  - `(constructor)(int n)`  
+  `n`までの階乗、逆元、階乗逆元をテーブルに保存して初期化。
+  
+  - 各種メソッド  
+  順列、組み合わせ数、重複組み合わせ数を計算する。
