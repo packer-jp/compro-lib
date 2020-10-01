@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
-    title: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
+    title: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"mathematics/partition-table.hpp\"\n#include <vector>\n\n\
@@ -26,13 +26,14 @@ data:
   path: mathematics/partition-table.hpp
   requiredBy: []
   timestamp: '2020-10-01 09:23:11+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
 documentation_of: mathematics/partition-table.hpp
 layout: document
-redirect_from:
-- /library/mathematics/partition-table.hpp
-- /library/mathematics/partition-table.hpp.html
-title: mathematics/partition-table.hpp
+title: "\u5206\u5272\u6570\u30C6\u30FC\u30D6\u30EB"
 ---
+
+- `<T> std::vector<std::vector<T>> partiton_table(int n, int k)`  
+  `T`は整数型もしくは`mod_int`。サイズ`n * k`の分割数テーブルを時間計算量`O(n^2)`で作る。
+  ここで、分割数`P(n, k)`は、`n`個の区別できないボールを`k`個の区別できない箱に入れる場合の数である。

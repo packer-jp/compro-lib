@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/stirling-number-2-table.hpp
     title: "\u7B2C 2 \u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u30C6\u30FC\u30D6\
       \u30EB"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_I&lang=ja
@@ -23,40 +23,39 @@ data:
     \ T> std::vector<std::vector<T>> stirling_number_2_table(int n, int k) {\n   \
     \ std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0] = 1;\n    for\
     \ (int i = 1; i <= n; i++) {\n        ret[i][1] = 1;\n        for (int j = 2;\
-    \ j < i && j < k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i - 1][j]; }\n\
-    \        if (i <= k) { ret[i][i] = 1; }\n    }\n    return ret;\n}\n#line 1 \"\
-    mathematics/mod-int.hpp\"\n#include <iostream>\n#include <utility>\n#line 4 \"\
-    mathematics/mod-int.hpp\"\n#include <cassert>\n\ntemplate<int MOD = 1'000'000'007>\n\
-    struct mod_int {\n    int v;\n    mod_int(long long v_ = 0) : v(v_ % MOD) { if\
-    \ (v < 0) { v += MOD; }}\n    static int mod() { return MOD; }\n    int val()\
-    \ const { return v; }\n    mod_int &operator+=(const mod_int &a) {\n        if\
-    \ ((v += a.v) >= MOD) { v -= MOD; }\n        return *this;\n    }\n    mod_int\
-    \ &operator-=(const mod_int &a) {\n        if ((v += MOD - a.v) >= MOD) { v -=\
-    \ MOD; }\n        return *this;\n    }\n    mod_int &operator*=(const mod_int\
-    \ &a) {\n        v = (int) ((long long) v * a.v % MOD);\n        return *this;\n\
-    \    }\n    mod_int &operator/=(const mod_int &a) { return *this *= a.inv(); }\n\
-    \    mod_int operator+() const { return *this; }\n    mod_int operator-() const\
-    \ { return -v; }\n    mod_int operator++() { return *this += 1; }\n    mod_int\
-    \ operator--() { return *this -= 1; }\n    mod_int operator++(signed) {\n    \
-    \    const mod_int ret(*this);\n        ++*this;\n        return ret;\n    }\n\
-    \    mod_int operator--(signed) {\n        const mod_int ret(*this);\n       \
-    \ --*this;\n        return ret;\n    }\n    mod_int inv() const {\n        int\
-    \ a = v, b = MOD, x = 1, u = 0;\n        while (b) {\n            int t = a /\
-    \ b;\n            std::swap(a -= t * b, b), std::swap(x -= t * u, u);\n      \
-    \  }\n        return x;\n    }\n    mod_int pow(long long n) const {\n       \
-    \ if (n < 0) { return pow(-n).inv(); }\n        mod_int ret = 1, mul = *this;\n\
-    \        while (n) {\n            if (n & 1) { ret *= mul; }\n            mul\
-    \ *= mul, n >>= 1;\n        }\n        return ret;\n    }\n    friend bool operator==(const\
-    \ mod_int &a, const mod_int &b) { return a.v == b.v; }\n    friend bool operator!=(const\
-    \ mod_int &a, const mod_int &b) { return std::rel_ops::operator!=(a, b); }\n \
-    \   friend mod_int operator+(mod_int a, const mod_int &b) { return a += b; }\n\
-    \    friend mod_int operator-(mod_int a, const mod_int &b) { return a -= b; }\n\
-    \    friend mod_int operator*(mod_int a, const mod_int &b) { return a *= b; }\n\
-    \    friend mod_int operator/(mod_int a, const mod_int &b) { return a /= b; }\n\
-    \    friend std::istream &operator>>(std::istream &is, mod_int &a) {\n       \
-    \ long long v;\n        is >> v, a = v;\n        return is;\n    }\n    friend\
-    \ std::ostream &operator<<(std::ostream &os, const mod_int &a) { return os <<\
-    \ a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
+    \ j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i - 1][j];\
+    \ }\n    }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\n#include\
+    \ <iostream>\n#include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include\
+    \ <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n\
+    \    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n   \
+    \ static int mod() { return MOD; }\n    int val() const { return v; }\n    mod_int\
+    \ &operator+=(const mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD;\
+    \ }\n        return *this;\n    }\n    mod_int &operator-=(const mod_int &a) {\n\
+    \        if ((v += MOD - a.v) >= MOD) { v -= MOD; }\n        return *this;\n \
+    \   }\n    mod_int &operator*=(const mod_int &a) {\n        v = (int) ((long long)\
+    \ v * a.v % MOD);\n        return *this;\n    }\n    mod_int &operator/=(const\
+    \ mod_int &a) { return *this *= a.inv(); }\n    mod_int operator+() const { return\
+    \ *this; }\n    mod_int operator-() const { return -v; }\n    mod_int operator++()\
+    \ { return *this += 1; }\n    mod_int operator--() { return *this -= 1; }\n  \
+    \  mod_int operator++(signed) {\n        const mod_int ret(*this);\n        ++*this;\n\
+    \        return ret;\n    }\n    mod_int operator--(signed) {\n        const mod_int\
+    \ ret(*this);\n        --*this;\n        return ret;\n    }\n    mod_int inv()\
+    \ const {\n        int a = v, b = MOD, x = 1, u = 0;\n        while (b) {\n  \
+    \          int t = a / b;\n            std::swap(a -= t * b, b), std::swap(x -=\
+    \ t * u, u);\n        }\n        return x;\n    }\n    mod_int pow(long long n)\
+    \ const {\n        if (n < 0) { return pow(-n).inv(); }\n        mod_int ret =\
+    \ 1, mul = *this;\n        while (n) {\n            if (n & 1) { ret *= mul; }\n\
+    \            mul *= mul, n >>= 1;\n        }\n        return ret;\n    }\n   \
+    \ friend bool operator==(const mod_int &a, const mod_int &b) { return a.v == b.v;\
+    \ }\n    friend bool operator!=(const mod_int &a, const mod_int &b) { return std::rel_ops::operator!=(a,\
+    \ b); }\n    friend mod_int operator+(mod_int a, const mod_int &b) { return a\
+    \ += b; }\n    friend mod_int operator-(mod_int a, const mod_int &b) { return\
+    \ a -= b; }\n    friend mod_int operator*(mod_int a, const mod_int &b) { return\
+    \ a *= b; }\n    friend mod_int operator/(mod_int a, const mod_int &b) { return\
+    \ a /= b; }\n    friend std::istream &operator>>(std::istream &is, mod_int &a)\
+    \ {\n        long long v;\n        is >> v, a = v;\n        return is;\n    }\n\
+    \    friend std::ostream &operator<<(std::ostream &os, const mod_int &a) { return\
+    \ os << a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
     \ fact, fact_inv, inv;\n    combination(int n) : fact(n + 1), fact_inv(n + 1),\
     \ inv(n + 1) {\n        fact[0] = fact[1] = fact_inv[0] = fact_inv[1] = inv[1]\
     \ = 1;\n        for (int i = 2; i <= n; i++) {\n            fact[i] = fact[i -\
@@ -79,8 +78,8 @@ data:
   isVerificationFile: true
   path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-01 09:05:23+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-10-01 09:36:45+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
 layout: document

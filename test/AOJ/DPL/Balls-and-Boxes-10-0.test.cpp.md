@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: mathematics/partition-table.hpp
-    title: mathematics/partition-table.hpp
+    title: "\u5206\u5272\u6570\u30C6\u30FC\u30D6\u30EB"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E&lang=ja
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J&lang=ja
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E&lang=ja
-  bundledCode: "#line 1 \"test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp\"\n#define PROBLEM\
-    \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E&lang=ja\"\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J&lang=ja
+  bundledCode: "#line 1 \"test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp\"\n#define PROBLEM\
+    \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J&lang=ja\"\
     \n#line 1 \"mathematics/partition-table.hpp\"\n#include <vector>\n\ntemplate<typename\
     \ T> std::vector<std::vector<T>> partition_table(int n, int k) {\n    std::vector\
     \ ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0] = 1;\n    for (int i = 0;\
@@ -63,10 +63,10 @@ data:
     \ int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[n - r]); }\n    T C(int\
     \ n, int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[r] * fact_inv[n\
     \ - r]); }\n    T H(int n, int r) { return C(n + r - 1, r); }\n};\n#line 4 \"\
-    test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp\"\n\n#include <bits/stdc++.h>\nusing\
+    test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp\"\n\n#include <bits/stdc++.h>\nusing\
     \ namespace std;\n\nint main() {\n    int n, k;\n    cin >> n >> k;\n    cout\
     \ << partition_table<mod_int<>>(n, k)[n][k] << endl;\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E&lang=ja\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J&lang=ja\"\
     \n#include \"../../../mathematics/partition-table.hpp\"\n#include \"../../../mathematics/mod-int.hpp\"\
     \n\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n,\
     \ k;\n    cin >> n >> k;\n    cout << partition_table<mod_int<>>(n, k)[n][k] <<\
@@ -75,15 +75,15 @@ data:
   - mathematics/partition-table.hpp
   - mathematics/mod-int.hpp
   isVerificationFile: true
-  path: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+  path: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-01 09:23:11+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-10-01 09:36:45+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+documentation_of: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
 layout: document
 redirect_from:
-- /verify/test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
-- /verify/test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp.html
-title: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+- /verify/test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
+- /verify/test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp.html
+title: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
 ---

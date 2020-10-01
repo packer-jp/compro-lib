@@ -3,32 +3,30 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
     title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"mathematics/stirling-number-2-table.hpp\"\n#include <vector>\n\
     \ntemplate<typename T> std::vector<std::vector<T>> stirling_number_2_table(int\
     \ n, int k) {\n    std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0]\
     \ = 1;\n    for (int i = 1; i <= n; i++) {\n        ret[i][1] = 1;\n        for\
-    \ (int j = 2; j < i && j < k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i\
-    \ - 1][j]; }\n        if (i <= k) { ret[i][i] = 1; }\n    }\n    return ret;\n\
-    }\n"
+    \ (int j = 2; j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i\
+    \ - 1][j]; }\n    }\n    return ret;\n}\n"
   code: "#include <vector>\n\ntemplate<typename T> std::vector<std::vector<T>> stirling_number_2_table(int\
     \ n, int k) {\n    std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0]\
     \ = 1;\n    for (int i = 1; i <= n; i++) {\n        ret[i][1] = 1;\n        for\
-    \ (int j = 2; j < i && j < k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i\
-    \ - 1][j]; }\n        if (i <= k) { ret[i][i] = 1; }\n    }\n    return ret;\n\
-    }"
+    \ (int j = 2; j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i\
+    \ - 1][j]; }\n    }\n    return ret;\n}"
   dependsOn: []
   isVerificationFile: false
   path: mathematics/stirling-number-2-table.hpp
   requiredBy: []
-  timestamp: '2020-10-01 09:05:23+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-10-01 09:36:45+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
 documentation_of: mathematics/stirling-number-2-table.hpp
