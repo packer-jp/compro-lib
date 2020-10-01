@@ -21,9 +21,9 @@ data:
     \ spf.end(), 0LL);\n        for (int i = 2; i * i <= n; i++) {\n            if\
     \ (spf[i] < i) { continue; }\n            for (int j = i * i; j <= n; j += i)\
     \ {\n                if (spf[j] == j) { spf[j] = i; }\n            }\n       \
-    \ }\n    }\n    std::vector<int> prime_factorize(int n) {\n        std::vector<int>\
-    \ ret;\n        while (n > 1) {\n            ret.emplace_back(spf[n]);\n     \
-    \       n /= spf[n];\n        }\n        return ret;\n    }\n};\n#line 3 \"test/AOJ/NTL/Prime-Factorize-1.test.cpp\"\
+    \ }\n    }\n    std::vector<int> prime_factorize(int a) {\n        std::vector<int>\
+    \ ret;\n        while (a > 1) {\n            ret.emplace_back(spf[a]);\n     \
+    \       a /= spf[a];\n        }\n        return ret;\n    }\n};\n#line 3 \"test/AOJ/NTL/Prime-Factorize-1.test.cpp\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n;\n\
     \    cin >> n;\n    cout << n << \":\";\n    multi_prime_factorize mpf(n);\n \
     \   auto v = mpf.prime_factorize(n);\n    for (int i = 0; i < v.size(); i++) {\
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/NTL/Prime-Factorize-1.test.cpp
   requiredBy: []
-  timestamp: '2020-10-01 15:34:37+09:00'
+  timestamp: '2020-10-01 15:53:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/NTL/Prime-Factorize-1.test.cpp

@@ -37,3 +37,5 @@ layout: document
 title: "\u7D20\u56E0\u6570\u5206\u89E3"
 ---
 
+- `<T> std::vector<T> prime_factorize(T n)`  
+`n`を素因数分解した結果を返す。時間計算量`O(sqrt n)`。
