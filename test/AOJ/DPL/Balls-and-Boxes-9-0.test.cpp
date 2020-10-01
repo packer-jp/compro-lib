@@ -8,5 +8,5 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    cout << stirling_number_2_table<mod_int<>>(n)[n][k] << endl;
+    cout << stirling_number_2_table<mod_int<>>(n, k)[n][k] << endl;
 }
