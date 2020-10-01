@@ -1,4 +1,4 @@
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E&lang=ja"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J&lang=ja"
 #include "../../../mathematics/partition-table.hpp"
 #include "../../../mathematics/mod-int.hpp"
 

@@ -21,8 +21,8 @@ add_executable(Vector-0 test/AOJ/ITP2/Vector-0.test.cpp data-structure/splay-tre
 add_executable(Vector-1 test/AOJ/ITP2/Vector-1.test.cpp data-structure/red-black-tree.hpp)
 
 add_executable(Largest-Rectangle-in-a-Histogram-0 test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp utility/histogram-largest-rectangle.hpp)
-add_executable(Balls-and-Boxes-5-0 test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp mathematics/partition-table.hpp mathematics/mod-int.hpp)
 add_executable(Balls-and-Boxes-9-0 test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp mathematics/stirling-number-2-table.hpp mathematics/mod-int.hpp)
+add_executable(Balls-and-Boxes-10-0 test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp mathematics/partition-table.hpp mathematics/mod-int.hpp)
 
 add_executable(Single-Source-Shortest-Path-0 test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp graph/dijkstra.hpp)
 add_executable(Single-Source-Shortest-Path-Negative-Edges-0 test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp graph/bellman-ford.hpp)
