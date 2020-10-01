@@ -6,7 +6,7 @@ data:
     path: mathematics/convolute.hpp
     title: "\u7573\u307F\u8FBC\u307F"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
     title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
   - icon: ':heavy_check_mark:'
@@ -22,7 +22,7 @@ data:
     path: test/unit-test/mathematics/mod-int.test.cpp
     title: test/unit-test/mathematics/mod-int.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include\
@@ -110,7 +110,7 @@ data:
   requiredBy:
   - mathematics/convolute.hpp
   timestamp: '2020-09-28 19:18:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   - test/unit-test/mathematics/mod-int.test.cpp
