@@ -12,11 +12,11 @@ struct multi_prime_factorize {
             }
         }
     }
-    std::vector<int> prime_factorize(int n) {
+    std::vector<int> prime_factorize(int a) {
         std::vector<int> ret;
-        while (n > 1) {
-            ret.emplace_back(spf[n]);
-            n /= spf[n];
+        while (a > 1) {
+            ret.emplace_back(spf[a]);
+            a /= spf[a];
         }
         return ret;
     }
