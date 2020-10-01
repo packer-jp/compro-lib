@@ -98,6 +98,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: mathematics/multi-prime-factorize.hpp
       title: "\u7D20\u56E0\u6570\u5206\u89E3 (\u8907\u6570\u30AF\u30A8\u30EA)"
+    - icon: ':x:'
+      path: mathematics/partition-table.hpp
+      title: mathematics/partition-table.hpp
     - icon: ':heavy_check_mark:'
       path: mathematics/permutation.hpp
       title: "\u9806\u5217"
@@ -175,6 +178,9 @@ data:
       title: test/AOJ/CGL/Convex-Hull-0.test.cpp
   - name: test/AOJ/DPL
     pages:
+    - icon: ':x:'
+      path: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+      title: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
     - icon: ':x:'
       path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
       title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp

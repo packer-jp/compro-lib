@@ -7,6 +7,9 @@ data:
     title: "\u7573\u307F\u8FBC\u307F"
   _extendedVerifiedWith:
   - icon: ':x:'
+    path: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+    title: test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
+  - icon: ':x:'
     path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
     title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
   - icon: ':heavy_check_mark:'
@@ -117,6 +120,7 @@ data:
   - test/unit-test/mathematics/matrix.test.cpp
   - test/AOJ/NTL/Power-0.test.cpp
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-5-0.test.cpp
 documentation_of: mathematics/mod-int.hpp
 layout: document
 title: "\u5270\u4F59\u74B0 / \u4F53"
