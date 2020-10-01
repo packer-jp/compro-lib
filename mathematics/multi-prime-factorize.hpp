@@ -12,7 +12,6 @@ struct multi_prime_factorize {
             }
         }
     }
-
     std::vector<int> prime_factorize(int n) {
         std::vector<int> ret;
         while (n > 1) {
