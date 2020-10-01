@@ -41,8 +41,9 @@ data:
   - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
 documentation_of: mathematics/bell-number-table.hpp
 layout: document
-redirect_from:
-- /library/mathematics/bell-number-table.hpp
-- /library/mathematics/bell-number-table.hpp.html
-title: mathematics/bell-number-table.hpp
+title: "\u30D9\u30EB\u6570\u30C6\u30FC\u30D6\u30EB"
 ---
+
+- `<T> std::vector<std::vector<T>> bell_number_table(int n, int k)`  
+  `T`は整数型もしくは`mod_int`。サイズ`n * k`のベル数テーブルを時間計算量`O(nk)`で作る。
+  ここで、ベル数`B(n, k)`は、`n`個の区別できるボールを`k`個の区別できない箱に入れる場合の数である。

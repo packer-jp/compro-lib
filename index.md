@@ -79,7 +79,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: mathematics/bell-number-table.hpp
-      title: mathematics/bell-number-table.hpp
+      title: "\u30D9\u30EB\u6570\u30C6\u30FC\u30D6\u30EB"
     - icon: ':heavy_check_mark:'
       path: mathematics/convolute.hpp
       title: "\u7573\u307F\u8FBC\u307F"

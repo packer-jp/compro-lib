@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: mathematics/bell-number-table.hpp
-    title: mathematics/bell-number-table.hpp
+    title: "\u30D9\u30EB\u6570\u30C6\u30FC\u30D6\u30EB"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
