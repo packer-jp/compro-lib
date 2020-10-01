@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
     title: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
+  - icon: ':x:'
+    path: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
+    title: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
     title: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
@@ -25,7 +28,7 @@ data:
     path: test/unit-test/mathematics/mod-int.test.cpp
     title: test/unit-test/mathematics/mod-int.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include\
@@ -113,13 +116,14 @@ data:
   requiredBy:
   - mathematics/convolute.hpp
   timestamp: '2020-09-28 19:18:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   - test/unit-test/mathematics/mod-int.test.cpp
   - test/unit-test/mathematics/matrix.test.cpp
   - test/AOJ/NTL/Power-0.test.cpp
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
   - test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
 documentation_of: mathematics/mod-int.hpp
 layout: document

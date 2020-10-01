@@ -1,28 +1,38 @@
 ---
 data:
   _extendedDependsOn:
+  - icon: ':x:'
+    path: mathematics/bell-number-table.hpp
+    title: mathematics/bell-number-table.hpp
   - icon: ':question:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B&lang=jp
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_G&lang=ja
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B&lang=jp
-  bundledCode: "#line 1 \"test/AOJ/NTL/Power-0.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B&lang=jp\"\
-    \n#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include <utility>\n\
-    #include <vector>\n#include <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct\
-    \ mod_int {\n    int v;\n    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v <\
-    \ 0) { v += MOD; }}\n    static int mod() { return MOD; }\n    int val() const\
-    \ { return v; }\n    mod_int &operator+=(const mod_int &a) {\n        if ((v +=\
-    \ a.v) >= MOD) { v -= MOD; }\n        return *this;\n    }\n    mod_int &operator-=(const\
-    \ mod_int &a) {\n        if ((v += MOD - a.v) >= MOD) { v -= MOD; }\n        return\
-    \ *this;\n    }\n    mod_int &operator*=(const mod_int &a) {\n        v = (int)\
-    \ ((long long) v * a.v % MOD);\n        return *this;\n    }\n    mod_int &operator/=(const\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_G&lang=ja
+  bundledCode: "#line 1 \"test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp\"\n#define PROBLEM\
+    \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_G&lang=ja\"\
+    \n#line 1 \"mathematics/bell-number-table.hpp\"\n#include <vector>\n\ntemplate<typename\
+    \ T> std::vector<std::vector<T>> bell_number_table(int n, int k) {\n    std::vector\
+    \ ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0] = 1;\n    for (int i = 1;\
+    \ i <= n; i++) {\n        ret[i][1] = 1;\n        for (int j = 2; j <= i && j\
+    \ <= k; j++) { ret[i][j] = ret[i][j - 1] + ret[i - 1][j - 1] + j * ret[i - 1][j];\
+    \ }\n    }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\n#include\
+    \ <iostream>\n#include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include\
+    \ <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n\
+    \    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n   \
+    \ static int mod() { return MOD; }\n    int val() const { return v; }\n    mod_int\
+    \ &operator+=(const mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD;\
+    \ }\n        return *this;\n    }\n    mod_int &operator-=(const mod_int &a) {\n\
+    \        if ((v += MOD - a.v) >= MOD) { v -= MOD; }\n        return *this;\n \
+    \   }\n    mod_int &operator*=(const mod_int &a) {\n        v = (int) ((long long)\
+    \ v * a.v % MOD);\n        return *this;\n    }\n    mod_int &operator/=(const\
     \ mod_int &a) { return *this *= a.inv(); }\n    mod_int operator+() const { return\
     \ *this; }\n    mod_int operator-() const { return -v; }\n    mod_int operator++()\
     \ { return *this += 1; }\n    mod_int operator--() { return *this -= 1; }\n  \
@@ -52,26 +62,28 @@ data:
     \     fact_inv[i] = fact_inv[i - 1] * inv[i];\n        }\n    }\n    T P(int n,\
     \ int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[n - r]); }\n    T C(int\
     \ n, int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[r] * fact_inv[n\
-    \ - r]); }\n    T H(int n, int r) { return C(n + r - 1, r); }\n};\n#line 3 \"\
-    test/AOJ/NTL/Power-0.test.cpp\"\n\n#include<bits/stdc++.h>\nusing namespace std;\n\
-    \nint main() {\n    mod_int<> m;\n    int n;\n    cin >> m >> n;\n    cout <<\
-    \ m.pow(n) << endl;\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B&lang=jp\"\
-    \n#include\"../../../mathematics/mod-int.hpp\"\n\n#include<bits/stdc++.h>\nusing\
-    \ namespace std;\n\nint main() {\n    mod_int<> m;\n    int n;\n    cin >> m >>\
-    \ n;\n    cout << m.pow(n) << endl;\n}\n"
+    \ - r]); }\n    T H(int n, int r) { return C(n + r - 1, r); }\n};\n#line 4 \"\
+    test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp\"\n\n#include <bits/stdc++.h>\nusing\
+    \ namespace std;\n\nint main() {\n    int n, k;\n    cin >> n >> k;\n    cout\
+    \ << bell_number_table<mod_int<>>(n, k)[n][k] << endl;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_G&lang=ja\"\
+    \n#include \"../../../mathematics/bell-number-table.hpp\"\n#include \"../../../mathematics/mod-int.hpp\"\
+    \n\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n,\
+    \ k;\n    cin >> n >> k;\n    cout << bell_number_table<mod_int<>>(n, k)[n][k]\
+    \ << endl;\n}"
   dependsOn:
+  - mathematics/bell-number-table.hpp
   - mathematics/mod-int.hpp
   isVerificationFile: true
-  path: test/AOJ/NTL/Power-0.test.cpp
+  path: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-28 19:18:29+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2020-10-01 10:04:15+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/AOJ/NTL/Power-0.test.cpp
+documentation_of: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
 layout: document
 redirect_from:
-- /verify/test/AOJ/NTL/Power-0.test.cpp
-- /verify/test/AOJ/NTL/Power-0.test.cpp.html
-title: test/AOJ/NTL/Power-0.test.cpp
+- /verify/test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
+- /verify/test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp.html
+title: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
 ---
