@@ -77,7 +77,7 @@ data:
       title: "\u30DE\u30E9\u30BD\u30F3\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   - name: mathematics
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: mathematics/bell-number-table.hpp
       title: mathematics/bell-number-table.hpp
     - icon: ':heavy_check_mark:'
@@ -92,7 +92,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: mathematics/matrix.hpp
       title: "\u884C\u5217"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: mathematics/mod-int.hpp
       title: "\u5270\u4F59\u74B0 / \u4F53"
     - icon: ':heavy_check_mark:'
@@ -184,7 +184,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
       title: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
       title: test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
     - icon: ':heavy_check_mark:'
