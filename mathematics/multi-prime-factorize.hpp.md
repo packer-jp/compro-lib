@@ -43,8 +43,8 @@ title: "\u7D20\u56E0\u6570\u5206\u89E3 (\u8907\u6570\u30AF\u30A8\u30EA)"
 - `struct multi_prime_factorize`  
   複数の素因数分解クエリを処理する。
 
-  - `(constructor)(int n)`
+  - `(constructor)(int n)`  
   最大で`n`まで素因数分解できるように初期化。時間計算量`O(n log n)`。
 
-  - `std::vector<int> prime_factorize(int a)`
+  - `std::vector<int> prime_factorize(int a)`  
   `a`を素因数分解した結果を返す。時間計算量`O(log a)`。
