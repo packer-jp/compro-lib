@@ -3,7 +3,7 @@ title: 素因数分解 (複数クエリ)
 documentation_of: mathematics/multi-prime-factorize.hpp
 ---
 
-- `struct multi_prime_factorize`  
+- `struct multi_prime_factorize`
   複数の素因数分解クエリを処理する。
 
   - `(constructor)(int n)`
