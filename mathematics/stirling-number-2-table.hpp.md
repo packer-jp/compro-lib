@@ -19,20 +19,20 @@ data:
   bundledCode: "#line 1 \"mathematics/stirling-number-2-table.hpp\"\n#include <vector>\n\
     \ntemplate<typename T> std::vector<std::vector<T>> stirling_number_2_table(int\
     \ n, int k) {\n    std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0]\
-    \ = 1;\n    for (int i = 1; i <= n; i++) {\n        ret[i][1] = 1;\n        for\
-    \ (int j = 2; j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i\
-    \ - 1][j]; }\n    }\n    return ret;\n}\n"
+    \ = 1;\n    if (k == 0) { return ret; }\n    for (int i = 1; i <= n; i++) {\n\
+    \        ret[i][1] = 1;\n        for (int j = 2; j <= i && j <= k; j++) { ret[i][j]\
+    \ = ret[i - 1][j - 1] + j * ret[i - 1][j]; }\n    }\n    return ret;\n}\n"
   code: "#include <vector>\n\ntemplate<typename T> std::vector<std::vector<T>> stirling_number_2_table(int\
     \ n, int k) {\n    std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0]\
-    \ = 1;\n    for (int i = 1; i <= n; i++) {\n        ret[i][1] = 1;\n        for\
-    \ (int j = 2; j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i\
-    \ - 1][j]; }\n    }\n    return ret;\n}"
+    \ = 1;\n    if (k == 0) { return ret; }\n    for (int i = 1; i <= n; i++) {\n\
+    \        ret[i][1] = 1;\n        for (int j = 2; j <= i && j <= k; j++) { ret[i][j]\
+    \ = ret[i - 1][j - 1] + j * ret[i - 1][j]; }\n    }\n    return ret;\n}"
   dependsOn: []
   isVerificationFile: false
   path: mathematics/stirling-number-2-table.hpp
   requiredBy:
   - mathematics/bell-number-table.hpp
-  timestamp: '2020-10-01 09:36:45+09:00'
+  timestamp: '2020-10-01 10:19:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp

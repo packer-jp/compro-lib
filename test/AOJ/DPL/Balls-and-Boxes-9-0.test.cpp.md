@@ -21,19 +21,19 @@ data:
     \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_I&lang=ja\"\
     \n#line 1 \"mathematics/stirling-number-2-table.hpp\"\n#include <vector>\n\ntemplate<typename\
     \ T> std::vector<std::vector<T>> stirling_number_2_table(int n, int k) {\n   \
-    \ std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0] = 1;\n    for\
-    \ (int i = 1; i <= n; i++) {\n        ret[i][1] = 1;\n        for (int j = 2;\
-    \ j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j - 1] + j * ret[i - 1][j];\
-    \ }\n    }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\n#include\
-    \ <iostream>\n#include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include\
-    \ <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n\
-    \    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n   \
-    \ static int mod() { return MOD; }\n    int val() const { return v; }\n    mod_int\
-    \ &operator+=(const mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD;\
-    \ }\n        return *this;\n    }\n    mod_int &operator-=(const mod_int &a) {\n\
-    \        if ((v += MOD - a.v) >= MOD) { v -= MOD; }\n        return *this;\n \
-    \   }\n    mod_int &operator*=(const mod_int &a) {\n        v = (int) ((long long)\
-    \ v * a.v % MOD);\n        return *this;\n    }\n    mod_int &operator/=(const\
+    \ std::vector ret(n + 1, std::vector<T>(k + 1));\n    ret[0][0] = 1;\n    if (k\
+    \ == 0) { return ret; }\n    for (int i = 1; i <= n; i++) {\n        ret[i][1]\
+    \ = 1;\n        for (int j = 2; j <= i && j <= k; j++) { ret[i][j] = ret[i - 1][j\
+    \ - 1] + j * ret[i - 1][j]; }\n    }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\
+    \n#include <iostream>\n#include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\
+    \n#include <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n\
+    \    int v;\n    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD;\
+    \ }}\n    static int mod() { return MOD; }\n    int val() const { return v; }\n\
+    \    mod_int &operator+=(const mod_int &a) {\n        if ((v += a.v) >= MOD) {\
+    \ v -= MOD; }\n        return *this;\n    }\n    mod_int &operator-=(const mod_int\
+    \ &a) {\n        if ((v += MOD - a.v) >= MOD) { v -= MOD; }\n        return *this;\n\
+    \    }\n    mod_int &operator*=(const mod_int &a) {\n        v = (int) ((long\
+    \ long) v * a.v % MOD);\n        return *this;\n    }\n    mod_int &operator/=(const\
     \ mod_int &a) { return *this *= a.inv(); }\n    mod_int operator+() const { return\
     \ *this; }\n    mod_int operator-() const { return -v; }\n    mod_int operator++()\
     \ { return *this += 1; }\n    mod_int operator--() { return *this -= 1; }\n  \
@@ -78,7 +78,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-01 09:36:45+09:00'
+  timestamp: '2020-10-01 10:19:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
