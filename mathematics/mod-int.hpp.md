@@ -63,14 +63,14 @@ data:
     \ long long v;\n        is >> v, a = v;\n        return is;\n    }\n    friend\
     \ std::ostream &operator<<(std::ostream &os, const mod_int &a) { return os <<\
     \ a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
-    \ fact, fact_inv, inv;\n    combination(int n) : fact(n + 1), fact_inv(n + 1),\
-    \ inv(n + 1) {\n        fact[0] = fact[1] = fact_inv[0] = fact_inv[1] = inv[1]\
-    \ = 1;\n        for (int i = 2; i <= n; i++) {\n            fact[i] = fact[i -\
-    \ 1] * i;\n            inv[i] = -inv[T::mod() % i] * (T::mod() / i);\n       \
-    \     fact_inv[i] = fact_inv[i - 1] * inv[i];\n        }\n    }\n    T P(int n,\
-    \ int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[n - r]); }\n    T C(int\
-    \ n, int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[r] * fact_inv[n\
-    \ - r]); }\n    T H(int n, int r) { return C(n + r - 1, r); }\n};\n"
+    \ fact, finv, inv;\n    combination(int n) : fact(n + 1), finv(n + 1), inv(n +\
+    \ 1) {\n        fact[0] = fact[1] = finv[0] = finv[1] = inv[1] = 1;\n        for\
+    \ (int i = 2; i <= n; i++) {\n            fact[i] = fact[i - 1] * i;\n       \
+    \     inv[i] = -inv[T::mod() % i] * (T::mod() / i);\n            finv[i] = finv[i\
+    \ - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) { return r < 0 || n\
+    \ < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r) { return P(n, r)\
+    \ * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r); }\n    T catalan(int\
+    \ n) { return C(2 * n, n) / (n + 1); }\n};\n"
   code: "#include <iostream>\n#include <utility>\n#include <vector>\n#include <cassert>\n\
     \ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n    mod_int(long\
     \ long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n    static int mod()\
@@ -102,20 +102,20 @@ data:
     \ long long v;\n        is >> v, a = v;\n        return is;\n    }\n    friend\
     \ std::ostream &operator<<(std::ostream &os, const mod_int &a) { return os <<\
     \ a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
-    \ fact, fact_inv, inv;\n    combination(int n) : fact(n + 1), fact_inv(n + 1),\
-    \ inv(n + 1) {\n        fact[0] = fact[1] = fact_inv[0] = fact_inv[1] = inv[1]\
-    \ = 1;\n        for (int i = 2; i <= n; i++) {\n            fact[i] = fact[i -\
-    \ 1] * i;\n            inv[i] = -inv[T::mod() % i] * (T::mod() / i);\n       \
-    \     fact_inv[i] = fact_inv[i - 1] * inv[i];\n        }\n    }\n    T P(int n,\
-    \ int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[n - r]); }\n    T C(int\
-    \ n, int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[r] * fact_inv[n\
-    \ - r]); }\n    T H(int n, int r) { return C(n + r - 1, r); }\n};"
+    \ fact, finv, inv;\n    combination(int n) : fact(n + 1), finv(n + 1), inv(n +\
+    \ 1) {\n        fact[0] = fact[1] = finv[0] = finv[1] = inv[1] = 1;\n        for\
+    \ (int i = 2; i <= n; i++) {\n            fact[i] = fact[i - 1] * i;\n       \
+    \     inv[i] = -inv[T::mod() % i] * (T::mod() / i);\n            finv[i] = finv[i\
+    \ - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) { return r < 0 || n\
+    \ < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r) { return P(n, r)\
+    \ * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r); }\n    T catalan(int\
+    \ n) { return C(2 * n, n) / (n + 1); }\n};"
   dependsOn: []
   isVerificationFile: false
   path: mathematics/mod-int.hpp
   requiredBy:
   - mathematics/convolute.hpp
-  timestamp: '2020-09-28 19:18:29+09:00'
+  timestamp: '2020-10-02 21:18:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp

@@ -114,30 +114,30 @@ data:
     \ {\n        long long v;\n        is >> v, a = v;\n        return is;\n    }\n\
     \    friend std::ostream &operator<<(std::ostream &os, const mod_int &a) { return\
     \ os << a.v; }\n};\n\ntemplate<typename T>\nstruct combination {\n    std::vector<T>\
-    \ fact, fact_inv, inv;\n    combination(int n) : fact(n + 1), fact_inv(n + 1),\
-    \ inv(n + 1) {\n        fact[0] = fact[1] = fact_inv[0] = fact_inv[1] = inv[1]\
-    \ = 1;\n        for (int i = 2; i <= n; i++) {\n            fact[i] = fact[i -\
-    \ 1] * i;\n            inv[i] = -inv[T::mod() % i] * (T::mod() / i);\n       \
-    \     fact_inv[i] = fact_inv[i - 1] * inv[i];\n        }\n    }\n    T P(int n,\
-    \ int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[n - r]); }\n    T C(int\
-    \ n, int r) { return r < 0 || n < r ? 0 : (fact[n] * fact_inv[r] * fact_inv[n\
-    \ - r]); }\n    T H(int n, int r) { return C(n + r - 1, r); }\n};\n#line 4 \"\
-    test/unit-test/mathematics/matrix.test.cpp\"\n\n#include<bits/stdc++.h>\nusing\
-    \ namespace std;\n\nint main() {\n    using mint = mod_int<>;\n    struct mint_mat\
-    \ {\n        using T = mint;\n        static T plus(const T &a, const T &b) {\
-    \ return a + b; }\n        static T cross(const T &a, const T &b) { return a *\
-    \ b; }\n        static T zero() { return 0; }\n        static T one() { return\
-    \ 1; }\n        static T minus(const T &a) { return -a; }\n        static T inv(const\
-    \ T &a) { return a.inv(); }\n        static T eps() { return 0; };\n        static\
-    \ bool less_abs(const T &a, const T &b) { return a.val() < b.val(); };\n    };\n\
-    \    using mat = matrix<mint_mat>;\n    mat A({{8, 2, 3, 2},\n           {1, 3,\
-    \ 2, 7},\n           {2, 5, 7, 6},\n           {1, 9, 9, 4}});\n    mat A2({{74,\
-    \ 55, 67, 56},\n            {22, 84, 86, 63},\n            {41, 108, 119, 105},\n\
-    \            {39, 110, 120, 135}});\n    assert(A * A == A2);\n    assert(A *\
-    \ A * A * A * A * A * A * A * A * A == A.pow(10));\n    assert(A / A == mat::id(A.height()));\n\
-    \    assert(A.pow(12) / A.pow(2) / A.pow(3) / A.pow(5) == A * A);\n    assert(-A\
-    \ == mat(A.height(), A.width()) - A);\n    cerr << A << endl;\n    cout << \"\
-    Hello World\" << endl;\n}\n"
+    \ fact, finv, inv;\n    combination(int n) : fact(n + 1), finv(n + 1), inv(n +\
+    \ 1) {\n        fact[0] = fact[1] = finv[0] = finv[1] = inv[1] = 1;\n        for\
+    \ (int i = 2; i <= n; i++) {\n            fact[i] = fact[i - 1] * i;\n       \
+    \     inv[i] = -inv[T::mod() % i] * (T::mod() / i);\n            finv[i] = finv[i\
+    \ - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) { return r < 0 || n\
+    \ < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r) { return P(n, r)\
+    \ * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r); }\n    T catalan(int\
+    \ n) { return C(2 * n, n) / (n + 1); }\n};\n#line 4 \"test/unit-test/mathematics/matrix.test.cpp\"\
+    \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    using mint\
+    \ = mod_int<>;\n    struct mint_mat {\n        using T = mint;\n        static\
+    \ T plus(const T &a, const T &b) { return a + b; }\n        static T cross(const\
+    \ T &a, const T &b) { return a * b; }\n        static T zero() { return 0; }\n\
+    \        static T one() { return 1; }\n        static T minus(const T &a) { return\
+    \ -a; }\n        static T inv(const T &a) { return a.inv(); }\n        static\
+    \ T eps() { return 0; };\n        static bool less_abs(const T &a, const T &b)\
+    \ { return a.val() < b.val(); };\n    };\n    using mat = matrix<mint_mat>;\n\
+    \    mat A({{8, 2, 3, 2},\n           {1, 3, 2, 7},\n           {2, 5, 7, 6},\n\
+    \           {1, 9, 9, 4}});\n    mat A2({{74, 55, 67, 56},\n            {22, 84,\
+    \ 86, 63},\n            {41, 108, 119, 105},\n            {39, 110, 120, 135}});\n\
+    \    assert(A * A == A2);\n    assert(A * A * A * A * A * A * A * A * A * A ==\
+    \ A.pow(10));\n    assert(A / A == mat::id(A.height()));\n    assert(A.pow(12)\
+    \ / A.pow(2) / A.pow(3) / A.pow(5) == A * A);\n    assert(-A == mat(A.height(),\
+    \ A.width()) - A);\n    cerr << A << endl;\n    cout << \"Hello World\" << endl;\n\
+    }\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A&lang=ja\"\
     \n#include\"../../../mathematics/matrix.hpp\"\n#include\"../../../mathematics/mod-int.hpp\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    using mint\
@@ -162,7 +162,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/mathematics/matrix.test.cpp
   requiredBy: []
-  timestamp: '2020-09-28 19:18:29+09:00'
+  timestamp: '2020-10-02 21:18:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/mathematics/matrix.test.cpp
