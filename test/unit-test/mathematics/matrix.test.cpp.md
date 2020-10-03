@@ -84,7 +84,7 @@ data:
     \ { return 1; }\n    static T minus(const T &a) { return -a; }\n    static T inv(const\
     \ T &a) { return 1 / a; }\n    static T eps() { return 1e-10; };\n    static bool\
     \ less_abs(const T &a, const T &b) { return std::abs(a) < std::abs(b); };\n};\n\
-    #line 5 \"mathematics/mod-int.hpp\"\n\ntemplate<int MOD = 1'000'000'007>\nstruct\
+    #line 5 \"mathematics/mod-int.hpp\"\n\ntemplate<int MOD = 1000000007>\nstruct\
     \ mod_int {\n    int v;\n    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v <\
     \ 0) { v += MOD; }}\n    static int mod() { return MOD; }\n    int val() const\
     \ { return v; }\n    mod_int &operator+=(const mod_int &a) {\n        if ((v +=\
@@ -195,7 +195,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/mathematics/matrix.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:16:22+09:00'
+  timestamp: '2020-10-04 00:28:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/mathematics/matrix.test.cpp

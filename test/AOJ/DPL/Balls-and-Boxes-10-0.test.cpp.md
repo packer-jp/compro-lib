@@ -25,7 +25,7 @@ data:
     \ = ret[i][j - 1];\n            if (j <= i) { ret[i][j] += ret[i - j][j]; }\n\
     \        }\n    }\n    return ret;\n}\n#line 1 \"mathematics/mod-int.hpp\"\n#include\
     \ <iostream>\n#include <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include\
-    \ <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n\
+    \ <cassert>\n\ntemplate<int MOD = 1000000007>\nstruct mod_int {\n    int v;\n\
     \    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n   \
     \ static int mod() { return MOD; }\n    int val() const { return v; }\n    mod_int\
     \ &operator+=(const mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD;\
@@ -110,7 +110,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:16:22+09:00'
+  timestamp: '2020-10-04 00:28:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp

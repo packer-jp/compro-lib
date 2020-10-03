@@ -32,7 +32,7 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include\
-    \ <utility>\n#include <vector>\n#include <cassert>\n\ntemplate<int MOD = 1'000'000'007>\n\
+    \ <utility>\n#include <vector>\n#include <cassert>\n\ntemplate<int MOD = 1000000007>\n\
     struct mod_int {\n    int v;\n    mod_int(long long v_ = 0) : v(v_ % MOD) { if\
     \ (v < 0) { v += MOD; }}\n    static int mod() { return MOD; }\n    int val()\
     \ const { return v; }\n    mod_int &operator+=(const mod_int &a) {\n        if\
@@ -105,7 +105,7 @@ data:
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
     \ }\n    T catalan(int n) { return C(2 * n, n) / (n + 1); }\n};\n"
   code: "#include <iostream>\n#include <utility>\n#include <vector>\n#include <cassert>\n\
-    \ntemplate<int MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n    mod_int(long\
+    \ntemplate<int MOD = 1000000007>\nstruct mod_int {\n    int v;\n    mod_int(long\
     \ long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n    static int mod()\
     \ { return MOD; }\n    int val() const { return v; }\n    mod_int &operator+=(const\
     \ mod_int &a) {\n        if ((v += a.v) >= MOD) { v -= MOD; }\n        return\
@@ -181,7 +181,7 @@ data:
   path: mathematics/mod-int.hpp
   requiredBy:
   - mathematics/convolute.hpp
-  timestamp: '2020-10-04 00:16:22+09:00'
+  timestamp: '2020-10-04 00:28:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp

@@ -16,7 +16,7 @@ data:
   bundledCode: "#line 1 \"test/unit-test/mathematics/mod-int.test.cpp\"\n#define PROBLEM\
     \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A&lang=ja\"\
     \n#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include <utility>\n\
-    #include <vector>\n#include <cassert>\n\ntemplate<int MOD = 1'000'000'007>\nstruct\
+    #include <vector>\n#include <cassert>\n\ntemplate<int MOD = 1000000007>\nstruct\
     \ mod_int {\n    int v;\n    mod_int(long long v_ = 0) : v(v_ % MOD) { if (v <\
     \ 0) { v += MOD; }}\n    static int mod() { return MOD; }\n    int val() const\
     \ { return v; }\n    mod_int &operator+=(const mod_int &a) {\n        if ((v +=\
@@ -121,7 +121,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/mathematics/mod-int.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:16:22+09:00'
+  timestamp: '2020-10-04 00:28:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/mathematics/mod-int.test.cpp

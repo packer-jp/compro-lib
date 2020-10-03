@@ -16,8 +16,8 @@ data:
   bundledCode: "#line 1 \"mathematics/convolute.hpp\"\n#include <cmath>\n#include\
     \ <vector>\n#line 1 \"mathematics/mod-int.hpp\"\n#include <iostream>\n#include\
     \ <utility>\n#line 4 \"mathematics/mod-int.hpp\"\n#include <cassert>\n\ntemplate<int\
-    \ MOD = 1'000'000'007>\nstruct mod_int {\n    int v;\n    mod_int(long long v_\
-    \ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n    static int mod() { return\
+    \ MOD = 1000000007>\nstruct mod_int {\n    int v;\n    mod_int(long long v_ =\
+    \ 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n    static int mod() { return\
     \ MOD; }\n    int val() const { return v; }\n    mod_int &operator+=(const mod_int\
     \ &a) {\n        if ((v += a.v) >= MOD) { v -= MOD; }\n        return *this;\n\
     \    }\n    mod_int &operator-=(const mod_int &a) {\n        if ((v += MOD - a.v)\
@@ -248,7 +248,7 @@ data:
   isVerificationFile: false
   path: mathematics/convolute.hpp
   requiredBy: []
-  timestamp: '2020-10-04 00:16:22+09:00'
+  timestamp: '2020-10-04 00:28:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
