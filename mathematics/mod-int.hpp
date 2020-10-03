@@ -91,12 +91,12 @@ struct runtime_mod_int {
     runtime_mod_int operator++() { return *this += 1; }
     runtime_mod_int operator--() { return *this -= 1; }
     runtime_mod_int operator++(signed) {
-        const mod_int ret(*this);
+        const runtime_mod_int ret(*this);
         ++*this;
         return ret;
     }
     runtime_mod_int operator--(signed) {
-        const mod_int ret(*this);
+        const runtime_mod_int ret(*this);
         --*this;
         return ret;
     }
@@ -110,7 +110,7 @@ struct runtime_mod_int {
     }
     runtime_mod_int pow(long long n) const {
         if (n < 0) { return pow(-n).inv(); }
-        mod_int ret = 1, mul = *this;
+        runtime_mod_int ret = 1, mul = *this;
         while (n) {
             if (n & 1) { ret *= mul; }
             mul *= mul, n >>= 1;
