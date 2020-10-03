@@ -3,7 +3,7 @@
 #include <vector>
 #include <cassert>
 
-template<int MOD = 1'000'000'007>
+template<int MOD = 1000000007>
 struct mod_int {
     int v;
     mod_int(long long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}
