@@ -56,19 +56,19 @@ data:
     \ &a) { return *this *= a.inv(); }\n    runtime_mod_int operator+() const { return\
     \ *this; }\n    runtime_mod_int operator-() const { return -v; }\n    runtime_mod_int\
     \ operator++() { return *this += 1; }\n    runtime_mod_int operator--() { return\
-    \ *this -= 1; }\n    runtime_mod_int operator++(signed) {\n        const mod_int\
+    \ *this -= 1; }\n    runtime_mod_int operator++(signed) {\n        const runtime_mod_int\
     \ ret(*this);\n        ++*this;\n        return ret;\n    }\n    runtime_mod_int\
-    \ operator--(signed) {\n        const mod_int ret(*this);\n        --*this;\n\
+    \ operator--(signed) {\n        const runtime_mod_int ret(*this);\n        --*this;\n\
     \        return ret;\n    }\n    runtime_mod_int inv() const {\n        int a\
     \ = v, b = MOD, x = 1, u = 0;\n        while (b) {\n            int t = a / b;\n\
     \            std::swap(a -= t * b, b), std::swap(x -= t * u, u);\n        }\n\
     \        return x;\n    }\n    runtime_mod_int pow(long long n) const {\n    \
-    \    if (n < 0) { return pow(-n).inv(); }\n        mod_int ret = 1, mul = *this;\n\
-    \        while (n) {\n            if (n & 1) { ret *= mul; }\n            mul\
-    \ *= mul, n >>= 1;\n        }\n        return ret;\n    }\n    friend bool operator==(const\
-    \ runtime_mod_int &a, const runtime_mod_int &b) { return a.v == b.v; }\n    friend\
-    \ bool operator!=(const runtime_mod_int &a, const runtime_mod_int &b) {\n    \
-    \    return std::rel_ops::operator!=(a, b);\n    }\n    friend runtime_mod_int\
+    \    if (n < 0) { return pow(-n).inv(); }\n        runtime_mod_int ret = 1, mul\
+    \ = *this;\n        while (n) {\n            if (n & 1) { ret *= mul; }\n    \
+    \        mul *= mul, n >>= 1;\n        }\n        return ret;\n    }\n    friend\
+    \ bool operator==(const runtime_mod_int &a, const runtime_mod_int &b) { return\
+    \ a.v == b.v; }\n    friend bool operator!=(const runtime_mod_int &a, const runtime_mod_int\
+    \ &b) {\n        return std::rel_ops::operator!=(a, b);\n    }\n    friend runtime_mod_int\
     \ operator+(runtime_mod_int a, const runtime_mod_int &b) { return a += b; }\n\
     \    friend runtime_mod_int operator-(runtime_mod_int a, const runtime_mod_int\
     \ &b) { return a -= b; }\n    friend runtime_mod_int operator*(runtime_mod_int\
@@ -97,7 +97,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/NTL/Power-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:01:02+09:00'
+  timestamp: '2020-10-04 00:16:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/NTL/Power-0.test.cpp
