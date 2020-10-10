@@ -103,7 +103,7 @@ data:
     \  finv[i] = finv[i - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) {\
     \ return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r)\
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
-    \ }\n    T catalan(int n) { return C(2 * n, n) / (n + 1); }\n};\n"
+    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};\n"
   code: "#include <iostream>\n#include <utility>\n#include <vector>\n#include <cassert>\n\
     \ntemplate<int MOD = 1000000007>\nstruct mod_int {\n    int v;\n    mod_int(long\
     \ long v_ = 0) : v(v_ % MOD) { if (v < 0) { v += MOD; }}\n    static int mod()\
@@ -175,22 +175,22 @@ data:
     \  finv[i] = finv[i - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) {\
     \ return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r)\
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
-    \ }\n    T catalan(int n) { return C(2 * n, n) / (n + 1); }\n};"
+    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};"
   dependsOn: []
   isVerificationFile: false
   path: mathematics/mod-int.hpp
   requiredBy:
   - mathematics/convolute.hpp
-  timestamp: '2020-10-04 00:28:26+09:00'
+  timestamp: '2020-10-10 19:42:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
-  - test/unit-test/mathematics/mod-int.test.cpp
-  - test/unit-test/mathematics/matrix.test.cpp
   - test/AOJ/NTL/Power-0.test.cpp
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
-  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
   - test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
+  - test/unit-test/mathematics/matrix.test.cpp
+  - test/unit-test/mathematics/mod-int.test.cpp
+  - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
 documentation_of: mathematics/mod-int.hpp
 layout: document
 title: "\u5270\u4F59\u74B0 / \u4F53"

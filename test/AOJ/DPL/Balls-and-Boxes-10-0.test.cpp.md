@@ -95,10 +95,10 @@ data:
     \  finv[i] = finv[i - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) {\
     \ return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r)\
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
-    \ }\n    T catalan(int n) { return C(2 * n, n) / (n + 1); }\n};\n#line 4 \"test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp\"\
-    \n\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n,\
-    \ k;\n    cin >> n >> k;\n    cout << partition_table<mod_int<>>(n, k)[n][k] <<\
-    \ endl;\n}\n"
+    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};\n#line 4 \"\
+    test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp\"\n\n#include <bits/stdc++.h>\nusing\
+    \ namespace std;\n\nint main() {\n    int n, k;\n    cin >> n >> k;\n    cout\
+    \ << partition_table<mod_int<>>(n, k)[n][k] << endl;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J&lang=ja\"\
     \n#include \"../../../mathematics/partition-table.hpp\"\n#include \"../../../mathematics/mod-int.hpp\"\
     \n\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n,\
@@ -110,7 +110,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:28:26+09:00'
+  timestamp: '2020-10-10 19:42:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp

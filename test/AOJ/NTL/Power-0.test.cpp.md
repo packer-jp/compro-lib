@@ -85,9 +85,10 @@ data:
     \  finv[i] = finv[i - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) {\
     \ return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r)\
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
-    \ }\n    T catalan(int n) { return C(2 * n, n) / (n + 1); }\n};\n#line 3 \"test/AOJ/NTL/Power-0.test.cpp\"\
-    \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    mod_int<>\
-    \ m;\n    int n;\n    cin >> m >> n;\n    cout << m.pow(n) << endl;\n}\n"
+    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};\n#line 3 \"\
+    test/AOJ/NTL/Power-0.test.cpp\"\n\n#include<bits/stdc++.h>\nusing namespace std;\n\
+    \nint main() {\n    mod_int<> m;\n    int n;\n    cin >> m >> n;\n    cout <<\
+    \ m.pow(n) << endl;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B&lang=jp\"\
     \n#include\"../../../mathematics/mod-int.hpp\"\n\n#include<bits/stdc++.h>\nusing\
     \ namespace std;\n\nint main() {\n    mod_int<> m;\n    int n;\n    cin >> m >>\
@@ -97,7 +98,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/NTL/Power-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:28:26+09:00'
+  timestamp: '2020-10-10 19:42:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/NTL/Power-0.test.cpp

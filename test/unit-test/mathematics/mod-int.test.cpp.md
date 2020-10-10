@@ -86,21 +86,21 @@ data:
     \  finv[i] = finv[i - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) {\
     \ return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r)\
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
-    \ }\n    T catalan(int n) { return C(2 * n, n) / (n + 1); }\n};\n#line 3 \"test/unit-test/mathematics/mod-int.test.cpp\"\
-    \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nconstexpr int MOD = 998244353;\n\
-    using mint = mod_int<MOD>;\n\nmint fact(int n) {\n    mint ret = 1;\n    for (int\
-    \ i = 2; i <= n; i++) { ret *= i; }\n    return ret;\n}\n\nint main() {\n    constexpr\
-    \ long long A = 1145141919810LL;\n\n    assert(mint() == 0);\n    assert(mint(A)\
-    \ == A % MOD);\n    assert(mint(-A) == MOD - A % MOD);\n    assert(mint(-MOD)\
-    \ == 0);\n    assert(+mint(A) == A);\n    assert(-mint(A) == -A);\n\n    mint\
-    \ m = MOD;\n    assert(++m == MOD + 1);\n    assert(--m == MOD);\n    assert(m++\
-    \ == MOD);\n    assert(m-- == MOD + 1);\n    assert(m == MOD);\n\n    assert(mint(A)\
-    \ +mint(A) == A + A);\n    assert(mint(A + A) - mint(A) == A);\n    assert(mint(A)\
-    \ / mint(A) == 1);\n    assert(mint(A).pow(A) * mint(A).pow(-A) == 1);\n\n   \
-    \ constexpr int n = 1000, r = 100;\n    combination<mint> comb(n + r);\n\n   \
-    \ assert(comb.P(n, r) == fact(n) / fact(n - r));\n    assert(comb.C(n, r) == fact(n)\
-    \ / fact(r) / fact(n - r));\n    assert(comb.H(n, r) == fact(n + r - 1) / fact(r)\
-    \ / fact(n - 1));\n\n    cout << \"Hello World\" << endl;\n}\n"
+    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};\n#line 3 \"\
+    test/unit-test/mathematics/mod-int.test.cpp\"\n\n#include<bits/stdc++.h>\nusing\
+    \ namespace std;\n\nconstexpr int MOD = 998244353;\nusing mint = mod_int<MOD>;\n\
+    \nmint fact(int n) {\n    mint ret = 1;\n    for (int i = 2; i <= n; i++) { ret\
+    \ *= i; }\n    return ret;\n}\n\nint main() {\n    constexpr long long A = 1145141919810LL;\n\
+    \n    assert(mint() == 0);\n    assert(mint(A) == A % MOD);\n    assert(mint(-A)\
+    \ == MOD - A % MOD);\n    assert(mint(-MOD) == 0);\n    assert(+mint(A) == A);\n\
+    \    assert(-mint(A) == -A);\n\n    mint m = MOD;\n    assert(++m == MOD + 1);\n\
+    \    assert(--m == MOD);\n    assert(m++ == MOD);\n    assert(m-- == MOD + 1);\n\
+    \    assert(m == MOD);\n\n    assert(mint(A) +mint(A) == A + A);\n    assert(mint(A\
+    \ + A) - mint(A) == A);\n    assert(mint(A) / mint(A) == 1);\n    assert(mint(A).pow(A)\
+    \ * mint(A).pow(-A) == 1);\n\n    constexpr int n = 1000, r = 100;\n    combination<mint>\
+    \ comb(n + r);\n\n    assert(comb.P(n, r) == fact(n) / fact(n - r));\n    assert(comb.C(n,\
+    \ r) == fact(n) / fact(r) / fact(n - r));\n    assert(comb.H(n, r) == fact(n +\
+    \ r - 1) / fact(r) / fact(n - 1));\n\n    cout << \"Hello World\" << endl;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A&lang=ja\"\
     \n#include\"../../../mathematics/mod-int.hpp\"\n\n#include<bits/stdc++.h>\nusing\
     \ namespace std;\n\nconstexpr int MOD = 998244353;\nusing mint = mod_int<MOD>;\n\
@@ -121,7 +121,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/mathematics/mod-int.test.cpp
   requiredBy: []
-  timestamp: '2020-10-04 00:28:26+09:00'
+  timestamp: '2020-10-10 19:42:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/mathematics/mod-int.test.cpp

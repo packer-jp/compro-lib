@@ -30,8 +30,8 @@ data:
   timestamp: '2020-09-23 16:37:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/unit-test/mathematics/moebius.test.cpp
   - test/AOJ/NTL/Prime-Factorize-0.test.cpp
+  - test/unit-test/mathematics/moebius.test.cpp
 documentation_of: mathematics/prime-factorize.hpp
 layout: document
 title: "\u7D20\u56E0\u6570\u5206\u89E3"
