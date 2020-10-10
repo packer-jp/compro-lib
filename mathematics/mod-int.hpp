@@ -147,5 +147,5 @@ struct combination {
     T P(int n, int r) { return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }
     T C(int n, int r) { return P(n, r) * finv[r]; }
     T H(int n, int r) { return C(n + r - 1, r); }
-    T catalan(int n) { return C(2 * n, n) / (n + 1); }
+    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }
 };
