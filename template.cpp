@@ -16,11 +16,6 @@ constexpr double PI = 3.1415926535897932384626433832795028;
 constexpr int DY[9] = {0, 1, 0, -1, 1, 1, -1, -1, 0};
 constexpr int DX[9] = {1, 0, -1, 0, 1, -1, -1, 1, 0};
 int sign(int a) { return (a > 0) - (a < 0); }
-int gcd(int a, int b) {
-    while (b) { swap(a %= b, b); }
-    return a;
-}
-int lcm(int a, int b) { return a / gcd(a, b) * b; }
 int cdiv(int a, int b) { return (a - 1 + b) / b; }
 template<typename T> void fin(T a) {
     cout << a << endl;
@@ -95,4 +90,3 @@ struct setup {
 
 signed main() {
 }
-
