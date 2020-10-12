@@ -133,38 +133,48 @@ data:
     \    int j = m + (m >> 1) - 1 - i;\n        to_prod(i, j);\n    }\n    for (int\
     \ i = 0; i < m; i++) { w[i] = w[i].conj(); }\n    ifft(c, w);\n    std::vector<double>\
     \ ret(n_);\n    for (int i = 0; i < n_; i++) { ret[i] = c[i].real; }\n    return\
-    \ ret;\n}\n\ntemplate<int MOD, int ROOT>\nstd::vector<int> friendly_mod_convolute(const\
-    \ std::vector<int> &a, const std::vector<int> &b) {\n    int n_a = a.size(), n_b\
-    \ = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<= 1)\
-    \ {}\n    int m = n >> 1;\n    std::vector<mod_int<MOD>> a_mint(n), b_mint(n),\
-    \ w(m + 2);\n    std::copy(a.begin(), a.end(), a_mint.begin()), std::copy(b.begin(),\
-    \ b.end(), b_mint.begin());\n    w[0] = 1, w[1] = mod_int<MOD>(ROOT).pow((MOD\
-    \ - 1) / n);\n    for (int i = 2; i < m; i++) { w[i] = w[i - 1] * w[1]; }\n  \
-    \  fft(a_mint, w);\n    fft(b_mint, w);\n    for (int i = 0; i < n; i++) { a_mint[i]\
-    \ *= b_mint[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m; i++) { w[i]\
-    \ = w[i - 1] * w[1]; }\n    ifft(a_mint, w);\n    std::vector<int> ret(n_);\n\
-    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }\n    return ret;\n\
-    }\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const std::vector<int>\
-    \ &a, const std::vector<int> &b, int mod) {\n    static constexpr int MS[] = {998244353,\
-    \ 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod = [](int a, int\
-    \ m) -> int {\n        a %= m;\n        if (a < 0) { a += m; }\n        return\
-    \ a;\n    };\n    auto mod_inv = [&](int a, int m) -> int {\n        int b = m,\
-    \ x = 1, u = 0;\n        while (b) {\n            int t = a / b;\n           \
-    \ std::swap(a -= t * b, b);\n            std::swap(x -= t * u, u);\n        }\n\
-    \        return safe_mod(x, m);\n    };\n    int n_a = a.size(), n_b = b.size();\n\
-    \    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<= 1) {}\n    std::vector<int>\
-    \ m(K + 1), prod_m(K + 1, 1);\n    std::vector<std::vector<int>> ret(K + 1, std::vector<int>(n_));\n\
-    \    std::copy(MS, MS + K, m.begin());\n    m[K] = mod;\n    for (int i = 0; i\
-    \ < K; i++) {\n        std::vector<int> piece;\n        if (i == 0) { piece =\
-    \ friendly_mod_convolute<MS[0], RS[0]>(a, b); }\n        if (i == 1) { piece =\
-    \ friendly_mod_convolute<MS[1], RS[1]>(a, b); }\n        if (i == 2) { piece =\
-    \ friendly_mod_convolute<MS[2], RS[2]>(a, b); }\n        int prod_inv = mod_inv(prod_m[i],\
-    \ m[i]);\n        for (int j = 0; j < n_; j++) {\n            int mod_m_i = (long\
-    \ long) safe_mod(piece[j] - ret[i][j], m[i]) * prod_inv % m[i];\n            for\
-    \ (int k = i + 1; k <= K; k++) {\n                ret[k][j] = (ret[k][j] + (long\
-    \ long) mod_m_i * prod_m[k] % m[k]) % m[k];\n            }\n        }\n      \
-    \  for (int j = i + 1; j <= K; j++) { prod_m[j] = (long long) prod_m[j] * m[i]\
-    \ % m[j]; }\n    }\n    return ret[K];\n}\n"
+    \ ret;\n}\n\ntemplate<typename T, int ROOT>\nstd::vector<T> friendly_mod_convolute(std::vector<T>\
+    \ a, std::vector<T> b) {\n    int n_a = a.size(), n_b = b.size();\n    int n_\
+    \ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<= 1) {}\n    int m = n >> 1;\n\
+    \    a.resize(n), b.resize(n);\n    std::vector<T> w(m + 2);\n    w[0] = 1, w[1]\
+    \ = T(ROOT).pow((T::mod() - 1) / n);\n    for (int i = 2; i < m; i++) { w[i] =\
+    \ w[i - 1] * w[1]; }\n    fft(a, w);\n    fft(b, w);\n    for (int i = 0; i <\
+    \ n; i++) { a[i] *= b[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m;\
+    \ i++) { w[i] = w[i - 1] * w[1]; }\n    ifft(a, w);\n    a.resize(n_);\n    return\
+    \ a;\n}\n\ntemplate<int MOD, int ROOT>\nstd::vector<int> friendly_mod_convolute(const\
+    \ std::vector<int> &a, const std::vector<int> &b) {\n    std::vector<mod_int<MOD>>\
+    \ a_mint(a.size()), b_mint(b.size());\n    std::copy(a.begin(), a.end(), a_mint.begin()),\
+    \ std::copy(b.begin(), b.end(), b_mint.begin());\n    std::vector<mod_int<MOD>>\
+    \ ret_mint(friendly_mod_convolute<mod_int<MOD>, ROOT>(a_mint, b_mint));\n    std::vector<int>\
+    \ ret(ret_mint.size());\n    for (int i = 0; i < ret.size(); i++) { ret[i] = ret_mint[i].val();\
+    \ }\n    return ret;\n}\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const\
+    \ std::vector<int> &a, const std::vector<int> &b, int mod) {\n    static constexpr\
+    \ int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod\
+    \ = [](int a, int m) -> int {\n        a %= m;\n        if (a < 0) { a += m; }\n\
+    \        return a;\n    };\n    auto mod_inv = [&](int a, int m) -> int {\n  \
+    \      int b = m, x = 1, u = 0;\n        while (b) {\n            int t = a /\
+    \ b;\n            std::swap(a -= t * b, b);\n            std::swap(x -= t * u,\
+    \ u);\n        }\n        return safe_mod(x, m);\n    };\n    int n_a = a.size(),\
+    \ n_b = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<=\
+    \ 1) {}\n    std::vector<int> m(K + 1), prod_m(K + 1, 1);\n    std::vector<std::vector<int>>\
+    \ ret(K + 1, std::vector<int>(n_));\n    std::copy(MS, MS + K, m.begin());\n \
+    \   m[K] = mod;\n    for (int i = 0; i < K; i++) {\n        std::vector<int> piece;\n\
+    \        if (i == 0) { piece = friendly_mod_convolute<MS[0], RS[0]>(a, b); }\n\
+    \        if (i == 1) { piece = friendly_mod_convolute<MS[1], RS[1]>(a, b); }\n\
+    \        if (i == 2) { piece = friendly_mod_convolute<MS[2], RS[2]>(a, b); }\n\
+    \        int prod_inv = mod_inv(prod_m[i], m[i]);\n        for (int j = 0; j <\
+    \ n_; j++) {\n            int mod_m_i = (long long) safe_mod(piece[j] - ret[i][j],\
+    \ m[i]) * prod_inv % m[i];\n            for (int k = i + 1; k <= K; k++) {\n \
+    \               ret[k][j] = (ret[k][j] + (long long) mod_m_i * prod_m[k] % m[k])\
+    \ % m[k];\n            }\n        }\n        for (int j = i + 1; j <= K; j++)\
+    \ { prod_m[j] = (long long) prod_m[j] * m[i] % m[j]; }\n    }\n    return ret[K];\n\
+    }\n\ntemplate<typename T, int K = 3>\nstd::vector<T> arbitrary_mod_convolute(const\
+    \ std::vector<T> &a, const std::vector<T> &b) {\n    std::vector<int> a_int(a.size()),\
+    \ b_int(b.size());\n    for (int i = 0; i < a.size(); i++) { a_int[i] = a[i].val();\
+    \ }\n    for (int i = 0; i < b.size(); i++) { b_int[i] = b[i].val(); }\n    std::vector<int>\
+    \ ret_int = arbitrary_mod_convolute<K>(a_int, b_int, T::mod());\n    std::vector<T>\
+    \ ret(ret_int.size());\n    std::copy(ret_int.begin(), ret_int.end(), ret.begin());\n\
+    \    return ret;\n}\n"
   code: "#include <cmath>\n#include <vector>\n#include \"mod-int.hpp\"\n\nconstexpr\
     \ double PI = 3.1415926535897932384626433832795028;\n\nstruct my_complex {\n \
     \   double real = 0, imag = 0;\n    my_complex() {}\n    my_complex(double real)\
@@ -211,44 +221,54 @@ data:
     \    int j = m + (m >> 1) - 1 - i;\n        to_prod(i, j);\n    }\n    for (int\
     \ i = 0; i < m; i++) { w[i] = w[i].conj(); }\n    ifft(c, w);\n    std::vector<double>\
     \ ret(n_);\n    for (int i = 0; i < n_; i++) { ret[i] = c[i].real; }\n    return\
-    \ ret;\n}\n\ntemplate<int MOD, int ROOT>\nstd::vector<int> friendly_mod_convolute(const\
-    \ std::vector<int> &a, const std::vector<int> &b) {\n    int n_a = a.size(), n_b\
-    \ = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<= 1)\
-    \ {}\n    int m = n >> 1;\n    std::vector<mod_int<MOD>> a_mint(n), b_mint(n),\
-    \ w(m + 2);\n    std::copy(a.begin(), a.end(), a_mint.begin()), std::copy(b.begin(),\
-    \ b.end(), b_mint.begin());\n    w[0] = 1, w[1] = mod_int<MOD>(ROOT).pow((MOD\
-    \ - 1) / n);\n    for (int i = 2; i < m; i++) { w[i] = w[i - 1] * w[1]; }\n  \
-    \  fft(a_mint, w);\n    fft(b_mint, w);\n    for (int i = 0; i < n; i++) { a_mint[i]\
-    \ *= b_mint[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m; i++) { w[i]\
-    \ = w[i - 1] * w[1]; }\n    ifft(a_mint, w);\n    std::vector<int> ret(n_);\n\
-    \    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }\n    return ret;\n\
-    }\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const std::vector<int>\
-    \ &a, const std::vector<int> &b, int mod) {\n    static constexpr int MS[] = {998244353,\
-    \ 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod = [](int a, int\
-    \ m) -> int {\n        a %= m;\n        if (a < 0) { a += m; }\n        return\
-    \ a;\n    };\n    auto mod_inv = [&](int a, int m) -> int {\n        int b = m,\
-    \ x = 1, u = 0;\n        while (b) {\n            int t = a / b;\n           \
-    \ std::swap(a -= t * b, b);\n            std::swap(x -= t * u, u);\n        }\n\
-    \        return safe_mod(x, m);\n    };\n    int n_a = a.size(), n_b = b.size();\n\
-    \    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<= 1) {}\n    std::vector<int>\
-    \ m(K + 1), prod_m(K + 1, 1);\n    std::vector<std::vector<int>> ret(K + 1, std::vector<int>(n_));\n\
-    \    std::copy(MS, MS + K, m.begin());\n    m[K] = mod;\n    for (int i = 0; i\
-    \ < K; i++) {\n        std::vector<int> piece;\n        if (i == 0) { piece =\
-    \ friendly_mod_convolute<MS[0], RS[0]>(a, b); }\n        if (i == 1) { piece =\
-    \ friendly_mod_convolute<MS[1], RS[1]>(a, b); }\n        if (i == 2) { piece =\
-    \ friendly_mod_convolute<MS[2], RS[2]>(a, b); }\n        int prod_inv = mod_inv(prod_m[i],\
-    \ m[i]);\n        for (int j = 0; j < n_; j++) {\n            int mod_m_i = (long\
-    \ long) safe_mod(piece[j] - ret[i][j], m[i]) * prod_inv % m[i];\n            for\
-    \ (int k = i + 1; k <= K; k++) {\n                ret[k][j] = (ret[k][j] + (long\
-    \ long) mod_m_i * prod_m[k] % m[k]) % m[k];\n            }\n        }\n      \
-    \  for (int j = i + 1; j <= K; j++) { prod_m[j] = (long long) prod_m[j] * m[i]\
-    \ % m[j]; }\n    }\n    return ret[K];\n}\n"
+    \ ret;\n}\n\ntemplate<typename T, int ROOT>\nstd::vector<T> friendly_mod_convolute(std::vector<T>\
+    \ a, std::vector<T> b) {\n    int n_a = a.size(), n_b = b.size();\n    int n_\
+    \ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<= 1) {}\n    int m = n >> 1;\n\
+    \    a.resize(n), b.resize(n);\n    std::vector<T> w(m + 2);\n    w[0] = 1, w[1]\
+    \ = T(ROOT).pow((T::mod() - 1) / n);\n    for (int i = 2; i < m; i++) { w[i] =\
+    \ w[i - 1] * w[1]; }\n    fft(a, w);\n    fft(b, w);\n    for (int i = 0; i <\
+    \ n; i++) { a[i] *= b[i]; }\n    w[1] = w[1].inv();\n    for (int i = 2; i < m;\
+    \ i++) { w[i] = w[i - 1] * w[1]; }\n    ifft(a, w);\n    a.resize(n_);\n    return\
+    \ a;\n}\n\ntemplate<int MOD, int ROOT>\nstd::vector<int> friendly_mod_convolute(const\
+    \ std::vector<int> &a, const std::vector<int> &b) {\n    std::vector<mod_int<MOD>>\
+    \ a_mint(a.size()), b_mint(b.size());\n    std::copy(a.begin(), a.end(), a_mint.begin()),\
+    \ std::copy(b.begin(), b.end(), b_mint.begin());\n    std::vector<mod_int<MOD>>\
+    \ ret_mint(friendly_mod_convolute<mod_int<MOD>, ROOT>(a_mint, b_mint));\n    std::vector<int>\
+    \ ret(ret_mint.size());\n    for (int i = 0; i < ret.size(); i++) { ret[i] = ret_mint[i].val();\
+    \ }\n    return ret;\n}\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const\
+    \ std::vector<int> &a, const std::vector<int> &b, int mod) {\n    static constexpr\
+    \ int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod\
+    \ = [](int a, int m) -> int {\n        a %= m;\n        if (a < 0) { a += m; }\n\
+    \        return a;\n    };\n    auto mod_inv = [&](int a, int m) -> int {\n  \
+    \      int b = m, x = 1, u = 0;\n        while (b) {\n            int t = a /\
+    \ b;\n            std::swap(a -= t * b, b);\n            std::swap(x -= t * u,\
+    \ u);\n        }\n        return safe_mod(x, m);\n    };\n    int n_a = a.size(),\
+    \ n_b = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<=\
+    \ 1) {}\n    std::vector<int> m(K + 1), prod_m(K + 1, 1);\n    std::vector<std::vector<int>>\
+    \ ret(K + 1, std::vector<int>(n_));\n    std::copy(MS, MS + K, m.begin());\n \
+    \   m[K] = mod;\n    for (int i = 0; i < K; i++) {\n        std::vector<int> piece;\n\
+    \        if (i == 0) { piece = friendly_mod_convolute<MS[0], RS[0]>(a, b); }\n\
+    \        if (i == 1) { piece = friendly_mod_convolute<MS[1], RS[1]>(a, b); }\n\
+    \        if (i == 2) { piece = friendly_mod_convolute<MS[2], RS[2]>(a, b); }\n\
+    \        int prod_inv = mod_inv(prod_m[i], m[i]);\n        for (int j = 0; j <\
+    \ n_; j++) {\n            int mod_m_i = (long long) safe_mod(piece[j] - ret[i][j],\
+    \ m[i]) * prod_inv % m[i];\n            for (int k = i + 1; k <= K; k++) {\n \
+    \               ret[k][j] = (ret[k][j] + (long long) mod_m_i * prod_m[k] % m[k])\
+    \ % m[k];\n            }\n        }\n        for (int j = i + 1; j <= K; j++)\
+    \ { prod_m[j] = (long long) prod_m[j] * m[i] % m[j]; }\n    }\n    return ret[K];\n\
+    }\n\ntemplate<typename T, int K = 3>\nstd::vector<T> arbitrary_mod_convolute(const\
+    \ std::vector<T> &a, const std::vector<T> &b) {\n    std::vector<int> a_int(a.size()),\
+    \ b_int(b.size());\n    for (int i = 0; i < a.size(); i++) { a_int[i] = a[i].val();\
+    \ }\n    for (int i = 0; i < b.size(); i++) { b_int[i] = b[i].val(); }\n    std::vector<int>\
+    \ ret_int = arbitrary_mod_convolute<K>(a_int, b_int, T::mod());\n    std::vector<T>\
+    \ ret(ret_int.size());\n    std::copy(ret_int.begin(), ret_int.end(), ret.begin());\n\
+    \    return ret;\n}"
   dependsOn:
   - mathematics/mod-int.hpp
   isVerificationFile: false
   path: mathematics/convolute.hpp
   requiredBy: []
-  timestamp: '2020-10-10 19:42:01+09:00'
+  timestamp: '2020-10-12 09:47:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
