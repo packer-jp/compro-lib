@@ -1,6 +1,7 @@
 #include <cmath>
 #include <vector>
 #include "mod-int.hpp"
+#include "mod-calc.hpp"
 
 constexpr double PI = 3.1415926535897932384626433832795028;
 
@@ -138,20 +139,6 @@ std::vector<int> friendly_mod_convolute(const std::vector<int> &a, const std::ve
 template<int K = 3>
 std::vector<int> arbitrary_mod_convolute(const std::vector<int> &a, const std::vector<int> &b, int mod) {
     static constexpr int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};
-    auto safe_mod = [](int a, int m) -> int {
-        a %= m;
-        if (a < 0) { a += m; }
-        return a;
-    };
-    auto mod_inv = [&](int a, int m) -> int {
-        int b = m, x = 1, u = 0;
-        while (b) {
-            int t = a / b;
-            std::swap(a -= t * b, b);
-            std::swap(x -= t * u, u);
-        }
-        return safe_mod(x, m);
-    };
     int n_a = a.size(), n_b = b.size();
     int n_ = n_a + n_b - 1, n;
     for (n = 1; n < n_; n <<= 1) {}
@@ -168,7 +155,7 @@ std::vector<int> arbitrary_mod_convolute(const std::vector<int> &a, const std::v
         for (int j = 0; j < n_; j++) {
             int mod_m_i = (long long) safe_mod(piece[j] - ret[i][j], m[i]) * prod_inv % m[i];
             for (int k = i + 1; k <= K; k++) {
-                ret[k][j] = (ret[k][j] + (long long) mod_m_i * prod_m[k] % m[k]) % m[k];
+                (ret[k][j] += (long long) mod_m_i * prod_m[k] % m[k]) %= m[k];
             }
         }
         for (int j = i + 1; j <= K; j++) { prod_m[j] = (long long) prod_m[j] * m[i] % m[j]; }

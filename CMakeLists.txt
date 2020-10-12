@@ -47,7 +47,7 @@ add_executable(RMQ-1 test/AOJ/Volume15/RMQ-1.test.cpp data-structure/red-black-t
 
 add_executable(Tree-0 test/AOJ/Volume26/Tree-0.test.cpp graph/heavy-light-decomposition.hpp data-structure/lazy-segment-tree.hpp)
 
-add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp)
+add_executable(Convolution-mod-1000000007-0 test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp mathematics/convolute.hpp mathematics/mod-int.hpp mathematics/mod-calc.hpp)
 
 add_executable(Many-A-Plus-B-0 test/Library-Checker/Sample/Many-A-Plus-B-0.test.cpp utility/fast-io.hpp)
 
@@ -56,6 +56,7 @@ add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp g
 add_executable(to-rooted-tree test/unit-test/graph/to-rooted-tree.test.cpp graph/to-rooted-tree.hpp)
 
 add_executable(mod-int test/unit-test/mathematics/mod-int.test.cpp mathematics/mod-int.hpp)
+add_executable(mod-calc test/unit-test/mathematics/mod-calc.test.cpp mathematics/mod-calc.hpp)
 add_executable(matrix test/unit-test/mathematics/matrix.test.cpp mathematics/matrix.hpp)
 add_executable(permutation test/unit-test/mathematics/permutation.test.cpp mathematics/permutation.hpp)
 add_executable(moebius test/unit-test/mathematics/moebius.test.cpp mathematics/moebius.hpp string/run-length-encoding.hpp)
