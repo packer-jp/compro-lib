@@ -5,6 +5,9 @@ data:
     path: mathematics/convolute.hpp
     title: "\u7573\u307F\u8FBC\u307F"
   - icon: ':heavy_check_mark:'
+    path: mathematics/mod-calc.hpp
+    title: mathematics/mod-calc.hpp
+  - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
     title: "\u5270\u4F59\u74B0 / \u4F53"
   _extendedRequiredBy: []
@@ -91,8 +94,22 @@ data:
     \  finv[i] = finv[i - 1] * inv[i];\n        }\n    }\n    T P(int n, int r) {\
     \ return r < 0 || n < r ? 0 : (fact[n] * finv[n - r]); }\n    T C(int n, int r)\
     \ { return P(n, r) * finv[r]; }\n    T H(int n, int r) { return C(n + r - 1, r);\
-    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};\n#line 4 \"\
-    mathematics/convolute.hpp\"\n\nconstexpr double PI = 3.1415926535897932384626433832795028;\n\
+    \ }\n    T catalan(int n) { return C(2 * n, n) * inv[n + 1]; }\n};\n#line 1 \"\
+    mathematics/mod-calc.hpp\"\n#include <map>\n\nint safe_mod(long long a, int m)\
+    \ {\n    a %= m;\n    if (a < 0) { a += m; }\n    return a;\n};\n\nint mod_inv(long\
+    \ long a, int m) {\n    long long b = m, x = 1, u = 0;\n    while (b) {\n    \
+    \    int t = a / b;\n        std::swap(a -= t * b, b);\n        std::swap(x -=\
+    \ t * u, u);\n    }\n    return safe_mod(x, m);\n};\n\nint mod_pow(long long a,\
+    \ long long n, int m) {\n    if (n < 0) { return mod_inv(mod_pow(a, -n, m), m);\
+    \ }\n    long long ret = 1, mul = a;\n    while (n) {\n        if (n & 1) { (ret\
+    \ *= mul) %= m; }\n        (mul *= mul) %= m, n >>= 1;\n    }\n    return ret;\n\
+    }\n\nint mod_log(long long a, long long b, int m) {\n    a %= m, b %= m;\n   \
+    \ std::map<int, int> mp;\n    int rt;\n    long long ap = a;\n    for (rt = 1;\
+    \ rt * rt < m; rt++) {\n        if (!mp.count(ap)) { mp[ap] = rt; }\n        (ap\
+    \ *= a) %= m;\n    }\n    ap = mod_inv(ap, m);\n    if (mp.count(b)) { return\
+    \ mp[b]; }\n    mp[1] = 0;\n    for (int i = 1; i < rt; i++) {\n        (b *=\
+    \ ap) %= m;\n        if (mp.count(b)) { return i * rt + mp[b]; }\n    }\n    return\
+    \ -1;\n}\n#line 5 \"mathematics/convolute.hpp\"\n\nconstexpr double PI = 3.1415926535897932384626433832795028;\n\
     \nstruct my_complex {\n    double real = 0, imag = 0;\n    my_complex() {}\n \
     \   my_complex(double real) : real(real) {}\n    my_complex(double real, double\
     \ imag) : real(real), imag(imag) {}\n    my_complex operator+() const { return\
@@ -154,14 +171,9 @@ data:
     \ ret(ret_mint.size());\n    for (int i = 0; i < ret.size(); i++) { ret[i] = ret_mint[i].val();\
     \ }\n    return ret;\n}\n\ntemplate<int K = 3>\nstd::vector<int> arbitrary_mod_convolute(const\
     \ std::vector<int> &a, const std::vector<int> &b, int mod) {\n    static constexpr\
-    \ int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};\n    auto safe_mod\
-    \ = [](int a, int m) -> int {\n        a %= m;\n        if (a < 0) { a += m; }\n\
-    \        return a;\n    };\n    auto mod_inv = [&](int a, int m) -> int {\n  \
-    \      int b = m, x = 1, u = 0;\n        while (b) {\n            int t = a /\
-    \ b;\n            std::swap(a -= t * b, b);\n            std::swap(x -= t * u,\
-    \ u);\n        }\n        return safe_mod(x, m);\n    };\n    int n_a = a.size(),\
-    \ n_b = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for (n = 1; n < n_; n <<=\
-    \ 1) {}\n    std::vector<int> m(K + 1), prod_m(K + 1, 1);\n    std::vector<std::vector<int>>\
+    \ int MS[] = {998244353, 469762049, 167772161}, RS[] = {3, 3, 3};\n    int n_a\
+    \ = a.size(), n_b = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for (n = 1;\
+    \ n < n_; n <<= 1) {}\n    std::vector<int> m(K + 1), prod_m(K + 1, 1);\n    std::vector<std::vector<int>>\
     \ ret(K + 1, std::vector<int>(n_));\n    std::copy(MS, MS + K, m.begin());\n \
     \   m[K] = mod;\n    for (int i = 0; i < K; i++) {\n        std::vector<int> piece;\n\
     \        if (i == 0) { piece = friendly_mod_convolute<MS[0], RS[0]>(a, b); }\n\
@@ -170,16 +182,16 @@ data:
     \        int prod_inv = mod_inv(prod_m[i], m[i]);\n        for (int j = 0; j <\
     \ n_; j++) {\n            int mod_m_i = (long long) safe_mod(piece[j] - ret[i][j],\
     \ m[i]) * prod_inv % m[i];\n            for (int k = i + 1; k <= K; k++) {\n \
-    \               ret[k][j] = (ret[k][j] + (long long) mod_m_i * prod_m[k] % m[k])\
-    \ % m[k];\n            }\n        }\n        for (int j = i + 1; j <= K; j++)\
-    \ { prod_m[j] = (long long) prod_m[j] * m[i] % m[j]; }\n    }\n    return ret[K];\n\
-    }\n\ntemplate<typename T, int K = 3>\nstd::vector<T> arbitrary_mod_convolute(const\
-    \ std::vector<T> &a, const std::vector<T> &b) {\n    std::vector<int> a_int(a.size()),\
-    \ b_int(b.size());\n    for (int i = 0; i < a.size(); i++) { a_int[i] = a[i].val();\
-    \ }\n    for (int i = 0; i < b.size(); i++) { b_int[i] = b[i].val(); }\n    std::vector<int>\
-    \ ret_int = arbitrary_mod_convolute<K>(a_int, b_int, T::mod());\n    std::vector<T>\
-    \ ret(ret_int.size());\n    std::copy(ret_int.begin(), ret_int.end(), ret.begin());\n\
-    \    return ret;\n}\n#line 3 \"test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp\"\
+    \               (ret[k][j] += (long long) mod_m_i * prod_m[k] % m[k]) %= m[k];\n\
+    \            }\n        }\n        for (int j = i + 1; j <= K; j++) { prod_m[j]\
+    \ = (long long) prod_m[j] * m[i] % m[j]; }\n    }\n    return ret[K];\n}\n\ntemplate<typename\
+    \ T, int K = 3>\nstd::vector<T> arbitrary_mod_convolute(const std::vector<T> &a,\
+    \ const std::vector<T> &b) {\n    std::vector<int> a_int(a.size()), b_int(b.size());\n\
+    \    for (int i = 0; i < a.size(); i++) { a_int[i] = a[i].val(); }\n    for (int\
+    \ i = 0; i < b.size(); i++) { b_int[i] = b[i].val(); }\n    std::vector<int> ret_int\
+    \ = arbitrary_mod_convolute<K>(a_int, b_int, T::mod());\n    std::vector<T> ret(ret_int.size());\n\
+    \    std::copy(ret_int.begin(), ret_int.end(), ret.begin());\n    return ret;\n\
+    }\n#line 3 \"test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp\"\
     \n\nusing namespace std;\n\nint N, M;\nint main() {\n    using mint = mod_int<1000000007>;\n\
     \    cin >> N >> M;\n    vector<mint> A(N), B(M);\n    for (int i = 0; i < N;\
     \ i++) { cin >> A[i]; }\n    for (int i = 0; i < M; i++) { cin >> B[i]; }\n  \
@@ -195,10 +207,11 @@ data:
   dependsOn:
   - mathematics/convolute.hpp
   - mathematics/mod-int.hpp
+  - mathematics/mod-calc.hpp
   isVerificationFile: true
   path: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-12 09:47:31+09:00'
+  timestamp: '2020-10-12 22:18:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp

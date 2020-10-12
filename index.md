@@ -93,6 +93,9 @@ data:
       path: mathematics/matrix.hpp
       title: "\u884C\u5217"
     - icon: ':heavy_check_mark:'
+      path: mathematics/mod-calc.hpp
+      title: mathematics/mod-calc.hpp
+    - icon: ':heavy_check_mark:'
       path: mathematics/mod-int.hpp
       title: "\u5270\u4F59\u74B0 / \u4F53"
     - icon: ':heavy_check_mark:'
@@ -314,6 +317,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/unit-test/mathematics/matrix.test.cpp
       title: test/unit-test/mathematics/matrix.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/unit-test/mathematics/mod-calc.test.cpp
+      title: test/unit-test/mathematics/mod-calc.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/unit-test/mathematics/mod-int.test.cpp
       title: test/unit-test/mathematics/mod-int.test.cpp
