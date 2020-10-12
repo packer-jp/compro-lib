@@ -5,10 +5,11 @@ using namespace std;
 
 int N, M;
 int main() {
+    using mint = mod_int<1000000007>;
     cin >> N >> M;
-    vector<int> A(N), B(M);
+    vector<mint> A(N), B(M);
     for (int i = 0; i < N; i++) { cin >> A[i]; }
     for (int i = 0; i < M; i++) { cin >> B[i]; }
-    vector<int> C = arbitrary_mod_convolute<3>(A, B, 1e9 + 7);
+    vector<mint> C = arbitrary_mod_convolute<mint, 3>(A, B);
     for (int i = 0; i < N + M - 1; i++) { cout << C[i] << endl; }
 }

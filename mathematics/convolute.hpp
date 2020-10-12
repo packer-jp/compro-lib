@@ -105,24 +105,33 @@ std::vector<double> convolute(const std::vector<double> &a, const std::vector<do
     return ret;
 }
 
-template<int MOD, int ROOT>
-std::vector<int> friendly_mod_convolute(const std::vector<int> &a, const std::vector<int> &b) {
+template<typename T, int ROOT>
+std::vector<T> friendly_mod_convolute(std::vector<T> a, std::vector<T> b) {
     int n_a = a.size(), n_b = b.size();
     int n_ = n_a + n_b - 1, n;
     for (n = 1; n < n_; n <<= 1) {}
     int m = n >> 1;
-    std::vector<mod_int<MOD>> a_mint(n), b_mint(n), w(m + 2);
-    std::copy(a.begin(), a.end(), a_mint.begin()), std::copy(b.begin(), b.end(), b_mint.begin());
-    w[0] = 1, w[1] = mod_int<MOD>(ROOT).pow((MOD - 1) / n);
+    a.resize(n), b.resize(n);
+    std::vector<T> w(m + 2);
+    w[0] = 1, w[1] = T(ROOT).pow((T::mod() - 1) / n);
     for (int i = 2; i < m; i++) { w[i] = w[i - 1] * w[1]; }
-    fft(a_mint, w);
-    fft(b_mint, w);
-    for (int i = 0; i < n; i++) { a_mint[i] *= b_mint[i]; }
+    fft(a, w);
+    fft(b, w);
+    for (int i = 0; i < n; i++) { a[i] *= b[i]; }
     w[1] = w[1].inv();
     for (int i = 2; i < m; i++) { w[i] = w[i - 1] * w[1]; }
-    ifft(a_mint, w);
-    std::vector<int> ret(n_);
-    for (int i = 0; i < n_; i++) { ret[i] = a_mint[i].val(); }
+    ifft(a, w);
+    a.resize(n_);
+    return a;
+}
+
+template<int MOD, int ROOT>
+std::vector<int> friendly_mod_convolute(const std::vector<int> &a, const std::vector<int> &b) {
+    std::vector<mod_int<MOD>> a_mint(a.size()), b_mint(b.size());
+    std::copy(a.begin(), a.end(), a_mint.begin()), std::copy(b.begin(), b.end(), b_mint.begin());
+    std::vector<mod_int<MOD>> ret_mint(friendly_mod_convolute<mod_int<MOD>, ROOT>(a_mint, b_mint));
+    std::vector<int> ret(ret_mint.size());
+    for (int i = 0; i < ret.size(); i++) { ret[i] = ret_mint[i].val(); }
     return ret;
 }
 
@@ -165,4 +174,15 @@ std::vector<int> arbitrary_mod_convolute(const std::vector<int> &a, const std::v
         for (int j = i + 1; j <= K; j++) { prod_m[j] = (long long) prod_m[j] * m[i] % m[j]; }
     }
     return ret[K];
+}
+
+template<typename T, int K = 3>
+std::vector<T> arbitrary_mod_convolute(const std::vector<T> &a, const std::vector<T> &b) {
+    std::vector<int> a_int(a.size()), b_int(b.size());
+    for (int i = 0; i < a.size(); i++) { a_int[i] = a[i].val(); }
+    for (int i = 0; i < b.size(); i++) { b_int[i] = b[i].val(); }
+    std::vector<int> ret_int = arbitrary_mod_convolute<K>(a_int, b_int, T::mod());
+    std::vector<T> ret(ret_int.size());
+    std::copy(ret_int.begin(), ret_int.end(), ret.begin());
+    return ret;
 }
