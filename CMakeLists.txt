@@ -29,7 +29,6 @@ add_executable(Single-Source-Shortest-Path-0 test/AOJ/GRL/Single-Source-Shortest
 add_executable(Single-Source-Shortest-Path-Negative-Edges-0 test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp graph/bellman-ford.hpp)
 add_executable(All-Pairs-Shortest-Path-0 test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp graph/warshall-floyd.hpp)
 add_executable(Diameter-of-a-Tree-0 test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp graph/re-rooting.hpp)
-add_executable(Bipartite-Matching-0 test/AOJ/GRL/Bipartite-Matching-0.test.cpp graph/bipartite-matching.hpp)
 add_executable(Maximum-Flow-0 test/AOJ/GRL/Maximum-Flow-0.test.cpp graph/ford-fulkerson.hpp)
 add_executable(Maximum-Flow-1 test/AOJ/GRL/Maximum-Flow-1.test.cpp graph/dinic.hpp)
 add_executable(Strongly-Connected-Components-0 test/AOJ/GRL/Strongly-Connected-Components-0.test.cpp graph/strongly-connected-components.hpp)
@@ -53,7 +52,6 @@ add_executable(Many-A-Plus-B-0 test/Library-Checker/Sample/Many-A-Plus-B-0.test.
 
 add_executable(heavy-light-decomposition test/unit-test/graph/heavy-light-decomposition.test.cpp graph/heavy-light-decomposition.hpp)
 add_executable(topological-sort test/unit-test/graph/topological-sort.test.cpp graph/topological-sort.hpp)
-add_executable(to-rooted-tree test/unit-test/graph/to-rooted-tree.test.cpp graph/to-rooted-tree.hpp)
 
 add_executable(mod-int test/unit-test/mathematics/mod-int.test.cpp mathematics/mod-int.hpp)
 add_executable(mod-calc test/unit-test/mathematics/mod-calc.test.cpp mathematics/mod-calc.hpp)

@@ -10,7 +10,7 @@ struct warshall_floyd {
         for (int i = 0; i < n; i++) { cost[i][i] = S::zero(); }
     }
     void add_edge(int from, int to, T cost) { this->cost[from][to] = cost; }
-    std::vector<std::vector<T>> get_dist() {
+    std::vector<std::vector<T>> get() {
         int n = cost.size();
         std::vector<std::vector<T>> ret(cost);
         for (int k = 0; k < n; k++) {

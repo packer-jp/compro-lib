@@ -3,21 +3,20 @@
 #include <cassert>
 
 struct heavy_light_decomposition {
-    int n;
     std::vector<std::vector<int>> adj;
-    std::vector<int> par, size, depth, in, out, head;
-    heavy_light_decomposition(const std::vector<std::vector<int>> &adj)
-        : n(adj.size()), adj(adj), par(n), size(n), depth(n), in(n), out(n), head(n) {}
+    std::vector<int> par, sz, depth, in, out, head;
+    heavy_light_decomposition(int n) : adj(n), par(n), sz(n), depth(n), in(n), out(n), head(n) {}
+    void add_edge(int u, int v) { adj[u].emplace_back(v), adj[v].emplace_back(u); }
     void dfs_size(int v, int p) {
-        size[v] = 1;
+        sz[v] = 1;
         par[v] = p;
         if (p != -1) { depth[v] = depth[p] + 1; }
         for (int i = 0; i < adj[v].size(); i++) {
             int &u = adj[v][i];
             if (u == p) { continue; }
             dfs_size(u, v);
-            size[v] += size[u];
-            if (size[u] > size[adj[v][0]]) { std::swap(u, adj[v][0]); }
+            sz[v] += sz[u];
+            if (sz[u] > sz[adj[v][0]]) { std::swap(u, adj[v][0]); }
         }
     }
     int dfs_hld(int v, int &t) {

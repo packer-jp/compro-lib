@@ -7,11 +7,15 @@ template<typename S>
 struct dijkstra {
     using T = typename S::T;
     using E = typename S::E;
-    std::vector<std::vector<int>> adj;
-    std::vector<std::vector<E>> cost;
-    dijkstra(int n) : adj(n), cost(n) {}
-    void add_edge(int from, int to, E cost) { adj[from].emplace_back(to), this->cost[from].emplace_back(cost); }
-    std::vector<T> get_dist(int s) {
+    struct edge {
+        int to;
+        E cost;
+        edge(int to, E cost) : to(to), cost(cost) {}
+    };
+    std::vector<std::vector<edge>> adj;
+    dijkstra(int n) : adj(n) {}
+    void add_edge(int from, int to, E cost) { adj[from].emplace_back(to, cost); }
+    std::vector<T> get(int s) {
         std::vector<T> ret(adj.size(), S::inf());
         using P = std::pair<T, int>;
         auto c = [&](P a, P b) -> bool { return S::less(b.first, a.first); };
@@ -24,8 +28,8 @@ struct dijkstra {
             int v = p.second;
             if (S::less(ret[v], p.first)) { continue; }
             for (int i = 0; i < adj[v].size(); i++) {
-                int u = adj[v][i];
-                T dist = S::plus(ret[v], cost[v][i]);
+                int u = adj[v][i].to;
+                T dist = S::plus(ret[v], adj[v][i].cost);
                 if (S::less(dist, ret[u])) { ret[u] = dist, pq.emplace(ret[u], u); }
             }
         }

@@ -16,7 +16,7 @@ struct bellman_ford {
     std::vector<edge> edges;
     bellman_ford(int n) : n(n) {}
     void add_edge(int from, int to, E cost) { edges.emplace_back(from, to, cost); }
-    std::vector<T> get_dist(int s) {
+    std::vector<T> get(int s) {
         std::vector<T> ret(n, S::inf());
         ret[s] = S::zero();
         for (int i = 0; i < n; i++) {

@@ -41,8 +41,7 @@ struct my_complex {
 };
 
 template<typename T> void fft(std::vector<T> &x, const std::vector<T> &w) {
-    int n = x.size();
-    int m = n >> 1;
+    int n = x.size(), m = n >> 1;
     std::vector<T> y(n);
     for (int i = 1; i <= m; i <<= 1) {
         for (int j = 0; j < m; j += i) {
@@ -57,8 +56,7 @@ template<typename T> void fft(std::vector<T> &x, const std::vector<T> &w) {
 }
 
 template<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w) {
-    int n = x.size();
-    int m = n >> 1;
+    int n = x.size(), m = n >> 1;
     std::vector<T> y(n);
     for (int i = m; i > 0; i >>= 1) {
         for (int j = 0; j < m; j += i) {

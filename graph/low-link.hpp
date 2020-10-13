@@ -2,12 +2,20 @@
 #include <algorithm>
 
 struct low_link {
-    int n;
-    std::vector<int> ord, low, articulations;
-    std::vector<std::vector<int>> adj;
-    std::vector<std::pair<int, int>> bridges;
-    low_link(const std::vector<std::vector<int>> &adj) : n(adj.size()), adj(adj), ord(n), low(n) {
-        std::vector<bool> visited(n);
+    struct edge {
+        int to, idx;
+        edge(int to, int idx) : to(to), idx(idx) {}
+    };
+    int m = 0;
+    std::vector<std::vector<edge>> adj;
+    low_link(int n) : adj(n) {}
+    int add_edge(int u, int v) {
+        adj[u].emplace_back(v, m), adj[v].emplace_back(u, m);
+        return m++;
+    }
+    std::pair<std::vector<int>, std::vector<int>> get() {
+        std::vector<int> ord(adj.size()), low(adj.size()), articulations, bridges;
+        std::vector<bool> visited(adj.size());
         int k = 0;
         auto dfs = [&](auto &&self, int cur, int par) -> void {
             visited[cur] = true;
@@ -15,18 +23,19 @@ struct low_link {
             low[cur] = ord[cur];
             int cnt = 0;
             bool is_articulation = false;
-            for (int to : adj[cur]) {
+            for (auto[to, idx] : adj[cur]) {
                 if (!visited[to]) {
                     cnt++;
                     self(self, to, cur);
                     low[cur] = std::min(low[cur], low[to]);
                     is_articulation |= ord[cur] <= low[to];
-                    if (ord[cur] < low[to]) { bridges.emplace_back(std::minmax(cur, to)); }
+                    if (ord[cur] < low[to]) { bridges.emplace_back(idx); }
                 } else if (to != par) { low[cur] = std::min(low[cur], ord[to]); }
             }
             if (par == -1) { is_articulation = cnt >= 2; }
             if (is_articulation) { articulations.emplace_back(cur); }
         };
         dfs(dfs, 0, -1);
+        return {articulations, bridges};
     }
 };
