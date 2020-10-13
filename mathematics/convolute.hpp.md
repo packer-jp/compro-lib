@@ -122,20 +122,20 @@ data:
     \    my_complex operator*(const my_complex &rhs) const { return my_complex(*this)\
     \ *= rhs; }\n    my_complex operator/(const int &rhs) const { return my_complex(*this)\
     \ /= rhs; }\n    my_complex conj() { return {real, -imag}; }\n};\n\ntemplate<typename\
-    \ T> void fft(std::vector<T> &x, const std::vector<T> &w) {\n    int n = x.size();\n\
-    \    int m = n >> 1;\n    std::vector<T> y(n);\n    for (int i = 1; i <= m; i\
-    \ <<= 1) {\n        for (int j = 0; j < m; j += i) {\n            for (int k =\
-    \ 0; k < i; k++) {\n                int u = j + k;\n                y[(u << 1)\
-    \ + 0] = (x[u + 0] + x[u + m]);\n                y[(u << 1) + 1] = (x[u + 0] -\
-    \ x[u + m]) * w[j];\n            }\n        }\n        std::swap(x, y);\n    }\n\
-    }\n\ntemplate<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w)\
-    \ {\n    int n = x.size();\n    int m = n >> 1;\n    std::vector<T> y(n);\n  \
-    \  for (int i = m; i > 0; i >>= 1) {\n        for (int j = 0; j < m; j += i) {\n\
-    \            for (int k = 0; k < i; k++) {\n                int u = j + k;\n \
-    \               x[(u << 1) + 1] *= w[j];\n                y[u + 0] = x[(u << 1)\
-    \ + 0] + x[(u << 1) + 1];\n                y[u + m] = x[(u << 1) + 0] - x[(u <<\
-    \ 1) + 1];\n            }\n        }\n        std::swap(x, y);\n    }\n    T n_inv\
-    \ = T(1) / n;\n    for (int i = 0; i < n; i++) { x[i] *= n_inv; }\n}\n\nstd::vector<double>\
+    \ T> void fft(std::vector<T> &x, const std::vector<T> &w) {\n    int n = x.size(),\
+    \ m = n >> 1;\n    std::vector<T> y(n);\n    for (int i = 1; i <= m; i <<= 1)\
+    \ {\n        for (int j = 0; j < m; j += i) {\n            for (int k = 0; k <\
+    \ i; k++) {\n                int u = j + k;\n                y[(u << 1) + 0] =\
+    \ (x[u + 0] + x[u + m]);\n                y[(u << 1) + 1] = (x[u + 0] - x[u +\
+    \ m]) * w[j];\n            }\n        }\n        std::swap(x, y);\n    }\n}\n\n\
+    template<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w) {\n\
+    \    int n = x.size(), m = n >> 1;\n    std::vector<T> y(n);\n    for (int i =\
+    \ m; i > 0; i >>= 1) {\n        for (int j = 0; j < m; j += i) {\n           \
+    \ for (int k = 0; k < i; k++) {\n                int u = j + k;\n            \
+    \    x[(u << 1) + 1] *= w[j];\n                y[u + 0] = x[(u << 1) + 0] + x[(u\
+    \ << 1) + 1];\n                y[u + m] = x[(u << 1) + 0] - x[(u << 1) + 1];\n\
+    \            }\n        }\n        std::swap(x, y);\n    }\n    T n_inv = T(1)\
+    \ / n;\n    for (int i = 0; i < n; i++) { x[i] *= n_inv; }\n}\n\nstd::vector<double>\
     \ convolute(const std::vector<double> &a, const std::vector<double> &b) {\n  \
     \  int n_a = a.size(), n_b = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for\
     \ (n = 1; n < n_; n <<= 1) {}\n    int m = n >> 1;\n    std::vector<my_complex>\
@@ -206,20 +206,20 @@ data:
     \    my_complex operator*(const my_complex &rhs) const { return my_complex(*this)\
     \ *= rhs; }\n    my_complex operator/(const int &rhs) const { return my_complex(*this)\
     \ /= rhs; }\n    my_complex conj() { return {real, -imag}; }\n};\n\ntemplate<typename\
-    \ T> void fft(std::vector<T> &x, const std::vector<T> &w) {\n    int n = x.size();\n\
-    \    int m = n >> 1;\n    std::vector<T> y(n);\n    for (int i = 1; i <= m; i\
-    \ <<= 1) {\n        for (int j = 0; j < m; j += i) {\n            for (int k =\
-    \ 0; k < i; k++) {\n                int u = j + k;\n                y[(u << 1)\
-    \ + 0] = (x[u + 0] + x[u + m]);\n                y[(u << 1) + 1] = (x[u + 0] -\
-    \ x[u + m]) * w[j];\n            }\n        }\n        std::swap(x, y);\n    }\n\
-    }\n\ntemplate<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w)\
-    \ {\n    int n = x.size();\n    int m = n >> 1;\n    std::vector<T> y(n);\n  \
-    \  for (int i = m; i > 0; i >>= 1) {\n        for (int j = 0; j < m; j += i) {\n\
-    \            for (int k = 0; k < i; k++) {\n                int u = j + k;\n \
-    \               x[(u << 1) + 1] *= w[j];\n                y[u + 0] = x[(u << 1)\
-    \ + 0] + x[(u << 1) + 1];\n                y[u + m] = x[(u << 1) + 0] - x[(u <<\
-    \ 1) + 1];\n            }\n        }\n        std::swap(x, y);\n    }\n    T n_inv\
-    \ = T(1) / n;\n    for (int i = 0; i < n; i++) { x[i] *= n_inv; }\n}\n\nstd::vector<double>\
+    \ T> void fft(std::vector<T> &x, const std::vector<T> &w) {\n    int n = x.size(),\
+    \ m = n >> 1;\n    std::vector<T> y(n);\n    for (int i = 1; i <= m; i <<= 1)\
+    \ {\n        for (int j = 0; j < m; j += i) {\n            for (int k = 0; k <\
+    \ i; k++) {\n                int u = j + k;\n                y[(u << 1) + 0] =\
+    \ (x[u + 0] + x[u + m]);\n                y[(u << 1) + 1] = (x[u + 0] - x[u +\
+    \ m]) * w[j];\n            }\n        }\n        std::swap(x, y);\n    }\n}\n\n\
+    template<typename T> void ifft(std::vector<T> &x, const std::vector<T> &w) {\n\
+    \    int n = x.size(), m = n >> 1;\n    std::vector<T> y(n);\n    for (int i =\
+    \ m; i > 0; i >>= 1) {\n        for (int j = 0; j < m; j += i) {\n           \
+    \ for (int k = 0; k < i; k++) {\n                int u = j + k;\n            \
+    \    x[(u << 1) + 1] *= w[j];\n                y[u + 0] = x[(u << 1) + 0] + x[(u\
+    \ << 1) + 1];\n                y[u + m] = x[(u << 1) + 0] - x[(u << 1) + 1];\n\
+    \            }\n        }\n        std::swap(x, y);\n    }\n    T n_inv = T(1)\
+    \ / n;\n    for (int i = 0; i < n; i++) { x[i] *= n_inv; }\n}\n\nstd::vector<double>\
     \ convolute(const std::vector<double> &a, const std::vector<double> &b) {\n  \
     \  int n_a = a.size(), n_b = b.size();\n    int n_ = n_a + n_b - 1, n;\n    for\
     \ (n = 1; n < n_; n <<= 1) {}\n    int m = n >> 1;\n    std::vector<my_complex>\
@@ -277,7 +277,7 @@ data:
   isVerificationFile: false
   path: mathematics/convolute.hpp
   requiredBy: []
-  timestamp: '2020-10-12 22:18:11+09:00'
+  timestamp: '2020-10-13 19:48:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp

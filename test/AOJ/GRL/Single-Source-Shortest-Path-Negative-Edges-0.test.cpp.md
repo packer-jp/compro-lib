@@ -21,7 +21,7 @@ data:
     \ {\n        int from, to;\n        E cost;\n        edge(int from, int to, E\
     \ cost) : from(from), to(to), cost(cost) {}\n    };\n    int n;\n    std::vector<edge>\
     \ edges;\n    bellman_ford(int n) : n(n) {}\n    void add_edge(int from, int to,\
-    \ E cost) { edges.emplace_back(from, to, cost); }\n    std::vector<T> get_dist(int\
+    \ E cost) { edges.emplace_back(from, to, cost); }\n    std::vector<T> get(int\
     \ s) {\n        std::vector<T> ret(n, S::inf());\n        ret[s] = S::zero();\n\
     \        for (int i = 0; i < n; i++) {\n            bool upd = false;\n      \
     \      for (int j = 0; j < edges.size(); j++) {\n                edge e = edges[j];\n\
@@ -36,25 +36,25 @@ data:
     #include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int V, E, r;\n\
     \    cin >> V >> E >> r;\n    bellman_ford<int_bf> bf(V);\n    for (int i = 0;\
     \ i < E; i++) {\n        int s, t, d;\n        cin >> s >> t >> d;\n        bf.add_edge(s,\
-    \ t, d);\n    }\n    vector<int> dist = bf.get_dist(r);\n    if (dist.empty())\
-    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
-    \   for (int i = 0; i < V; i++) { cout << (dist[i] < INT_MAX ? to_string(dist[i])\
-    \ : \"INF\") << endl; }\n}\n"
+    \ t, d);\n    }\n    vector<int> dist = bf.get(r);\n    if (dist.empty()) {\n\
+    \        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for\
+    \ (int i = 0; i < V; i++) { cout << (dist[i] < INT_MAX ? to_string(dist[i]) :\
+    \ \"INF\") << endl; }\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja\"\
     \n#include\"../../../graph/bellman-ford.hpp\"\n\n#include<bits/stdc++.h>\nusing\
     \ namespace std;\n\nint main() {\n    int V, E, r;\n    cin >> V >> E >> r;\n\
     \    bellman_ford<int_bf> bf(V);\n    for (int i = 0; i < E; i++) {\n        int\
     \ s, t, d;\n        cin >> s >> t >> d;\n        bf.add_edge(s, t, d);\n    }\n\
-    \    vector<int> dist = bf.get_dist(r);\n    if (dist.empty()) {\n        cout\
-    \ << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for (int i = 0;\
-    \ i < V; i++) { cout << (dist[i] < INT_MAX ? to_string(dist[i]) : \"INF\") <<\
-    \ endl; }\n}"
+    \    vector<int> dist = bf.get(r);\n    if (dist.empty()) {\n        cout << \"\
+    NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for (int i = 0; i < V;\
+    \ i++) { cout << (dist[i] < INT_MAX ? to_string(dist[i]) : \"INF\") << endl; }\n\
+    }"
   dependsOn:
   - graph/bellman-ford.hpp
   isVerificationFile: true
   path: test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-23 16:37:45+09:00'
+  timestamp: '2020-10-13 19:52:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp

@@ -20,7 +20,7 @@ data:
     \ T = typename S::T;\n    std::vector<std::vector<T>> cost;\n    warshall_floyd(int\
     \ n) : cost(n, std::vector<T>(n, S::inf())) {\n        for (int i = 0; i < n;\
     \ i++) { cost[i][i] = S::zero(); }\n    }\n    void add_edge(int from, int to,\
-    \ T cost) { this->cost[from][to] = cost; }\n    std::vector<std::vector<T>> get_dist()\
+    \ T cost) { this->cost[from][to] = cost; }\n    std::vector<std::vector<T>> get()\
     \ {\n        int n = cost.size();\n        std::vector<std::vector<T>> ret(cost);\n\
     \        for (int k = 0; k < n; k++) {\n            for (int i = 0; i < n; i++)\
     \ {\n                for (int j = 0; j < n; j++) {\n                    T dist\
@@ -34,8 +34,8 @@ data:
     #include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int V, E;\n\
     \    cin >> V >> E;\n    warshall_floyd<int_wf> wf(V);\n    for (int i = 0; i\
     \ < E; i++) {\n        int s, t, d;\n        cin >> s >> t >> d;\n        wf.add_edge(s,\
-    \ t, d);\n    }\n    vector<vector<int>> dist = wf.get_dist();\n    for (int i\
-    \ = 0; i < V; i++) {\n        if (dist[i][i] < 0) {\n            cout << \"NEGATIVE\
+    \ t, d);\n    }\n    vector<vector<int>> dist = wf.get();\n    for (int i = 0;\
+    \ i < V; i++) {\n        if (dist[i][i] < 0) {\n            cout << \"NEGATIVE\
     \ CYCLE\" << endl;\n            return 0;\n        }\n    }\n    for (int i =\
     \ 0; i < V; i++) {\n        for (int j = 0; j < V; j++) {\n            cout <<\
     \ (dist[i][j] == INT_MAX ? \"INF\" : to_string(dist[i][j])) << (j < V - 1 ? \"\
@@ -45,7 +45,7 @@ data:
     using namespace std;\n\nint main() {\n    int V, E;\n    cin >> V >> E;\n    warshall_floyd<int_wf>\
     \ wf(V);\n    for (int i = 0; i < E; i++) {\n        int s, t, d;\n        cin\
     \ >> s >> t >> d;\n        wf.add_edge(s, t, d);\n    }\n    vector<vector<int>>\
-    \ dist = wf.get_dist();\n    for (int i = 0; i < V; i++) {\n        if (dist[i][i]\
+    \ dist = wf.get();\n    for (int i = 0; i < V; i++) {\n        if (dist[i][i]\
     \ < 0) {\n            cout << \"NEGATIVE CYCLE\" << endl;\n            return\
     \ 0;\n        }\n    }\n    for (int i = 0; i < V; i++) {\n        for (int j\
     \ = 0; j < V; j++) {\n            cout << (dist[i][j] == INT_MAX ? \"INF\" : to_string(dist[i][j]))\
@@ -55,7 +55,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-23 16:37:45+09:00'
+  timestamp: '2020-10-13 19:52:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp

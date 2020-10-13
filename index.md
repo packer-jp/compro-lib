@@ -38,9 +38,6 @@ data:
       path: graph/bellman-ford.hpp
       title: "Bellman-Ford \u6CD5"
     - icon: ':heavy_check_mark:'
-      path: graph/bipartite-matching.hpp
-      title: "\u4E8C\u90E8\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
-    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.hpp
       title: "Dijkstra \u6CD5"
     - icon: ':heavy_check_mark:'
@@ -52,18 +49,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/heavy-light-decomposition.hpp
       title: "HL \u5206\u89E3"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/low-link.hpp
       title: Low Link
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/re-rooting.hpp
       title: "\u5168\u65B9\u4F4D\u6728 DP"
     - icon: ':heavy_check_mark:'
       path: graph/strongly-connected-components.hpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':heavy_check_mark:'
-      path: graph/to-rooted-tree.hpp
-      title: "\u6839\u4ED8\u304D\u6728\u306B\u5909\u63DB"
     - icon: ':heavy_check_mark:'
       path: graph/topological-sort.hpp
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
@@ -227,16 +221,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp
       title: test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/GRL/Articulation-Points-0.test.cpp
       title: test/AOJ/GRL/Articulation-Points-0.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/AOJ/GRL/Bipartite-Matching-0.test.cpp
-      title: test/AOJ/GRL/Bipartite-Matching-0.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/GRL/Bridges-0.test.cpp
       title: test/AOJ/GRL/Bridges-0.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
       title: test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
     - icon: ':heavy_check_mark:'
@@ -306,9 +297,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/unit-test/graph/heavy-light-decomposition.test.cpp
       title: test/unit-test/graph/heavy-light-decomposition.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/unit-test/graph/to-rooted-tree.test.cpp
-      title: test/unit-test/graph/to-rooted-tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/unit-test/graph/topological-sort.test.cpp
       title: test/unit-test/graph/topological-sort.test.cpp

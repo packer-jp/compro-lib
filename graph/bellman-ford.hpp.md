@@ -16,7 +16,7 @@ data:
     \ {\n        int from, to;\n        E cost;\n        edge(int from, int to, E\
     \ cost) : from(from), to(to), cost(cost) {}\n    };\n    int n;\n    std::vector<edge>\
     \ edges;\n    bellman_ford(int n) : n(n) {}\n    void add_edge(int from, int to,\
-    \ E cost) { edges.emplace_back(from, to, cost); }\n    std::vector<T> get_dist(int\
+    \ E cost) { edges.emplace_back(from, to, cost); }\n    std::vector<T> get(int\
     \ s) {\n        std::vector<T> ret(n, S::inf());\n        ret[s] = S::zero();\n\
     \        for (int i = 0; i < n; i++) {\n            bool upd = false;\n      \
     \      for (int j = 0; j < edges.size(); j++) {\n                edge e = edges[j];\n\
@@ -33,7 +33,7 @@ data:
     \    E cost;\n        edge(int from, int to, E cost) : from(from), to(to), cost(cost)\
     \ {}\n    };\n    int n;\n    std::vector<edge> edges;\n    bellman_ford(int n)\
     \ : n(n) {}\n    void add_edge(int from, int to, E cost) { edges.emplace_back(from,\
-    \ to, cost); }\n    std::vector<T> get_dist(int s) {\n        std::vector<T> ret(n,\
+    \ to, cost); }\n    std::vector<T> get(int s) {\n        std::vector<T> ret(n,\
     \ S::inf());\n        ret[s] = S::zero();\n        for (int i = 0; i < n; i++)\
     \ {\n            bool upd = false;\n            for (int j = 0; j < edges.size();\
     \ j++) {\n                edge e = edges[j];\n                T dist = S::plus(ret[e.from],\
@@ -48,7 +48,7 @@ data:
   isVerificationFile: false
   path: graph/bellman-ford.hpp
   requiredBy: []
-  timestamp: '2020-09-23 16:37:45+09:00'
+  timestamp: '2020-10-13 19:48:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/GRL/Single-Source-Shortest-Path-Negative-Edges-0.test.cpp

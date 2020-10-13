@@ -19,24 +19,24 @@ data:
   bundledCode: "#line 1 \"test/AOJ/Volume26/Tree-0.test.cpp\"\n#define PROBLEM \"\
     http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2667\"\n#line 1 \"graph/heavy-light-decomposition.hpp\"\
     \n#include <algorithm>\n#include <vector>\n#include <cassert>\n\nstruct heavy_light_decomposition\
-    \ {\n    int n;\n    std::vector<std::vector<int>> adj;\n    std::vector<int>\
-    \ par, size, depth, in, out, head;\n    heavy_light_decomposition(const std::vector<std::vector<int>>\
-    \ &adj)\n        : n(adj.size()), adj(adj), par(n), size(n), depth(n), in(n),\
-    \ out(n), head(n) {}\n    void dfs_size(int v, int p) {\n        size[v] = 1;\n\
-    \        par[v] = p;\n        if (p != -1) { depth[v] = depth[p] + 1; }\n    \
-    \    for (int i = 0; i < adj[v].size(); i++) {\n            int &u = adj[v][i];\n\
+    \ {\n    std::vector<std::vector<int>> adj;\n    std::vector<int> par, sz, depth,\
+    \ in, out, head;\n    heavy_light_decomposition(int n) : adj(n), par(n), sz(n),\
+    \ depth(n), in(n), out(n), head(n) {}\n    void add_edge(int u, int v) { adj[u].emplace_back(v),\
+    \ adj[v].emplace_back(u); }\n    void dfs_size(int v, int p) {\n        sz[v]\
+    \ = 1;\n        par[v] = p;\n        if (p != -1) { depth[v] = depth[p] + 1; }\n\
+    \        for (int i = 0; i < adj[v].size(); i++) {\n            int &u = adj[v][i];\n\
     \            if (u == p) { continue; }\n            dfs_size(u, v);\n        \
-    \    size[v] += size[u];\n            if (size[u] > size[adj[v][0]]) { std::swap(u,\
-    \ adj[v][0]); }\n        }\n    }\n    int dfs_hld(int v, int &t) {\n        in[v]\
-    \ = t++;\n        for (int i = 0; i < adj[v].size(); i++) {\n            int u\
-    \ = adj[v][i];\n            if (u == par[v]) { continue; }\n            head[u]\
-    \ = (i == 0 ? head[v] : u);\n            dfs_hld(u, t);\n        }\n        return\
-    \ out[v] = t;\n    }\n    std::vector<int> build(int root) {\n        dfs_size(root,\
-    \ -1);\n        head[root] = root;\n        int t = 0;\n        dfs_hld(root,\
-    \ t);\n        return in;\n    }\n    int get_lca(int u, int v) {\n        while\
-    \ (true) {\n            if (in[u] > in[v]) { std::swap(u, v); }\n            if\
-    \ (head[u] == head[v]) { return u; }\n            v = par[head[v]];\n        }\n\
-    \    }\n    int get_dist(int u, int v) { return depth[u] + depth[v] - 2 * depth[get_lca(u,\
+    \    sz[v] += sz[u];\n            if (sz[u] > sz[adj[v][0]]) { std::swap(u, adj[v][0]);\
+    \ }\n        }\n    }\n    int dfs_hld(int v, int &t) {\n        in[v] = t++;\n\
+    \        for (int i = 0; i < adj[v].size(); i++) {\n            int u = adj[v][i];\n\
+    \            if (u == par[v]) { continue; }\n            head[u] = (i == 0 ? head[v]\
+    \ : u);\n            dfs_hld(u, t);\n        }\n        return out[v] = t;\n \
+    \   }\n    std::vector<int> build(int root) {\n        dfs_size(root, -1);\n \
+    \       head[root] = root;\n        int t = 0;\n        dfs_hld(root, t);\n  \
+    \      return in;\n    }\n    int get_lca(int u, int v) {\n        while (true)\
+    \ {\n            if (in[u] > in[v]) { std::swap(u, v); }\n            if (head[u]\
+    \ == head[v]) { return u; }\n            v = par[head[v]];\n        }\n    }\n\
+    \    int get_dist(int u, int v) { return depth[u] + depth[v] - 2 * depth[get_lca(u,\
     \ v)]; }\n    std::vector<std::pair<int, int>> get_path(int u, int v, bool edge)\
     \ {\n        std::vector<std::pair<int, int>> a, b;\n        while (true) {\n\
     \            if (head[u] == head[v]) {\n                if (edge) {\n        \
@@ -92,35 +92,35 @@ data:
     \ T &b) { return std::min(a, b); }\n    static E op_EE(const E &a, const E &b)\
     \ { return a + b; }\n    static T op_TE(const T &a, const E &b) { return a + b;\
     \ }\n};\n#line 4 \"test/AOJ/Volume26/Tree-0.test.cpp\"\n\n#include <bits/stdc++.h>\n\
-    using namespace std;\n\nint main() {\n    int N, Q;\n    cin >> N >> Q;\n    vector<vector<int>>\
-    \ adj(N);\n    for (int i = 0; i < N - 1; i++) {\n        int a, b;\n        cin\
-    \ >> a >> b;\n        adj[a].push_back(b), adj[b].push_back(a);\n    }\n    heavy_light_decomposition\
-    \ hld(adj);\n    hld.build(0);\n    lazy_segment_tree<rsq_and_raq> lst(vector<pair<long\
-    \ long, int>>(N, {0, 1}));\n    for (int i = 0; i < Q; i++) {\n        int type;\n\
-    \        cin >> type;\n        if (type == 0) {\n            int u, v;\n     \
-    \       cin >> u >> v;\n            long long ans = 0;\n            vector<pair<int,\
-    \ int>> segs = hld.get_path(u, v, true);\n            for (int j = 0; j < segs.size();\
-    \ j++) {\n                if (segs[j].first > segs[j].second) { swap(segs[j].first,\
-    \ segs[j].second); }\n                ans += lst.fold(segs[j].first, segs[j].second\
-    \ + 1).first;\n            }\n            cout << ans << endl;\n        } else\
-    \ {\n            int v, x;\n            cin >> v >> x;\n            pair<int,\
-    \ int> seg = hld.get_subtree(v, true);\n            if (seg.first <= seg.second)\
-    \ { lst.apply(seg.first, seg.second + 1, x); }\n        }\n    }\n}\n"
+    using namespace std;\n\nint main() {\n    int N, Q;\n    cin >> N >> Q;\n    heavy_light_decomposition\
+    \ hld(N);\n    for (int i = 0; i < N - 1; i++) {\n        int a, b;\n        cin\
+    \ >> a >> b;\n        hld.add_edge(a, b);\n    }\n    hld.build(0);\n    lazy_segment_tree<rsq_and_raq>\
+    \ lst(vector<pair<long long, int>>(N, {0, 1}));\n    for (int i = 0; i < Q; i++)\
+    \ {\n        int type;\n        cin >> type;\n        if (type == 0) {\n     \
+    \       int u, v;\n            cin >> u >> v;\n            long long ans = 0;\n\
+    \            vector<pair<int, int>> segs = hld.get_path(u, v, true);\n       \
+    \     for (int j = 0; j < segs.size(); j++) {\n                if (segs[j].first\
+    \ > segs[j].second) { swap(segs[j].first, segs[j].second); }\n               \
+    \ ans += lst.fold(segs[j].first, segs[j].second + 1).first;\n            }\n \
+    \           cout << ans << endl;\n        } else {\n            int v, x;\n  \
+    \          cin >> v >> x;\n            pair<int, int> seg = hld.get_subtree(v,\
+    \ true);\n            if (seg.first <= seg.second) { lst.apply(seg.first, seg.second\
+    \ + 1, x); }\n        }\n    }\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2667\"\
     \n#include \"../../../graph/heavy-light-decomposition.hpp\"\n#include \"../../../data-structure/lazy-segment-tree.hpp\"\
     \n\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N,\
-    \ Q;\n    cin >> N >> Q;\n    vector<vector<int>> adj(N);\n    for (int i = 0;\
-    \ i < N - 1; i++) {\n        int a, b;\n        cin >> a >> b;\n        adj[a].push_back(b),\
-    \ adj[b].push_back(a);\n    }\n    heavy_light_decomposition hld(adj);\n    hld.build(0);\n\
-    \    lazy_segment_tree<rsq_and_raq> lst(vector<pair<long long, int>>(N, {0, 1}));\n\
-    \    for (int i = 0; i < Q; i++) {\n        int type;\n        cin >> type;\n\
-    \        if (type == 0) {\n            int u, v;\n            cin >> u >> v;\n\
-    \            long long ans = 0;\n            vector<pair<int, int>> segs = hld.get_path(u,\
-    \ v, true);\n            for (int j = 0; j < segs.size(); j++) {\n           \
-    \     if (segs[j].first > segs[j].second) { swap(segs[j].first, segs[j].second);\
-    \ }\n                ans += lst.fold(segs[j].first, segs[j].second + 1).first;\n\
-    \            }\n            cout << ans << endl;\n        } else {\n         \
-    \   int v, x;\n            cin >> v >> x;\n            pair<int, int> seg = hld.get_subtree(v,\
+    \ Q;\n    cin >> N >> Q;\n    heavy_light_decomposition hld(N);\n    for (int\
+    \ i = 0; i < N - 1; i++) {\n        int a, b;\n        cin >> a >> b;\n      \
+    \  hld.add_edge(a, b);\n    }\n    hld.build(0);\n    lazy_segment_tree<rsq_and_raq>\
+    \ lst(vector<pair<long long, int>>(N, {0, 1}));\n    for (int i = 0; i < Q; i++)\
+    \ {\n        int type;\n        cin >> type;\n        if (type == 0) {\n     \
+    \       int u, v;\n            cin >> u >> v;\n            long long ans = 0;\n\
+    \            vector<pair<int, int>> segs = hld.get_path(u, v, true);\n       \
+    \     for (int j = 0; j < segs.size(); j++) {\n                if (segs[j].first\
+    \ > segs[j].second) { swap(segs[j].first, segs[j].second); }\n               \
+    \ ans += lst.fold(segs[j].first, segs[j].second + 1).first;\n            }\n \
+    \           cout << ans << endl;\n        } else {\n            int v, x;\n  \
+    \          cin >> v >> x;\n            pair<int, int> seg = hld.get_subtree(v,\
     \ true);\n            if (seg.first <= seg.second) { lst.apply(seg.first, seg.second\
     \ + 1, x); }\n        }\n    }\n}"
   dependsOn:
@@ -129,7 +129,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/Volume26/Tree-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-24 22:53:36+09:00'
+  timestamp: '2020-10-13 19:52:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/Volume26/Tree-0.test.cpp
