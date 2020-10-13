@@ -49,7 +49,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/heavy-light-decomposition.hpp
       title: "HL \u5206\u89E3"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/low-link.hpp
       title: Low Link
     - icon: ':heavy_check_mark:'
@@ -224,7 +224,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL/Articulation-Points-0.test.cpp
       title: test/AOJ/GRL/Articulation-Points-0.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL/Bridges-0.test.cpp
       title: test/AOJ/GRL/Bridges-0.test.cpp
     - icon: ':heavy_check_mark:'
