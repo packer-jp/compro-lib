@@ -11,6 +11,7 @@ int main() {
     vector<int> s(E), t(E);
     for (int i = 0; i < E; i++) {
         cin >> s[i] >> t[i];
+        if (s[i] > t[i]) { swap(s[i], t[i]); }
         ll.add_edge(s[i], t[i]);
     }
     vector<pair<int, int>> ans;

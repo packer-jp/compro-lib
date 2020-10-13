@@ -18,7 +18,7 @@ struct low_link {
         std::vector<int> ord(n), low(n), articulations, bridges;
         std::vector<bool> visited(n);
         int k = 0;
-        auto dfs = [&](auto &&self, int cur, int par) -> void {
+        auto dfs = [&](auto &&dfs, int cur, int par) -> void {
             visited[cur] = true;
             ord[cur] = k++;
             low[cur] = ord[cur];
@@ -27,7 +27,7 @@ struct low_link {
             for (auto[to, idx] : adj[cur]) {
                 if (!visited[to]) {
                     cnt++;
-                    self(self, to, cur);
+                    dfs(dfs, to, cur);
                     low[cur] = std::min(low[cur], low[to]);
                     is_articulation |= ord[cur] <= low[to];
                     if (ord[cur] < low[to]) { bridges.emplace_back(idx); }

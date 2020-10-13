@@ -10,7 +10,7 @@ int main() {
     mt19937 mt(rnd());
     uniform_int_distribution<> uid(0, V - 1);
     for (int i = 0; i < N; i++) {
-        vector<vector<int>> adj(V);
+        topological_sort ts(V);
         bool used[V][V] = {};
         int src[V];
         for (int i = 0; i < V; i++) { src[i] = i; }
@@ -19,11 +19,11 @@ int main() {
             int u = uid(mt), v = uid(mt);
             if (used[u][v]) { continue; }
             if (src[u] < src[v]) {
-                adj[u].push_back(v);
+                ts.add_edge(u, v);
                 used[u][v] = true;
             }
         }
-        vector<int> sorted = topological_sort(adj);
+        vector<int> sorted = ts.get();
         // shuffle(sorted.begin(), sorted.end(), mt);
         for (int j = 0; j < V; j++) {
             for (int k = j + 1; k < V; k++) {
