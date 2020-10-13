@@ -14,6 +14,6 @@ int main() {
         cin >> s >> t >> d;
         dij.add_edge(s, t, d);
     }
-    vector<int> dist = dij.get_dist(r);
+    vector<int> dist = dij.get(r);
     for (int i = 0; i < V; i++) { cout << (dist[i] == INT_MAX ? "INF" : to_string(dist[i])) << endl; }
 }

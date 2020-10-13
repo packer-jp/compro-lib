@@ -8,13 +8,12 @@ using namespace std;
 int main() {
     int N, Q;
     cin >> N >> Q;
-    vector<vector<int>> adj(N);
+    heavy_light_decomposition hld(N);
     for (int i = 0; i < N - 1; i++) {
         int a, b;
         cin >> a >> b;
-        adj[a].push_back(b), adj[b].push_back(a);
+        hld.add_edge(a, b);
     }
-    heavy_light_decomposition hld(adj);
     hld.build(0);
     lazy_segment_tree<rsq_and_raq> lst(vector<pair<long long, int>>(N, {0, 1}));
     for (int i = 0; i < Q; i++) {

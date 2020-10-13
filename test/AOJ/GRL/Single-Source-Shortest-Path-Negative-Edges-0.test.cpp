@@ -13,7 +13,7 @@ int main() {
         cin >> s >> t >> d;
         bf.add_edge(s, t, d);
     }
-    vector<int> dist = bf.get_dist(r);
+    vector<int> dist = bf.get(r);
     if (dist.empty()) {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;

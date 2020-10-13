@@ -13,7 +13,7 @@ int main() {
         cin >> s >> t >> d;
         wf.add_edge(s, t, d);
     }
-    vector<vector<int>> dist = wf.get_dist();
+    vector<vector<int>> dist = wf.get();
     for (int i = 0; i < V; i++) {
         if (dist[i][i] < 0) {
             cout << "NEGATIVE CYCLE" << endl;

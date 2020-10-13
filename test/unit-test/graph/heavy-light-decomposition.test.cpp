@@ -14,18 +14,16 @@ int main() {
     };
     segment_tree<str> st_fwd(N), st_rev(N);
     vector<string> weight = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
-    vector<vector<int>> graph(N, vector<int>());
-    auto add_edge = [&](int u, int v) { graph[u].push_back(v), graph[v].push_back(u); };
-    add_edge(7, 2);
-    add_edge(2, 6);
-    add_edge(4, 2);
-    add_edge(4, 3);
-    add_edge(5, 4);
-    add_edge(5, 1);
-    add_edge(1, 0);
-    add_edge(0, 9);
-    add_edge(5, 8);
-    heavy_light_decomposition hld(graph);
+    heavy_light_decomposition hld(N);
+    hld.add_edge(7, 2);
+    hld.add_edge(2, 6);
+    hld.add_edge(4, 2);
+    hld.add_edge(4, 3);
+    hld.add_edge(5, 4);
+    hld.add_edge(5, 1);
+    hld.add_edge(1, 0);
+    hld.add_edge(0, 9);
+    hld.add_edge(5, 8);
     vector<int> in = hld.build(5);
     for (int i = 0; i < N; i++) {
         st_fwd.set(in[i], weight[i]);

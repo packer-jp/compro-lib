@@ -7,14 +7,13 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vector<vector<int>> adj(n, vector<int>()), cost(n, vector<int>());
+    re_rooting<diameter_rr> rr(n);
     for (int i = 0; i < n - 1; i++) {
         int s, t, w;
         cin >> s >> t >> w;
-        adj[s].push_back(t), adj[t].push_back(s);
-        cost[s].push_back(w), cost[t].push_back(w);
+        rr.add_edge(s, t, w, w);
     }
-    vector<int> cands = re_rooting<diameter_rr>(adj, cost);
+    vector<int> cands = rr.get();
     int ans = 0;
     for (int i = 0; i < n; i++) { ans = max(ans, cands[i]); }
     cout << ans << endl;
