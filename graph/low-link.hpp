@@ -14,8 +14,9 @@ struct low_link {
         return m++;
     }
     std::pair<std::vector<int>, std::vector<int>> get() {
-        std::vector<int> ord(adj.size()), low(adj.size()), articulations, bridges;
-        std::vector<bool> visited(adj.size());
+        int n = adj.size();
+        std::vector<int> ord(n), low(n), articulations, bridges;
+        std::vector<bool> visited(n);
         int k = 0;
         auto dfs = [&](auto &&self, int cur, int par) -> void {
             visited[cur] = true;

@@ -7,13 +7,13 @@ using namespace std;
 int main() {
     int V, E;
     cin >> V >> E;
-    vector<vector<int>> adj(V);
+    strongly_connected_components scc(V);
     for (int i = 0; i < E; i++) {
         int s, t;
         cin >> s >> t;
-        adj[s].push_back(t);
+        scc.add_edge(s, t);
     }
-    vector<int> cmp = strongly_connected_components(adj);
+    vector<int> cmp = scc.get();
     int Q;
     cin >> Q;
     for (int i = 0; i < Q; i++) {
