@@ -14,7 +14,7 @@ struct re_rooting {
     re_rooting(int n) : adj(n) {}
     int add_edge(int u, int v, E u2v, E v2u) {
         adj[u].emplace_back(v, u2v), adj[v].emplace_back(u, v2u);
-        return m++
+        return m++;
     }
     std::vector<T> get() {
         std::vector<std::vector<T>> dp(adj.size());
@@ -23,7 +23,7 @@ struct re_rooting {
             T cum = S::id();
             for (int i = 0; i < adj[cur].size(); i++) {
                 if (adj[cur][i].to == par) { continue; }
-                dp[cur][i] = S::op_TE(dfs0(dfs0, adj[cur][i], cur), adj[cur][i].cost);
+                dp[cur][i] = S::op_TE(dfs0(dfs0, adj[cur][i].to, cur), adj[cur][i].cost);
                 cum = S::op_TT(cum, dp[cur][i]);
             }
             return cum;

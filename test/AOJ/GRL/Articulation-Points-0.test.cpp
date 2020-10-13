@@ -7,14 +7,13 @@ using namespace std;
 int main() {
     int V, E;
     cin >> V >> E;
-    vector<vector<int>> adj(V);
+    low_link ll(V);
     for (int i = 0; i < E; i++) {
         int s, t;
         cin >> s >> t;
-        adj[s].emplace_back(t);
-        adj[t].emplace_back(s);
+        ll.add_edge(s, t);
     }
-    low_link ll(adj);
-    sort(ll.articulations.begin(), ll.articulations.end());
-    for (auto p:ll.articulations) { cout << p << endl; }
+    vector<int> ans = ll.get().first;
+    sort(ans.begin(), ans.end());
+    for (auto p:ans) { cout << p << endl; }
 }

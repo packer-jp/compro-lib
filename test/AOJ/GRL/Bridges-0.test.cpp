@@ -7,14 +7,14 @@ using namespace std;
 int main() {
     int V, E;
     cin >> V >> E;
-    vector<vector<int>> adj(V);
+    low_link ll(V);
+    vector<int> s(E), t(E);
     for (int i = 0; i < E; i++) {
-        int s, t;
-        cin >> s >> t;
-        adj[s].emplace_back(t);
-        adj[t].emplace_back(s);
+        cin >> s[i] >> t[i];
+        ll.add_edge(s[i], t[i]);
     }
-    low_link ll(adj);
-    sort(ll.bridges.begin(), ll.bridges.end());
-    for (auto p:ll.bridges) { cout << p.first << " " << p.second << endl; }
+    vector<pair<int, int>> ans;
+    for (int i:ll.get().second) { ans.emplace_back(s[i], t[i]); }
+    sort(ans.begin(), ans.end());
+    for (auto p:ans) { cout << p.first << " " << p.second << endl; }
 }
