@@ -49,10 +49,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/heavy-light-decomposition.hpp
       title: "HL \u5206\u89E3"
-    - icon: ':x:'
+    - icon: ':question:'
       path: graph/low-link.hpp
       title: Low Link
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/re-rooting.hpp
       title: "\u5168\u65B9\u4F4D\u6728 DP"
     - icon: ':heavy_check_mark:'
@@ -221,13 +221,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp
       title: test/AOJ/GRL/All-Pairs-Shortest-Path-0.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL/Articulation-Points-0.test.cpp
       title: test/AOJ/GRL/Articulation-Points-0.test.cpp
     - icon: ':x:'
       path: test/AOJ/GRL/Bridges-0.test.cpp
       title: test/AOJ/GRL/Bridges-0.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
       title: test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
     - icon: ':heavy_check_mark:'

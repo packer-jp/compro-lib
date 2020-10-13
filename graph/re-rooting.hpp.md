@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
     title: test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/re-rooting.hpp\"\n#include <vector>\n\ntemplate<typename\
@@ -16,11 +16,11 @@ data:
     \ to, E cost) : to(to), cost(cost) {}\n    };\n    int m = 0;\n    std::vector<std::vector<edge>>\
     \ adj;\n    re_rooting(int n) : adj(n) {}\n    int add_edge(int u, int v, E u2v,\
     \ E v2u) {\n        adj[u].emplace_back(v, u2v), adj[v].emplace_back(u, v2u);\n\
-    \        return m++\n    }\n    std::vector<T> get() {\n        std::vector<std::vector<T>>\
+    \        return m++;\n    }\n    std::vector<T> get() {\n        std::vector<std::vector<T>>\
     \ dp(adj.size());\n        auto dfs0 = [&](auto &&dfs0, int cur, int par) -> T\
     \ {\n            dp[cur].resize(adj[cur].size());\n            T cum = S::id();\n\
     \            for (int i = 0; i < adj[cur].size(); i++) {\n                if (adj[cur][i].to\
-    \ == par) { continue; }\n                dp[cur][i] = S::op_TE(dfs0(dfs0, adj[cur][i],\
+    \ == par) { continue; }\n                dp[cur][i] = S::op_TE(dfs0(dfs0, adj[cur][i].to,\
     \ cur), adj[cur][i].cost);\n                cum = S::op_TT(cum, dp[cur][i]);\n\
     \            }\n            return cum;\n        };\n        dfs0(dfs0, 0, -1);\n\
     \        std::vector<T> ret(adj.size());\n        auto dfs1 = [&](auto &&dfs1,\
@@ -43,12 +43,12 @@ data:
     \  int to;\n        E cost;\n        edge(int to, E cost) : to(to), cost(cost)\
     \ {}\n    };\n    int m = 0;\n    std::vector<std::vector<edge>> adj;\n    re_rooting(int\
     \ n) : adj(n) {}\n    int add_edge(int u, int v, E u2v, E v2u) {\n        adj[u].emplace_back(v,\
-    \ u2v), adj[v].emplace_back(u, v2u);\n        return m++\n    }\n    std::vector<T>\
+    \ u2v), adj[v].emplace_back(u, v2u);\n        return m++;\n    }\n    std::vector<T>\
     \ get() {\n        std::vector<std::vector<T>> dp(adj.size());\n        auto dfs0\
     \ = [&](auto &&dfs0, int cur, int par) -> T {\n            dp[cur].resize(adj[cur].size());\n\
     \            T cum = S::id();\n            for (int i = 0; i < adj[cur].size();\
     \ i++) {\n                if (adj[cur][i].to == par) { continue; }\n         \
-    \       dp[cur][i] = S::op_TE(dfs0(dfs0, adj[cur][i], cur), adj[cur][i].cost);\n\
+    \       dp[cur][i] = S::op_TE(dfs0(dfs0, adj[cur][i].to, cur), adj[cur][i].cost);\n\
     \                cum = S::op_TT(cum, dp[cur][i]);\n            }\n           \
     \ return cum;\n        };\n        dfs0(dfs0, 0, -1);\n        std::vector<T>\
     \ ret(adj.size());\n        auto dfs1 = [&](auto &&dfs1, int cur, int par, T drop)\
@@ -69,8 +69,8 @@ data:
   isVerificationFile: false
   path: graph/re-rooting.hpp
   requiredBy: []
-  timestamp: '2020-10-13 19:48:15+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-10-13 20:08:33+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/GRL/Diameter-of-a-Tree-0.test.cpp
 documentation_of: graph/re-rooting.hpp

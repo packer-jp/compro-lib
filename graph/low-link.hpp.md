@@ -3,14 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/GRL/Articulation-Points-0.test.cpp
     title: test/AOJ/GRL/Articulation-Points-0.test.cpp
   - icon: ':x:'
     path: test/AOJ/GRL/Bridges-0.test.cpp
     title: test/AOJ/GRL/Bridges-0.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/low-link.hpp\"\n#include <vector>\n#include <algorithm>\n\
@@ -57,7 +57,7 @@ data:
   path: graph/low-link.hpp
   requiredBy: []
   timestamp: '2020-10-13 19:48:15+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/AOJ/GRL/Articulation-Points-0.test.cpp
   - test/AOJ/GRL/Bridges-0.test.cpp

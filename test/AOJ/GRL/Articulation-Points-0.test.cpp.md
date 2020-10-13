@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/low-link.hpp
     title: Low Link
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A&lang=ja
@@ -36,25 +36,24 @@ data:
     \   };\n        dfs(dfs, 0, -1);\n        return {articulations, bridges};\n \
     \   }\n};\n#line 3 \"test/AOJ/GRL/Articulation-Points-0.test.cpp\"\n\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int V, E;\n    cin\
-    \ >> V >> E;\n    vector<vector<int>> adj(V);\n    for (int i = 0; i < E; i++)\
-    \ {\n        int s, t;\n        cin >> s >> t;\n        adj[s].emplace_back(t);\n\
-    \        adj[t].emplace_back(s);\n    }\n    low_link ll(adj);\n    sort(ll.articulations.begin(),\
-    \ ll.articulations.end());\n    for (auto p:ll.articulations) { cout << p << endl;\
-    \ }\n}\n"
+    \ >> V >> E;\n    low_link ll(V);\n    for (int i = 0; i < E; i++) {\n       \
+    \ int s, t;\n        cin >> s >> t;\n        ll.add_edge(s, t);\n    }\n    vector<int>\
+    \ ans = ll.get().first;\n    sort(ans.begin(), ans.end());\n    for (auto p:ans)\
+    \ { cout << p << endl; }\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A&lang=ja\"\
     \n#include \"../../../graph/low-link.hpp\"\n\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\n\nint main() {\n    int V, E;\n    cin >> V >> E;\n    vector<vector<int>>\
-    \ adj(V);\n    for (int i = 0; i < E; i++) {\n        int s, t;\n        cin >>\
-    \ s >> t;\n        adj[s].emplace_back(t);\n        adj[t].emplace_back(s);\n\
-    \    }\n    low_link ll(adj);\n    sort(ll.articulations.begin(), ll.articulations.end());\n\
-    \    for (auto p:ll.articulations) { cout << p << endl; }\n}"
+    \ namespace std;\n\nint main() {\n    int V, E;\n    cin >> V >> E;\n    low_link\
+    \ ll(V);\n    for (int i = 0; i < E; i++) {\n        int s, t;\n        cin >>\
+    \ s >> t;\n        ll.add_edge(s, t);\n    }\n    vector<int> ans = ll.get().first;\n\
+    \    sort(ans.begin(), ans.end());\n    for (auto p:ans) { cout << p << endl;\
+    \ }\n}"
   dependsOn:
   - graph/low-link.hpp
   isVerificationFile: true
   path: test/AOJ/GRL/Articulation-Points-0.test.cpp
   requiredBy: []
-  timestamp: '2020-10-13 19:48:15+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-10-13 20:08:33+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/GRL/Articulation-Points-0.test.cpp
 layout: document
