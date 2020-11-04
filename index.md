@@ -120,6 +120,9 @@ data:
   - name: string
     pages:
     - icon: ':heavy_check_mark:'
+      path: string/parse.hpp
+      title: string/parse.hpp
+    - icon: ':heavy_check_mark:'
       path: string/rolling-hash-2d.hpp
       title: "2 \u6B21\u5143\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
     - icon: ':heavy_check_mark:'
@@ -269,6 +272,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/NTL/Prime-Factorize-1.test.cpp
       title: test/AOJ/NTL/Prime-Factorize-1.test.cpp
+  - name: test/AOJ/Volume1
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/Volume1/Smart-Calculator-0.test.cpp
+      title: test/AOJ/Volume1/Smart-Calculator-0.test.cpp
   - name: test/AOJ/Volume15
     pages:
     - icon: ':heavy_check_mark:'
