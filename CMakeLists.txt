@@ -11,6 +11,7 @@ add_executable(Prime-Numbers-0 test/AOJ/ALDS1/Prime-Numbers-0.test.cpp mathemati
 add_executable(Convex-Hull-0 test/AOJ/CGL/Convex-Hull-0.test.cpp geometry/geometry.hpp)
 
 add_executable(Union-Find-Tree-0 test/AOJ/DSL/Union-Find-Tree-0.test.cpp data-structure/union-find-tree.hpp)
+add_executable(Range-Add-Query-0 test/AOJ/DSL/Range-Add-Query-0.test.cpp data-structure/fenwick-tree.hpp)
 add_executable(Range-Minimum-Query-0 test/AOJ/DSL/Range-Minimum-Query-0.test.cpp data-structure/segment-tree.hpp)
 add_executable(Range-Sum-Query-0 test/AOJ/DSL/Range-Sum-Query-0.test.cpp data-structure/segment-tree.hpp)
 add_executable(Range-Sum-Query-1 test/AOJ/DSL/Range-Sum-Query-1.test.cpp data-structure/fenwick-tree.hpp)
@@ -41,6 +42,7 @@ add_executable(Power-0 test/AOJ/NTL/Power-0.test.cpp mathematics/mod-int.hpp)
 add_executable(Prime-Factorize-0 test/AOJ/NTL/Prime-Factorize-0.test.cpp mathematics/prime-factorize.hpp)
 add_executable(Prime-Factorize-1 test/AOJ/NTL/Prime-Factorize-1.test.cpp mathematics/multi-prime-factorize.hpp)
 
+add_executable(Smart-Calculator-0 test/AOJ/Volume1/Smart-Calculator-0.test.cpp string/parse.hpp)
 add_executable(RMQ-0 test/AOJ/Volume15/RMQ-0.test.cpp data-structure/splay-tree.hpp)
 add_executable(RMQ-1 test/AOJ/Volume15/RMQ-1.test.cpp data-structure/red-black-tree.hpp)
 
