@@ -67,8 +67,5 @@ data:
   - test/AOJ/Volume1/Smart-Calculator-0.test.cpp
 documentation_of: string/parse.hpp
 layout: document
-redirect_from:
-- /library/string/parse.hpp
-- /library/string/parse.hpp.html
-title: string/parse.hpp
+title: "\u69CB\u6587\u89E3\u6790"
 ---

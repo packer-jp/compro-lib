@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: string/parse.hpp
-    title: string/parse.hpp
+    title: "\u69CB\u6587\u89E3\u6790"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp

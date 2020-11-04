@@ -57,8 +57,5 @@ data:
   - test/unit-test/mathematics/mod-calc.test.cpp
 documentation_of: mathematics/mod-calc.hpp
 layout: document
-redirect_from:
-- /library/mathematics/mod-calc.hpp
-- /library/mathematics/mod-calc.hpp.html
-title: mathematics/mod-calc.hpp
+title: "mod \u8A08\u7B97"
 ---

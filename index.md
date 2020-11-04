@@ -88,7 +88,7 @@ data:
       title: "\u884C\u5217"
     - icon: ':heavy_check_mark:'
       path: mathematics/mod-calc.hpp
-      title: mathematics/mod-calc.hpp
+      title: "mod \u8A08\u7B97"
     - icon: ':heavy_check_mark:'
       path: mathematics/mod-int.hpp
       title: "\u5270\u4F59\u74B0 / \u4F53"
@@ -121,7 +121,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: string/parse.hpp
-      title: string/parse.hpp
+      title: "\u69CB\u6587\u89E3\u6790"
     - icon: ':heavy_check_mark:'
       path: string/rolling-hash-2d.hpp
       title: "2 \u6B21\u5143\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"

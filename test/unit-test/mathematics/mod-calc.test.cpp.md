@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/mod-calc.hpp
-    title: mathematics/mod-calc.hpp
+    title: "mod \u8A08\u7B97"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
