@@ -4,66 +4,66 @@
 using state = std::string::const_iterator;
 struct parse_error {};
 
-void consume(state &begin, char expected) {
-    if (*begin == expected) {
-        begin++;
+void consume(state &cur, char expected) {
+    if (*cur == expected) {
+        cur++;
     } else {
-        std::cerr << "Expected '" << expected << "' but got '" << *begin << "'" << std::endl;
+        std::cerr << "Expected '" << expected << "' but got '" << *cur << "'" << std::endl;
         std::cerr << "Rest string is '";
-        while (*begin) { std::cerr << *begin++; }
+        while (*cur) { std::cerr << *cur++; }
         std::cerr << "'" << std::endl;
         throw parse_error();
     }
 }
 
 struct parser {
-    int number(state &begin) {
+    int number(state &cur) {
         int ret = 0;
-        while (isdigit(*begin)) {
+        while (isdigit(*cur)) {
             ret *= 10;
-            ret += *begin - '0';
-            begin++;
+            ret += *cur - '0';
+            cur++;
         }
         return ret;
     }
-    int term(state &begin) {
-        int ret = factor(begin);
+    int term(state &cur) {
+        int ret = factor(cur);
         while (true) {
-            if (*begin == '*') {
-                consume(begin, '*');
-                ret *= factor(begin);
-            } else if (*begin == '/') {
-                consume(begin, '/');
-                ret /= factor(begin);
+            if (*cur == '*') {
+                consume(cur, '*');
+                ret *= factor(cur);
+            } else if (*cur == '/') {
+                consume(cur, '/');
+                ret /= factor(cur);
             } else {
                 break;
             }
         }
         return ret;
     }
-    int expr(state &begin) {
-        int ret = term(begin);
+    int expr(state &cur) {
+        int ret = term(cur);
         while (true) {
-            if (*begin == '+') {
-                consume(begin, '+');
-                ret += term(begin);
-            } else if (*begin == '-') {
-                consume(begin, '-');
-                ret -= term(begin);
+            if (*cur == '+') {
+                consume(cur, '+');
+                ret += term(cur);
+            } else if (*cur == '-') {
+                consume(cur, '-');
+                ret -= term(cur);
             } else {
                 break;
             }
         }
         return ret;
     }
-    int factor(state &begin) {
-        if (*begin == '(') {
-            consume(begin, '(');
-            int ret = expr(begin);
-            consume(begin, ')');
+    int factor(state &cur) {
+        if (*cur == '(') {
+            consume(cur, '(');
+            int ret = expr(cur);
+            consume(cur, ')');
             return ret;
         } else {
-            return number(begin);
+            return number(cur);
         }
     }
 };
