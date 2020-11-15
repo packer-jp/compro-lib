@@ -15,7 +15,7 @@ struct union_find_tree {
         if ((i = root(i)) == (j = root(j))) { return; }
         if (sz[i] < sz[j]) { std::swap(i, j); }
         sz[i] += sz[j];
-        val[i] = S::op(val[i], val[j]);
+        S::merge(val[i], val[j]);
         par[j] = i;
     }
     bool same(int i, int j) { return root(i) == root(j); }
@@ -25,5 +25,5 @@ struct union_find_tree {
 
 struct normal_uf {
     struct T {};
-    static T op(const T &a, const T &b) { return {}; }
+    static void merge(T &a, const T &b) {}
 };
