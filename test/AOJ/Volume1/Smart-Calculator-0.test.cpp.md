@@ -21,23 +21,23 @@ data:
     \ {\n        std::cerr << \"Expected '\" << expected << \"' but got '\" << *cur\
     \ << \"'\" << std::endl;\n        std::cerr << \"Rest string is '\";\n       \
     \ while (*cur) { std::cerr << *cur++; }\n        std::cerr << \"'\" << std::endl;\n\
-    \        throw parse_error();\n    }\n}\n\nstruct parser {\n    int number(state\
-    \ &cur) {\n        int ret = 0;\n        while (isdigit(*cur)) {\n           \
-    \ ret *= 10;\n            ret += *cur - '0';\n            cur++;\n        }\n\
-    \        return ret;\n    }\n    int term(state &cur) {\n        int ret = factor(cur);\n\
-    \        while (true) {\n            if (*cur == '*') {\n                consume(cur,\
-    \ '*');\n                ret *= factor(cur);\n            } else if (*cur == '/')\
-    \ {\n                consume(cur, '/');\n                ret /= factor(cur);\n\
-    \            } else {\n                break;\n            }\n        }\n    \
-    \    return ret;\n    }\n    int expr(state &cur) {\n        int ret = term(cur);\n\
-    \        while (true) {\n            if (*cur == '+') {\n                consume(cur,\
-    \ '+');\n                ret += term(cur);\n            } else if (*cur == '-')\
-    \ {\n                consume(cur, '-');\n                ret -= term(cur);\n \
-    \           } else {\n                break;\n            }\n        }\n     \
-    \   return ret;\n    }\n    int factor(state &cur) {\n        if (*cur == '(')\
-    \ {\n            consume(cur, '(');\n            int ret = expr(cur);\n      \
-    \      consume(cur, ')');\n            return ret;\n        } else {\n       \
-    \     return number(cur);\n        }\n    }\n};\n#line 3 \"test/AOJ/Volume1/Smart-Calculator-0.test.cpp\"\
+    \        throw parse_error();\n    }\n}\n\n\nstruct parser {\n    int expr(state\
+    \ &cur) {\n        int ret = term(cur);\n        while (true) {\n            if\
+    \ (*cur == '+') {\n                consume(cur, '+');\n                ret +=\
+    \ term(cur);\n            } else if (*cur == '-') {\n                consume(cur,\
+    \ '-');\n                ret -= term(cur);\n            } else {\n           \
+    \     break;\n            }\n        }\n        return ret;\n    }\n    int term(state\
+    \ &cur) {\n        int ret = factor(cur);\n        while (true) {\n          \
+    \  if (*cur == '*') {\n                consume(cur, '*');\n                ret\
+    \ *= factor(cur);\n            } else if (*cur == '/') {\n                consume(cur,\
+    \ '/');\n                ret /= factor(cur);\n            } else {\n         \
+    \       break;\n            }\n        }\n        return ret;\n    }\n    int\
+    \ factor(state &cur) {\n        if (*cur == '(') {\n            consume(cur, '(');\n\
+    \            int ret = expr(cur);\n            consume(cur, ')');\n          \
+    \  return ret;\n        } else {\n            return number(cur);\n        }\n\
+    \    }\n    int number(state &cur) {\n        int ret = 0;\n        while (isdigit(*cur))\
+    \ {\n            ret *= 10;\n            ret += *cur - '0';\n            cur++;\n\
+    \        }\n        return ret;\n    }\n};\n#line 3 \"test/AOJ/Volume1/Smart-Calculator-0.test.cpp\"\
     \n\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n\
     \    cin >> N;\n    cin.ignore();\n    for (int i = 0; i < N; i++) {\n       \
     \ string s;\n        getline(cin, s);\n        state begin = s.begin();\n    \
@@ -55,7 +55,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/Volume1/Smart-Calculator-0.test.cpp
   requiredBy: []
-  timestamp: '2020-11-04 21:28:05+09:00'
+  timestamp: '2020-11-05 01:51:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/Volume1/Smart-Calculator-0.test.cpp

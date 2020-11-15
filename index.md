@@ -27,6 +27,11 @@ data:
     - icon: ':warning:'
       path: data-structure/weighted-union-find-tree.hpp
       title: "\u91CD\u307F\u4ED8\u304D Union-Find \u6728"
+  - name: dp
+    pages:
+    - icon: ':warning:'
+      path: dp/fzt.hpp
+      title: dp/fzt.hpp
   - name: geometry
     pages:
     - icon: ':heavy_check_mark:'

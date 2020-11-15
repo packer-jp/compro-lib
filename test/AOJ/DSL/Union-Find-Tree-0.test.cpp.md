@@ -23,11 +23,11 @@ data:
     \ i) {\n        if (par[i] == -1) { return i; }\n        else { return par[i]\
     \ = root(par[i]); }\n    }\n    void unite(int i, int j) {\n        if ((i = root(i))\
     \ == (j = root(j))) { return; }\n        if (sz[i] < sz[j]) { std::swap(i, j);\
-    \ }\n        sz[i] += sz[j];\n        val[i] = S::op(val[i], val[j]);\n      \
-    \  par[j] = i;\n    }\n    bool same(int i, int j) { return root(i) == root(j);\
-    \ }\n    int size(int i) { return sz[root(i)]; }\n    T &operator[](int i) { return\
-    \ val[root(i)]; }\n};\n\nstruct normal_uf {\n    struct T {};\n    static T op(const\
-    \ T &a, const T &b) { return {}; }\n};\n#line 3 \"test/AOJ/DSL/Union-Find-Tree-0.test.cpp\"\
+    \ }\n        sz[i] += sz[j];\n        S::merge(val[i], val[j]);\n        par[j]\
+    \ = i;\n    }\n    bool same(int i, int j) { return root(i) == root(j); }\n  \
+    \  int size(int i) { return sz[root(i)]; }\n    T &operator[](int i) { return\
+    \ val[root(i)]; }\n};\n\nstruct normal_uf {\n    struct T {};\n    static void\
+    \ merge(T &a, const T &b) {}\n};\n#line 3 \"test/AOJ/DSL/Union-Find-Tree-0.test.cpp\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n,\
     \ q;\n    cin >> n >> q;\n    union_find_tree<normal_uf> uf(n);\n    for (int\
     \ i = 0; i < q; i++) {\n        int com, x, y;\n        cin >> com >> x >> y;\n\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DSL/Union-Find-Tree-0.test.cpp
   requiredBy: []
-  timestamp: '2020-09-26 20:50:35+09:00'
+  timestamp: '2020-11-15 21:42:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL/Union-Find-Tree-0.test.cpp
