@@ -35,8 +35,8 @@ data:
   timestamp: '2020-10-01 10:19:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
   - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
 documentation_of: mathematics/stirling-number-2-table.hpp
 layout: document
 title: "\u7B2C 2 \u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u30C6\u30FC\u30D6\

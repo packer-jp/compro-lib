@@ -85,8 +85,8 @@ data:
   timestamp: '2020-10-13 19:48:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/Volume26/Tree-0.test.cpp
   - test/unit-test/graph/heavy-light-decomposition.test.cpp
+  - test/AOJ/Volume26/Tree-0.test.cpp
 documentation_of: graph/heavy-light-decomposition.hpp
 layout: document
 title: "HL \u5206\u89E3"

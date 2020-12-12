@@ -12,11 +12,11 @@ data:
     links: []
   bundledCode: "#line 1 \"mathematics/permutation.hpp\"\n#include <algorithm>\n#include\
     \ <iostream>\n#include <vector>\n#include <numeric>\n\nstruct permutation {\n\
-    \    std::vector<int> data;\n    permutation(int n) : data(n) { for (int i = 0;\
-    \ i < n; i++) { data[i] = i; }}\n    permutation(const std::vector<int> &src)\
-    \ : data(src) {}\n    int size() const { return data.size(); }\n    static permutation\
-    \ id(int n) {\n        std::vector<int> ret(n);\n        std::iota(ret.begin(),\
-    \ ret.end(), 0LL);\n        return ret;\n    }\n    bool next() { return std::next_permutation(data.begin(),\
+    \    std::vector<int> data;\n    permutation(int n) : data(n) { std::iota(data.begin(),\
+    \ data.end(), 0); }\n    permutation(const std::vector<int> &src) : data(src)\
+    \ {}\n    int size() const { return data.size(); }\n    static permutation id(int\
+    \ n) {\n        std::vector<int> ret(n);\n        std::iota(ret.begin(), ret.end(),\
+    \ 0);\n        return ret;\n    }\n    bool next() { return std::next_permutation(data.begin(),\
     \ data.end()); }\n    bool prev() { return std::prev_permutation(data.begin(),\
     \ data.end()); }\n    int operator[](int i) const { return data[i]; }\n    permutation\
     \ &operator*=(const permutation &a) {\n        std::vector<int> tmp(data);\n \
@@ -42,10 +42,10 @@ data:
     \      return os;\n    }\n};\n"
   code: "#include <algorithm>\n#include <iostream>\n#include <vector>\n#include <numeric>\n\
     \nstruct permutation {\n    std::vector<int> data;\n    permutation(int n) : data(n)\
-    \ { for (int i = 0; i < n; i++) { data[i] = i; }}\n    permutation(const std::vector<int>\
+    \ { std::iota(data.begin(), data.end(), 0); }\n    permutation(const std::vector<int>\
     \ &src) : data(src) {}\n    int size() const { return data.size(); }\n    static\
     \ permutation id(int n) {\n        std::vector<int> ret(n);\n        std::iota(ret.begin(),\
-    \ ret.end(), 0LL);\n        return ret;\n    }\n    bool next() { return std::next_permutation(data.begin(),\
+    \ ret.end(), 0);\n        return ret;\n    }\n    bool next() { return std::next_permutation(data.begin(),\
     \ data.end()); }\n    bool prev() { return std::prev_permutation(data.begin(),\
     \ data.end()); }\n    int operator[](int i) const { return data[i]; }\n    permutation\
     \ &operator*=(const permutation &a) {\n        std::vector<int> tmp(data);\n \
@@ -73,7 +73,7 @@ data:
   isVerificationFile: false
   path: mathematics/permutation.hpp
   requiredBy: []
-  timestamp: '2020-09-28 19:18:29+09:00'
+  timestamp: '2020-12-13 01:33:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/unit-test/mathematics/permutation.test.cpp
