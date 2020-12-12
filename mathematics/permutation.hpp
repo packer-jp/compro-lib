@@ -5,12 +5,12 @@
 
 struct permutation {
     std::vector<int> data;
-    permutation(int n) : data(n) { for (int i = 0; i < n; i++) { data[i] = i; }}
+    permutation(int n) : data(n) { std::iota(data.begin(), data.end(), 0); }
     permutation(const std::vector<int> &src) : data(src) {}
     int size() const { return data.size(); }
     static permutation id(int n) {
         std::vector<int> ret(n);
-        std::iota(ret.begin(), ret.end(), 0LL);
+        std::iota(ret.begin(), ret.end(), 0);
         return ret;
     }
     bool next() { return std::next_permutation(data.begin(), data.end()); }
