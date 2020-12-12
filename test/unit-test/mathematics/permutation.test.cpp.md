@@ -42,8 +42,8 @@ data:
     \            } while (cur != i);\n            for (int j = 0; j < cyc.size();\
     \ j++) { ret[cyc[j]] = cyc[(j + m) % cyc.size()]; }\n        }\n        return\
     \ ret;\n    }\n    friend std::ostream &operator<<(std::ostream &os, const permutation\
-    \ &a) {\n        os << \"{\";\n        for (int i = 0; i < a.size(); i++) { os\
-    \ << a[i] << (i + 1 != a.size() ? \", \" : \"\"); }\n        os << \"}\";\n  \
+    \ &a) {\n        os << \"(\";\n        for (int i = 0; i < a.size(); i++) { os\
+    \ << a[i] << (i + 1 != a.size() ? \", \" : \"\"); }\n        os << \")\";\n  \
     \      return os;\n    }\n};\n#line 3 \"test/unit-test/mathematics/permutation.test.cpp\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    vector<int>\
     \ e = {0, 1, 2, 3, 4};\n    vector<int> a = {3, 2, 1, 4, 0};\n    vector<int>\
@@ -69,7 +69,7 @@ data:
   isVerificationFile: true
   path: test/unit-test/mathematics/permutation.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 01:33:58+09:00'
+  timestamp: '2020-12-13 01:37:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit-test/mathematics/permutation.test.cpp

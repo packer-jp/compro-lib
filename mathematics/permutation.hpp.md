@@ -37,8 +37,8 @@ data:
     \            } while (cur != i);\n            for (int j = 0; j < cyc.size();\
     \ j++) { ret[cyc[j]] = cyc[(j + m) % cyc.size()]; }\n        }\n        return\
     \ ret;\n    }\n    friend std::ostream &operator<<(std::ostream &os, const permutation\
-    \ &a) {\n        os << \"{\";\n        for (int i = 0; i < a.size(); i++) { os\
-    \ << a[i] << (i + 1 != a.size() ? \", \" : \"\"); }\n        os << \"}\";\n  \
+    \ &a) {\n        os << \"(\";\n        for (int i = 0; i < a.size(); i++) { os\
+    \ << a[i] << (i + 1 != a.size() ? \", \" : \"\"); }\n        os << \")\";\n  \
     \      return os;\n    }\n};\n"
   code: "#include <algorithm>\n#include <iostream>\n#include <vector>\n#include <numeric>\n\
     \nstruct permutation {\n    std::vector<int> data;\n    permutation(int n) : data(n)\
@@ -66,14 +66,14 @@ data:
     \            } while (cur != i);\n            for (int j = 0; j < cyc.size();\
     \ j++) { ret[cyc[j]] = cyc[(j + m) % cyc.size()]; }\n        }\n        return\
     \ ret;\n    }\n    friend std::ostream &operator<<(std::ostream &os, const permutation\
-    \ &a) {\n        os << \"{\";\n        for (int i = 0; i < a.size(); i++) { os\
-    \ << a[i] << (i + 1 != a.size() ? \", \" : \"\"); }\n        os << \"}\";\n  \
+    \ &a) {\n        os << \"(\";\n        for (int i = 0; i < a.size(); i++) { os\
+    \ << a[i] << (i + 1 != a.size() ? \", \" : \"\"); }\n        os << \")\";\n  \
     \      return os;\n    }\n};"
   dependsOn: []
   isVerificationFile: false
   path: mathematics/permutation.hpp
   requiredBy: []
-  timestamp: '2020-12-13 01:33:58+09:00'
+  timestamp: '2020-12-13 01:37:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/unit-test/mathematics/permutation.test.cpp
