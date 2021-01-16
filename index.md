@@ -81,10 +81,10 @@ data:
       title: "\u30D9\u30EB\u6570\u30C6\u30FC\u30D6\u30EB"
     - icon: ':warning:'
       path: mathematics/binomial-table.hpp
-      title: mathematics/binomial-table.hpp
+      title: "\u4E8C\u9805\u4FC2\u6570\u30C6\u30FC\u30D6\u30EB"
     - icon: ':warning:'
       path: mathematics/binomial.hpp
-      title: mathematics/binomial.hpp
+      title: "\u4E8C\u9805\u4FC2\u6570"
     - icon: ':heavy_check_mark:'
       path: mathematics/convolute.hpp
       title: "\u7573\u307F\u8FBC\u307F"

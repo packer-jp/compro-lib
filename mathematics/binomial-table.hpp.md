@@ -27,8 +27,5 @@ data:
   verifiedWith: []
 documentation_of: mathematics/binomial-table.hpp
 layout: document
-redirect_from:
-- /library/mathematics/binomial-table.hpp
-- /library/mathematics/binomial-table.hpp.html
-title: mathematics/binomial-table.hpp
+title: "\u4E8C\u9805\u4FC2\u6570\u30C6\u30FC\u30D6\u30EB"
 ---
