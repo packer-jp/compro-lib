@@ -80,6 +80,9 @@ data:
       path: mathematics/bell-number-table.hpp
       title: "\u30D9\u30EB\u6570\u30C6\u30FC\u30D6\u30EB"
     - icon: ':warning:'
+      path: mathematics/binomial-table.hpp
+      title: mathematics/binomial-table.hpp
+    - icon: ':warning:'
       path: mathematics/binomial.hpp
       title: mathematics/binomial.hpp
     - icon: ':heavy_check_mark:'
