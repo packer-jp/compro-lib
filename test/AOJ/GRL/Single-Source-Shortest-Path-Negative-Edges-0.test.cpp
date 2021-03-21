@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja"
-#include"../../../graph/bellman-ford.hpp"
+#include "../../../graph/bellman-ford.hpp"
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -18,5 +18,7 @@ int main() {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;
     }
-    for (int i = 0; i < V; i++) { cout << (dist[i] < INT_MAX ? to_string(dist[i]) : "INF") << endl; }
+    for (int i = 0; i < V; i++) {
+        cout << (dist[i] < INT_MAX ? to_string(dist[i]) : "INF") << endl;
+    }
 }

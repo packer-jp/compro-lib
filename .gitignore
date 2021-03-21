@@ -1,3 +1,6 @@
-# Project exclude paths
+# for CLion
 /cmake-build-debug/
 .idea/**/workspace.xml
+
+# for Visual Studio Code
+.vscode/

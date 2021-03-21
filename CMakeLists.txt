@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(compro-lib)
+project(kyopro-lib-cpp)
 
 set(CMAKE_CXX_STANDARD 17)
 
