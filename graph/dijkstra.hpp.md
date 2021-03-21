@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp
     title: test/AOJ/GRL/Single-Source-Shortest-Path-0.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

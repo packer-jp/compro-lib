@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/unit-test/graph/heavy-light-decomposition.test.cpp
     title: test/unit-test/graph/heavy-light-decomposition.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

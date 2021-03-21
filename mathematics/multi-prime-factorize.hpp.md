@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/NTL/Prime-Factorize-1.test.cpp
     title: test/AOJ/NTL/Prime-Factorize-1.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

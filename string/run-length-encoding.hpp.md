@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/unit-test/string/run-length-encoding.test.cpp
     title: test/unit-test/string/run-length-encoding.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

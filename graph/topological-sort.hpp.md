@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/unit-test/graph/topological-sort.test.cpp
     title: test/unit-test/graph/topological-sort.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

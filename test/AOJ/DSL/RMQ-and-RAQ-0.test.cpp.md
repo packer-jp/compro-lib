@@ -6,6 +6,7 @@ data:
     title: "\u9045\u5EF6\u8A55\u4FA1 Segment \u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

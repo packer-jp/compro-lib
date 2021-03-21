@@ -15,6 +15,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume26/Tree-0.test.cpp
     title: test/AOJ/Volume26/Tree-0.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -114,8 +115,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
-  - test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
   - test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
+  - test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
   - test/AOJ/Volume26/Tree-0.test.cpp
 documentation_of: data-structure/lazy-segment-tree.hpp
 layout: document

@@ -6,6 +6,7 @@ data:
     title: "\u69CB\u6587\u89E3\u6790"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

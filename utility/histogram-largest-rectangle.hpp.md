@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp
     title: test/AOJ/DPL/Largest-Rectangle-in-a-Histogram-0.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

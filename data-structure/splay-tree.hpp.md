@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume15/RMQ-0.test.cpp
     title: test/AOJ/Volume15/RMQ-0.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -126,8 +127,8 @@ data:
   timestamp: '2020-09-23 16:37:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/ITP2/Vector-0.test.cpp
   - test/AOJ/Volume15/RMQ-0.test.cpp
+  - test/AOJ/ITP2/Vector-0.test.cpp
 documentation_of: data-structure/splay-tree.hpp
 layout: document
 title: "Splay \u6728"

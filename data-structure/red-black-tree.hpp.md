@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/Volume15/RMQ-1.test.cpp
     title: test/AOJ/Volume15/RMQ-1.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -131,8 +132,8 @@ data:
   timestamp: '2020-09-23 16:37:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/ITP2/Vector-1.test.cpp
   - test/AOJ/Volume15/RMQ-1.test.cpp
+  - test/AOJ/ITP2/Vector-1.test.cpp
 documentation_of: data-structure/red-black-tree.hpp
 layout: document
 title: "\u8D64\u9ED2\u6728"

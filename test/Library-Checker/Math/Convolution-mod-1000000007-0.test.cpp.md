@@ -12,6 +12,7 @@ data:
     title: "\u5270\u4F59\u74B0 / \u4F53"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
