@@ -17,7 +17,7 @@ data:
       title: "\u8D64\u9ED2\u6728"
     - icon: ':heavy_check_mark:'
       path: data-structure/segment-tree.hpp
-      title: "Segment \u6728"
+      title: data-structure/segment-tree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/splay-tree.hpp
       title: "Splay \u6728"

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/segment-tree.hpp
-    title: "Segment \u6728"
+    title: data-structure/segment-tree.hpp
   - icon: ':heavy_check_mark:'
     path: graph/heavy-light-decomposition.hpp
     title: "HL \u5206\u89E3"
