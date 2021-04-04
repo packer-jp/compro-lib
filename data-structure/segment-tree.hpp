@@ -20,8 +20,7 @@ template <typename S> struct segment_tree {
     }
     /**
      * @brief 一点変更
-     * @arg i インデックス。
-     * @arg x 置き換え先。
+     * @arg i, x インデックスと置き換え先。
      **/
     void set(int i, const T &x) {
         data[i += n] = x;
