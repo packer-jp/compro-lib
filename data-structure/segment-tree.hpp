@@ -2,6 +2,10 @@
 #include <limits>
 #include <vector>
 
+/**
+ * @brief Segment 木
+ * @tparam S 代数的構造。
+ */
 template <typename S> struct segment_tree {
     using T = typename S::T;
     int n;
@@ -15,8 +19,9 @@ template <typename S> struct segment_tree {
         }
     }
     /**
-     * @param i インデックス
-     * @param x 置き換え先
+     * @brief 一点変更
+     * @arg i インデックス。
+     * @arg x 置き換え先。
      **/
     void set(int i, const T &x) {
         data[i += n] = x;
@@ -26,6 +31,7 @@ template <typename S> struct segment_tree {
     }
     /**
      * @brief 一点取得
+     * @arg i インデックス。
      **/
     const T &operator[](int i) const {
         return data[i + n];
