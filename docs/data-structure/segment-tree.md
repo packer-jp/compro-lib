@@ -1,6 +1,6 @@
 ---
 title: Segment 木
-documentation_of: data-structure/segment-tree.hpp
+documentation_of: data-structure/hoge.hpp
 ---
 
 - `<S> struct segment_tree`  
