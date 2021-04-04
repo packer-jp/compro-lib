@@ -50,8 +50,8 @@ data:
   timestamp: '2020-09-24 00:11:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL/Range-Sum-Query-1.test.cpp
   - test/AOJ/DSL/Range-Add-Query-0.test.cpp
+  - test/AOJ/DSL/Range-Sum-Query-1.test.cpp
 documentation_of: data-structure/fenwick-tree.hpp
 layout: document
 title: "Fenwick \u6728"

@@ -60,8 +60,8 @@ data:
   timestamp: '2020-10-13 20:30:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/GRL/Bridges-0.test.cpp
   - test/AOJ/GRL/Articulation-Points-0.test.cpp
+  - test/AOJ/GRL/Bridges-0.test.cpp
 documentation_of: graph/low-link.hpp
 layout: document
 title: Low Link
