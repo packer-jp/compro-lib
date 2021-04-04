@@ -24,6 +24,9 @@ template <typename S> struct segment_tree {
             data[i] = S::op(data[i << 1 | 0], data[i << 1 | 1]);
         }
     }
+    /**
+     * @brief 一点取得
+     **/
     const T &operator[](int i) const {
         return data[i + n];
     }
