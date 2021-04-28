@@ -2,10 +2,6 @@
 #include <limits>
 #include <vector>
 
-/**
- * @brief Segment 木
- * @tparam S 代数的構造。
- */
 template <typename S> struct segment_tree {
     using T = typename S::T;
     int n;
@@ -18,20 +14,12 @@ template <typename S> struct segment_tree {
             data[i] = S::op(data[i << 1 | 0], data[i << 1 | 1]);
         }
     }
-    /**
-     * @brief 一点変更
-     * @arg i, x インデックスと置き換え先。
-     **/
     void set(int i, const T &x) {
         data[i += n] = x;
         while (i >>= 1) {
             data[i] = S::op(data[i << 1 | 0], data[i << 1 | 1]);
         }
     }
-    /**
-     * @brief 一点取得
-     * @arg i インデックス。
-     **/
     const T &operator[](int i) const {
         return data[i + n];
     }

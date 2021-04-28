@@ -1,10 +1,10 @@
 ---
-title: 剰余環 / 体
+title: modint
 documentation_of: mathematics/mod-int.hpp
 ---
 
 - `<int MOD=1'000'000'0007> struct mod_int`  
-`MOD`を法とした剰余環 / 体。
+`MOD`を法とした modint。
 
   - `(constructor)(long long v_)`  
   値`v_`で初期化。
