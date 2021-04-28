@@ -122,9 +122,9 @@ data:
   timestamp: '2021-04-04 16:30:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
-  - test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
   - test/AOJ/DSL/RSQ-and-RAQ-0.test.cpp
+  - test/AOJ/DSL/RMQ-and-RUQ-0.test.cpp
+  - test/AOJ/DSL/RMQ-and-RAQ-0.test.cpp
   - test/AOJ/Volume26/Tree-0.test.cpp
 documentation_of: data-structure/lazy-segment-tree.hpp
 layout: document

@@ -185,20 +185,20 @@ data:
   timestamp: '2020-10-10 19:42:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
-  - test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
-  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
-  - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
   - test/AOJ/NTL/Power-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-10-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-9-0.test.cpp
+  - test/AOJ/DPL/Balls-and-Boxes-7-0.test.cpp
+  - test/Library-Checker/Math/Convolution-mod-1000000007-0.test.cpp
   - test/unit-test/mathematics/matrix.test.cpp
   - test/unit-test/mathematics/mod-int.test.cpp
 documentation_of: mathematics/mod-int.hpp
 layout: document
-title: "\u5270\u4F59\u74B0 / \u4F53"
+title: modint
 ---
 
 - `<int MOD=1'000'000'0007> struct mod_int`  
-`MOD`を法とした剰余環 / 体。
+`MOD`を法とした modint。
 
   - `(constructor)(long long v_)`  
   値`v_`で初期化。

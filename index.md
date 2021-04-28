@@ -17,7 +17,7 @@ data:
       title: "\u8D64\u9ED2\u6728"
     - icon: ':heavy_check_mark:'
       path: data-structure/segment-tree.hpp
-      title: "Segment \u6728"
+      title: data-structure/segment-tree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/splay-tree.hpp
       title: "Splay \u6728"
@@ -102,7 +102,7 @@ data:
       title: "mod \u8A08\u7B97"
     - icon: ':heavy_check_mark:'
       path: mathematics/mod-int.hpp
-      title: "\u5270\u4F59\u74B0 / \u4F53"
+      title: modint
     - icon: ':heavy_check_mark:'
       path: mathematics/moebius.hpp
       title: "Moebius \u95A2\u6570"

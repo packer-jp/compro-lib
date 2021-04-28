@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: mathematics/mod-int.hpp
-    title: "\u5270\u4F59\u74B0 / \u4F53"
+    title: modint
   - icon: ':heavy_check_mark:'
     path: mathematics/partition-table.hpp
     title: "\u5206\u5272\u6570\u30C6\u30FC\u30D6\u30EB"
