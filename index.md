@@ -18,6 +18,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/segment-tree.hpp
       title: data-structure/segment-tree.hpp
+    - icon: ':warning:'
+      path: data-structure/segtree.hpp
+      title: data-structure/segtree.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/splay-tree.hpp
       title: "Splay \u6728"

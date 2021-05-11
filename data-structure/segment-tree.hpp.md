@@ -63,9 +63,9 @@ data:
   timestamp: '2021-04-28 09:04:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL/Range-Minimum-Query-0.test.cpp
-  - test/AOJ/DSL/Range-Sum-Query-0.test.cpp
   - test/unit-test/graph/heavy-light-decomposition.test.cpp
+  - test/AOJ/DSL/Range-Sum-Query-0.test.cpp
+  - test/AOJ/DSL/Range-Minimum-Query-0.test.cpp
 documentation_of: data-structure/segment-tree.hpp
 layout: document
 redirect_from:
